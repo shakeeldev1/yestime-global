@@ -65,7 +65,7 @@ const HomeHero = ({
   secondaryAction = (
     <a
       href="#about"
-      className="inline-flex items-center justify-center rounded-full border border-[#0b3b6e] bg-[#0b3b6e] px-[1.4rem] py-[0.85rem] font-semibold text-white transition duration-300 ease-out hover:-translate-y-1 hover:bg-[#1274b8] hover:shadow-[0_10px_22px_rgba(11,59,110,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b3b6e] focus-visible:ring-offset-2"
+      className="inline-flex items-center justify-center rounded-full border border-[#0b3b6e] bg-[#0b3b6e] px-[1.4rem] py-[0.85rem] font-semibold text-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_10px_22px_rgba(11,59,110,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b3b6e] focus-visible:ring-offset-2"
     >
       Discover More
     </a>
@@ -145,13 +145,13 @@ const HomeHero = ({
                 {currentSlide.titleAfter}
               </h1>
 
-              {currentSlide.description ? <p className="mt-6 max-w-[42rem] border-l-[3px] border-[#0b3b6e] pl-4 text-lg leading-[1.7] text-[#41566f]">{currentSlide.description}</p> : null}
+              {currentSlide.description ? <p className="mt-6 hidden max-w-[42rem] border-l-[3px] border-[#0b3b6e] pl-4 text-lg leading-[1.7] text-[#41566f] md:block">{currentSlide.description}</p> : null}
             </div>
 
             {currentSlide.primaryAction || currentSlide.secondaryAction ? <div className="flex flex-wrap gap-4">{currentSlide.primaryAction}{currentSlide.secondaryAction}</div> : null}
 
             {currentSlide.stats?.length ? (
-              <div className="grid grid-cols-3 gap-4 border-t border-[rgba(197,150,46,0.35)] pt-6">
+              <div className="hidden grid-cols-3 gap-4 border-t border-[rgba(197,150,46,0.35)] pt-6 md:grid">
                 {currentSlide.stats.map((stat, index) => (
                   <div key={stat.id ?? index} className="group relative min-h-16 p-2">
                     {stat.label ? <div className="mb-[0.35rem] text-[0.7rem] font-bold uppercase tracking-[0.16em] text-[#a97916]">{stat.label}</div> : null}

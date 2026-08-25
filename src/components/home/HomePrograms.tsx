@@ -30,7 +30,7 @@ const programs: Program[] = [
     label: 'Car Program',
     title: 'Car Program',
     description: 'Explore the Car Program options, including plans without draw, plans with draw, and 12-month plans. Eligibility and terms guide each plan.',
-    points: ['Car Program', 'Without Draw', 'With Draw', '12-Month Plan', 'Eligibility & Terms'],
+    points: ['Car Program', 'With Draw', '12-Month Plan', 'Eligibility & Terms'],
     status: 'Flexible car plans',
     icon: FiServer,
   },
@@ -104,17 +104,17 @@ const HomePrograms = () => {
     const ProgramIcon = program.icon
 
     return (
-      <div key={program.id} className={`absolute inset-0 flex flex-col [transition:opacity_500ms_ease-in-out] will-change-[opacity] ${layerClassName}`}>
-        <div className="flex items-center justify-between gap-4">
+      <div key={program.id} className={`absolute inset-0 flex min-w-0 flex-col [transition:opacity_500ms_ease-in-out] will-change-[opacity] ${layerClassName}`}>
+        <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#0b3b6e_0%,#1274b8_100%)] text-[#f0c75e] shadow-[0_8px_16px_rgba(11,59,110,0.22)]">
             <ProgramIcon size={26} />
           </div>
-          <span className="rounded-full border border-[#d6b35a] bg-[#fff8e1] px-3.5 py-[0.45rem] text-[0.7rem] font-bold uppercase tracking-[0.08em] text-[#a97916]">{program.status}</span>
+          <span className="max-w-full rounded-full border border-[#d6b35a] bg-[#fff8e1] px-3.5 py-[0.45rem] text-right text-[0.7rem] font-bold uppercase tracking-[0.08em] text-[#a97916]">{program.status}</span>
         </div>
 
-        <div className="min-h-0 flex-1 py-8">
-          <h3 className="m-0 text-[clamp(1.75rem,3.5vw,2.25rem)] font-normal tracking-[-0.02em] text-[#071a36]">{program.title}</h3>
-          <p className="mt-3.5 max-w-2xl text-[0.975rem] leading-7 text-[#41566f]">{program.description}</p>
+        <div className="flex-none min-w-0 py-6 sm:py-8">
+          <h3 className="m-0 break-words text-[clamp(1.75rem,3.5vw,2.25rem)] font-normal tracking-[-0.02em] text-[#071a36]">{program.title}</h3>
+          <p className="mt-3.5 max-w-2xl break-words text-[0.975rem] leading-7 text-[#41566f]">{program.description}</p>
         </div>
 
         <div className="mb-4 flex items-center justify-between gap-4 border-t border-[rgba(11,59,110,0.12)] pt-4">
@@ -144,8 +144,8 @@ const HomePrograms = () => {
           <p className="mx-auto mt-5 text-[1.05rem] leading-7 text-[#41566f]">Explore the Shop &amp; Savings, Car, Motorcycle / Scooter, and other approved programs.</p>
         </div>
 
-        <div className="my-12 flex justify-center">
-          <div className="inline-flex max-w-full gap-1 overflow-x-auto rounded-2xl border border-[#dbe5f2] bg-white p-1.5 shadow-[0_4px_20px_rgba(11,59,110,0.06),0_1px_2px_rgba(11,59,110,0.05)]">
+        <div className="my-10 flex justify-center sm:my-12">
+          <div className="grid w-full max-w-full grid-cols-2 gap-1 rounded-2xl border border-[#dbe5f2] bg-white p-1.5 shadow-[0_4px_20px_rgba(11,59,110,0.06),0_1px_2px_rgba(11,59,110,0.05)] sm:inline-flex sm:w-auto sm:grid-cols-none sm:overflow-x-auto">
             {programs.map((program) => {
               const active = program.id === activeId
 
@@ -155,7 +155,7 @@ const HomePrograms = () => {
                   type="button"
                   onClick={() => selectProgram(program.id)}
                   aria-pressed={active}
-                  className={`whitespace-nowrap rounded-xl border-0 px-5 py-3 text-[0.825rem] font-medium transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5962e] focus-visible:ring-offset-2 ${active ? 'bg-[#0b3b6e] text-white shadow-[0_4px_14px_rgba(11,59,110,0.28)]' : 'bg-transparent text-[#5d7087] hover:bg-[#eff6ff] hover:text-[#0b3b6e]'}`}
+                  className={`min-w-0 whitespace-normal rounded-xl border-0 px-2 py-2.5 text-xs font-medium sm:whitespace-nowrap sm:px-5 sm:py-3 sm:text-[0.825rem] transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5962e] focus-visible:ring-offset-2 ${active ? 'bg-[#0b3b6e] text-white shadow-[0_4px_14px_rgba(11,59,110,0.28)]' : 'bg-transparent text-[#5d7087] hover:bg-[#eff6ff] hover:text-[#0b3b6e]'}`}
                 >
                   {program.label}
                 </button>
@@ -164,10 +164,10 @@ const HomePrograms = () => {
           </div>
         </div>
 
-        <article className="relative min-h-[380px] overflow-hidden rounded-[2rem] border border-[rgba(11,59,110,0.16)] bg-[linear-gradient(145deg,#ffffff_0%,#f4f8fc_100%)] p-10 text-[#071a36] shadow-[0_20px_40px_-15px_rgba(11,59,110,0.12)] backdrop-blur-2xl">
+        <article className="relative min-h-[760px] overflow-hidden rounded-[2rem] sm:min-h-[620px] lg:min-h-[500px] border border-[rgba(11,59,110,0.16)] bg-[linear-gradient(145deg,#ffffff_0%,#f4f8fc_100%)] p-10 text-[#071a36] shadow-[0_20px_40px_-15px_rgba(11,59,110,0.12)] backdrop-blur-2xl">
           <div className="pointer-events-none absolute -right-10 -top-[30%] h-[350px] w-[350px] bg-[radial-gradient(circle,rgba(14,116,184,0.12)_0%,rgba(255,255,255,0)_70%)]" />
           <div className="pointer-events-none absolute -bottom-[20%] -left-[10%] h-[300px] w-[300px] bg-[radial-gradient(circle,rgba(240,199,94,0.14)_0%,rgba(255,255,255,0)_70%)]" />
-          <div className="relative z-10 min-h-[320px]">
+          <div className="relative z-10 min-h-[680px] sm:min-h-[540px] lg:min-h-[420px]">
             {renderProgramDetails(displayedProgram, isCrossfading ? 'opacity-0' : 'opacity-100')}
             {incomingProgram ? renderProgramDetails(incomingProgram, isCrossfading ? 'opacity-100' : 'opacity-0') : null}
           </div>

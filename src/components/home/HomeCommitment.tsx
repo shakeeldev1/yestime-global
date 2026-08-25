@@ -57,13 +57,13 @@ const HomeCommitment = ({
   return (
     <section
       ref={sectionRef}
-      className={`mx-auto my-11 w-[63%] max-w-7xl rounded-[2.5rem] border border-[#dbe5f2] bg-white p-[2.1rem] shadow-[0_20px_45px_rgba(11,59,110,0.1)] transition-all duration-700 ease-out ${
+      className={`mx-auto my-8 w-[calc(100%-2rem)] max-w-7xl rounded-3xl border border-[#dbe5f2] bg-white p-5 sm:my-11 sm:w-[90%] sm:rounded-[2.5rem] sm:p-8 lg:w-[63%] lg:p-[2.1rem] shadow-[0_20px_45px_rgba(11,59,110,0.1)] transition-all duration-700 ease-out ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'
       } ${className}`}
     >
       {(title || highlight) && (
-        <div className="mb-8 text-center">
-          <h2 className="mb-4 text-[clamp(1.75rem,4vw,2.5rem)] font-normal leading-tight text-[#071a36]">
+        <div className="mb-7 text-center sm:mb-8">
+          <h2 className="mb-4 break-words text-[clamp(1.5rem,6vw,2.5rem)] font-normal leading-tight text-[#071a36] sm:text-[clamp(1.75rem,4vw,2.5rem)]">
             {title}{' '}
             {highlight ? <span className="italic text-[#c5962e]">{highlight}</span> : null}
           </h2>
@@ -71,7 +71,7 @@ const HomeCommitment = ({
       )}
 
       {items.length > 0 ? (
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
           {items.map((item) => {
             const isHovered = hoveredItem === item.id
 
@@ -88,7 +88,7 @@ const HomeCommitment = ({
                     className={`transition-all duration-300 ${isHovered ? 'scale-110 text-[#c5962e]' : 'scale-100 text-[#0b3b6e]'}`}
                   />
                 </div>
-                <p className="m-0 text-base font-normal leading-snug text-[#41566f] transition-colors duration-300 group-hover:text-[#071a36]">{item.text}</p>
+                <p className="m-0 break-words text-sm font-normal leading-6 text-[#41566f] transition-colors duration-300 group-hover:text-[#071a36] sm:text-base sm:leading-snug">{item.text}</p>
               </div>
             )
           })}

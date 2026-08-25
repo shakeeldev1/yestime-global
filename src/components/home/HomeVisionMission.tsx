@@ -161,8 +161,8 @@ const HomeVisionMission = () => {
           })}
         </div>
 
-        <article className="flex min-h-[330px] flex-col rounded-[1.6rem] border border-[rgba(11,59,110,0.16)] bg-gradient-to-br from-white to-[#f4f8fc] p-7 text-[#071a36] shadow-[0_20px_40px_rgba(11,59,110,0.12)]">
-          <div className="relative min-h-[302px]">
+        <article className="flex min-w-0 min-h-[560px] flex-col rounded-[1.6rem] lg:min-h-[330px] border border-[rgba(11,59,110,0.16)] bg-gradient-to-br from-white to-[#f4f8fc] p-7 text-[#071a36] shadow-[0_20px_40px_rgba(11,59,110,0.12)]">
+          <div className="relative min-h-[504px] lg:min-h-[302px]">
             {renderStepDetails(displayedStep, isCrossfading ? 'opacity-0' : 'opacity-100')}
             {incomingStep ? renderStepDetails(incomingStep, isCrossfading ? 'opacity-100' : 'opacity-0') : null}
           </div>

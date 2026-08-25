@@ -71,9 +71,9 @@ const HomeHero = ({
     </a>
   ),
   stats = defaultStats,
-  imageSrc = ['/img.webp', '/variant1_square.webp', '/variant2_square.webp'],
+  imageSrc = ['/img.webp', '/variant2_square.webp', '/variant1_square.webp'],
   imageAlt = 'Yes Time Global logo connecting opportunities worldwide',
-  imageFit = 'cover',
+  imageFit = 'contain',
   className = '',
 }: HomeHeroProps) => {
   const hasSlidesMode = Boolean(slides?.length)
@@ -134,7 +134,7 @@ const HomeHero = ({
   const imageFitClass = imageFit === 'contain' ? 'object-contain' : 'object-cover'
 
   return (
-    <section className={`${className} relative flex min-h-[calc(100vh-4.5rem)] items-center overflow-hidden bg-[linear-gradient(135deg,#ffffff_0%,#f7fafc_58%,#eaf2fb_100%)] py-16`}>
+    <section className={`${className} relative flex min-h-[calc(100dvh-5rem)] items-center overflow-hidden bg-[linear-gradient(135deg,#ffffff_0%,#f7fafc_58%,#eaf2fb_100%)] py-10 lg:h-[calc(100dvh-5rem)] lg:min-h-0 lg:py-8`}>
       <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-12">
         <div key={hasSlidesMode ? currentIndex : 'single-layout'} className="grid items-center gap-12 lg:grid-cols-[minmax(0,7fr)_minmax(280px,5fr)]">
           <div className="flex min-w-0 flex-col gap-6">
@@ -164,7 +164,7 @@ const HomeHero = ({
           </div>
 
           <div className="relative min-w-0">
-            <div className="relative h-[clamp(300px,42vw,480px)] w-full overflow-hidden rounded-2xl border border-[rgba(11,59,110,0.32)] bg-[linear-gradient(145deg,#ffffff_0%,#edf4ff_100%)] shadow-[0_20px_45px_rgba(11,59,110,0.16)]">
+            <div className="relative h-[clamp(260px,42vw,400px)] w-full overflow-hidden rounded-2xl border border-[rgba(11,59,110,0.32)] bg-[#071a36] shadow-[0_20px_45px_rgba(11,59,110,0.16)]">
               <Swiper
                 modules={[Autoplay, EffectFade]}
                 effect="fade"
@@ -179,7 +179,7 @@ const HomeHero = ({
                 className="h-full w-full"
               >
                 {activeImages.map((image, index) => (
-                  <SwiperSlide key={`${image}-${index}`} className="relative !h-full !w-full">
+                  <SwiperSlide key={`${image}-${index}`} className="relative flex !h-full !w-full items-center justify-center bg-[#071a36]">
                     <img src={image} alt={index === 0 ? currentSlide.imageAlt ?? imageAlt : ''} className={`absolute inset-0 block h-full w-full ${imageFitClass}`} />
                   </SwiperSlide>
                 ))}

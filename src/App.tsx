@@ -22,8 +22,10 @@ const MainFunction = () => {
   return (
     <div>
       <Navbaar />
-      <Outlet />
-      <Footer />
+      <BusinessPartners/>
+      {/* <Outlet />
+      <Footer /> */}
+
     </div>
   )
 }

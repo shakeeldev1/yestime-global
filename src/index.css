@@ -1,1 +1,75 @@
 @import "tailwindcss";
+
+@keyframes globe-orbit-gold {
+	from {
+		transform: rotate(35deg) rotateZ(0deg);
+	}
+	to {
+		transform: rotate(35deg) rotateZ(360deg);
+	}
+}
+
+@keyframes globe-orbit-blue {
+	from {
+		transform: rotate(-35deg) rotateZ(360deg);
+	}
+	to {
+		transform: rotate(-35deg) rotateZ(0deg);
+	}
+}
+
+@keyframes globe-float {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-8px);
+	}
+}
+
+@keyframes globe-pulse {
+	0%, 100% {
+		box-shadow: 0 0 60px rgba(0, 100, 255, 0.25);
+	}
+	50% {
+		box-shadow: 0 0 85px rgba(0, 130, 255, 0.42);
+	}
+}
+
+.globe-orbit-gold {
+	animation: globe-orbit-gold 18s linear infinite;
+}
+
+.globe-orbit-blue {
+	animation: globe-orbit-blue 24s linear infinite;
+}
+
+.globe-core {
+	animation: globe-float 5s ease-in-out infinite, globe-pulse 4s ease-in-out infinite;
+}
+
+.globe-outer-glow {
+	animation: globe-pulse 4s ease-in-out infinite;
+}
+
+.globe-marker {
+	animation: globe-float 4s ease-in-out infinite;
+}
+
+.globe-marker-nepal {
+	animation-delay: -1.2s;
+}
+
+.globe-marker-indonesia {
+	animation-delay: -2.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.globe-orbit-gold,
+	.globe-orbit-blue,
+	.globe-core,
+	.globe-outer-glow,
+	.globe-marker {
+		animation: none;
+	}
+}

@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       { path: '/OurPrograms', element: <OurPrograms /> },
       { path: '/HowItWorks', element: <HowItWorks /> },
       { path: '/BusinessPartners', element: <BusinessPartners /> },
-      { path: '/GlobalExpansion', element: <GlobalExpansion /> },
+      { path: '/global-expansion', element: <GlobalExpansion /> },
       { path: '/Investors', element: <Investors /> },
       { path: '/BanksFinancial', element: <BanksFinancial /> },
       { path: '/Customer', element: <Customer /> },

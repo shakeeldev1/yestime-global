@@ -36,6 +36,9 @@ const router = createBrowserRouter([
       { path: '/vision-mission', element: <VissionMission /> },
       { path: '/OurPrograms', element: <OurPrograms /> },
       { path: '/HowItWorks', element: <HowItWorks /> },
+
+      { path: '/BusinessPartners', element: <BusinessPartners /> },
+      { path: '/global-expansion', element: <GlobalExpansion /> },
       { path: '/business-partners', element: <BusinessPartners /> },
       { path: '/GlobalExpansion', element: <GlobalExpansion /> },
       { path: '/Investors', element: <Investors /> },

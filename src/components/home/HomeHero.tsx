@@ -57,7 +57,7 @@ const HomeHero = ({
   primaryAction = (
     <a
       href="#programs"
-      className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-[1.4rem] py-[0.85rem] font-bold text-[#071a36] shadow-[0_10px_22px_rgba(197,150,46,0.24)] transition duration-300 ease-out hover:-translate-y-1 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5962e] focus-visible:ring-offset-2"
+      className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-[1.4rem] py-[0.85rem] text-xs font-bold uppercase tracking-[0.08em] text-[#071a36] shadow-[0_10px_22px_rgba(197,150,46,0.24)] transition duration-300 ease-out hover:-translate-y-1 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5962e] focus-visible:ring-offset-2"
     >
       Explore Programs
     </a>
@@ -65,7 +65,7 @@ const HomeHero = ({
   secondaryAction = (
     <a
       href="#about"
-      className="inline-flex items-center justify-center rounded-full border border-[#0b3b6e] bg-[#0b3b6e] px-[1.4rem] py-[0.85rem] font-semibold text-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_10px_22px_rgba(11,59,110,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b3b6e] focus-visible:ring-offset-2"
+      className="inline-flex items-center justify-center rounded-full border border-[#0b3b6e] bg-[#0b3b6e] px-[1.4rem] py-[0.85rem] text-xs font-bold uppercase tracking-[0.08em] text-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_10px_22px_rgba(11,59,110,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b3b6e] focus-visible:ring-offset-2"
     >
       Discover More
     </a>
@@ -139,13 +139,13 @@ const HomeHero = ({
         <div key={hasSlidesMode ? currentIndex : 'single-layout'} className="grid items-center gap-12 lg:grid-cols-[minmax(0,7fr)_minmax(280px,5fr)]">
           <div className="flex min-w-0 flex-col gap-6">
             <div>
-              <h1 className="m-0 text-[clamp(2.25rem,5vw,4.5rem)] font-normal leading-[1.08] tracking-[-0.04em] text-[#071a36]">
+              <h1 className="m-0 text-[clamp(2rem,5vw,3.5rem)] font-normal leading-[1.1] tracking-[-0.04em] text-[#071a36]">
                 {currentSlide.titleBefore}
-                {currentSlide.titleHighlight ? <span className="block bg-[linear-gradient(135deg,#b8860b_0%,#f0c75e_48%,#c5962e_100%)] bg-clip-text pb-[0.1em] italic leading-[1.18] text-transparent">{currentSlide.titleHighlight}</span> : null}
+                {currentSlide.titleHighlight ? <span className="block text-[#c5962e]">{currentSlide.titleHighlight}</span> : null}
                 {currentSlide.titleAfter}
               </h1>
 
-              {currentSlide.description ? <p className="mt-6 hidden max-w-[42rem] border-l-[3px] border-[#0b3b6e] pl-4 text-lg leading-[1.7] text-[#41566f] md:block">{currentSlide.description}</p> : null}
+              {currentSlide.description ? <p className="mt-5 hidden max-w-[42rem] border-l-[3px] border-[#0b3b6e] pl-4 text-base leading-7 text-[#41566f] md:block">{currentSlide.description}</p> : null}
             </div>
 
             {currentSlide.primaryAction || currentSlide.secondaryAction ? <div className="flex flex-wrap gap-4">{currentSlide.primaryAction}{currentSlide.secondaryAction}</div> : null}
@@ -164,7 +164,7 @@ const HomeHero = ({
           </div>
 
           <div className="relative min-w-0">
-            <div className="relative h-[clamp(260px,42vw,400px)] w-full overflow-hidden rounded-2xl border border-[rgba(11,59,110,0.32)] bg-[#071a36] shadow-[0_20px_45px_rgba(11,59,110,0.16)]">
+            <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-[rgba(11,59,110,0.32)] bg-[#071a36] shadow-[0_20px_45px_rgba(11,59,110,0.16)]">
               <Swiper
                 modules={[Autoplay, EffectFade]}
                 effect="fade"

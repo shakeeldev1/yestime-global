@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 import './App.css'
 
-import Footer from './components/common/Footer'
 import Navbaar from './components/common/Navbaar'
 
 import Home from './pages/Home'
@@ -22,9 +21,7 @@ const MainFunction = () => {
   return (
     <div>
       <Navbaar />
-      <BusinessPartners/>
-      {/* <Outlet />
-      <Footer /> */}
+      <Outlet />
 
     </div>
   )
@@ -39,7 +36,7 @@ const router = createBrowserRouter([
       { path: '/vision-mission', element: <VissionMission /> },
       { path: '/OurPrograms', element: <OurPrograms /> },
       { path: '/HowItWorks', element: <HowItWorks /> },
-      { path: '/BusinessPartners', element: <BusinessPartners /> },
+      { path: '/business-partners', element: <BusinessPartners /> },
       { path: '/GlobalExpansion', element: <GlobalExpansion /> },
       { path: '/Investors', element: <Investors /> },
       { path: '/BanksFinancial', element: <BanksFinancial /> },

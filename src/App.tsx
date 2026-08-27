@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider,  } from 'react-router-dom'
 import './App.css'
 
 import Navbaar from './components/common/Navbaar'

@@ -178,6 +178,17 @@ const Navbaar = () => {
             onToggle={() => toggleDropdown("support")}
           />
 
+          <Link
+            to="/Customer"
+            className={`px-3 py-2 text-sm font-medium transition duration-300 ${
+              isActive("/Customer")
+                ? "text-[#c5a06a]"
+                : "text-white hover:text-[#c5a06a]"
+            }`}
+          >
+            Customers
+          </Link>
+
           {/* CONTACT */}
 
           <Link
@@ -279,6 +290,16 @@ const Navbaar = () => {
             onToggle={() => toggleDropdown("mobile-support")}
             onNavigate={closeMenu}
           />
+
+          <Link
+            to="/Customer"
+            onClick={closeMenu}
+            className={`block border-b border-white/10 py-3 text-sm font-medium ${
+              isActive("/Customer") ? "text-[#c5a06a]" : "text-white"
+            }`}
+          >
+            Customers
+          </Link>
 
           {/* CONTACT */}
 

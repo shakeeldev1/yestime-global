@@ -1,9 +1,19 @@
-import React from 'react'
+import GlobalExpansionHero from "../components/GlobalExpansioncomponent/GlobalExpansionHero";
+import GlobalImpact from "../components/GlobalExpansioncomponent/GlobalImpact";
+import GlobalJourney from "../components/GlobalExpansioncomponent/GlobalJourney";
+import GlobalPartnershipCTA from "../components/GlobalExpansioncomponent/GlobalPartnershipCTA";
+import WhatWeDoGlobally from "../components/GlobalExpansioncomponent/WhatWeDoGlobally";
 
 const GlobalExpansion = () => {
   return (
-    <div>GlobalExpansion</div>
-  )
-}
+    <main>
+      <GlobalExpansionHero />
+      <GlobalImpact/>
+      <WhatWeDoGlobally/>
+      <GlobalJourney/>
+      <GlobalPartnershipCTA/>
+    </main>
+  );
+};
 
-export default GlobalExpansion
+export default GlobalExpansion;

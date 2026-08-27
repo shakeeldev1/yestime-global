@@ -2,114 +2,146 @@ import React from "react";
 import {
   ArrowUpRight,
   Handshake,
-  Headphones,
+  FileCheck,
   Network,
   ShieldCheck,
   TrendingUp,
 } from "lucide-react";
 
 interface DealerBenefit {
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: React.ElementType;
   title: string;
+  image: string;
   description: string;
 }
 
 const dealerBenefits: DealerBenefit[] = [
   {
     icon: Network,
-    title: "Strong Network",
+    title: "Dealer Network",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDj0SFOiYx5AjcQQ3SG01ME_gET6r7nY5kwoQ0wHpxv8swCiiPHSru7C0&s=10",
     description:
-      "Become part of a growing network of professional dealers and business partners.",
+      "Become part of our growing dealer network and establish a professional business relationship with the company.",
   },
   {
     icon: TrendingUp,
-    title: "Growth Opportunities",
+    title: "Business Opportunities",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGp82fhEWXATVgJ0FQJNOL_7Kajz1pl9ksi3ER4jJFrQbIr7t0uvWPS5rH&s=10",
     description:
-      "Unlock new opportunities to expand your business and increase your market reach.",
+      "Explore opportunities to expand your market presence and develop your business through partnership.",
   },
   {
     icon: ShieldCheck,
-    title: "Reliable Partnership",
+    title: "Trusted Partnership",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7QGCuHT0zQz5jH7DSY4lM9XuZ23m5X8-nczwHXUqdxX-AoxNPoQls8BhX&s=10",
     description:
-      "Work with a trusted partner focused on transparency, reliability and long-term growth.",
+      "Build a reliable and long-term partnership based on agreed business terms, company policies and mutual understanding.",
   },
   {
-    icon: Headphones,
-    title: "Partner Support",
+    icon: FileCheck,
+    title: "Formal Process",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAZFZc30J4fo48tm10LxsqD7zE0lPqGU2D0J6Tiz_QYwiDmDUlGf4mwtTP&s=10",
     description:
-      "Get dedicated support to help you build and maintain a successful partnership.",
+      "Dealer applications and business information are reviewed according to company requirements before partnership approval.",
   },
 ];
 
 const Dealers: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-[#020b1c] py-24">
+    <section className="relative overflow-hidden bg-white py-24">
       {/* Background Glow */}
-      <div className="absolute left-[-150px] top-[-100px] h-[400px] w-[400px] rounded-full bg-[#0759c9]/20 blur-[120px]" />
-      <div className="absolute right-[-150px] bottom-[-100px] h-[400px] w-[400px] rounded-full bg-[#f5b72d]/10 blur-[120px]" />
+      <div className="absolute left-[-150px] top-[-100px] h-[400px] w-[400px] rounded-full bg-[#0B2341]/5 blur-[120px]" />
+      <div className="absolute right-[-150px] bottom-[-100px] h-[400px] w-[400px] rounded-full bg-[#C6922B]/10 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Top Content */}
         <div className="grid gap-12 lg:grid-cols-2 lg:items-end">
           <div>
-            <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#f5b72d]">
-              Dealer Network
+            <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#C6922B]">
+              Dealer Partnership
             </span>
 
-            <h2 className="mt-4 text-4xl font-bold leading-tight text-white sm:text-5xl">
-              Build a Stronger
-              <span className="block bg-gradient-to-r from-[#f5b72d] via-[#ffd86a] to-[#c7cbd1] bg-clip-text text-transparent">
+            <h2 className="mt-4 text-4xl font-bold leading-tight text-[#0B2341] sm:text-5xl">
+              Grow Through a Strong
+              <span className="block text-[#C6922B]">
                 Dealer Partnership
               </span>
             </h2>
           </div>
 
-          <p className="text-lg leading-8 text-slate-300">
-            Our dealer partnerships are built around trust, collaboration
-            and sustainable growth. We work closely with dealers to create
-            mutually beneficial business opportunities.
+          <p className="text-lg leading-8 text-[#55708F]">
+            We welcome suitable dealers who can establish a professional
+            business relationship with the company. Our partnership approach
+            focuses on business development, market expansion and long-term
+            cooperation according to mutually agreed terms.
           </p>
         </div>
 
         {/* Dealer Banner */}
-        <div className="relative mt-16 overflow-hidden rounded-3xl border border-[#f5b72d]/20 bg-gradient-to-br from-[#06162f] via-[#031126] to-[#020817] p-8 text-white shadow-2xl shadow-[#001d4d]/40 sm:p-12 lg:p-14">
-          
+        <div className="relative mt-16 overflow-hidden rounded-3xl border border-[#D9E3EF] bg-[#F8FAFC] p-8 shadow-xl shadow-[#0B2341]/5 sm:p-12 lg:p-14">
           {/* Decorative Glows */}
-          <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#0759c9]/20 blur-3xl" />
-          <div className="absolute -bottom-32 left-20 h-80 w-80 rounded-full bg-[#f5b72d]/10 blur-3xl" />
+          <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#0B2341]/5 blur-3xl" />
+          <div className="absolute -bottom-32 left-20 h-80 w-80 rounded-full bg-[#C6922B]/10 blur-3xl" />
 
           {/* Decorative Circle */}
-          <div className="absolute right-[-100px] top-1/2 h-[350px] w-[350px] -translate-y-1/2 rounded-full border border-[#f5b72d]/10" />
-          <div className="absolute right-[-50px] top-1/2 h-[250px] w-[250px] -translate-y-1/2 rounded-full border border-[#1b70e0]/10" />
+          <div className="absolute right-[-100px] top-1/2 h-[350px] w-[350px] -translate-y-1/2 rounded-full border border-[#C6922B]/10" />
+          <div className="absolute right-[-50px] top-1/2 h-[250px] w-[250px] -translate-y-1/2 rounded-full border border-[#0B2341]/10" />
 
           <div className="relative grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-            
             {/* Intro */}
             <div>
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f5b72d] to-[#c98a08] text-[#020b1c] shadow-lg shadow-[#f5b72d]/20">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#0B2341] text-[#C6922B] shadow-lg shadow-[#0B2341]/10">
                 <Handshake size={31} />
               </div>
 
-              <h3 className="mt-7 text-3xl font-bold sm:text-4xl">
+              <h3 className="mt-7 text-3xl font-bold text-[#0B2341] sm:text-4xl">
                 Become Our Dealer
               </h3>
 
-              <p className="mt-5 leading-8 text-slate-300">
-                Join our dealer network and take your business to the next
-                level through a professional and growth-focused partnership.
+              <p className="mt-5 leading-8 text-[#55708F]">
+               Dealers can partner with us to expand our network and drive sustainable business growth.
+
               </p>
 
-              <button className="group mt-8 inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-[#f5b72d] to-[#ffd866] px-7 py-3.5 font-semibold text-[#020b1c] shadow-lg shadow-[#f5b72d]/20 transition duration-300 hover:-translate-y-0.5 hover:shadow-[#f5b72d]/30">
-                Partner With Us
+              <p className="mt-4 leading-8 text-[#55708F]">
+              Interested dealers can submit their business details for review and approval under agreed terms.
+
+              </p>
+
+              <div className="mt-7 rounded-2xl border border-[#C6922B]/20 bg-[#C6922B]/5 p-4">
+                <div className="flex items-start gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-[#C6922B] shadow-sm">
+                    <FileCheck size={20} />
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-bold text-[#0B2341]">
+                      Dealer Partnership Process
+                    </h4>
+
+                    <p className="mt-1 text-sm leading-6 text-[#55708F]">
+                      Business information submission → company review →
+                      approval → agreed terms → formal business partnership.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <button className="group mt-8 inline-flex items-center gap-2 rounded-md bg-[#0B2341] px-7 py-3.5 font-semibold text-white shadow-lg shadow-[#0B2341]/10 transition duration-300 hover:-translate-y-0.5 hover:bg-[#C6922B] hover:shadow-[#C6922B]/20">
+                Become a Dealer
 
                 <ArrowUpRight
                   size={19}
-                  className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 />
               </button>
             </div>
 
-            {/* Benefits */}
+            {/* Benefits With Background Images */}
             <div className="grid gap-4 sm:grid-cols-2">
               {dealerBenefits.map((benefit) => {
                 const Icon = benefit.icon;
@@ -117,22 +149,84 @@ const Dealers: React.FC = () => {
                 return (
                   <div
                     key={benefit.title}
-                    className="group rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#f5b72d]/40 hover:bg-[#0759c9]/10"
+                    className="group relative overflow-hidden rounded-2xl border border-[#D9E3EF] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C6922B] hover:shadow-lg hover:shadow-[#0B2341]/10"
+                    style={{
+                      backgroundImage: `url(${benefit.image})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      minHeight: "250px",
+                    }}
                   >
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f5b72d]/10 text-[#f5b72d] transition duration-300 group-hover:bg-[#f5b72d] group-hover:text-[#020b1c]">
-                      <Icon size={21} />
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-[#0B2341]/80 transition-all duration-300 group-hover:bg-[#0B2341]/70" />
+
+                    {/* Content */}
+                    <div className="relative z-10 flex h-full flex-col p-6">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-white backdrop-blur-sm transition-all duration-300 group-hover:bg-[#C6922B]/20 group-hover:text-[#C6922B]">
+                        <Icon size={22} />
+                      </div>
+
+                      <h4 className="mt-5 text-lg font-bold text-white transition-colors duration-300 group-hover:text-[#C6922B]">
+                        {benefit.title}
+                      </h4>
+
+                      <p className="mt-3 text-sm leading-6 text-white/85">
+                        {benefit.description}
+                      </p>
                     </div>
-
-                    <h4 className="mt-5 text-lg font-bold text-white">
-                      {benefit.title}
-                    </h4>
-
-                    <p className="mt-2 text-sm leading-6 text-slate-400">
-                      {benefit.description}
-                    </p>
                   </div>
                 );
               })}
+            </div>
+          </div>
+
+          {/* Bottom Highlight */}
+          <div className="relative mt-10 border-t border-[#D9E3EF] pt-8">
+            <div className="grid gap-5 sm:grid-cols-3">
+              <div className="flex items-start gap-3">
+                <Handshake
+                  size={20}
+                  className="mt-1 shrink-0 text-[#C6922B]"
+                />
+                <div>
+                  <h5 className="font-semibold text-[#0B2341]">
+                    Mutual Cooperation
+                  </h5>
+                  <p className="mt-1 text-sm leading-6 text-[#55708F]">
+                    Partnership based on mutual understanding and cooperation.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <TrendingUp
+                  size={20}
+                  className="mt-1 shrink-0 text-[#C6922B]"
+                />
+                <div>
+                  <h5 className="font-semibold text-[#0B2341]">
+                    Market Expansion
+                  </h5>
+                  <p className="mt-1 text-sm leading-6 text-[#55708F]">
+                    Support business reach and future market opportunities.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <ShieldCheck
+                  size={20}
+                  className="mt-1 shrink-0 text-[#C6922B]"
+                />
+                <div>
+                  <h5 className="font-semibold text-[#0B2341]">
+                    Long-Term Growth
+                  </h5>
+                  <p className="mt-1 text-sm leading-6 text-[#55708F]">
+                    Develop sustainable and professional business relations.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

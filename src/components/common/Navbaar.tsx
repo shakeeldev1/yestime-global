@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import {
-  ChevronDown,
-  Menu,
-  X,
-} from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 interface DropdownItem {
   name: string;
@@ -18,32 +14,27 @@ interface DropdownProps {
   onToggle: () => void;
 }
 
-const Dropdown = ({
-  title,
-  items,
-  isOpen,
-  onToggle,
-}: DropdownProps) => {
+const Dropdown = ({ title, items, isOpen, onToggle }: DropdownProps) => {
   const location = useLocation();
 
   return (
     <div className="relative">
       <button
         onClick={onToggle}
-        className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-white transition duration-300 hover:text-[#c5a06a]"
+        className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-white transition duration-300 hover:text-[#D4AF37]"
       >
         {title}
 
         <ChevronDown
           size={16}
           className={`transition-transform duration-300 ${
-            isOpen ? "rotate-180" : ""
+            isOpen ? "rotate-180 text-[#D4AF37]" : ""
           }`}
         />
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 top-full mt-2 w-56 overflow-hidden rounded-lg border border-[#c5a06a]/30 bg-[#071a31] shadow-2xl">
+        <div className="absolute left-0 top-full mt-2 w-56 overflow-hidden rounded-lg border border-[#D4AF37]/30 bg-[#000000] shadow-2xl backdrop-blur-md">
           {items.map((item) => {
             const active = location.pathname === item.path;
 
@@ -53,8 +44,8 @@ const Dropdown = ({
                 to={item.path}
                 className={`block px-5 py-3 text-sm transition duration-300 ${
                   active
-                    ? "bg-[#c5a06a]/15 text-[#c5a06a]"
-                    : "text-white hover:bg-[#c5a06a]/10 hover:pl-7 hover:text-[#c5a06a]"
+                    ? "bg-[#D4AF37]/15 text-[#D4AF37]"
+                    : "text-white hover:bg-[#D4AF37]/10 hover:pl-7 hover:text-[#D4AF37]"
                 }`}
               >
                 {item.name}
@@ -74,9 +65,7 @@ const Navbaar = () => {
   const location = useLocation();
 
   const toggleDropdown = (name: string) => {
-    setOpenDropdown(
-      openDropdown === name ? null : name
-    );
+    setOpenDropdown(openDropdown === name ? null : name);
   };
 
   const closeMenu = () => {
@@ -88,73 +77,41 @@ const Navbaar = () => {
     return location.pathname === path;
   };
 
+  /* ================= DROPDOWN DATA ================= */
+
   const aboutItems: DropdownItem[] = [
-    {
-      name: "About Us",
-      path: "/about",
-    },
-    {
-      name: "Vision & Mission",
-      path: "/vision-mission",
-    },
+    { name: "About Us", path: "/about" },
+    { name: "Vision & Mission", path: "/vision-mission" },
   ];
 
   const programItems: DropdownItem[] = [
-    {
-      name: "Our Programs",
-      path: "/our-programs",
-    },
-    {
-      name: "How It Works",
-      path: "/how-it-works",
-    },
+    { name: "Our Programs", path: "/our-programs" },
+    { name: "How It Works", path: "/how-it-works" },
   ];
 
   const businessItems: DropdownItem[] = [
-    {
-      name: "Business Partners",
-      path: "/business-partners",
-    },
-    {
-      name: "Global Expansion",
-      path: "/global-expansion",
-    },
+    { name: "Business Partners", path: "/business-partners" },
+    { name: "Global Expansion", path: "/global-expansion" },
   ];
 
   const financeItems: DropdownItem[] = [
-    {
-      name: "Investors",
-      path: "/Investors",
-    },
-    {
-      name: "Banks & Financial",
-      path: "/BanksFinancial",
-    },
+    { name: "Investors", path: "/investors" },
+    { name: "Banks & Financial", path: "/banks-financial" },
   ];
 
   const supportItems: DropdownItem[] = [
-    {
-      name: "Customer",
-      path: "/Customer",
-    },
-    {
-      name: "FAQs",
-      path: "/faqs",
-    },
+    { name: "Customer", path: "/customer" },
+    { name: "FAQs", path: "/faqs" },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-[#c5a06a]/30 bg-[#061326]/95 shadow-lg backdrop-blur-md">
+    <nav className="sticky top-0 z-50 w-full border-b border-[#D4AF37]/20 bg-[#000000] shadow-xl backdrop-blur-md">
+      {/* ================= MAIN NAVBAR ================= */}
 
       <div className="mx-auto flex h-20 max-w-[1450px] items-center justify-between px-5 md:px-8 lg:px-10">
-
         {/* ================= LOGO ================= */}
 
-        <Link
-          to="/"
-          onClick={closeMenu}
-          className="flex items-center"
-        >
+        <Link to="/" onClick={closeMenu} className="flex items-center">
           <img
             src="/logo.png"
             alt="Yes Time Global"
@@ -162,18 +119,15 @@ const Navbaar = () => {
           />
         </Link>
 
-        {/* ================= DESKTOP NAVBAR ================= */}
+        {/* ================= DESKTOP MENU ================= */}
 
         <div className="hidden items-center gap-1 lg:flex">
-
           {/* HOME */}
 
           <Link
             to="/"
             className={`px-3 py-2 text-sm font-medium transition duration-300 ${
-              isActive("/")
-                ? "text-[#c5a06a]"
-                : "text-white hover:text-[#c5a06a]"
+              isActive("/") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
             }`}
           >
             Home
@@ -239,10 +193,10 @@ const Navbaar = () => {
 
           <Link
             to="/contact-us"
-            className={`ml-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition duration-300 ${
+            className={`ml-3 rounded-full border px-5 py-2.5 text-sm font-semibold transition duration-300 ${
               isActive("/contact-us")
-                ? "border-[#c5a06a] bg-[#c5a06a] text-[#061326]"
-                : "border-[#c5a06a] text-[#c5a06a] hover:bg-[#c5a06a] hover:text-[#061326]"
+                ? "border-[#D4AF37] bg-[#D4AF37] text-[#000000]"
+                : "border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#000000]"
             }`}
           >
             Contact Us
@@ -254,44 +208,34 @@ const Navbaar = () => {
             to="/legal-pages"
             className={`ml-2 px-3 py-2 text-sm font-medium transition duration-300 ${
               isActive("/legal-pages")
-                ? "text-[#c5a06a]"
-                : "text-white hover:text-[#c5a06a]"
+                ? "text-[#D4AF37]"
+                : "text-white hover:text-[#D4AF37]"
             }`}
           >
             Legal
           </Link>
-
         </div>
-
-        {/* ================= MOBILE BUTTON ================= */}
 
         <button
           onClick={() => setMobileMenu(!mobileMenu)}
           className="rounded-lg p-2 text-white transition hover:bg-white/10 lg:hidden"
           aria-label="Toggle menu"
         >
-          {mobileMenu ? (
-            <X size={28} />
-          ) : (
-            <Menu size={28} />
-          )}
+          {mobileMenu ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* ================= MOBILE MENU ================= */}
 
       {mobileMenu && (
-        <div className="border-t border-[#c5a06a]/20 bg-[#061326] px-5 pb-6 pt-4 lg:hidden">
-
+        <div className="border-t border-[#D4AF37]/20 bg-[#000000] px-5 pb-6 pt-4 lg:hidden">
           {/* HOME */}
 
           <Link
             to="/"
             onClick={closeMenu}
             className={`block border-b border-white/10 py-3 text-sm font-medium ${
-              isActive("/")
-                ? "text-[#c5a06a]"
-                : "text-white"
+              isActive("/") ? "text-[#D4AF37]" : "text-white"
             }`}
           >
             Home
@@ -362,7 +306,7 @@ const Navbaar = () => {
           <Link
             to="/contact-us"
             onClick={closeMenu}
-            className="mt-4 block rounded-full bg-[#c5a06a] px-5 py-3 text-center text-sm font-semibold text-[#061326] transition hover:bg-[#d8b87b]"
+            className="mt-4 block rounded-full bg-[#D4AF37] px-5 py-3 text-center text-sm font-semibold text-[#000000] transition duration-300 hover:bg-[#c5a06a]"
           >
             Contact Us
           </Link>
@@ -372,11 +316,10 @@ const Navbaar = () => {
           <Link
             to="/legal-pages"
             onClick={closeMenu}
-            className="mt-3 block py-3 text-center text-sm text-white hover:text-[#c5a06a]"
+            className="mt-3 block py-3 text-center text-sm text-white transition hover:text-[#D4AF37]"
           >
             Legal Pages
           </Link>
-
         </div>
       )}
     </nav>
@@ -402,7 +345,6 @@ const MobileDropdown = ({
 }: MobileDropdownProps) => {
   return (
     <div className="border-b border-white/10">
-
       <button
         onClick={onToggle}
         className="flex w-full items-center justify-between py-3 text-sm font-medium text-white"
@@ -412,19 +354,19 @@ const MobileDropdown = ({
         <ChevronDown
           size={18}
           className={`transition-transform duration-300 ${
-            isOpen ? "rotate-180 text-[#c5a06a]" : ""
+            isOpen ? "rotate-180 text-[#D4AF37]" : ""
           }`}
         />
       </button>
 
       {isOpen && (
-        <div className="mb-2 rounded-lg bg-white/5">
+        <div className="mb-2 rounded-lg bg-[#0a0a0a]">
           {items.map((item) => (
             <Link
               key={item.path}
               to={item.path}
               onClick={onNavigate}
-              className="block px-5 py-3 text-sm text-gray-300 transition hover:bg-[#c5a06a]/10 hover:text-[#c5a06a]"
+              className="block px-5 py-3 text-sm text-gray-300 transition duration-300 hover:bg-[#D4AF37]/10 hover:text-[#D4AF37]"
             >
               {item.name}
             </Link>
@@ -435,4 +377,4 @@ const MobileDropdown = ({
   );
 };
 
-export default Navbaar;
+export default Navbaar; 

@@ -62,16 +62,52 @@
 }
 
 .global-expansion-page #global-expansion {
-	background: #eef4fa;
+	background: #020b1c;
 }
 
-.global-expansion-page #global-expansion img {
-	opacity: 0.18;
-	filter: saturate(0.8);
+.global-expansion-page #global-expansion .global-expansion-background {
+	opacity: 1;
+	filter: saturate(0.9) contrast(1.05);
 }
 
 .global-expansion-page #global-expansion [class*="bg-[#020B1C]/85"] {
-	background-color: rgba(247, 250, 252, 0.84) !important;
+	background: linear-gradient(90deg, rgba(2, 11, 28, 0.82) 0%, rgba(2, 11, 28, 0.58) 52%, rgba(2, 11, 28, 0.7) 100%) !important;
+}
+
+.global-expansion-page #global-expansion [class*="text-white"] {
+	color: #ffffff !important;
+}
+
+.global-expansion-page #global-expansion [class*="text-slate-300"] {
+	color: #d7e0eb !important;
+}
+
+.global-expansion-page #global-expansion [class*="bg-[#07152D]"] {
+	background-color: rgba(2, 11, 28, 0.78) !important;
+}
+
+.global-expansion-page #global-expansion [class*="bg-white/5"] {
+	background-color: rgba(0, 0, 0, 0.28) !important;
+}
+
+.global-expansion-page #global-expansion .globe-marker > span.rounded-md {
+	background-color: #ffffff !important;
+	border-color: rgba(11, 59, 110, 0.2) !important;
+	color: #071a36 !important;
+	font-weight: 600;
+	text-shadow: none;
+}
+
+.global-expansion-page #global-expansion .swiper-slide {
+	backface-visibility: hidden;
+}
+
+.global-expansion-page #global-expansion .swiper-slide h1,
+.global-expansion-page #global-expansion .swiper-slide h2,
+.global-expansion-page #global-expansion .swiper-slide p,
+.global-expansion-page #global-expansion .swiper-slide a,
+.global-expansion-page #global-expansion .swiper-slide span {
+	text-shadow: 0 1px 16px rgba(2, 11, 28, 0.28);
 }
 
 .global-expansion-page [class*="bg-[#07152D]"],

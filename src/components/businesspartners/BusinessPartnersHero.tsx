@@ -25,7 +25,7 @@ const BusinessPartnersHero: React.FC = () => {
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-8 text-slate-200 sm:text-lg">
               We believe strong partnerships create stronger businesses.
               Join our growing network of shops, showrooms and dealers
               and become a valuable part of our business ecosystem.

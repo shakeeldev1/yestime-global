@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero from '../components/VissionMission/Hero'
 import LiveClocks from '../components/VissionMission/LiveClocks'
 import VisionMission from '../components/VissionMission/VisionMission'

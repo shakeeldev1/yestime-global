@@ -6,7 +6,7 @@ import WhatWeDoGlobally from "../components/GlobalExpansioncomponent/WhatWeDoGlo
 
 const GlobalExpansion = () => {
   return (
-    <main>
+    <main className="global-expansion-page">
       <GlobalExpansionHero />
       <GlobalImpact/>
       <WhatWeDoGlobally/>

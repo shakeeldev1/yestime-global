@@ -30,7 +30,7 @@ interface Slide {
   countries: string[];
 }
 
-const GlobalExpansionHero: React.FC = () => {
+const   GlobalExpansionHero: React.FC = () => {
   const slides: Slide[] = [
     {
       id: 1,
@@ -41,7 +41,7 @@ const GlobalExpansionHero: React.FC = () => {
       subtitle: "Expanding Our Reach Beyond Borders",
       description:
         "YES TIME GLOBAL is expanding its presence across different countries, creating opportunities for wider international participation and building stronger global connections.",
-      countries: ["Pakistan", "Nepal", "Indonesia"],
+      countries: ["🇵🇰 Pakistan", "🇳🇵 Nepal", "🇮🇩 Indonesia"],
     },
 
     {
@@ -70,10 +70,10 @@ const GlobalExpansionHero: React.FC = () => {
       description:
         "Our journey does not stop with the current countries. In the future, other countries will also become part of our growing international presence.",
       countries: [
-        "Pakistan",
-        "Nepal",
-        "Indonesia",
-        "Future Countries",
+        "🇵🇰 Pakistan",
+        "🇳🇵 Nepal",
+        "🇮🇩 Indonesia",
+        "🌍 Future Countries",
       ],
     },
   ];

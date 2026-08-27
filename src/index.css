@@ -1,5 +1,88 @@
 @import "tailwindcss";
 
+/* Keep the global expansion page aligned with the light home-page theme. */
+.global-expansion-page {
+	background: linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
+	color: #071a36;
+}
+
+.global-expansion-page [class*="bg-[#020B1C]"],
+.global-expansion-page [class*="bg-[#07152D]"],
+.global-expansion-page [class*="bg-[#06152D]"],
+.global-expansion-page [class*="bg-[#041B38]"] {
+	background-color: #ffffff !important;
+}
+
+.global-expansion-page [class*="bg-[#091A35]"] {
+	background-color: #eef5fb !important;
+}
+
+.global-expansion-page [class*="text-white"] {
+	color: #071a36 !important;
+}
+
+.global-expansion-page [class*="text-slate-300"] {
+	color: #41566f !important;
+}
+
+.global-expansion-page [class*="text-slate-400"],
+.global-expansion-page [class*="text-slate-500"] {
+	color: #5d7087 !important;
+}
+
+.global-expansion-page [class*="text-slate-100"] {
+	color: #0b2b52 !important;
+}
+
+.global-expansion-page [class*="border-white"] {
+	border-color: rgba(11, 59, 110, 0.16) !important;
+}
+
+.global-expansion-page [class*="bg-white/[0.07]"],
+.global-expansion-page [class*="bg-white/5"] {
+	background-color: #eff6ff !important;
+}
+
+.global-expansion-page [class*="bg-[#020B1C]/85"] {
+	background-color: rgba(255, 255, 255, 0.86) !important;
+}
+
+.global-expansion-page [class*="bg-[#020B1C]/70"],
+.global-expansion-page [class*="bg-[#020B1C]/"] {
+	background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.global-expansion-page [class*="text-[#FFD45A]"],
+.global-expansion-page [class*="text-[#D9A21B]"] {
+	color: #a97916 !important;
+}
+
+.global-expansion-page section {
+	background-image: linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
+}
+
+.global-expansion-page #global-expansion {
+	background: #eef4fa;
+}
+
+.global-expansion-page #global-expansion img {
+	opacity: 0.18;
+	filter: saturate(0.8);
+}
+
+.global-expansion-page #global-expansion [class*="bg-[#020B1C]/85"] {
+	background-color: rgba(247, 250, 252, 0.84) !important;
+}
+
+.global-expansion-page [class*="bg-[#07152D]"],
+.global-expansion-page [class*="bg-[#07152D]/"] {
+	box-shadow: 0 14px 32px rgba(11, 59, 110, 0.08);
+}
+
+.global-expansion-page [class*="rounded-2xl"][class*="border"]:hover {
+	box-shadow: 0 18px 36px rgba(11, 59, 110, 0.13);
+}
+
 @keyframes globe-orbit-gold {
 	from {
 		transform: rotate(35deg) rotateZ(0deg);

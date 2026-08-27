@@ -1,7 +1,6 @@
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider,  } from 'react-router-dom'
 import './App.css'
 
-import Footer from './components/common/Footer'
 import Navbaar from './components/common/Navbaar'
 
 import Home from './pages/Home'
@@ -22,9 +21,7 @@ const MainFunction = () => {
   return (
     <div>
       <Navbaar />
-      <BusinessPartners/>
-      {/* <Outlet />
-      <Footer /> */}
+    
 
     </div>
   )

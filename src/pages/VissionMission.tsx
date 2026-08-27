@@ -1,8 +1,18 @@
 import React from 'react'
+import Hero from '../components/VissionMission/Hero'
+
 
 const VissionMission = () => {
   return (
-    <div>Vission&Mission</div>
+    <div>
+
+
+
+    <Hero />
+
+
+
+    </div>
   )
 }
 

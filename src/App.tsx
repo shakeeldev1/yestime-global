@@ -21,7 +21,7 @@ const MainFunction = () => {
   return (
     <div>
       <Navbaar />
-    
+      <Outlet />
 
     </div>
   )
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       { path: '/vision-mission', element: <VissionMission /> },
       { path: '/OurPrograms', element: <OurPrograms /> },
       { path: '/HowItWorks', element: <HowItWorks /> },
-      { path: '/BusinessPartners', element: <BusinessPartners /> },
+      { path: '/business-partners', element: <BusinessPartners /> },
       { path: '/GlobalExpansion', element: <GlobalExpansion /> },
       { path: '/Investors', element: <Investors /> },
       { path: '/BanksFinancial', element: <BanksFinancial /> },

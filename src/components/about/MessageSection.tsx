@@ -1,34 +1,43 @@
 export default function MessageSection() {
   return (
-    <section className="bg-[#FAF9F5] py-16 px-6">
-      <div className="mx-auto max-w-5xl text-center">
-        {/* Eyebrow Header */}
-        <p className="text-xs font-semibold tracking-[0.25em] text-[#C4A052] uppercase mb-2">
-          OUR MESSAGE
-        </p>
+    <section className="w-full bg-white px-4 py-20 sm:px-6 lg:px-10">
+      <div className="mx-auto max-w-6xl">
 
-        {/* Main Heading */}
-        <h2 className="text-4xl font-bold text-[#1B2534] mb-10">
-          Our Message
-        </h2>
-
-        {/* Quote Card */}
-        <div className="relative bg-white rounded-2xl p-8 md:p-12 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-gray-100 max-w-4xl mx-auto">
-          {/* Quote Icon */}
-          <span className="absolute top-4 right-6 text-5xl text-[#F3C262] opacity-80 select-none">
-            “
-          </span>
-
-          {/* Main Quote Text */}
-          <p className="text-[#3E526D] text-base md:text-lg font-normal mb-6">
-            "Connect opportunities, move business forward, and take a step toward the future."
+        {/* Section Heading */}
+        <div className="mb-14 text-center">
+          <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#B08D57]">
+            OUR MESSAGE
           </p>
 
-          {/* Gold Highlighted Sub-text */}
-          <p className="text-[#F3C262] text-base md:text-lg font-normal">
-            With a mission to bring people around the world closer together.
-          </p>
+          <h2 className="font-serif text-4xl font-semibold leading-tight text-[#102A43] sm:text-5xl">
+            Our message
+          </h2>
         </div>
+
+        {/* Message Card */}
+        <div className="mx-auto flex min-h-[390px] max-w-6xl items-center justify-center rounded-[22px] border border-[#102A43]/10 bg-white px-6 py-14 text-center shadow-sm sm:px-10 lg:px-16">
+
+          <div className="w-full">
+
+            {/* Quote Mark */}
+            <div className="mb-10 font-serif text-5xl font-bold leading-none text-[#D5A843]">
+              “
+            </div>
+
+            {/* Main Message */}
+            <p className="mx-auto max-w-5xl font-serif text-2xl font-normal italic leading-[1.6] text-[#102A43] sm:text-3xl lg:text-[32px]">
+              Connect opportunities, move business forward, and take a step
+              toward the future.
+            </p>
+
+            {/* Bottom Message */}
+            <p className="mt-10 text-sm font-semibold uppercase tracking-[0.08em] text-[#B08D57] sm:text-base">
+              A NEW EFFORT TO CONNECT OPPORTUNITIES ACROSS THE WORLD
+            </p>
+
+          </div>
+        </div>
+
       </div>
     </section>
   );

@@ -41,7 +41,7 @@ const GlobalExpansionHero: React.FC = () => {
       subtitle: "Expanding Our Reach Beyond Borders",
       description:
         "YES TIME GLOBAL is expanding its presence across different countries, creating opportunities for wider international participation and building stronger global connections.",
-      countries: ["Pakistan", "Nepal", "Indonesia"],
+      countries: ["🇵🇰 Pakistan", "🇳🇵 Nepal", "🇮🇩 Indonesia"],
     },
 
     {
@@ -70,10 +70,10 @@ const GlobalExpansionHero: React.FC = () => {
       description:
         "Our journey does not stop with the current countries. In the future, other countries will also become part of our growing international presence.",
       countries: [
-        "Pakistan",
-        "Nepal",
-        "Indonesia",
-        "Future Countries",
+        "🇵🇰 Pakistan",
+        "🇳🇵 Nepal",
+        "🇮🇩 Indonesia",
+        "🌍 Future Countries",
       ],
     },
   ];
@@ -120,10 +120,10 @@ const GlobalExpansionHero: React.FC = () => {
             <div className="relative min-h-[680px] md:min-h-[720px]">
               {/* Background Image */}
 
-              <img
-                src={slide.image}
-                alt={`${slide.title} - YES TIME GLOBAL`}
-                className="absolute inset-0 h-full w-full object-cover"
+              <div
+                aria-hidden="true"
+                className="global-expansion-background absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${slide.image})` }}
               />
 
               {/* Dark Overlay */}
@@ -157,13 +157,13 @@ const GlobalExpansionHero: React.FC = () => {
                   CONTENT
               ========================================= */}
 
-              <div className="relative z-10 mx-auto flex min-h-[680px] max-w-7xl items-center px-5 py-20 sm:px-8 md:min-h-[720px] lg:px-12">
+              <div className="relative z-20 mx-auto flex min-h-[680px] max-w-7xl items-center px-5 py-20 sm:px-8 md:min-h-[720px] lg:px-12">
                 <div className="grid w-full items-center gap-14 lg:grid-cols-2">
                   {/* =====================================
                       LEFT CONTENT
                   ===================================== */}
 
-                  <div className="max-w-3xl">
+                  <div className="relative z-10 max-w-3xl">
                     {/* Badge */}
 
                     <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#D9A21B]/40 bg-[#07152D]/70 px-4 py-2 backdrop-blur-sm">
@@ -211,19 +211,19 @@ const GlobalExpansionHero: React.FC = () => {
                         COUNTRIES
                     ===================================== */}
 
-                    <div className="mt-7 flex flex-wrap gap-2.5">
+                    <div className="mt-5 flex flex-wrap items-center gap-2">
                       {slide.countries.map(
                         (country, index) => (
                           <div
                             key={`${slide.id}-${index}`}
-                            className="flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.07] px-3.5 py-2 transition duration-300 hover:border-[#D9A21B]/70 hover:bg-white/10"
+                            className="mx-0 flex min-w-0 shrink-0 items-center gap-2 rounded-full border border-white/15 bg-white/[0.07] px-3 py-1.5 transition duration-300 hover:border-[#D9A21B]/70 hover:bg-white/10"
                           >
                             <MapPin
                               size={14}
                               className="text-[#FFD45A]"
                             />
 
-                            <span className="text-sm font-medium text-slate-100">
+                            <span className="whitespace-nowrap text-sm font-medium text-[#0b2b52]">
                               {country}
                             </span>
                           </div>

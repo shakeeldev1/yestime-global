@@ -1,5 +1,161 @@
 @import "tailwindcss";
 
+/* Keep the global expansion page aligned with the light home-page theme. */
+.global-expansion-page {
+	background: linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
+	color: #071a36;
+}
+
+.global-expansion-page [class*="bg-[#020B1C]"],
+.global-expansion-page [class*="bg-[#07152D]"],
+.global-expansion-page [class*="bg-[#06152D]"],
+.global-expansion-page [class*="bg-[#041B38]"] {
+	background-color: #ffffff !important;
+}
+
+.global-expansion-page [class*="bg-[#091A35]"] {
+	background-color: #eef5fb !important;
+}
+
+.global-expansion-page [class*="text-white"] {
+	color: #071a36 !important;
+}
+
+.global-expansion-page [class*="text-slate-300"] {
+	color: #41566f !important;
+}
+
+.global-expansion-page [class*="text-slate-400"],
+.global-expansion-page [class*="text-slate-500"] {
+	color: #5d7087 !important;
+}
+
+.global-expansion-page [class*="text-slate-100"] {
+	color: #0b2b52 !important;
+}
+
+.global-expansion-page [class*="border-white"] {
+	border-color: rgba(11, 59, 110, 0.16) !important;
+}
+
+.global-expansion-page [class*="bg-white/[0.07]"],
+.global-expansion-page [class*="bg-white/5"] {
+	background-color: #eff6ff !important;
+}
+
+.global-expansion-page [class*="bg-[#020B1C]/85"] {
+	background-color: rgba(255, 255, 255, 0.86) !important;
+}
+
+.global-expansion-page [class*="bg-[#020B1C]/70"],
+.global-expansion-page [class*="bg-[#020B1C]/"] {
+	background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.global-expansion-page [class*="text-[#FFD45A]"],
+.global-expansion-page [class*="text-[#D9A21B]"] {
+	color: #a97916 !important;
+}
+
+.global-expansion-page section {
+	background-image: linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
+}
+
+.global-expansion-page #global-expansion {
+	background: #020b1c;
+}
+
+.global-expansion-page #global-expansion .global-expansion-background {
+	opacity: 1;
+	filter: saturate(0.9) contrast(1.05);
+}
+
+.global-expansion-page #global-expansion [class*="bg-[#020B1C]/85"] {
+	background: linear-gradient(90deg, rgba(2, 11, 28, 0.82) 0%, rgba(2, 11, 28, 0.58) 52%, rgba(2, 11, 28, 0.7) 100%) !important;
+}
+
+.global-expansion-page #global-expansion [class*="text-white"] {
+	color: #ffffff !important;
+}
+
+.global-expansion-page #global-expansion [class*="text-slate-300"] {
+	color: #d7e0eb !important;
+}
+
+.global-expansion-page #global-expansion [class*="bg-[#07152D]"] {
+	background-color: rgba(2, 11, 28, 0.78) !important;
+}
+
+.global-expansion-page #global-expansion [class*="bg-white/5"] {
+	background-color: rgba(0, 0, 0, 0.28) !important;
+}
+
+.global-expansion-page #global-expansion .globe-marker > span.rounded-md {
+	background-color: #ffffff !important;
+	border-color: rgba(11, 59, 110, 0.2) !important;
+	color: #071a36 !important;
+	font-weight: 600;
+	text-shadow: none;
+}
+
+.global-expansion-page #global-expansion .swiper-slide {
+	backface-visibility: hidden;
+}
+
+.global-expansion-page #global-expansion .swiper-slide h1,
+.global-expansion-page #global-expansion .swiper-slide h2,
+.global-expansion-page #global-expansion .swiper-slide p,
+.global-expansion-page #global-expansion .swiper-slide a,
+.global-expansion-page #global-expansion .swiper-slide span {
+	text-shadow: 0 1px 16px rgba(2, 11, 28, 0.28);
+}
+
+.global-expansion-page [class*="bg-[#07152D]"],
+.global-expansion-page [class*="bg-[#07152D]/"] {
+	box-shadow: 0 14px 32px rgba(11, 59, 110, 0.08);
+}
+
+.global-expansion-page [class*="rounded-2xl"][class*="border"]:hover {
+	box-shadow: 0 18px 36px rgba(11, 59, 110, 0.13);
+}
+
+.global-expansion-page .global-journey-card {
+	background-color: #07152d !important;
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: 0 18px 40px rgba(2, 11, 28, 0.16);
+}
+
+.global-expansion-page .global-journey-card-overlay {
+	background: linear-gradient(90deg, rgba(2, 11, 28, 0.94) 0%, rgba(2, 11, 28, 0.78) 48%, rgba(2, 11, 28, 0.28) 100%);
+}
+
+.global-expansion-page .global-journey-card:hover .global-journey-card-overlay {
+	background: linear-gradient(90deg, rgba(2, 11, 28, 0.9) 0%, rgba(2, 11, 28, 0.66) 46%, rgba(2, 11, 28, 0.16) 100%);
+}
+
+.global-expansion-page .global-journey-card:hover {
+	background-position: 54% center;
+	box-shadow: 0 24px 48px rgba(2, 11, 28, 0.24);
+}
+
+.global-expansion-page .global-journey-card .border-white\/10 {
+	border-color: rgba(255, 255, 255, 0.28) !important;
+}
+
+.global-expansion-page .global-journey-card .bg-white\/5 {
+	background-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+.global-expansion-page .global-journey-card .text-white {
+	color: #ffffff !important;
+}
+
+.global-expansion-page .global-journey-card .text-slate-400,
+.global-expansion-page .global-journey-card .text-slate-500 {
+	color: #d7e0eb !important;
+}
+
 @keyframes globe-orbit-gold {
 	from {
 		transform: rotate(35deg) rotateZ(0deg);

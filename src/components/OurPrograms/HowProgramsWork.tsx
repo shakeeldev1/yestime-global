@@ -1,100 +1,88 @@
-import {
-  UserPlus,
-  Search,
-  FileText,
-  ShieldCheck,
-  CreditCard,
-  Gift,
-} from "lucide-react";
+import React from "react";
 
-const steps = [
+interface Step {
+  number: string;
+  title: string;
+  description: string;
+}
+
+const steps: Step[] = [
   {
     number: "01",
-    title: "Register",
-    text: "Create your account with basic information.",
-    icon: UserPlus,
+    title: "Choose Your Plan",
+    description: "Pick the plan that fits your need and budget.",
   },
   {
     number: "02",
-    title: "Explore",
-    text: "Browse programs and choose what suits you.",
-    icon: Search,
+    title: "Review Full Details",
+    description: "See complete plan information before you proceed.",
   },
   {
     number: "03",
-    title: "Apply / Submit",
-    text: "Submit required details and documents.",
-    icon: FileText,
+    title: "Submit Application",
+    description: "Send your request with the required details.",
   },
   {
     number: "04",
-    title: "Verification",
-    text: "We verify your information for security.",
-    icon: ShieldCheck,
+    title: "Make Payments",
+    description: "Pay the agreed installment on your chosen plan.",
   },
   {
     number: "05",
-    title: "Payments",
-    text: "Make payments as per the plan you choose.",
-    icon: CreditCard,
+    title: "Track Your Plan",
+    description: "Monitor installments, balance & status anytime.",
   },
   {
     number: "06",
-    title: "Enjoy Benefits",
-    text: "Receive your benefits and stay connected.",
-    icon: Gift,
+    title: "Plan Completion",
+    description: "Once terms are met, your plan is complete.",
   },
 ];
 
 const HowProgramsWork = () => {
   return (
-    <section className="bg-[#f4f0e8] px-5 py-20 text-[#071426] md:px-10 md:py-24 lg:px-16">
-      <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-        <div className="lg:sticky lg:top-10 lg:self-start">
-          <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#b27a18]">
-            How it works
-          </p>
-          <h2 className="mt-4 font-[Playfair_Display] text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
-            From first step
-            <span className="block italic text-[#b27a18]">to real benefits.</span>
-          </h2>
-          <p className="mt-6 max-w-md text-base leading-7 text-[#59616b]">
-            Getting started is straightforward. Follow six simple steps and
-            stay in control at every stage of your journey.
-          </p>
-          <div className="mt-9 flex items-center gap-3 text-sm font-semibold text-[#071426]">
-            <span className="h-px w-12 bg-[#b27a18]" />
-            <span>Simple. Secure. Clear.</span>
-          </div>
-        </div>
+    <section className="bg-[#0e1b30] px-6 py-[100px] text-center text-white lg:px-8">
+      <div className="mx-auto max-w-[1160px]">
+        <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#d8ad5e]">
+         
+          How A Plan Works
+        </span>
 
-        <div className="relative">
-          <div className="absolute bottom-8 left-6 top-8 w-px bg-[#c8b98e] md:left-8" />
-          {steps.map((step) => {
-            const Icon = step.icon;
+        <h2 className="mt-[14px] text-[clamp(1.9rem,3.4vw,2.5rem)] font-semibold">
+          Simple Steps.{" "}
+          <em className="font-serif text-[#d8ad5e]">Clear Process.</em>
+        </h2>
 
-            return (
-              <div
-                key={step.number}
-                className="group relative flex gap-5 pb-8 last:pb-0 md:gap-7"
-              >
-                <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center border-2 border-[#b27a18] bg-[#f4f0e8] font-semibold text-[#b27a18] transition duration-300 group-hover:bg-[#b27a18] group-hover:text-white md:h-16 md:w-16">
-                  {step.number}
-                </div>
+        <p className="mx-auto mt-3 max-w-[560px] text-[0.98rem] leading-7 text-[#b9c0cf]">
+          From choosing a plan to completion this is the same six-step path
+          every vehicle or property plan follows.
+        </p>
 
-                <div className="flex min-h-16 flex-1 items-start justify-between gap-4 border-b border-[#d8d0c2] pb-8 group-last:border-0">
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b27a18]">Step {step.number}</p>
-                    <h3 className="mt-2 text-xl font-semibold text-[#071426]">{step.title}</h3>
-                    <p className="mt-2 max-w-md text-sm leading-6 text-[#59616b]">{step.text}</p>
-                  </div>
-                  <div className="hidden h-11 w-11 shrink-0 items-center justify-center bg-[#071426] text-[#f4c75e] sm:flex">
-                    <Icon size={21} strokeWidth={1.5} />
-                  </div>
-                </div>
+        <div className="mt-14 grid grid-cols-1 gap-y-11 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-0">
+          {steps.map((step, index) => (
+            <div
+              key={step.number}
+              className="relative px-3"
+            >
+             
+              {index !== steps.length - 1 && (
+                <div className="absolute left-1/2 top-[23px] hidden h-px w-full bg-white/15 lg:block" />
+              )}
+
+              
+              <div className="relative z-10 mx-auto flex h-[46px] w-[46px] items-center justify-center rounded-full border border-[#d8ad5e] bg-white/[0.06] font-serif text-[0.85rem] font-semibold text-[#d8ad5e]">
+                {step.number}
               </div>
-            );
-          })}
+
+              <h3 className="mt-4 text-[0.95rem] font-semibold text-white">
+                {step.title}
+              </h3>
+
+              <p className="mx-auto mt-1 max-w-[150px] text-xs leading-5 text-[#9aa2b3]">
+                {step.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

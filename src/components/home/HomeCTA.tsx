@@ -10,6 +10,7 @@ type HomeCTAProps = {
   actions?: ReactNode
   children?: ReactNode
   className?: string
+  panelClassName?: string
 }
 
 const HomeCTA = ({
@@ -20,6 +21,7 @@ const HomeCTA = ({
   actions,
   children,
   className = '',
+  panelClassName = '',
 }: HomeCTAProps) => {
   const sectionRef = useRef<HTMLElement | null>(null)
   const [isVisible, setIsVisible] = useState(() => typeof window === 'undefined' || !('IntersectionObserver' in window))
@@ -68,7 +70,7 @@ const HomeCTA = ({
       className={`${className} relative overflow-hidden bg-white px-4 pb-10 pt-8 sm:pb-12 transition-[opacity,transform] duration-500 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
     >
       <div className="relative z-10 mx-auto w-[calc(100%-2rem)] max-w-[1280px] p-0 sm:w-[90%] lg:w-[63%]">
-        <div className="relative overflow-hidden rounded-3xl border border-[rgba(11,59,110,0.16)] bg-[linear-gradient(145deg,#ffffff_0%,#f4f8fc_100%)] p-5 sm:p-8 shadow-[0_18px_45px_-18px_rgba(11,59,110,0.14)]">
+        <div className={`relative overflow-hidden rounded-3xl border border-[rgba(11,59,110,0.16)] bg-[linear-gradient(145deg,#ffffff_0%,#f4f8fc_100%)] p-5 shadow-[0_18px_45px_-18px_rgba(11,59,110,0.14)] sm:p-8 ${panelClassName}`}>
           <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 sm:-left-28 sm:-top-28 sm:h-96 sm:w-96 rounded-full bg-[rgba(14,116,184,0.12)] blur-[80px]" />
           <div className="pointer-events-none absolute -bottom-24 -right-20 h-64 w-64 sm:-bottom-32 sm:-right-24 sm:h-96 sm:w-96 rounded-full bg-[rgba(240,199,94,0.16)] blur-[80px]" />
 

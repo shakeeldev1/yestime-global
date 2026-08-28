@@ -20,7 +20,7 @@ const initialValues: FormValues = {
   message: '',
 }
 
-const inputClassName = 'mt-2 w-full rounded-xl border border-[#dbe5f2] bg-white px-4 py-3 text-sm text-[#071a36] outline-none transition placeholder:text-[#8b9bad] focus:border-[#0b3b6e] focus:ring-2 focus:ring-[#0b3b6e]/10'
+const inputClassName = 'mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-[#071a36] outline-none transition placeholder:text-[#8b9bad] focus:border-[#d99420] focus:ring-2 focus:ring-[#d99420]/15'
 
 const ContactForm = () => {
   const [values, setValues] = useState<FormValues>(initialValues)
@@ -37,11 +37,11 @@ const ContactForm = () => {
   }
 
   return (
-    <section id="contact-form" className="bg-[#f7fafc] px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
-      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.72fr)] lg:items-start">
-        <div className="rounded-[2rem] border border-[#dbe5f2] bg-white p-5 shadow-[0_18px_40px_rgba(11,59,110,0.08)] sm:p-8">
-          <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#a97916]">Send an inquiry</span>
-          <h2 className="mt-3 text-[clamp(1.8rem,4vw,2.8rem)] font-normal leading-tight tracking-[-0.03em] text-[#071a36]">Tell us how we can help.</h2>
+    <section id="contact-form" className="bg-white px-5 py-12 sm:px-8 lg:px-12">
+      <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.72fr)] lg:items-start">
+        <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_18px_40px_rgba(11,59,110,0.08)] sm:p-8">
+          <span className="inline-flex rounded-full border border-amber-300/50 bg-amber-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-amber-700">Send an inquiry</span>
+          <h2 className="mt-4 text-3xl font-black leading-tight tracking-tight text-[#061832] sm:text-4xl">Tell us how we can help.</h2>
           <p className="mt-3 max-w-xl text-sm leading-7 text-[#41566f]">Share a few details and our team can guide you to the right next step.</p>
 
           <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
@@ -80,11 +80,11 @@ const ContactForm = () => {
             </label>
 
             <label className="flex items-start gap-3 text-sm leading-6 text-[#41566f]">
-              <input required type="checkbox" className="mt-1 h-4 w-4 accent-[#0b3b6e]" />
+              <input required type="checkbox" className="mt-1 h-4 w-4 accent-[#d99420]" />
               <span>I agree that YES TIME GLOBAL may use these details to respond to my inquiry.</span>
             </label>
 
-            <button type="submit" className="inline-flex w-full items-center justify-center rounded-full bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-6 py-3.5 text-sm font-bold uppercase tracking-[0.08em] text-[#071a36] shadow-[0_10px_22px_rgba(197,150,46,0.24)] transition duration-300 ease-out hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5962e] focus-visible:ring-offset-2 sm:w-auto">
+            <button type="submit" className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#f5c54e] to-[#d99420] px-6 py-3.5 text-xs font-bold uppercase tracking-[0.08em] text-[#07182d] shadow-lg shadow-amber-500/20 transition-all hover:-translate-y-0.5 hover:shadow-amber-500/30 focus-visible:outline-2 focus-visible:outline-amber-400 sm:w-auto">
               Send message
             </button>
 
@@ -92,14 +92,14 @@ const ContactForm = () => {
           </form>
         </div>
 
-        <aside className="rounded-[2rem] border border-[#dbe5f2] bg-[linear-gradient(145deg,#ffffff_0%,#eff6ff_100%)] p-5 sm:p-8">
-          <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#a97916]">Before you send</span>
-          <h2 className="mt-3 text-2xl font-normal text-[#071a36]">A clear path starts here.</h2>
+        <aside className="self-start rounded-3xl border border-[#d6b35a]/40 bg-[#06234b] p-5 text-white shadow-[0_18px_40px_rgba(2,12,28,0.16)] sm:p-8 lg:sticky lg:top-24">
+          <span className="inline-flex rounded-full border border-amber-300/50 bg-amber-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#f5c54e]">Before you send</span>
+          <h2 className="mt-4 text-2xl font-black text-white">A clear path starts here.</h2>
           <div className="mt-6 space-y-4">
             {['Choose the inquiry that best matches your question.', 'Include enough detail for a useful response.', 'Use the form for program, support, partnership, or investment questions.'].map((item) => (
               <div key={item} className="flex items-start gap-3">
                 <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#c5962e]" />
-                <p className="m-0 text-sm leading-6 text-[#41566f]">{item}</p>
+                <p className="m-0 text-sm leading-6 text-slate-200">{item}</p>
               </div>
             ))}
           </div>

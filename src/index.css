@@ -119,6 +119,43 @@
 	box-shadow: 0 18px 36px rgba(11, 59, 110, 0.13);
 }
 
+.global-expansion-page .global-journey-card {
+	background-color: #07152d !important;
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: 0 18px 40px rgba(2, 11, 28, 0.16);
+}
+
+.global-expansion-page .global-journey-card-overlay {
+	background: linear-gradient(90deg, rgba(2, 11, 28, 0.94) 0%, rgba(2, 11, 28, 0.78) 48%, rgba(2, 11, 28, 0.28) 100%);
+}
+
+.global-expansion-page .global-journey-card:hover .global-journey-card-overlay {
+	background: linear-gradient(90deg, rgba(2, 11, 28, 0.9) 0%, rgba(2, 11, 28, 0.66) 46%, rgba(2, 11, 28, 0.16) 100%);
+}
+
+.global-expansion-page .global-journey-card:hover {
+	background-position: 54% center;
+	box-shadow: 0 24px 48px rgba(2, 11, 28, 0.24);
+}
+
+.global-expansion-page .global-journey-card .border-white\/10 {
+	border-color: rgba(255, 255, 255, 0.28) !important;
+}
+
+.global-expansion-page .global-journey-card .bg-white\/5 {
+	background-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+.global-expansion-page .global-journey-card .text-white {
+	color: #ffffff !important;
+}
+
+.global-expansion-page .global-journey-card .text-slate-400,
+.global-expansion-page .global-journey-card .text-slate-500 {
+	color: #d7e0eb !important;
+}
+
 @keyframes globe-orbit-gold {
 	from {
 		transform: rotate(35deg) rotateZ(0deg);

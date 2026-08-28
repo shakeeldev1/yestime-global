@@ -19,16 +19,19 @@ import LegalPages from './pages/LegalPages'
 import TermsConditions from './pages/TermsConditions'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Disclaimer from './pages/Disclaimer'
+import Footer from './components/common/Footer'
 
 const MainFunction = () => {
   return (
     <div>
       <Navbaar />
       <Outlet />
+      <Footer />
 
     </div>
   )
 }
+      <Footer />
 
 const router = createBrowserRouter([
   {

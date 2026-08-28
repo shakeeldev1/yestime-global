@@ -86,7 +86,7 @@ export default function LiveClocks() {
             Global Time
           </p>
 
-          <h2 className="mt-2 font-serif text-2xl text-white md:text-3xl">
+          <h2 className="mt-2 text-2xl text-white md:text-3xl">
             Connected Across Time Zones
           </h2>
         </div>

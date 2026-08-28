@@ -9,6 +9,7 @@ import {
 interface JourneyItem {
   id: number;
   country: string;
+  image: string;
   title: string;
   description: string;
   status: string;
@@ -19,6 +20,8 @@ const GlobalJourney: React.FC = () => {
     {
       id: 1,
       country: "Pakistan",
+      image:
+        "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=85",
       title: "Where Our Journey Begins",
       description:
         "Pakistan represents an important part of our global journey and the foundation from which YES TIME GLOBAL continues to grow.",
@@ -27,6 +30,8 @@ const GlobalJourney: React.FC = () => {
     {
       id: 2,
       country: "Nepal",
+      image:
+        "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=85",
       title: "Building New Connections",
       description:
         "Our journey extends into Nepal, creating opportunities to develop new relationships and strengthen our international network.",
@@ -35,6 +40,8 @@ const GlobalJourney: React.FC = () => {
     {
       id: 3,
       country: "Indonesia",
+      image:
+        "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=85",
       title: "Expanding Our Reach",
       description:
         "Indonesia is another important part of our growing international presence as we continue exploring new markets and opportunities.",
@@ -43,6 +50,8 @@ const GlobalJourney: React.FC = () => {
     {
       id: 4,
       country: "Future Markets",
+      image:
+        "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=85",
       title: "The Journey Continues",
       description:
         "Our vision goes beyond today's markets. We continue looking toward new countries, partnerships, and opportunities for future expansion.",
@@ -81,7 +90,7 @@ const GlobalJourney: React.FC = () => {
               className="text-[#FFD45A]"
             />
 
-            <span className="text-xs font-semibold tracking-[0.16em] text-[#FFD45A]">
+            <span className="text-xs font-semibold  text-[#FFD45A]">
               OUR GLOBAL JOURNEY
             </span>
           </div>
@@ -121,7 +130,7 @@ const GlobalJourney: React.FC = () => {
         <div className="relative mt-16">
           {/* Desktop Connecting Line */}
 
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-[#D9A21B]/10 via-[#D9A21B]/60 to-[#D9A21B]/10 lg:block" />
+          <div className="pointer-events-none absolute bottom-0 left-1/2 top-0 z-10 hidden w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#D9A21B] to-transparent opacity-80 lg:block" />
 
           <div className="space-y-8 lg:space-y-0">
             {journey.map((item, index) => {
@@ -136,7 +145,7 @@ const GlobalJourney: React.FC = () => {
                       TIMELINE POINT
                   ===================================== */}
 
-                  <div className="absolute left-6 top-8 z-20 hidden h-4 w-4 -translate-x-1/2 rounded-full border-4 border-[#020B1C] bg-[#FFD45A] shadow-[0_0_15px_rgba(255,212,90,0.35)] lg:left-1/2 lg:block" />
+                  <div className="absolute left-6 top-8 z-30 hidden h-4 w-4 -translate-x-1/2 rounded-full border-4 border-white bg-[#FFD45A] shadow-[0_0_15px_rgba(217,162,27,0.5)] lg:left-1/2 lg:block" />
 
                   {/* =====================================
                       CONTENT
@@ -149,7 +158,17 @@ const GlobalJourney: React.FC = () => {
                         : "lg:col-start-2 lg:justify-start lg:pl-16"
                     }`}
                   >
-                    <article className="group relative w-full overflow-hidden rounded-2xl border border-white/10 bg-[#07152D]/70 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#D9A21B]/50 hover:bg-[#091A35] sm:p-7 lg:max-w-xl">
+                    <article
+                      className="global-journey-card group relative w-full overflow-hidden rounded-2xl border border-white/10 bg-[#07152D]/70 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#D9A21B]/50 hover:bg-[#091A35] sm:p-7 lg:max-w-xl"
+                      style={{
+                        backgroundImage: `url(${item.image})`,
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                      }}
+                    >
+                      <div className="global-journey-card-overlay absolute inset-0 transition duration-300" />
+
+                      <div className="relative z-10">
                       {/* Top Border */}
 
                       <div className="absolute left-0 right-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#D9A21B] to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
@@ -166,7 +185,7 @@ const GlobalJourney: React.FC = () => {
                           </div>
 
                           <div>
-                            <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#D9A21B]">
+                            <p className="text-xs font-medium  tracking-[0.12em] text-[#D9A21B]">
                               0{item.id}
                             </p>
 
@@ -209,6 +228,7 @@ const GlobalJourney: React.FC = () => {
                           size={17}
                           className="text-slate-500 transition duration-300 group-hover:translate-x-1 group-hover:text-[#FFD45A]"
                         />
+                      </div>
                       </div>
                     </article>
                   </div>

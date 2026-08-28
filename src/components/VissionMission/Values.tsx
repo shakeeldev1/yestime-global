@@ -58,7 +58,7 @@ export default function Values() {
           </span>
 
           {/* Heading (Size reduced here) */}
-          <h2 className="mt-3 font-serif text-xl font-semibold sm:text-2xl lg:text-3xl">
+          <h2 className="mt-3 text-xl font-semibold sm:text-2xl lg:text-3xl">
             Our Core Values
           </h2>
 
@@ -97,14 +97,14 @@ export default function Values() {
                   {value.number}
                 </span>
 
-                <span className="font-serif text-3xl text-white/[0.05] transition-all duration-500 group-hover:text-[#f2cb61]/10">
+                <span className="text-3xl text-white/[0.05] transition-all duration-500 group-hover:text-[#f2cb61]/10">
                   {value.number}
                 </span>
 
               </div>
 
               {/* Title */}
-              <h3 className="mt-5 font-serif text-xl font-semibold text-white transition-colors duration-300 group-hover:text-[#f2cb61]">
+              <h3 className="mt-5 text-xl font-semibold text-white transition-colors duration-300 group-hover:text-[#f2cb61]">
                 {value.title}
               </h3>
 
@@ -130,7 +130,7 @@ export default function Values() {
         {/* Bottom Quote */}
         <div className="mx-auto mt-12 max-w-xl text-center">
 
-          <p className="font-serif text-base italic leading-7 text-[#cdd3dc]/60 sm:text-lg">
+          <p className="text-base italic leading-7 text-[#cdd3dc]/60 sm:text-lg">
             We believe that how we work is just as important as what we
             achieve.
           </p>

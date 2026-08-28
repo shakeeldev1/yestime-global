@@ -75,7 +75,7 @@ const WhatWeDoGlobally: React.FC = () => {
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#D9A21B]/30 bg-[#07152D] px-4 py-2">
               <span className="h-2 w-2 rounded-full bg-[#FFD45A]" />
 
-              <span className="text-xs font-semibold tracking-[0.16em] text-[#FFD45A]">
+              <span className="text-xs font-semibold  text-[#FFD45A]">
                 WHAT WE DO
               </span>
             </div>
@@ -155,7 +155,7 @@ const WhatWeDoGlobally: React.FC = () => {
 
                 <div className="mt-auto pt-7">
                   <div className="flex items-center justify-between border-t border-white/10 pt-5">
-                    <span className="text-xs font-medium uppercase tracking-[0.12em] text-slate-500 transition duration-300 group-hover:text-[#FFD45A]">
+                    <span className="text-xs font-medium  tracking-[0.12em] text-slate-500 transition duration-300 group-hover:text-[#FFD45A]">
                       YES TIME GLOBAL
                     </span>
 

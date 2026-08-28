@@ -1,27 +1,25 @@
-import React from 'react'
 import ProgramsHero from '../components/OurPrograms/ProgramsHero'
-import ProgramHighlights from '../components/OurPrograms/ProgramHighlights'
-import ProgramsGrid from '../components/OurPrograms/ProgramsGrid'
+import ProgramsIntro from '../components/OurPrograms/ProgramsIntro'
+import ProgramCards from '../components/OurPrograms/ProgramCards'
 import HowProgramsWork from '../components/OurPrograms/HowProgramsWork'
-import WhyChooseUs from '../components/OurPrograms/WhyChooseUs'
-import ProgramsClosing from '../components/OurPrograms/ProgramsClosing'
+import PrioritiesAim from '../components/OurPrograms/PrioritiesAim'
+import ReferralSystem from '../components/OurPrograms/ReferralSystem'
+import TokenLuckyDraw from '../components/OurPrograms/TokenLuckyDraw'
 import ProgramsCTA from '../components/OurPrograms/ProgramsCTA'
-import RewardsDraws from '../components/OurPrograms/RewardsDraws'
-import ReferralEarn from '../components/OurPrograms/ReferralEarn'
+
 
 const OurPrograms = () => {
   return (
     <div>
 
      <ProgramsHero />
-     <ProgramHighlights />
-     <ProgramsGrid />
+     <ProgramsIntro />
+     <ProgramCards />
      <HowProgramsWork />
-     <WhyChooseUs />
-     <ReferralEarn />
-     <RewardsDraws />
+     <PrioritiesAim />
+     <ReferralSystem />
+     <TokenLuckyDraw />
      <ProgramsCTA />
-     <ProgramsClosing />
 
 
 

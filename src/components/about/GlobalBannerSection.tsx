@@ -3,7 +3,7 @@ export default function GlobalBannerSection() {
     <section className="bg-[#131B2E] py-16 px-6 text-center">
       <div className="mx-auto max-w-4xl flex flex-col items-center justify-center">
         {/* Brand Name */}
-        <h2 className="font-serif text-3xl md:text-4xl font-medium tracking-[0.2em] text-[#D9A928] mb-3">
+        <h2 className="text-3xl md:text-4xl font-medium tracking-[0.2em] text-[#D9A928] mb-3">
           YES TIME
         </h2>
 

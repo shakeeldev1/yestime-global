@@ -65,7 +65,7 @@ const GlobalPartnershipCTA: React.FC = () => {
                     className="text-[#FFD45A]"
                   />
 
-                  <span className="text-xs font-semibold tracking-[0.16em] text-[#FFD45A]">
+                  <span className="text-xs font-semibold  text-[#FFD45A]">
                     GLOBAL PARTNERSHIP
                   </span>
                 </div>

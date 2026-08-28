@@ -1,108 +1,98 @@
-import React from "react";
 import {
   ShieldCheck,
   LockKeyhole,
   Headphones,
   Globe2,
+  Users,
 } from "lucide-react";
 
 const reasons = [
   {
     icon: ShieldCheck,
-    title: "Transparent & Reliable Platform",
-    text: "Complete transparency in all processes.",
+    number: "01",
+    title: "Secure & Reliable",
+    text: "Your money, data, and progress are handled with care.",
+    image: "https://i.pinimg.com/736x/04/40/26/0440261e033e3914da751f1d07a44fc6.jpg",
+  },
+  {
+    icon: Users,
+    number: "02",
+    title: "Inclusive Community",
+    text: "Find a welcoming network where every member can grow.",
+    image: "https://i.pinimg.com/736x/d6/68/0b/d6680b6bd7072943f8c0bb9bf09d32ac.jpg",
   },
   {
     icon: LockKeyhole,
-    title: "Secure & Safe Transactions",
-    text: "Your security is our top priority.",
-  },
-  {
-    icon: Headphones,
-    title: "Customer Support 24/7",
-    text: "We are here to help you anytime.",
+    number: "03",
+    title: "Innovation Driven",
+    text: "Better tools and smarter ways to move forward, every day.",
+    image: "https://i.pinimg.com/736x/80/ec/94/80ec94ee4d43989dab3bb436a801f08d.jpg",
   },
   {
     icon: Globe2,
-    title: "Global Opportunities",
-    text: "Access programs and opportunities worldwide.",
+    number: "04",
+    title: "Global Impact",
+    text: "Access opportunities designed to create lasting change.",
+    image: "https://i.pinimg.com/736x/c7/c3/9d/c7c39d0d81332644b52e98500834b0b2.jpg",
+  },
+  {
+    icon: Headphones,
+    number: "05",
+    title: "Member Focused",
+    text: "Your goals set the direction. Our support helps you get there.",
+    image: "https://i.pinimg.com/736x/e3/88/7e/e3887ea6ed6ea175af9550ffd639564b.jpg",
   },
 ];
 
-const WhyChooseUs: React.FC = () => {
+const WhyChooseUs = () => {
   return (
-    <section className="bg-[#fbfaf7] px-5 py-20 md:px-10 lg:px-16">
-      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2">
-        
-        <div className="rounded-xl border border-[#d4af37]/20 bg-white p-8 shadow-sm">
-          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#b4872a]">
-            Why Choose Yes Time Global?
-          </span>
+    <section className="relative overflow-hidden bg-[#071426] px-5 py-20 text-white md:px-10 md:py-24 lg:px-16">
+      <div className="absolute -right-32 top-0 h-96 w-96 rounded-full border border-[#e6aa33]/15" />
+      <div className="absolute bottom-[-15rem] left-[-10rem] h-96 w-96 rounded-full bg-[#12345a]/60 blur-3xl" />
 
-          <h2 className="mt-3 font-serif text-3xl font-semibold text-[#12172a]">
-            Built Around
-            <span className="block italic text-[#b4872a]">
-              Trust & Simplicity
-            </span>
-          </h2>
-
-          <p className="mt-4 text-sm leading-7 text-[#6b7280]">
-            Our programs are designed to make your journey easier,
-            clearer and more reliable.
+      <div className="relative mx-auto max-w-7xl">
+        <div className="max-w-2xl">
+          <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#e6aa33]">
+            Why join YES TIME GLOBAL?
           </p>
-
-          <div className="mt-8 space-y-6">
-            {reasons.map((reason) => {
-              const Icon = reason.icon;
-
-              return (
-                <div
-                  key={reason.title}
-                  className="flex gap-4"
-                >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#060b1f] text-[#f2cb61]">
-                    <Icon size={19} />
-                  </div>
-
-                  <div>
-                    <h3 className="text-sm font-semibold text-[#12172a]">
-                      {reason.title}
-                    </h3>
-
-                    <p className="mt-1 text-xs text-[#6b7280]">
-                      {reason.text}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <h2 className="mt-4 font-[Playfair_Display] text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            Built for your next
+            <span className="block italic text-[#f4c75e]">chapter of growth.</span>
+          </h2>
+          <p className="mt-5 max-w-xl text-base leading-7 text-[#b9c5d5] md:text-lg">
+            One transparent platform to grow with confidence, connect globally,
+            and turn ambition into progress.
+          </p>
         </div>
 
-        <div className="relative overflow-hidden rounded-xl bg-[#060b1f] p-8 text-white md:p-10">
-          <div className="absolute right-[-70px] top-[-70px] h-56 w-56 rounded-full border border-[#d4af37]/20" />
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {reasons.map((reason) => {
+            const Icon = reason.icon;
 
-          <div className="relative z-10 flex h-full flex-col justify-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#f2cb61]">
-              Our Commitment
-            </span>
-
-            <h2 className="mt-4 font-serif text-3xl font-semibold md:text-4xl">
-              Your Goals.
-              <span className="block italic text-[#d4af37]">
-                Our Support.
-              </span>
-            </h2>
-
-            <p className="mt-5 max-w-lg text-sm leading-7 text-[#cdd3dc]">
-              We focus on creating a simple, transparent and
-              customer-focused experience across every program.
-            </p>
-
-            <button className="mt-8 w-fit rounded-md border border-[#d4af37] px-6 py-3 text-xs font-semibold uppercase tracking-wide text-[#f2cb61] transition hover:bg-[#d4af37] hover:text-[#060b1f]">
-              Learn More
-            </button>
-          </div>
+            return (
+              <article
+                key={reason.title}
+                className="group overflow-hidden border border-white/10 bg-white/[0.06] transition duration-300 hover:-translate-y-2 hover:border-[#e6aa33]/70 hover:bg-white/[0.1]"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={reason.image}
+                    alt=""
+                    className="h-full w-full object-cover grayscale-[30%] transition duration-500 group-hover:scale-110 group-hover:grayscale-0"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071426] via-transparent to-transparent" />
+                  <span className="absolute left-4 top-4 text-xs font-bold tracking-[0.2em] text-[#f4c75e]">
+                    {reason.number}
+                  </span>
+                </div>
+                <div className="p-5">
+                  <Icon size={22} strokeWidth={1.6} className="text-[#f4c75e]" />
+                  <h3 className="mt-5 text-lg font-semibold leading-snug">{reason.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-[#b9c5d5]">{reason.text}</p>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -48,7 +48,7 @@ export default function GlobalPresence() {
           </span>
 
           {/* Heading (Size reduced here) */}
-          <h2 className="mt-3 font-serif text-xl font-semibold text-[#12172a] sm:text-2xl lg:text-3xl">
+          <h2 className="mt-3 text-xl font-semibold text-[#12172a] sm:text-2xl lg:text-3xl">
             Global Presence
           </h2>
 
@@ -96,7 +96,7 @@ export default function GlobalPresence() {
                 </div>
 
                 {/* City */}
-                <h3 className="mt-5 font-serif text-xl font-semibold text-white transition-colors duration-300 group-hover:text-[#f2cb61]">
+                <h3 className="mt-5 text-xl font-semibold text-white transition-colors duration-300 group-hover:text-[#f2cb61]">
                   {location.city}
                 </h3>
 
@@ -121,7 +121,7 @@ export default function GlobalPresence() {
         </div>
 
         {/* Bottom Statement */}
-        <p className="mx-auto mt-8 max-w-xl text-center font-serif text-base italic text-[#12172a]/65 sm:text-lg">
+        <p className="mx-auto mt-8 max-w-xl text-center text-base italic text-[#12172a]/65 sm:text-lg">
           One world. Many possibilities. One connected future.
         </p>
 

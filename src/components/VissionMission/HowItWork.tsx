@@ -44,7 +44,7 @@ export default function HowWeWork() {
           </span>
 
           {/* Heading (Size reduced here) */}
-          <h2 className="mt-3 font-serif text-xl font-semibold text-[#12172a] sm:text-2xl lg:text-3xl">
+          <h2 className="mt-3 text-xl font-semibold text-[#12172a] sm:text-2xl lg:text-3xl">
             How We Work
           </h2>
 
@@ -87,7 +87,7 @@ export default function HowWeWork() {
                 </div>
 
                 {/* Title */}
-                <h3 className="mt-5 font-serif text-xl font-semibold text-[#12172a] transition-colors duration-300 group-hover:text-[#b4872a]">
+                <h3 className="mt-5 text-xl font-semibold text-[#12172a] transition-colors duration-300 group-hover:text-[#b4872a]">
                   {step.title}
                 </h3>
 

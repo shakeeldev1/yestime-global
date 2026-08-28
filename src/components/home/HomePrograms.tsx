@@ -109,16 +109,16 @@ const HomePrograms = () => {
           <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#0b3b6e_0%,#1274b8_100%)] text-[#f0c75e] shadow-[0_8px_16px_rgba(11,59,110,0.22)]">
             <ProgramIcon size={26} />
           </div>
-          <span className="max-w-full rounded-full border border-[#d6b35a] bg-[#fff8e1] px-3.5 py-[0.45rem] text-right text-[0.7rem] font-bold uppercase tracking-[0.08em] text-[#a97916]">{program.status}</span>
+          <span className="max-w-full rounded-full border border-[#d6b35a] bg-[#fff8e1] px-3.5 py-[0.45rem] text-right text-[0.7rem] font-bold  tracking-[0.08em] text-[#a97916]">{program.status}</span>
         </div>
 
         <div className="flex-none min-w-0 py-6 sm:py-8">
-          <h3 className="m-0 break-words text-[clamp(1.75rem,3.5vw,2.25rem)] font-normal tracking-[-0.02em] text-[#071a36]">{program.title}</h3>
+          <h3 className="m-0 break-words text-5xl font-bold tracking-[-0.02em] text-[#071a36]">{program.title}</h3>
           <p className="mt-3.5 max-w-2xl break-words text-[0.975rem] leading-7 text-[#41566f]">{program.description}</p>
         </div>
 
         <div className="mb-4 flex items-center justify-between gap-4 border-t border-[rgba(11,59,110,0.12)] pt-4">
-          <span className="text-[0.7rem] font-medium uppercase tracking-[0.12em] text-[#a97916]">Program Highlights</span>
+          <span className="text-[0.7rem] font-medium  tracking-[0.12em] text-[#a97916]">Program Highlights</span>
           <span className="text-xs font-medium text-[#5d7087]">{program.points.length} features</span>
         </div>
 
@@ -137,8 +137,8 @@ const HomePrograms = () => {
     <section id="programs" className="bg-[linear-gradient(180deg,#ffffff_0%,#f7fafc_100%)] px-6 py-24">
       <div className="mx-auto max-w-[1100px]">
         <div className="mx-auto max-w-[720px] text-center">
-          <span className="inline-block rounded-full border border-[rgba(11,59,110,0.18)] bg-[#eff6ff] px-4 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-[#0b3b6e]">Our Programs</span>
-          <h2 className="mt-5 text-[clamp(2.25rem,5vw,3.5rem)] font-normal leading-[1.15] tracking-[-0.03em] text-[#071a36]">
+          <span className="inline-block rounded-full border border-[rgba(11,59,110,0.18)] bg-[#eff6ff] px-4 py-1.5 text-xs font-bold  tracking-[0.12em] text-[#0b3b6e]">Our Programs</span>
+          <h2 className="mt-5 text-5xl font-bold leading-[1.15] tracking-[-0.03em] text-[#071a36]">
             Programs for <span className="bg-[linear-gradient(135deg,#b8860b_0%,#f0c75e_48%,#c5962e_100%)] bg-clip-text text-transparent">Participation &amp; Savings.</span>
           </h2>
           <p className="mx-auto mt-5 text-[1.05rem] leading-7 text-[#41566f]">Explore the Shop &amp; Savings, Car, Motorcycle / Scooter, and other approved programs.</p>

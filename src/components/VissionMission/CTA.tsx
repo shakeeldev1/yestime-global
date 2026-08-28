@@ -19,7 +19,7 @@ export default function CTA() {
         </span>
 
         {/* Heading (Size reduced here) */}
-        <h2 className="mx-auto mt-4 max-w-3xl font-serif text-xl font-semibold leading-snug sm:text-2xl lg:text-3xl">
+        <h2 className="mx-auto mt-4 max-w-3xl text-xl font-semibold leading-snug sm:text-2xl lg:text-3xl">
           Ready to Connect With the{" "}
           <span className="text-[#f2cb61]">
             Right Opportunity?

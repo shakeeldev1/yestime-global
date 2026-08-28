@@ -105,7 +105,7 @@ const HomeVisionMission = () => {
           <StepIcon size={23} />
         </div>
         <div className="flex-1">
-          <h3 className="mt-2 text-[clamp(1.8rem,4vw,2.5rem)] font-normal tracking-[-0.03em] text-[#071a36]">{step.title}</h3>
+          <h3 className="mt-2 text-5xl font-bold tracking-[-0.03em] text-[#071a36]">{step.title}</h3>
           <p className="mt-3 max-w-xl text-sm leading-7 text-[#41566f]">{step.description}</p>
         </div>
         <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -122,8 +122,8 @@ const HomeVisionMission = () => {
   return (
     <section id="vision-mission" className="bg-white px-6 py-20">
       <div className="mx-auto max-w-[760px] text-center">
-        <span className="inline-block rounded-full bg-[#eff6ff] px-3.5 py-1.5 text-xs font-medium uppercase tracking-[0.12em] text-[#0b3b6e]">Vision &amp; Mission</span>
-        <h2 className="mt-4 text-[clamp(2rem,5vw,3.5rem)] font-normal leading-tight tracking-[-0.04em] text-[#071a36]">
+        <span className="inline-block rounded-full bg-[#eff6ff] px-3.5 py-1.5 text-xs font-medium  tracking-[0.12em] text-[#0b3b6e]">Vision &amp; Mission</span>
+        <h2 className="mt-4 text-5xl font-bold leading-tight text-[#071a36]">
           Our Direction. <span className="text-[#c5962e]">A Global Future.</span>
         </h2>
         <p className="mx-auto mt-5 text-base leading-7 text-[#41566f]">Explore our vision, mission, future direction, and global expansion across Pakistan, Nepal, and Indonesia.</p>

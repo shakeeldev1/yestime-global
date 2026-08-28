@@ -16,7 +16,7 @@ const RewardsDraws: React.FC = () => {
             Rewards & Benefits
           </span>
 
-          <h2 className="mt-3 font-serif text-2xl font-semibold text-[#12172a]">
+          <h2 className="mt-3 text-2xl font-semibold text-[#12172a]">
             Enjoy More Benefits
           </h2>
 
@@ -41,7 +41,7 @@ const RewardsDraws: React.FC = () => {
             Exciting Rewards & Draws
           </span>
 
-          <h2 className="mt-3 font-serif text-2xl font-semibold">
+          <h2 className="mt-3 text-2xl font-semibold">
             Lucky Draw Opportunities
           </h2>
 

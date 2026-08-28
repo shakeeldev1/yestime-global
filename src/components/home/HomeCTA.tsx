@@ -75,14 +75,14 @@ const HomeCTA = ({
           <div className="relative z-10 grid min-w-0 grid-cols-1 items-center gap-6 md:grid-cols-[minmax(0,2fr)_minmax(190px,1fr)] md:gap-8">
             <div className="flex min-w-0 flex-col gap-4">
               {badge ? (
-                <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#d6b35a] bg-[#eff6ff] px-3.5 py-[0.45rem] text-[0.7rem] font-bold uppercase tracking-[0.15em] text-[#0b2b52]">
+                <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#d6b35a] bg-[#eff6ff] px-3.5 py-[0.45rem] text-[0.7rem] font-bold  tracking-[0.15em] text-[#0b2b52]">
                   <FiStar size={16} />
                   <span>{badge}</span>
                 </div>
               ) : null}
 
               {title ? (
-                <h2 className="m-0 break-words text-[clamp(1.6rem,7vw,2.8rem)] sm:text-[clamp(1.8rem,4vw,2.8rem)] font-normal leading-[1.15] tracking-[-0.03em] text-[#071a36]">
+                <h2 className="m-0 break-words text-5xl font-bold leading-[1.15] tracking-[-0.03em] text-[#071a36]">
                   {title}{' '}
                   {highlight ? <span className="italic text-[#c5962e]">{highlight}</span> : null}
                 </h2>

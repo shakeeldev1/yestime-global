@@ -1,4 +1,3 @@
-import React from 'react'
 import ProgramsHero from '../components/OurPrograms/ProgramsHero'
 import ProgramHighlights from '../components/OurPrograms/ProgramHighlights'
 import ProgramsGrid from '../components/OurPrograms/ProgramsGrid'

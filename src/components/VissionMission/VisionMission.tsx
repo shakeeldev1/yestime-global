@@ -15,7 +15,7 @@ export default function VisionMission() {
           </span>
 
           {/* Heading (Size reduced here) */}
-          <h2 className="mt-3 font-serif text-xl font-semibold text-[#12172a] sm:text-2xl lg:text-3xl">
+          <h2 className="mt-3 text-xl font-semibold text-[#12172a] sm:text-2xl lg:text-3xl">
             Vision &amp; Mission
           </h2>
 
@@ -51,14 +51,14 @@ export default function VisionMission() {
                 01
               </span>
 
-              <span className="font-serif text-4xl text-[#d4af37]/15 transition-colors duration-500 group-hover:text-[#d4af37]/30">
+              <span className="text-4xl text-[#d4af37]/15 transition-colors duration-500 group-hover:text-[#d4af37]/30">
                 V
               </span>
 
             </div>
 
             {/* Title (Size reduced here) */}
-            <h3 className="font-serif text-xl font-semibold text-[#12172a] sm:text-2xl">
+            <h3 className="text-xl font-semibold text-[#12172a] sm:text-2xl">
               Our Vision
             </h3>
 
@@ -100,14 +100,14 @@ export default function VisionMission() {
                 02
               </span>
 
-              <span className="font-serif text-4xl text-[#f2cb61]/10 transition-colors duration-500 group-hover:text-[#f2cb61]/20">
+              <span className="text-4xl text-[#f2cb61]/10 transition-colors duration-500 group-hover:text-[#f2cb61]/20">
                 M
               </span>
 
             </div>
 
             {/* Title (Size reduced here) */}
-            <h3 className="font-serif text-xl font-semibold text-white sm:text-2xl">
+            <h3 className="text-xl font-semibold text-white sm:text-2xl">
               Our Mission
             </h3>
 
@@ -140,7 +140,7 @@ export default function VisionMission() {
         {/* Bottom Statement */}
         <div className="mx-auto mt-12 max-w-xl text-center">
 
-          <p className="font-serif text-base italic leading-7 text-[#12172a]/70 sm:text-lg">
+          <p className="text-base italic leading-7 text-[#12172a]/70 sm:text-lg">
             &ldquo;The right opportunity, at the right time, can change
             everything.&rdquo;
           </p>

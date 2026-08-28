@@ -181,7 +181,7 @@ const GlobalExpansionHero: React.FC = () => {
 
                     {/* Heading */}
 
-                    <h1 className="max-w-3xl text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-white sm:text-5xl md:text-6xl lg:text-[68px]">
+                    <h1 className="max-w-3xl text-4xl font-bold  tracking-[-0.02em] text-white sm:text-5xl md:text-6xl lg:text-[68px]">
                       {slide.title}
                     </h1>
 

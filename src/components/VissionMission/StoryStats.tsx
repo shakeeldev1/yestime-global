@@ -37,7 +37,7 @@ export default function StoryStats() {
             </span>
 
             {/* Heading (Size reduced here) */}
-            <h2 className="mt-3 max-w-2xl font-serif text-xl font-semibold leading-snug sm:text-2xl lg:text-3xl">
+            <h2 className="mt-3 max-w-2xl text-xl font-semibold leading-snug sm:text-2xl lg:text-3xl">
               Built Around a{" "}
               <span className="text-[#f2cb61]">
                 Simple Belief
@@ -60,7 +60,7 @@ export default function StoryStats() {
 
             {/* Signature */}
             <div className="mt-6">
-              <span className="font-serif text-xl italic text-[#f2cb61]/80">
+              <span className="text-xl italic text-[#f2cb61]/80">
                 Yes Time Global
               </span>
 
@@ -81,7 +81,7 @@ export default function StoryStats() {
               >
 
                 {/* Stat Value (Size reduced here) */}
-                <div className="font-serif text-2xl font-semibold text-[#f2cb61] sm:text-3xl lg:text-4xl">
+                <div className="text-2xl font-semibold text-[#f2cb61] sm:text-3xl lg:text-4xl">
                   {stat.value}
                 </div>
 

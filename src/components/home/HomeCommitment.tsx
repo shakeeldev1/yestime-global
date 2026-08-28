@@ -63,7 +63,7 @@ const HomeCommitment = ({
     >
       {(title || highlight) && (
         <div className="mb-7 text-center sm:mb-8">
-          <h2 className="mb-4 break-words text-[clamp(1.5rem,6vw,2.5rem)] font-normal leading-tight text-[#071a36] sm:text-[clamp(1.75rem,4vw,2.5rem)]">
+          <h2 className="mb-4 break-words text-5xl font-bold leading-tight text-[#071a36]">
             {title}{' '}
             {highlight ? <span className="italic text-[#c5962e]">{highlight}</span> : null}
           </h2>

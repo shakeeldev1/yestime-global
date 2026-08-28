@@ -81,7 +81,7 @@ const GlobalJourney: React.FC = () => {
               className="text-[#FFD45A]"
             />
 
-            <span className="text-xs font-semibold tracking-[0.16em] text-[#FFD45A]">
+            <span className="text-xs font-semibold  text-[#FFD45A]">
               OUR GLOBAL JOURNEY
             </span>
           </div>
@@ -166,7 +166,7 @@ const GlobalJourney: React.FC = () => {
                           </div>
 
                           <div>
-                            <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#D9A21B]">
+                            <p className="text-xs font-medium  tracking-[0.12em] text-[#D9A21B]">
                               0{item.id}
                             </p>
 

@@ -81,7 +81,7 @@ const ProgramsGrid: React.FC = () => {
             Explore Our Programs
           </span>
 
-          <h2 className="mt-3 font-serif text-3xl font-semibold text-[#12172a] md:text-4xl">
+          <h2 className="mt-3 text-3xl font-semibold text-[#12172a] md:text-4xl">
             Opportunities Built Around
             <span className="block italic text-[#b4872a]">
               Your Everyday Needs
@@ -120,12 +120,12 @@ const ProgramsGrid: React.FC = () => {
               <div className="p-6 pt-9">
 
                 <div className="flex items-center gap-4">
-                  <span className="font-serif text-3xl text-[#b4872a]">
+                  <span className="text-3xl text-[#b4872a]">
                     {program.number}
                   </span>
 
                   <div>
-                    <h3 className="font-serif text-xl font-semibold text-[#12172a]">
+                    <h3 className="text-xl font-semibold text-[#12172a]">
                       {program.title}
                     </h3>
 

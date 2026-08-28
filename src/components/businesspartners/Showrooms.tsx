@@ -42,7 +42,7 @@ const Showrooms: React.FC = () => {
 
         {/* Header */}
         <div className="max-w-3xl">
-          <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#f5b72d]">
+          <span className="text-sm font-bold  tracking-[0.25em] text-[#f5b72d]">
             Showroom Partnership
           </span>
 

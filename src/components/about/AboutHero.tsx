@@ -21,7 +21,7 @@ export default function AboutHero() {
         </p>
 
         {/* Heading */}
-        <h1 className="mb-6 font-serif text-[clamp(36px,5vw,72px)] font-medium leading-none tracking-[-1.5px]">
+        <h1 className="mb-6 text-[clamp(36px,5vw,72px)] font-medium leading-none tracking-[-1.5px]">
           <span className="text-[#172033]">
             ABOUT{" "}
           </span>

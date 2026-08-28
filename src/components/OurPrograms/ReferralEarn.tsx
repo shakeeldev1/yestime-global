@@ -15,7 +15,7 @@ const ReferralEarn: React.FC = () => {
               Referral & Earn
             </span>
 
-            <h2 className="mt-3 font-serif text-3xl font-semibold text-[#12172a]">
+            <h2 className="mt-3 text-3xl font-semibold text-[#12172a]">
               Share the Opportunity.
               <span className="block italic text-[#b4872a]">
                 Earn Together.

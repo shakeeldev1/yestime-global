@@ -52,7 +52,7 @@ const Dealers: React.FC = () => {
         {/* Top Content */}
         <div className="grid gap-12 lg:grid-cols-2 lg:items-end">
           <div>
-            <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#f5b72d]">
+            <span className="text-sm font-bold  tracking-[0.25em] text-[#f5b72d]">
               Dealer Network
             </span>
 

@@ -15,7 +15,7 @@ export default function MessageSection() {
         {/* Quote Card */}
         <div className="relative bg-white rounded-2xl p-8 md:p-12 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-gray-100 max-w-4xl mx-auto">
           {/* Quote Icon */}
-          <span className="absolute top-4 right-6 text-5xl font-serif text-[#F3C262] opacity-80 select-none">
+          <span className="absolute top-4 right-6 text-5xl text-[#F3C262] opacity-80 select-none">
             “
           </span>
 

@@ -1,21 +1,19 @@
-import HomeAbout from '../components/home/HomeAbout'
-import HomeCTA from '../components/home/HomeCTA'
-import HomeCommitment from '../components/home/HomeCommitment'
-import HomeHero from '../components/home/HomeHero'
-import HomePrograms from '../components/home/HomePrograms'
-import HomeVisionMission from '../components/home/HomeVisionMission'
+import LandingHero from '../components/home/LandingHero'
+import CompanyOverview from '../components/home/CompanyOverview'
+// import DirectionSection from '../components/home/DirectionSection'
+import ProgramsSection from '../components/home/ProgramsSection'
+import CommunitySection from '../components/home/CommunitySection'
+import AboutUsCard from '../components/home/HomeAbout'
 
-const Home = () => {
-  return (
-    <main className="font-sans antialiased">
-      <HomeHero />
-      <HomeAbout />
-      <HomeVisionMission />
-      <HomePrograms />
-      <HomeCommitment />
-      <HomeCTA />
-    </main>
-  )
-}
+const Home = () => (
+  <main className="overflow-hidden bg-white">
+    <LandingHero />
+    <AboutUsCard/>
+    <ProgramsSection />
+    <CommunitySection />
+    <CompanyOverview />
+    {/* <DirectionSection /> */}
+  </main>
+)
 
 export default Home

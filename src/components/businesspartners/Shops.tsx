@@ -51,7 +51,7 @@ const Shops: React.FC = () => {
 
         {/* Section Heading */}
         <div className="mx-auto max-w-3xl text-center">
-          <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#f5b72d]">
+          <span className="text-sm font-bold  tracking-[0.25em] text-[#f5b72d]">
             Business Partners
           </span>
 

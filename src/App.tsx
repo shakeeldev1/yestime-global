@@ -16,6 +16,9 @@ import Customer from './pages/Customer'
 import FAQs from './pages/FAQs'
 import ContactUs from './pages/ContactUs'
 import LegalPages from './pages/LegalPages'
+import TermsConditions from './pages/TermsConditions'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import Disclaimer from './pages/Disclaimer'
 
 const MainFunction = () => {
   return (
@@ -46,7 +49,11 @@ const router = createBrowserRouter([
       { path: '/Customer', element: <Customer /> },
       { path: '/FAQs', element: <FAQs /> },
       { path: '/ContactUs', element: <ContactUs /> },
+      { path: '/contact-us', element: <ContactUs /> },
       { path: '/LegalPages', element: <LegalPages /> },
+      { path: '/terms-conditions', element: <TermsConditions /> },
+      { path: '/privacy-policy', element: <PrivacyPolicy /> },
+      { path: '/disclaimer', element: <Disclaimer /> },
     ],
   },
 ])

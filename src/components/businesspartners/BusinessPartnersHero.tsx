@@ -1,113 +1,217 @@
 import React from "react";
-import { ArrowDown, Handshake } from "lucide-react";
+import {
+  ArrowDown,
+  Handshake,
+  Store,
+  Building2,
+  Users,
+  BriefcaseBusiness,
+  TrendingUp,
+  Laptop,
+  type LucideIcon,
+} from "lucide-react";
+
+interface PartnerCard {
+  icon: LucideIcon;
+  title: string;
+  text: string;
+}
+
+const partnerCards: PartnerCard[] = [
+  {
+    icon: Store,
+    title: "Shops",
+    text: "Retail shops can join our business network and grow through partnership.",
+  },
+  {
+    icon: Building2,
+    title: "Business Partners",
+    text: "Businesses can work with us to support expansion and long-term growth.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Investors",
+    text: "Business investors can explore opportunities created through our expanding system.",
+  },
+  {
+    icon: Users,
+    title: "Dealers",
+    text: "Dealers and distribution partners can become part of our growing network.",
+  },
+];
 
 const BusinessPartnersHero: React.FC = () => {
   return (
-    <section className="relative min-h-[70vh] overflow-hidden bg-slate-950 text-white">
+    <section className="relative min-h-[75vh] overflow-hidden bg-white text-[#0B2341]">
       {/* Background Glow */}
-      <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-amber-500/10 blur-3xl" />
-      <div className="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-amber-400/10 blur-3xl" />
+      <div className="absolute -left-40 top-10 h-80 w-80 rounded-full bg-[#C6922B]/5 blur-3xl" />
 
-      <div className="relative mx-auto flex min-h-[70vh] max-w-7xl items-center px-6 py-20 lg:px-8">
+      <div className="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-[#0B2341]/5 blur-3xl" />
+
+      <div className="relative mx-auto flex min-h-[75vh] max-w-7xl items-center px-6 py-12 lg:px-8">
         <div className="grid w-full items-center gap-14 lg:grid-cols-2">
 
-          {/* Content */}
+          {/* ================= LEFT CONTENT ================= */}
           <div>
-            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-amber-400/30 bg-amber-400/10 px-5 py-2 text-sm font-medium text-amber-300">
-              <Handshake size={18} />
+            {/* Badge */}
+            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#C6922B]/30 bg-[#C6922B]/5 px-5 py-2 text-sm font-semibold text-[#C6922B]">
+              <Handshake size={18} strokeWidth={2} />
               Business Partnership
             </div>
 
-            <h1 className="max-w-3xl text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-              Grow Your Business
-              <span className="block text-amber-400">
-                With Us
+            {/* Heading */}
+            <h1 className="max-w-2xl text-4xl font-normal leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl">
+              Build Stronger
+              <span className="block text-[#C6922B]">
+                Business Partnerships.
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-8 text-slate-200 sm:text-lg">
-              We believe strong partnerships create stronger businesses.
-              Join our growing network of shops, showrooms and dealers
-              and become a valuable part of our business ecosystem.
+            {/* Description */}
+            <p className="mt-6 max-w-xl text-base leading-8 text-[#31527A] sm:text-lg">
+              We aim to build strong and sustainable business relationships
+              with shops, business partners, investors, dealers and service
+              providers. As our business network expands, new opportunities
+              for growth, collaboration and business development may arise.
             </p>
 
+            {/* Supporting Points */}
+            <div className="mt-7 grid max-w-xl gap-3 sm:grid-cols-2">
+
+              {/* Point 1 */}
+              <div className="flex items-center gap-3 text-sm text-[#31527A]">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#C6922B]/10 text-[#C6922B]">
+                  <Handshake size={16} strokeWidth={2} />
+                </div>
+
+                <span>Long-Term Partnerships</span>
+              </div>
+
+              {/* Point 2 */}
+              <div className="flex items-center gap-3 text-sm text-[#31527A]">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#C6922B]/10 text-[#C6922B]">
+                  <TrendingUp size={16} strokeWidth={2} />
+                </div>
+
+                <span>Business Growth</span>
+              </div>
+
+              {/* Point 3 */}
+              <div className="flex items-center gap-3 text-sm text-[#31527A]">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#C6922B]/10 text-[#C6922B]">
+                  <BriefcaseBusiness size={16} strokeWidth={2} />
+                </div>
+
+                <span>New Opportunities</span>
+              </div>
+
+              {/* Point 4 */}
+              <div className="flex items-center gap-3 text-sm text-[#31527A]">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#C6922B]/10 text-[#C6922B]">
+                  <Laptop size={16} strokeWidth={2} />
+                </div>
+
+                <span>Digital &amp; Technical Support</span>
+              </div>
+            </div>
+
+            {/* Buttons */}
             <div className="mt-8 flex flex-wrap gap-4">
-              <button className="rounded-md bg-amber-400 px-7 py-3.5 font-semibold text-slate-950 transition duration-300 hover:bg-amber-300">
+              <button
+                type="button"
+                className="rounded-full bg-[#0B2341] px-7 py-3.5 font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#16385F]"
+              >
                 Become a Partner
               </button>
 
-              <button className="rounded-md border border-white/20 px-7 py-3.5 font-semibold text-white transition duration-300 hover:border-amber-400 hover:text-amber-400">
+              <button
+                type="button"
+                className="rounded-full border border-[#C6922B] px-7 py-3.5 font-semibold text-[#0B2341] transition-all duration-300 hover:bg-[#C6922B] hover:text-white"
+              >
                 Explore Partnership
               </button>
             </div>
           </div>
 
-          {/* Cards */}
+          {/* ================= RIGHT CONTENT ================= */}
           <div className="relative">
-            <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-sm">
-              <div className="grid grid-cols-2 gap-5">
+            <div className="rounded-[28px] border border-[#D9E3EF] bg-[#F8FAFC] p-5 sm:p-7">
 
-                {/* Shops */}
-                <div className="rounded-2xl border border-white/10 bg-slate-900 p-6 transition duration-300 hover:-translate-y-1 hover:border-amber-400/40">
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400/10 text-amber-400">
-                    <span className="text-xl font-bold">01</span>
-                  </div>
+              {/* Right Header */}
+              <div className="mb-6">
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#C6922B]">
+                  Who Can Partner
+                </span>
 
-                  <h3 className="text-lg font-semibold">
-                    Shops
-                  </h3>
+                <h2 className="mt-2 text-2xl font-semibold text-[#0B2341] sm:text-3xl">
+                  Grow With Our Business Network
+                </h2>
 
-                  <p className="mt-2 text-sm leading-6 text-slate-400">
-                    Partner with us through retail shops.
-                  </p>
-                </div>
-
-                {/* Showrooms */}
-                <div className="mt-8 rounded-2xl border border-white/10 bg-slate-900 p-6 transition duration-300 hover:-translate-y-1 hover:border-amber-400/40">
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400/10 text-amber-400">
-                    <span className="text-xl font-bold">02</span>
-                  </div>
-
-                  <h3 className="text-lg font-semibold">
-                    Showrooms
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-slate-400">
-                    Build a stronger showroom partnership.
-                  </p>
-                </div>
-
-                {/* Dealers */}
-                <div className="-mt-2 rounded-2xl border border-white/10 bg-slate-900 p-6 transition duration-300 hover:-translate-y-1 hover:border-amber-400/40">
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400/10 text-amber-400">
-                    <span className="text-xl font-bold">03</span>
-                  </div>
-
-                  <h3 className="text-lg font-semibold">
-                    Dealers
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-slate-400">
-                    Join our professional dealer network.
-                  </p>
-                </div>
-
-                {/* Partnership */}
-                <div className="rounded-2xl border border-amber-400/20 bg-amber-400/5 p-6">
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400 text-slate-950">
-                    <Handshake size={22} />
-                  </div>
-
-                  <h3 className="text-lg font-semibold text-amber-300">
-                    Strong Partnership
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-slate-400">
-                    Together we create long-term success.
-                  </p>
-                </div>
-
+                <p className="mt-2 text-sm leading-6 text-[#55708F]">
+                  Partnership opportunities may be available for different
+                  businesses and professionals according to company needs.
+                </p>
               </div>
+
+              {/* Partner Cards */}
+             {/* Partner Cards */}
+<div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+  {partnerCards.map((partner) => {
+    const Icon = partner.icon;
+
+    return (
+      <div
+        key={partner.title}
+        className="group flex h-[230px] flex-col rounded-2xl border border-[#D9E3EF] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C6922B] hover:shadow-md"
+      >
+        {/* Icon */}
+        <div className="mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#0B2341]/5 text-[#0B2341] transition-all duration-300 group-hover:bg-[#C6922B]/10 group-hover:text-[#C6922B]">
+          <Icon
+            size={23}
+            strokeWidth={2}
+          />
+        </div>
+
+        {/* Heading */}
+        <h3 className="text-lg font-semibold text-[#0B2341] transition-colors duration-300 group-hover:text-[#C6922B]">
+          {partner.title}
+        </h3>
+
+        {/* Description */}
+        <p className="mt-2 text-sm leading-6 text-[#55708F]">
+          {partner.text}
+        </p>
+      </div>
+    );
+  })}
+</div>
+
+              {/* Bottom Info */}
+              <div className="mt-5 rounded-2xl border border-[#C6922B]/20 bg-[#C6922B]/5 p-4">
+                <div className="flex items-start gap-3">
+
+                  <div className="mt-0.5 shrink-0 text-[#C6922B]">
+                    <BriefcaseBusiness
+                      size={20}
+                      strokeWidth={2}
+                    />
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-semibold text-[#0B2341]">
+                      More Partnership Opportunities
+                    </h4>
+
+                    <p className="mt-1 text-xs leading-5 text-[#55708F]">
+                      Service providers, corporate partners and other relevant
+                      business associates may also become part of the network
+                      according to company requirements.
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -115,10 +219,11 @@ const BusinessPartnersHero: React.FC = () => {
       </div>
 
       {/* Scroll Icon */}
-      <div className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 md:block">
+      <div className="absolute bottom-5 left-1/2 hidden -translate-x-1/2 md:block">
         <ArrowDown
-          className="animate-bounce text-amber-400"
-          size={22}
+          className="animate-bounce text-[#C6922B]"
+          size={21}
+          strokeWidth={2}
         />
       </div>
     </section>

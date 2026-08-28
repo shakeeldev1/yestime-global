@@ -1,11 +1,15 @@
+import React from 'react'
+
+import CoreValues from '../components/VissionMission/CoreValues'
 import Hero from '../components/VissionMission/Hero'
-import LiveClocks from '../components/VissionMission/LiveClocks'
+import HowWeWork from '../components/VissionMission/HowWeWork'
+import OurAim from '../components/VissionMission/OurAim'
+import Programs from '../components/VissionMission/Programs'
+import Purpose from '../components/VissionMission/Purpose'
+import VisionCTA from '../components/VissionMission/VisionCTA'
 import VisionMission from '../components/VissionMission/VisionMission'
-import Values from '../components/VissionMission/Values'
-import HowItWork from '../components/VissionMission/HowItWork'
-import StoryStats from '../components/VissionMission/StoryStats'
-import GlobalPresence from '../components/VissionMission/GlobalPresence'
-import CTA from '../components/VissionMission/CTA'
+import WhereWeOperate from '../components/VissionMission/WhereWeOperate'
+
 
 
 const VissionMission = () => {
@@ -15,13 +19,16 @@ const VissionMission = () => {
 
 
     <Hero />
-    <LiveClocks />
+    <Purpose />
     <VisionMission />
-    <Values />
-    <HowItWork />
-    <StoryStats />
-    <GlobalPresence />
-    <CTA />
+    <CoreValues />
+    <Programs />
+    <HowWeWork />
+    <OurAim />
+    <WhereWeOperate />
+    <VisionCTA />
+
+
 
 
 

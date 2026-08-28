@@ -6,19 +6,19 @@ type LegalDocumentContentProps = {
 
 const LegalDocumentContent = ({ document }: LegalDocumentContentProps) => {
   return (
-    <section className="bg-[#f7fafc] px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
-      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.8fr)] lg:items-start">
-        <aside className="rounded-3xl border border-[#dbe5f2] bg-white p-5 shadow-[0_12px_30px_rgba(11,59,110,0.06)] sm:p-7 lg:sticky lg:top-28">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#a97916]">Please note</p>
-          <h2 className="mt-3 text-2xl font-normal leading-tight text-[#071a36]">Review the details carefully.</h2>
-          <p className="mt-4 text-sm leading-7 text-[#41566f]">Program terms may differ by plan and market. The latest approved policy and plan-specific terms take priority over general website information.</p>
+    <section className="bg-slate-100/70 px-5 py-12 sm:px-8 lg:px-12">
+      <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.8fr)] lg:items-start">
+        <aside className="self-start rounded-3xl border border-[#d6b35a]/40 bg-[#06234b] p-5 text-white shadow-[0_18px_40px_rgba(2,12,28,0.16)] sm:p-7 lg:sticky lg:top-28">
+          <p className="inline-flex rounded-full border border-amber-300/50 bg-amber-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#f5c54e]">Please note</p>
+          <h2 className="mt-4 text-2xl font-black leading-tight text-white">Review the details carefully.</h2>
+          <p className="mt-4 text-sm leading-7 text-slate-200">Program terms may differ by plan and market. The latest approved policy and plan-specific terms take priority over general website information.</p>
         </aside>
 
-        <article className="rounded-3xl border border-[#dbe5f2] bg-white p-5 shadow-[0_12px_30px_rgba(11,59,110,0.06)] sm:p-8 lg:p-10">
+        <article className="rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_18px_40px_rgba(11,59,110,0.08)] sm:p-8 lg:p-10">
           <div className="space-y-9">
             {document.sections.map((section) => (
               <section key={section.heading} className="border-b border-[#e5edf5] pb-8 last:border-0 last:pb-0">
-                <h2 className="text-xl font-medium leading-tight text-[#071a36] sm:text-2xl">{section.heading}</h2>
+                <h2 className="text-xl font-bold leading-tight text-[#071a36] sm:text-2xl">{section.heading}</h2>
                 <div className="mt-4 space-y-4">
                   {section.paragraphs.map((paragraph) => <p key={paragraph} className="text-sm leading-7 text-[#41566f] sm:text-base">{paragraph}</p>)}
                 </div>

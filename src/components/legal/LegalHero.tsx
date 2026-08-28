@@ -1,17 +1,18 @@
 import type { LegalDocument } from './legalData'
 
-type LegalHeroProps = Pick<LegalDocument, 'label' | 'title' | 'highlight' | 'description' | 'updated'>
+type LegalHeroProps = Pick<LegalDocument, 'label' | 'title' | 'highlight' | 'description'> & {
+  updated?: string
+}
 
 const LegalHero = ({ label, title, highlight, description, updated }: LegalHeroProps) => {
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#ffffff_0%,#f7fafc_58%,#eaf2fb_100%)] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
-      <div className="pointer-events-none absolute -right-24 -top-32 h-96 w-96 rounded-full bg-[rgba(14,116,184,0.1)] blur-[80px]" />
-      <div className="pointer-events-none absolute -bottom-40 -left-24 h-96 w-96 rounded-full bg-[rgba(240,199,94,0.14)] blur-[80px]" />
-      <div className="relative mx-auto max-w-4xl text-center">
-        <span className="inline-flex rounded-full border border-[rgba(11,59,110,0.18)] bg-[#eff6ff] px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-[#0b3b6e]">{label}</span>
-        <h1 className="mt-5 text-[clamp(2.25rem,6vw,4.5rem)] font-normal leading-[1.08] tracking-[-0.04em] text-[#071a36]">{title} <span className="text-[#c5962e]">{highlight}</span></h1>
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-[#41566f] sm:text-lg">{description}</p>
-        <p className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-[#8a6a1b]">{updated}</p>
+    <section className="relative overflow-hidden bg-[radial-gradient(circle_at_72%_35%,#51452d_0%,#28251f_32%,#111111_78%)] px-6 py-12 text-white sm:px-10 sm:py-16 lg:px-[7%] lg:py-20">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#f6b93f90_1px,transparent_1px)] [background-size:38px_38px] opacity-[0.12]" />
+      <div className="relative z-10 max-w-3xl">
+        <span className="inline-flex rounded-full border border-[#d6b35a]/60 bg-[#020c1c]/60 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-[#f5c54e] backdrop-blur-sm">{label}</span>
+        <h1 className="mt-5 break-words text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">{title} <span className="text-[#f5c54e]">{highlight}</span></h1>
+        <p className="mt-6 max-w-2xl text-base leading-7 text-slate-200 sm:text-lg">{description}</p>
+        {updated ? <p className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-[#f5c54e]">{updated}</p> : null}
       </div>
     </section>
   )

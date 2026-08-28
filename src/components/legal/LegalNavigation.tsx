@@ -12,10 +12,10 @@ const links = [
 
 const LegalNavigation = ({ active }: LegalNavigationProps) => {
   return (
-    <nav aria-label="Legal pages" className="border-b border-[#dbe5f2] bg-white px-5 py-4 sm:px-8 lg:px-12">
-      <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-2 sm:justify-start">
+    <nav aria-label="Legal pages" className="border-b border-slate-200 bg-slate-100/70 px-5 py-4 sm:px-8 lg:px-12">
+      <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-2 sm:justify-start">
         {links.map((link) => (
-          <Link key={link.id} to={link.path} className={`rounded-full px-4 py-2 text-xs font-semibold transition duration-200 sm:text-sm ${active === link.id ? 'bg-[#0b3b6e] text-white shadow-[0_8px_18px_rgba(11,59,110,0.16)]' : 'text-[#41566f] hover:bg-[#eff6ff] hover:text-[#0b3b6e]'}`}>
+          <Link key={link.id} to={link.path} className={`rounded-xl px-4 py-2 text-xs font-bold transition duration-200 sm:text-sm ${active === link.id ? 'bg-[#0b3b6e] text-white shadow-[0_8px_18px_rgba(11,59,110,0.16)]' : 'text-[#41566f] hover:bg-white hover:text-[#0b3b6e] hover:shadow-sm'}`}>
             {link.label}
           </Link>
         ))}

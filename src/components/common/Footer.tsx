@@ -206,15 +206,15 @@ const Footer = () => {
         <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-gray-400 sm:flex-row">
           <p>© {new Date().getFullYear()} Yes Time Global Private Limited. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-4">
-            <Link to="/legal-pages" className="transition hover:text-[#D4AF37]">
+            <Link to="/privacy-policy" className="transition hover:text-[#D4AF37]">
               Privacy Policy
             </Link>
             <span>•</span>
-            <Link to="/legal-pages" className="transition hover:text-[#D4AF37]">
+            <Link to="/terms-conditions" className="transition hover:text-[#D4AF37]">
               Terms & Conditions
             </Link>
             <span>•</span>
-            <Link to="/legal-pages" className="transition hover:text-[#D4AF37]">
+            <Link to="/disclaimer" className="transition hover:text-[#D4AF37]">
               Legal Disclaimer
             </Link>
           </div>

@@ -15,14 +15,20 @@ interface DropdownProps {
   onNavigate: () => void;
 }
 
-const Dropdown = ({ title, items, isOpen, onToggle, onNavigate }: DropdownProps) => {
+const Dropdown = ({
+  title,
+  items,
+  isOpen,
+  onToggle,
+  onNavigate,
+}: DropdownProps) => {
   const location = useLocation();
 
   return (
     <div className="relative">
       <button
         onClick={onToggle}
-        className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-white transition duration-300 hover:text-[#D4AF37]"
+        className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-white transition-colors duration-300 hover:text-[#D4AF37]"
       >
         {title}
 
@@ -44,10 +50,10 @@ const Dropdown = ({ title, items, isOpen, onToggle, onNavigate }: DropdownProps)
                 key={item.path}
                 to={item.path}
                 onClick={onNavigate}
-                className={`block px-5 py-3 text-sm transition duration-300 ${
+                className={`block px-5 py-3 text-sm transition-colors duration-300 ${
                   active
                     ? "bg-[#D4AF37]/15 text-[#D4AF37]"
-                    : "text-white hover:bg-[#D4AF37]/10 hover:pl-7 hover:text-[#D4AF37]"
+                    : "text-white hover:bg-[#D4AF37]/10 hover:text-[#D4AF37]"
                 }`}
               >
                 {item.name}
@@ -113,7 +119,11 @@ const Navbaar = () => {
       <div className="mx-auto flex h-20 max-w-[1450px] items-center justify-between px-5 md:px-8 lg:px-10">
         {/* ================= LOGO ================= */}
 
-        <Link to="/" onClick={closeMenu} className="flex items-center">
+        <Link
+          to="/"
+          onClick={closeMenu}
+          className="flex items-center"
+        >
           <img
             src="/logo.png"
             alt="Yes Time Global"
@@ -129,8 +139,10 @@ const Navbaar = () => {
           <Link
             to="/"
             onClick={closeMenu}
-            className={`px-3 py-2 text-sm font-medium transition duration-300 ${
-              isActive("/") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
+            className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
+              isActive("/")
+                ? "text-[#D4AF37]"
+                : "text-white hover:text-[#D4AF37]"
             }`}
           >
             Home
@@ -186,10 +198,12 @@ const Navbaar = () => {
             onNavigate={closeMenu}
           />
 
+          {/* CUSTOMERS */}
+
           <Link
             to="/Customer"
             onClick={closeMenu}
-            className={`px-3 py-2 text-sm font-medium transition duration-300 ${
+            className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
               isActive("/Customer")
                 ? "text-[#c5a06a]"
                 : "text-white hover:text-[#c5a06a]"
@@ -203,7 +217,7 @@ const Navbaar = () => {
           <Link
             to="/contact-us"
             onClick={closeMenu}
-            className={`ml-3 rounded-full border px-5 py-2.5 text-sm font-semibold transition duration-300 ${
+            className={`ml-3 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors duration-300 ${
               isActive("/contact-us")
                 ? "border-[#D4AF37] bg-[#D4AF37] text-[#000000]"
                 : "border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#000000]"
@@ -217,7 +231,7 @@ const Navbaar = () => {
           <Link
             to="/legal-pages"
             onClick={closeMenu}
-            className={`ml-2 px-3 py-2 text-sm font-medium transition duration-300 ${
+            className={`ml-2 px-3 py-2 text-sm font-medium transition-colors duration-300 ${
               isActive("/legal-pages")
                 ? "text-[#D4AF37]"
                 : "text-white hover:text-[#D4AF37]"
@@ -227,9 +241,11 @@ const Navbaar = () => {
           </Link>
         </div>
 
+        {/* ================= MOBILE BUTTON ================= */}
+
         <button
           onClick={() => setMobileMenu(!mobileMenu)}
-          className="rounded-lg p-2 text-white transition hover:bg-white/10 lg:hidden"
+          className="rounded-lg p-2 text-white transition-colors duration-300 hover:bg-white/10 lg:hidden"
           aria-label="Toggle menu"
         >
           {mobileMenu ? <X size={28} /> : <Menu size={28} />}
@@ -302,11 +318,15 @@ const Navbaar = () => {
             onNavigate={closeMenu}
           />
 
+          {/* CUSTOMERS */}
+
           <Link
             to="/Customer"
             onClick={closeMenu}
             className={`block border-b border-white/10 py-3 text-sm font-medium ${
-              isActive("/Customer") ? "text-[#c5a06a]" : "text-white"
+              isActive("/Customer")
+                ? "text-[#c5a06a]"
+                : "text-white"
             }`}
           >
             Customers
@@ -317,7 +337,7 @@ const Navbaar = () => {
           <Link
             to="/contact-us"
             onClick={closeMenu}
-            className="mt-4 block rounded-full bg-[#D4AF37] px-5 py-3 text-center text-sm font-semibold text-[#000000] transition duration-300 hover:bg-[#c5a06a]"
+            className="mt-4 block rounded-full bg-[#D4AF37] px-5 py-3 text-center text-sm font-semibold text-[#000000] transition-colors duration-300 hover:bg-[#c5a06a]"
           >
             Contact Us
           </Link>
@@ -327,7 +347,7 @@ const Navbaar = () => {
           <Link
             to="/legal-pages"
             onClick={closeMenu}
-            className="mt-3 block py-3 text-center text-sm text-white transition hover:text-[#D4AF37]"
+            className="mt-3 block py-3 text-center text-sm text-white transition-colors duration-300 hover:text-[#D4AF37]"
           >
             Legal Pages
           </Link>
@@ -377,7 +397,7 @@ const MobileDropdown = ({
               key={item.path}
               to={item.path}
               onClick={onNavigate}
-              className="block px-5 py-3 text-sm text-gray-300 transition duration-300 hover:bg-[#D4AF37]/10 hover:text-[#D4AF37]"
+              className="block px-5 py-3 text-sm text-gray-300 transition-colors duration-300 hover:bg-[#D4AF37]/10 hover:text-[#D4AF37]"
             >
               {item.name}
             </Link>

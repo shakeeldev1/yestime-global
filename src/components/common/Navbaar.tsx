@@ -85,7 +85,7 @@ const Navbaar = () => {
   ];
 
   const programItems: DropdownItem[] = [
-    { name: "Our Programs", path: "/our-programs" },
+    { name: "Our Programs", path: "/OurPrograms" },
     { name: "How It Works", path: "/how-it-works" },
   ];
 

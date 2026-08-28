@@ -1,97 +1,88 @@
 import React from "react";
-import {
-  UserPlus,
-  Search,
-  FileText,
-  ShieldCheck,
-  CreditCard,
-  Gift,
-} from "lucide-react";
 
-const steps = [
+interface Step {
+  number: string;
+  title: string;
+  description: string;
+}
+
+const steps: Step[] = [
   {
     number: "01",
-    title: "Register",
-    text: "Create your account with basic information.",
-    icon: UserPlus,
+    title: "Choose Your Plan",
+    description: "Pick the plan that fits your need and budget.",
   },
   {
     number: "02",
-    title: "Explore",
-    text: "Browse programs and choose what suits you.",
-    icon: Search,
+    title: "Review Full Details",
+    description: "See complete plan information before you proceed.",
   },
   {
     number: "03",
-    title: "Apply / Submit",
-    text: "Submit required details and documents.",
-    icon: FileText,
+    title: "Submit Application",
+    description: "Send your request with the required details.",
   },
   {
     number: "04",
-    title: "Verification",
-    text: "We verify your information for security.",
-    icon: ShieldCheck,
+    title: "Make Payments",
+    description: "Pay the agreed installment on your chosen plan.",
   },
   {
     number: "05",
-    title: "Payments",
-    text: "Make payments as per the plan you choose.",
-    icon: CreditCard,
+    title: "Track Your Plan",
+    description: "Monitor installments, balance & status anytime.",
   },
   {
     number: "06",
-    title: "Enjoy Benefits",
-    text: "Receive your benefits and stay connected.",
-    icon: Gift,
+    title: "Plan Completion",
+    description: "Once terms are met, your plan is complete.",
   },
 ];
 
 const HowProgramsWork: React.FC = () => {
   return (
-    <section className="bg-[#060b1f] px-5 py-20 text-white md:px-10 lg:px-16">
-      <div className="mx-auto max-w-7xl rounded-2xl border border-[#d4af37]/30 bg-[#0d1836] px-6 py-12 md:px-10">
-        
-        <div className="mb-12 text-center">
-          <span className="text-xs font-medium uppercase tracking-[0.3em] text-[#f2cb61]">
-            How Our Programs Work
-          </span>
+    <section className="bg-[#0e1b30] px-6 py-[100px] text-center text-white lg:px-8">
+      <div className="mx-auto max-w-[1160px]">
+        <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#d8ad5e]">
+          <span className="h-px w-6 bg-[#d8ad5e]" />
+          How A Plan Works
+        </span>
 
-          <h2 className="mt-3 font-serif text-3xl font-semibold md:text-4xl">
-            Simple Steps.
-            <span className="italic text-[#d4af37]">
-              {" "}Clear Process.
-            </span>
-          </h2>
-        </div>
+        <h2 className="mt-[14px] text-[clamp(1.9rem,3.4vw,2.5rem)] font-semibold">
+          Simple Steps.{" "}
+          <em className="font-serif text-[#d8ad5e]">Clear Process.</em>
+        </h2>
 
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-6">
-          {steps.map((step) => {
-            const Icon = step.icon;
+        <p className="mx-auto mt-3 max-w-[560px] text-[0.98rem] leading-7 text-[#b9c0cf]">
+          From choosing a plan to completion — this is the same six-step path
+          every vehicle or property plan follows.
+        </p>
 
-            return (
-              <div
-                key={step.number}
-                className="relative text-center"
-              >
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-[#d4af37] bg-[#060b1f] font-serif text-lg text-[#f2cb61]">
-                  {step.number}
-                </div>
+        <div className="mt-14 grid grid-cols-1 gap-y-11 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-0">
+          {steps.map((step, index) => (
+            <div
+              key={step.number}
+              className="relative px-3"
+            >
+             
+              {index !== steps.length - 1 && (
+                <div className="absolute left-1/2 top-[23px] hidden h-px w-full bg-white/15 lg:block" />
+              )}
 
-                <div className="mx-auto mt-4 flex h-12 w-12 items-center justify-center text-[#d4af37]">
-                  <Icon size={28} strokeWidth={1.3} />
-                </div>
-
-                <h3 className="mt-3 text-sm font-semibold">
-                  {step.title}
-                </h3>
-
-                <p className="mx-auto mt-2 max-w-[160px] text-xs leading-5 text-[#cdd3dc]/70">
-                  {step.text}
-                </p>
+              
+              <div className="relative z-10 mx-auto flex h-[46px] w-[46px] items-center justify-center rounded-full border border-[#d8ad5e] bg-white/[0.06] font-serif text-[0.85rem] font-semibold text-[#d8ad5e]">
+                {step.number}
               </div>
-            );
-          })}
+
+              <h3 className="mt-4 text-[0.95rem] font-semibold text-white">
+                {step.title}
+              </h3>
+
+              <p className="mx-auto mt-1 max-w-[150px] text-xs leading-5 text-[#9aa2b3]">
+                {step.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

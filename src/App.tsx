@@ -16,12 +16,14 @@ import Customer from './pages/Customer'
 import FAQs from './pages/FAQs'
 import ContactUs from './pages/ContactUs'
 import LegalPages from './pages/LegalPages'
+import Footer from './components/common/Footer'
 
 const MainFunction = () => {
   return (
     <div>
       <Navbaar />
       <Outlet />
+      <Footer />
 
     </div>
   )

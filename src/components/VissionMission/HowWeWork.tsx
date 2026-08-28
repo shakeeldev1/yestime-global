@@ -39,7 +39,7 @@ const HowWeWork: React.FC = () => {
       <div className="mx-auto max-w-[1000px]">
       
         <span className="inline-flex items-center gap-2.5 font-sans text-[0.72rem] font-bold uppercase tracking-[0.22em] text-[#b8892f]">
-          <span className="h-px w-[22px] bg-[#b8892f]" />
+      
           Our Approach
         </span>
 

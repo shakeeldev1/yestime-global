@@ -6,7 +6,7 @@ const WhereWeOperate: React.FC = () => {
       <div className="mx-auto max-w-[1120px]">
       
         <span className="inline-flex items-center gap-2.5 font-sans text-[0.72rem] font-bold uppercase tracking-[0.22em] text-[#b8892f]">
-          <span className="h-px w-[22px] bg-[#b8892f]" />
+        
           Beyond Borders
         </span>
 
@@ -32,7 +32,7 @@ const WhereWeOperate: React.FC = () => {
             </h3>
 
             <p className="mt-2 text-[0.95rem] leading-relaxed text-[#5b6472]">
-              Our home market — where Yes Time Global connects
+              Our home market where Yes Time Global connects
               customers, dealers and property seekers with real,
               organized opportunities every day.
             </p>
@@ -50,7 +50,7 @@ const WhereWeOperate: React.FC = () => {
             </h3>
 
             <p className="mt-2 text-[0.95rem] leading-relaxed text-[#5b6472]">
-              Looking ahead, our vision reaches beyond one country —
+              Looking ahead, our vision reaches beyond one country
               extending these same programs and opportunities into new
               markets around the world.
             </p>

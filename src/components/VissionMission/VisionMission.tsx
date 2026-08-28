@@ -10,7 +10,7 @@ const VisionMission: React.FC = () => {
         {/* Heading */}
         <div className="mx-auto max-w-[650px]">
           <span className="inline-flex items-center gap-2.5 font-sans text-[0.72rem] font-bold uppercase tracking-[0.22em] text-[#b8892f]">
-            <span className="h-px w-[22px] bg-[#b8892f]" />
+        
             What Drives Us
           </span>
 
@@ -20,7 +20,7 @@ const VisionMission: React.FC = () => {
 
           <p className="mt-3 text-[#5b6472]">
             Our vision defines where we are going. Our mission defines
-            how we get there — with organization, trust and modern
+            how we get there with organization, trust and modern
             tools.
           </p>
         </div>
@@ -39,7 +39,7 @@ const VisionMission: React.FC = () => {
             <p className="mt-[18px] text-[0.98rem] leading-relaxed text-[#5b6472]">
               To build a modern business platform that helps connect
               people, businesses, institutions, dealers and buyers of
-              vehicles and property with genuine opportunities —
+              vehicles and property with genuine opportunities
               starting in Pakistan, and reaching markets around the
               world.
             </p>
@@ -60,7 +60,7 @@ const VisionMission: React.FC = () => {
 
             <p className="mt-[18px] text-[0.98rem] leading-relaxed text-[#b9c0cf]">
               To use modern technology to provide easy facilities and
-              programs for our customers — so they can benefit without
+              programs for our customers so they can benefit without
               complication, and take a more organized, confident part
               in every business activity.
             </p>

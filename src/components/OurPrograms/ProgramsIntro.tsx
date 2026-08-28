@@ -5,7 +5,7 @@ const ProgramsIntro: React.FC = () => {
     <section className="px-6 pb-5 pt-[88px] text-center lg:px-8">
       <div className="mx-auto max-w-[680px]">
         <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#b8892f]">
-          <span className="h-px w-6 bg-[#b8892f]" />
+       
           What We Offer
         </span>
 

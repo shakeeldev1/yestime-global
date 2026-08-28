@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
               text-[#b8892f]
             "
           >
-            <span className="h-px w-[22px] bg-[#b8892f]" />
+  
             Our Purpose
           </span>
 
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
             Yes Time Global (Private) Limited was built on one idea:
             every worthwhile opportunity has a right time and a right
             place. We exist to bring people, vehicles and property
-            together — easily, transparently, and on organized terms.
+            together easily, transparently, and on organized terms.
           </p>
 
           <div className="mt-8 flex items-center gap-4 sm:mt-10">

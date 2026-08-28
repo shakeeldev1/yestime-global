@@ -8,7 +8,7 @@ const TokenLuckyDraw: React.FC = () => {
        
         <div className="mx-auto mb-14 max-w-[650px] text-center">
           <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#b8892f]">
-            <span className="h-px w-5 bg-[#b8892f]" />
+          
             Token &amp; Lucky Draw
           </span>
 
@@ -18,7 +18,7 @@ const TokenLuckyDraw: React.FC = () => {
 
           <p className="mx-auto mt-[14px] max-w-[600px] text-[0.95rem] leading-7 text-[#5b6472]">
             Yes Time Global's buy &amp; sell program gives eligible customers a
-            token, or identification number, on completion of a purchase —
+            token, or identification number, on completion of a purchase
             which may be entered into an available lucky draw.
           </p>
         </div>
@@ -36,7 +36,7 @@ const TokenLuckyDraw: React.FC = () => {
 
             <p className="mb-2.5 text-[0.92rem] leading-7 text-[#5b6472]">
               Once your purchase is verified through a registered dealer,
-              you're issued a token tied to your account — recording your
+              you're issued a token tied to your account recording your
               buying date, amount, dealer and token number.
             </p>
 
@@ -71,7 +71,7 @@ const TokenLuckyDraw: React.FC = () => {
           <div className="border-t border-[#e7e3da] pt-5 text-center text-[0.8rem] italic leading-6 text-[#8a92a0] md:col-span-2">
             The lucky draw only runs where legally permitted, under applicable
             law and required approvals. No customer has an absolute right to
-            any reward — benefit is given only when the relevant program's
+            any reward benefit is given only when the relevant program's
             terms are fully met.
           </div>
         </div>

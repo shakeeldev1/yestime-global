@@ -2,12 +2,22 @@ import React from "react";
 
 const OurAim: React.FC = () => {
   return (
-    <section className="bg-[#0e1b30] px-8 py-24 text-[#e7e9ef]">
-      <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
-      
+    <section
+      className="relative overflow-hidden px-8 py-24 text-[#e7e9ef]"
+      style={{
+        backgroundImage: "url('/img10.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+     
+      <div className="absolute inset-0 bg-[#0e1b30]/90" />
+
+      <div className="relative z-10 mx-auto grid max-w-[1120px] grid-cols-1 items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
+        
         <div>
           <span className="inline-flex items-center gap-2.5 font-sans text-[0.72rem] font-bold uppercase tracking-[0.22em] text-[#d8ad5e]">
-            <span className="h-px w-[22px] bg-[#d8ad5e]" />
             Our Commitment
           </span>
 
@@ -27,11 +37,11 @@ const OurAim: React.FC = () => {
           <p className="mt-4 text-base leading-relaxed text-[#b9c0cf]">
             We place real importance on giving customers and partners
             clear information, better facilities, and a responsible
-            way of doing business — at every stage of the journey.
+            way of doing business at every stage of the journey.
           </p>
         </div>
 
-        <div className="rounded-[2px] border border-white/10 border-l-[3px] border-l-[#b8892f] bg-white/[0.04] p-8">
+        <div className="rounded-[2px] border border-white/10 border-l-[3px] border-l-[#b8892f] bg-white/[0.06] p-8 backdrop-blur-[2px]">
           <p className="font-serif text-xl italic leading-relaxed text-white">
             "Join opportunities, grow your business, and take a step
             forward toward the future."

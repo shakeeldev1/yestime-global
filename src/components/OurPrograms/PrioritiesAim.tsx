@@ -41,7 +41,7 @@ const PrioritiesAim: React.FC = () => {
          
           <div className="rounded border border-[#e7e3da] border-t-[3px] border-t-[#b8892f] bg-white p-8 md:p-[38px]">
             <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#b8892f]">
-              <span className="h-px w-5 bg-[#b8892f]" />
+            
               Why Choose Yes Time Global
             </span>
 
@@ -65,7 +65,7 @@ const PrioritiesAim: React.FC = () => {
                     <strong className="text-[#0e1b30]">
                       {priority.title}
                     </strong>{" "}
-                    — {priority.description}
+                    {priority.description}
                   </span>
                 </li>
               ))}
@@ -74,7 +74,7 @@ const PrioritiesAim: React.FC = () => {
 
           <div className="rounded border-t-[3px] border-t-[#b8892f] bg-[#0e1b30] p-8 text-white md:p-[38px]">
             <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#d8ad5e]">
-              <span className="h-px w-5 bg-[#d8ad5e]" />
+             
               Our Commitment
             </span>
 
@@ -91,7 +91,7 @@ const PrioritiesAim: React.FC = () => {
             <p className="mt-[14px] text-[0.95rem] leading-7 text-[#b9c0cf]">
               We place real importance on giving customers and partners clear
               information, better facilities, and a responsible way of doing
-              business — at every stage of the journey.
+              business at every stage of the journey.
             </p>
           </div>
         </div>

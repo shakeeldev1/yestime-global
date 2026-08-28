@@ -35,7 +35,7 @@ const values: Value[] = [
     number: "05",
     title: "Global Reach",
     description:
-      "We're building toward the future — extending these business opportunities into new countries and markets.",
+      "We're building toward the future extending these business opportunities into new countries and markets.",
   },
 ];
 
@@ -46,7 +46,7 @@ const CoreValues: React.FC = () => {
        
         <div className="mx-auto max-w-[600px]">
           <span className="inline-flex items-center gap-2.5 font-sans text-[0.72rem] font-bold uppercase tracking-[0.22em] text-[#b8892f]">
-            <span className="h-px w-[22px] bg-[#b8892f]" />
+    
             What We Stand For
           </span>
 
@@ -82,7 +82,7 @@ const CoreValues: React.FC = () => {
 
           <div className="bg-white p-8">
             <span className="font-serif text-[0.82rem] font-semibold text-[#b8892f]">
-              —
+              06
             </span>
 
             <h3 className="mt-3 text-lg font-semibold text-[#0e1b30]">

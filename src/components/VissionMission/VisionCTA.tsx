@@ -8,7 +8,7 @@ const VisionCTA: React.FC = () => {
     >
       <div className="mx-auto max-w-[640px]">
         <span className="inline-flex items-center gap-2.5 font-sans text-[0.72rem] font-bold uppercase tracking-[0.22em] text-[#d8ad5e]">
-          <span className="h-px w-[22px] bg-[#d8ad5e]" />
+      
           Let's Connect
         </span>
 
@@ -22,7 +22,7 @@ const VisionCTA: React.FC = () => {
 
         <p className="mt-4 text-[1.02rem] leading-relaxed text-[#b9c0cf]">
           Whether it's a vehicle plan, a property opportunity, or a
-          dealer partnership — we're here to help you take the next
+          dealer partnership we're here to help you take the next
           step, at the right time.
         </p>
 
@@ -35,7 +35,7 @@ const VisionCTA: React.FC = () => {
           </a>
 
           <a
-            href="#programs"
+            href="/OurPrograms"
             className="rounded-[2px] border border-white/30 px-[30px] py-[15px] text-sm font-bold tracking-wide text-white transition-all duration-200 hover:border-[#d8ad5e] hover:text-[#d8ad5e]"
           >
             See Our Programs

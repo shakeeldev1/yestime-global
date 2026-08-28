@@ -44,7 +44,7 @@ const HowProgramsWork: React.FC = () => {
     <section className="bg-[#0e1b30] px-6 py-[100px] text-center text-white lg:px-8">
       <div className="mx-auto max-w-[1160px]">
         <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#d8ad5e]">
-          <span className="h-px w-6 bg-[#d8ad5e]" />
+         
           How A Plan Works
         </span>
 
@@ -54,7 +54,7 @@ const HowProgramsWork: React.FC = () => {
         </h2>
 
         <p className="mx-auto mt-3 max-w-[560px] text-[0.98rem] leading-7 text-[#b9c0cf]">
-          From choosing a plan to completion — this is the same six-step path
+          From choosing a plan to completion this is the same six-step path
           every vehicle or property plan follows.
         </p>
 

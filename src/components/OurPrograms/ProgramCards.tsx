@@ -23,7 +23,7 @@ const programs: Program[] = [
     number: "01 — Vehicle Plan",
     title: "Vehicle Plan",
     description:
-      "Installment-based plans for buying a vehicle, chosen according to your budget and need, with every plan's price, duration, eligibility and terms set out clearly upfront.",
+      "Installment based plans for buying a vehicle, chosen according to your budget and need, with every plan's price, duration, eligibility and terms set out clearly upfront.",
 
     image: "/img1.png",
 
@@ -33,7 +33,7 @@ const programs: Program[] = [
 
     points: [
       "Plans from Rs. 30 Lakh up to Rs. 2.1 Crore vehicles",
-      "Fixed monthly installment — e.g. Rs. 36,000/month for a 30 Lakh plan",
+      "Fixed monthly installment e.g. Rs. 36,000/month for a 30 Lakh plan",
       "Every plan's amount, duration & eligibility shown upfront",
       "Payment record kept safe against your account",
     ],
@@ -46,7 +46,7 @@ const programs: Program[] = [
     number: "02 — Property Plan",
     title: "Property Plan",
     description:
-      "A modern platform for people who want to buy, sell or invest in property — bringing buyers, owners and business partners together with clear, verified information.",
+      "A modern platform for people who want to buy, sell or invest in property bringing buyers, owners and business partners together with clear, verified information.",
 
     image: "/img2.png",
 
@@ -55,8 +55,8 @@ const programs: Program[] = [
     icon: <House size={22} />,
 
     points: [
-      "Residential property — homes, flats & more",
-      "Commercial property — shops, offices, plazas, markets",
+      "Residential property homes, flats & more",
+      "Commercial property shops, offices, plazas, markets",
       "Agricultural land & related opportunities",
       "Future construction & development plans, where applicable",
     ],
@@ -69,7 +69,7 @@ const programs: Program[] = [
     number: "03 — New Vehicle",
     title: "New Vehicle",
     description:
-      "An organized, easy digital platform to buy and sell new or used cars, motorcycles and scooters — with genuine listing details for every vehicle.",
+      "An organized, easy digital platform to buy and sell new or used cars, motorcycles and scooters with genuine listing details for every vehicle.",
 
     image: "/img3.png",
 
@@ -78,21 +78,21 @@ const programs: Program[] = [
     icon: <Bike size={22} />,
 
     points: [
-      "Cars, motorcycles & scooters — new and used",
+      "Cars, motorcycles & scooters new and used",
       "Listings include model, year, condition, price & photos",
       "Direct contact with the seller or their representative",
       "Buyers are encouraged to verify condition & documents themselves",
     ],
 
     note:
-      "Listing information is provided to help your search — it is not a substitute for your own inspection before purchase.",
+      "Listing information is provided to help your search it is not a substitute for your own inspection before purchase.",
   },
 
   {
     number: "04 — Buy & Sell Program",
     title: "Buy & Sell Program",
     description:
-      "Connects customers with registered dealers on one organized platform — built to bring buying and selling together, according to the company's set rules.",
+      "Connects customers with registered dealers on one organized platform built to bring buying and selling together, according to the company's set rules.",
 
     image: "/img4.png",
 
@@ -101,7 +101,7 @@ const programs: Program[] = [
     icon: <UserRound size={22} />,
 
     points: [
-      "Search or register as a company-verified dealer",
+      "Search or register as a company verified dealer",
       "A personal dashboard to track your buying record",
       "View program announcements & results in one place",
       "Buying eligibility set per the company's system",

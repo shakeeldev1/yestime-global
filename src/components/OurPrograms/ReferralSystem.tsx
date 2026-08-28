@@ -7,7 +7,7 @@ const ReferralSystem: React.FC = () => {
        
         <div>
           <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#b8892f]">
-            <span className="h-px w-5 bg-[#b8892f]" />
+           
             Referral System
           </span>
 
@@ -20,7 +20,7 @@ const ReferralSystem: React.FC = () => {
 
           <p className="mt-4 text-[0.98rem] leading-7 text-[#5b6472]">
             Existing customers can refer friends, relatives and people they
-            know to Yes Time Global's programs — each customer gets a unique
+            know to Yes Time Global's programs each customer gets a unique
             referral number to share.
           </p>
 

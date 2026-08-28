@@ -38,39 +38,6 @@ const features: Feature[] = [
 const ProgramsHero: React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-white h-[98vh]">
-   
-
-      <div
-        className="
-          pointer-events-none
-          absolute
-          left-1/2
-          top-[-105px]
-          z-0
-          h-[650px]
-          w-[650px]
-          -translate-x-1/2
-          opacity-80
-          sm:top-[-95px]
-          sm:h-[700px]
-          sm:w-[700px]
-        "
-      >
-        <div className="absolute inset-0 rounded-full border border-[#eeeae1]" />
-
-        <div className="absolute inset-[70px] rounded-full border border-[#eeeae1]" />
-
-        <div className="absolute inset-[145px] rounded-full border border-[#ead9b6]" />
-
-        <span className="absolute left-[50%] top-[8px] h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-[#b8892f]" />
-
-        <span className="absolute bottom-[18%] left-[11%] h-1.5 w-1.5 rounded-full bg-[#ead9b6]" />
-
-        <span className="absolute right-[11%] top-[35%] h-1.5 w-1.5 rounded-full bg-[#ead9b6]" />
-      </div>
-
-     
-
       <div
         className="
           relative
@@ -90,10 +57,8 @@ const ProgramsHero: React.FC = () => {
           lg:px-8
         "
       >
-  
-
         <div className="flex items-center gap-2">
-          <span className="h-px w-7 bg-[#b8892f]" />
+     
 
           <span
             className="
@@ -108,9 +73,7 @@ const ProgramsHero: React.FC = () => {
             Our Programs
           </span>
 
-          <span className="h-px w-7 bg-[#b8892f]" />
         </div>
-
 
         <h1
           className="
@@ -128,7 +91,7 @@ const ProgramsHero: React.FC = () => {
             lg:text-[3.65rem]
           "
         >
-          Four Programs, Built
+          Our Programs, Built
           <br />
 
           <span className="text-[#0e1b30]">
@@ -145,7 +108,6 @@ const ProgramsHero: React.FC = () => {
             {" "}Opportunities
           </em>
         </h1>
-
 
         <p
           className="
@@ -201,7 +163,6 @@ const ProgramsHero: React.FC = () => {
                 }
               `}
             >
-
               <div
                 className="
                   flex
@@ -220,7 +181,6 @@ const ProgramsHero: React.FC = () => {
               >
                 {feature.icon}
               </div>
-
 
               <div className="min-w-0">
                 <h3
@@ -252,7 +212,6 @@ const ProgramsHero: React.FC = () => {
             </div>
           ))}
         </div>
-
 
         <div className="mt-10 flex items-center gap-2 opacity-70">
           <span className="h-px w-8 bg-[#e7e3da]" />

@@ -1,6 +1,6 @@
 export default function AboutHero() {
   return (
-    <section className="relative min-h-[680px] overflow-hidden bg-[#FBFAF7] px-3 py-20 sm:px-5 sm:py-24">
+    <section className="relative min-h-[600px] overflow-hidden bg-[#FBFAF7] px-3 py-20 sm:px-5 sm:py-20">
 
       {/* Background Decorations */}
       <div className="pointer-events-none absolute -left-32 -top-32 h-80 w-80 rounded-full bg-[#B08D57]/10 blur-3xl" />
@@ -26,6 +26,7 @@ export default function AboutHero() {
         {/* Main Heading */}
         <h1 className="max-w-4xl text-3xl font-bold leading-[1.1] tracking-[-0.02em] text-[#102A43] sm:text-5xl lg:text-6xl">
           Creating Possibilities.
+
           <span className="mt-2 block text-[#B08D57]">
             Shaping Tomorrow, Together.
           </span>

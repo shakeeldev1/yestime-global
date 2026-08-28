@@ -1,10 +1,11 @@
 export default function MissionSection() {
   return (
-    <section className="w-full bg-[#FBFAF7] px-4 py-20 sm:px-6 lg:px-10">
+    <section className="w-full bg-[#FBFAF7] px-4 pt-6 pb-6 sm:px-6 sm:pt-6 sm:pb-6 lg:px-10">
       <div className="mx-auto max-w-6xl">
 
         {/* Section Heading */}
         <div className="mx-auto mb-10 max-w-2xl text-center">
+
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#B08D57]">
             VISION AND MISSION
           </p>
@@ -12,6 +13,7 @@ export default function MissionSection() {
           <h2 className="font-serif text-3xl font-semibold leading-tight text-[#102A43] sm:text-4xl">
             What we're working toward
           </h2>
+
         </div>
 
         {/* Cards */}
@@ -22,11 +24,13 @@ export default function MissionSection() {
 
             {/* Vision Image */}
             <div className="h-[200px] overflow-hidden sm:h-[220px]">
+
               <img
                 src="https://images.unsplash.com/photo-1524666041070-9d87656c25bb?auto=format&fit=crop&w=1200&q=80"
                 alt="Global vision"
                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
               />
+
             </div>
 
             {/* Vision Content */}
@@ -34,6 +38,7 @@ export default function MissionSection() {
 
               {/* Icon */}
               <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-lg bg-[#F6E8BF] text-[#B08D57]">
+
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -50,6 +55,7 @@ export default function MissionSection() {
 
                   <circle cx="12" cy="12" r="2.5" />
                 </svg>
+
               </div>
 
               <h3 className="font-serif text-xl font-semibold text-[#102A43]">
@@ -62,6 +68,7 @@ export default function MissionSection() {
                 buyers and property-related individuals with business
                 opportunities — across Pakistan, and in time, around the world.
               </p>
+
             </div>
           </div>
 
@@ -70,11 +77,13 @@ export default function MissionSection() {
 
             {/* Mission Image */}
             <div className="h-[200px] overflow-hidden sm:h-[220px]">
+
               <img
                 src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80"
                 alt="Business team working together"
                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
               />
+
             </div>
 
             {/* Mission Content */}
@@ -82,6 +91,7 @@ export default function MissionSection() {
 
               {/* Icon */}
               <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-lg bg-[#F6E8BF] text-[#B08D57]">
+
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -96,6 +106,7 @@ export default function MissionSection() {
                     d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
                   />
                 </svg>
+
               </div>
 
               <h3 className="font-serif text-xl font-semibold text-[#102A43]">
@@ -107,6 +118,7 @@ export default function MissionSection() {
                 things easier for our customers, and to help move business
                 activities forward in a more organized, dependable way.
               </p>
+
             </div>
           </div>
 

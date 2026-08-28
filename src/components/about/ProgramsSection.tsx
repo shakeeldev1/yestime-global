@@ -39,7 +39,7 @@ export default function ProgramsSection() {
   ];
 
   return (
-    <section className="w-full bg-[#FBFAF7] px-4 py-20 sm:px-6 lg:px-10">
+    <section className="w-full bg-[#FBFAF7] px-4 pt-6 pb-2 sm:px-6 sm:pt-6 lg:px-10">
       <div className="mx-auto max-w-6xl">
 
         {/* Section Heading */}
@@ -51,7 +51,9 @@ export default function ProgramsSection() {
 
           <h2 className="font-serif text-4xl font-semibold leading-[1.15] tracking-tight text-[#102A43] sm:text-5xl">
             Where opportunity meets
-            <span className="block">organization</span>
+            <span className="block">
+              organization
+            </span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-[#52606D] sm:text-base">
@@ -72,11 +74,13 @@ export default function ProgramsSection() {
 
               {/* Image */}
               <div className="h-[175px] overflow-hidden">
+
                 <img
                   src={program.image}
                   alt={program.alt}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+
               </div>
 
               {/* Card Content */}

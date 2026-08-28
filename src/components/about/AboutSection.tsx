@@ -1,10 +1,11 @@
 export default function AboutSection() {
   return (
-    <section className="w-full bg-[#FBFAF7] px-4 py-20 sm:px-6 lg:px-10">
+    <section className="w-full bg-[#FBFAF7] px-4 pt-8 pb-6 sm:px-6 sm:pt-10 sm:pb-6 lg:px-10">
       <div className="mx-auto max-w-6xl">
 
         {/* Section Heading */}
         <div className="mx-auto mb-10 max-w-2xl text-center">
+
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#B08D57]">
             WHO WE ARE
           </p>
@@ -17,6 +18,7 @@ export default function AboutSection() {
             Our core idea is simple: bring different business facilities and
             programs to people through one connected, organized system.
           </p>
+
         </div>
 
         {/* Main Content */}
@@ -24,6 +26,7 @@ export default function AboutSection() {
 
           {/* Left Image */}
           <div className="relative h-[480px] overflow-hidden rounded-xl">
+
             <img
               src="https://i.pinimg.com/736x/3f/ee/e5/3feee507a07c642e33f9b2af47caa14e.jpg"
               alt="Yes Time Global team"
@@ -36,6 +39,7 @@ export default function AboutSection() {
                 Built on trust between customers and business partners
               </p>
             </div>
+
           </div>
 
           {/* Right Cards */}
@@ -46,6 +50,7 @@ export default function AboutSection() {
 
               {/* Icon */}
               <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-lg bg-[#F6E8BF] text-[#B08D57]">
+
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -59,13 +64,16 @@ export default function AboutSection() {
                     strokeLinejoin="round"
                     d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"
                   />
+
                   <circle cx="9" cy="7" r="4" />
+
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
                   />
                 </svg>
+
               </div>
 
               <h3 className="font-serif text-xl font-semibold text-[#102A43]">
@@ -79,6 +87,7 @@ export default function AboutSection() {
                 technology and an organized business system that makes
                 activities easier, clearer and more effective.
               </p>
+
             </div>
 
             {/* Our Purpose */}
@@ -86,6 +95,7 @@ export default function AboutSection() {
 
               {/* Icon */}
               <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-lg bg-[#F6E8BF] text-[#B08D57]">
+
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -99,8 +109,10 @@ export default function AboutSection() {
                     strokeLinejoin="round"
                     d="M2.25 12s3.75-6 9.75-6 9.75 6 9.75 6-3.75 6-9.75 6-9.75-6-9.75-6z"
                   />
+
                   <circle cx="12" cy="12" r="2.5" />
                 </svg>
+
               </div>
 
               <h3 className="font-serif text-xl font-semibold text-[#102A43]">
@@ -110,9 +122,10 @@ export default function AboutSection() {
               <p className="mt-3 max-w-2xl text-xs leading-6 text-[#52606D] sm:text-sm">
                 Our purpose is to provide a simple, organized system where
                 people can benefit from different programs according to their
-                needs — gaining easy access to business opportunities,
+                needs, gaining easy access to business opportunities,
                 wherever they are.
               </p>
+
             </div>
 
           </div>

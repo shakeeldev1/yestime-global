@@ -12,9 +12,10 @@ interface DropdownProps {
   items: DropdownItem[];
   isOpen: boolean;
   onToggle: () => void;
+  onNavigate: () => void;
 }
 
-const Dropdown = ({ title, items, isOpen, onToggle }: DropdownProps) => {
+const Dropdown = ({ title, items, isOpen, onToggle, onNavigate }: DropdownProps) => {
   const location = useLocation();
 
   return (
@@ -42,6 +43,7 @@ const Dropdown = ({ title, items, isOpen, onToggle }: DropdownProps) => {
               <Link
                 key={item.path}
                 to={item.path}
+                onClick={onNavigate}
                 className={`block px-5 py-3 text-sm transition duration-300 ${
                   active
                     ? "bg-[#D4AF37]/15 text-[#D4AF37]"
@@ -126,6 +128,7 @@ const Navbaar = () => {
 
           <Link
             to="/"
+            onClick={closeMenu}
             className={`px-3 py-2 text-sm font-medium transition duration-300 ${
               isActive("/") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
             }`}
@@ -140,6 +143,7 @@ const Navbaar = () => {
             items={aboutItems}
             isOpen={openDropdown === "about"}
             onToggle={() => toggleDropdown("about")}
+            onNavigate={closeMenu}
           />
 
           {/* PROGRAMS */}
@@ -149,6 +153,7 @@ const Navbaar = () => {
             items={programItems}
             isOpen={openDropdown === "programs"}
             onToggle={() => toggleDropdown("programs")}
+            onNavigate={closeMenu}
           />
 
           {/* BUSINESS */}
@@ -158,6 +163,7 @@ const Navbaar = () => {
             items={businessItems}
             isOpen={openDropdown === "business"}
             onToggle={() => toggleDropdown("business")}
+            onNavigate={closeMenu}
           />
 
           {/* FINANCE */}
@@ -167,6 +173,7 @@ const Navbaar = () => {
             items={financeItems}
             isOpen={openDropdown === "finance"}
             onToggle={() => toggleDropdown("finance")}
+            onNavigate={closeMenu}
           />
 
           {/* SUPPORT */}
@@ -176,10 +183,12 @@ const Navbaar = () => {
             items={supportItems}
             isOpen={openDropdown === "support"}
             onToggle={() => toggleDropdown("support")}
+            onNavigate={closeMenu}
           />
 
           <Link
             to="/Customer"
+            onClick={closeMenu}
             className={`px-3 py-2 text-sm font-medium transition duration-300 ${
               isActive("/Customer")
                 ? "text-[#c5a06a]"
@@ -193,6 +202,7 @@ const Navbaar = () => {
 
           <Link
             to="/contact-us"
+            onClick={closeMenu}
             className={`ml-3 rounded-full border px-5 py-2.5 text-sm font-semibold transition duration-300 ${
               isActive("/contact-us")
                 ? "border-[#D4AF37] bg-[#D4AF37] text-[#000000]"
@@ -206,6 +216,7 @@ const Navbaar = () => {
 
           <Link
             to="/legal-pages"
+            onClick={closeMenu}
             className={`ml-2 px-3 py-2 text-sm font-medium transition duration-300 ${
               isActive("/legal-pages")
                 ? "text-[#D4AF37]"
@@ -377,4 +388,4 @@ const MobileDropdown = ({
   );
 };
 
-export default Navbaar; 
+export default Navbaar;

@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const AboutHero: React.FC = () => {
@@ -8,26 +9,15 @@ const AboutHero: React.FC = () => {
         backgroundImage: "url('/about-hero.png')",
       }}
     >
-      {/* Dark Overlay */}
-      <div
-        className="
-          absolute inset-0
-          bg-gradient-to-r
-          from-[#020e20]
-          via-[#061d38e8]
-          to-[#061a3580]
-        "
-      />
-
       {/* Hero Container */}
       <div
         className="
           relative z-10 mx-auto flex min-h-[500px]
-          max-w-[1200px] items-center
-          px-5 py-16 sm:px-8 lg:px-10
+          max-w-[1200px] items-center justify-center
+          px-5 py-16 text-center sm:px-8 lg:px-10
         "
       >
-        <div className="max-w-[650px]">
+        <div className="mx-auto flex max-w-[800px] flex-col items-center">
 
           {/* Badge */}
           <div
@@ -35,14 +25,14 @@ const AboutHero: React.FC = () => {
               mb-4 inline-flex rounded-full
               border border-[#d6a43166]
               bg-[#061a35aa]
-              px-3 py-1.5
+              px-3.5 py-1.5
               backdrop-blur-sm
             "
           >
             <span
               className="
-                text-[9px] font-semibold
-                uppercase tracking-[2px]
+                text-[10px] font-bold
+                uppercase tracking-[2.5px]
                 text-[#f3d38a]
               "
             >
@@ -53,123 +43,102 @@ const AboutHero: React.FC = () => {
           {/* Heading */}
           <h1
             className="
-              font-serif text-[36px]
-              font-bold leading-[1.08]
+              font-serif font-extrabold
+              leading-[1.15] tracking-tight
               text-white
-              sm:text-[42px]
-              md:text-[50px]
-              lg:text-[56px]
+              text-[36px]
+              sm:text-[46px]
+              md:text-[56px]
             "
           >
-            Connecting People,
-            <br />
+            <span className="block">
+              Connecting People,
+            </span>
 
-            <span className="text-[#f2c45c]">
-              Businesses & Global Opportunities.
+            <span className="block whitespace-nowrap text-[#f2c45c]">
+              Businesses & Global Opportunities
             </span>
           </h1>
 
           {/* Description */}
           <p
             className="
-              mt-5 max-w-[570px]
-              text-[12px] leading-6
-              text-[#c5d1df]
+              mt-4 max-w-[550px]
+              text-[12px] leading-relaxed
+              text-white
               sm:text-[13px]
             "
           >
-            We create accessible programs and strategic partnerships that
-            connect people, businesses and opportunities — building a trusted
-            ecosystem from Pakistan toward the world.
+            Building a trusted global ecosystem from Pakistan with strategic
+            partnerships and accessible programs.
           </p>
 
           {/* Buttons */}
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
 
             {/* Explore Programs */}
             <a
               href="/programs"
               className="
-                inline-flex items-center gap-2
-                rounded-md bg-[#e0ad38]
-                px-4 py-2.5
-                text-[11px] font-bold
-                shadow-lg
+                inline-flex h-[44px] min-w-[160px]
+                items-center justify-center gap-2
+                rounded-lg
+                bg-[#e0ad38]
+                px-6
+                text-[12px] font-bold
+                text-[#07172d]
+                shadow-lg shadow-black/20
                 transition-all duration-300
                 hover:-translate-y-1
                 hover:bg-[#f3c75d]
+                hover:shadow-xl
               "
-              style={{
-                color: "#07172d",
-              }}
             >
-              <span style={{ color: "#07172d" }}>
-                Explore Programs
-              </span>
+              <span>Explore Programs</span>
 
               <span
-                className="text-sm font-bold"
-                style={{
-                  color: "#07172d",
-                }}
+                className="text-base font-bold"
+                style={{ color: "#07172d" }}
               >
                 →
               </span>
             </a>
 
             {/* Contact Us */}
-            <a
-              href="/contact"
-              className="
-                inline-flex items-center gap-2
-                rounded-md border
-                px-5 py-2.5
-                text-[11px] font-bold
-                shadow-lg
-                transition-all duration-300
-                hover:-translate-y-1
-                hover:bg-[#0b2a4e]
-              "
-              style={{
-                color: "#ffffff",
-                backgroundColor: "#061a35",
-                borderColor: "#f3c75d",
-              }}
-            >
-              <span
-                className="whitespace-nowrap"
-                style={{
-                  color: "#ffffff",
-                }}
-              >
-                Contact Us
-              </span>
-
-              <span
-                className="text-sm font-bold"
-                style={{
-                  color: "#f3c75d",
-                }}
-              >
-                →
-              </span>
-            </a>
+           <a
+  href="/contact"
+  className="
+    inline-flex h-[44px] min-w-[160px]
+    items-center justify-center
+    rounded-lg
+    bg-[#e0ad38]
+    px-6
+    text-[12px] font-bold
+    text-[#07172d]
+    shadow-lg shadow-black/20
+    transition-all duration-300
+    hover:-translate-y-1
+    hover:bg-[#f3c75d]
+    hover:shadow-xl
+  "
+>
+  Contact Us
+</a>
 
           </div>
 
           {/* Stats */}
           <div
             className="
-              mt-8 grid grid-cols-2
-              gap-2
-              sm:flex sm:flex-wrap
+              mt-8 grid grid-cols-2 gap-3
+              sm:flex sm:flex-wrap sm:justify-center
             "
           >
 
             {/* Global */}
             <div
               className="
-                min-w-[120px]
+                min-w-[130px]
                 rounded-lg border
                 border-[#d9aa3a55]
                 bg-[#061a35cc]
@@ -177,7 +146,7 @@ const AboutHero: React.FC = () => {
                 backdrop-blur-md
               "
             >
-              <strong className="block text-[15px] text-white">
+              <strong className="block text-[15px] font-bold text-white">
                 Global
               </strong>
 
@@ -189,7 +158,7 @@ const AboutHero: React.FC = () => {
             {/* Trusted */}
             <div
               className="
-                min-w-[120px]
+                min-w-[130px]
                 rounded-lg border
                 border-[#d9aa3a55]
                 bg-[#061a35cc]
@@ -197,7 +166,7 @@ const AboutHero: React.FC = () => {
                 backdrop-blur-md
               "
             >
-              <strong className="block text-[15px] text-white">
+              <strong className="block text-[15px] font-bold text-white">
                 Trusted
               </strong>
 
@@ -209,7 +178,7 @@ const AboutHero: React.FC = () => {
             {/* Transparent */}
             <div
               className="
-                min-w-[120px]
+                min-w-[130px]
                 rounded-lg border
                 border-[#d9aa3a55]
                 bg-[#061a35cc]
@@ -217,7 +186,7 @@ const AboutHero: React.FC = () => {
                 backdrop-blur-md
               "
             >
-              <strong className="block text-[15px] text-white">
+              <strong className="block text-[15px] font-bold text-white">
                 Transparent
               </strong>
 
@@ -229,7 +198,7 @@ const AboutHero: React.FC = () => {
             {/* Support */}
             <div
               className="
-                min-w-[120px]
+                min-w-[130px]
                 rounded-lg border
                 border-[#d9aa3a55]
                 bg-[#061a35cc]
@@ -237,7 +206,7 @@ const AboutHero: React.FC = () => {
                 backdrop-blur-md
               "
             >
-              <strong className="block text-[15px] text-white">
+              <strong className="block text-[15px] font-bold text-white">
                 24/7
               </strong>
 
@@ -254,3 +223,4 @@ const AboutHero: React.FC = () => {
 };
 
 export default AboutHero;
+

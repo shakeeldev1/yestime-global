@@ -1,27 +1,80 @@
 import React from "react";
+import {
+  ArrowRight,
+  Target,
+  Eye,
+  Sparkles,
+  Users,
+  ShoppingBag,
+  Car,
+  Bike,
+  PiggyBank,
+} from "lucide-react";
+
+interface Program {
+  title: string;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
+  image: string;
+}
+
+const programs: Program[] = [
+  {
+    title: "Shopping Program",
+    icon: ShoppingBag,
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=85",
+  },
+  {
+    title: "Car Program",
+    icon: Car,
+    image:
+      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=900&q=85",
+  },
+  {
+    title: "Motorcycle Program",
+    icon: Bike,
+    image:
+      "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=85",
+  },
+  {
+    title: "Savings Programs",
+    icon: PiggyBank,
+    image:
+      "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=900&q=85",
+  },
+];
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="bg-[#f6f8fb] py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10">
+    <section className="w-full bg-[#f5f7fa] py-7 sm:py-8">
+      <div className="mx-auto w-full max-w-[1450px] px-3 sm:px-5 lg:px-6">
 
-        {/* Main Card */}
-        <div className="grid overflow-hidden rounded-2xl bg-white shadow-[0_15px_45px_rgba(10,35,55,0.08)] lg:grid-cols-2">
+        {/* MAIN CARD */}
+        <div className="grid overflow-hidden rounded-2xl border border-[#e5eaf0] bg-white shadow-[0_15px_45px_rgba(11,35,65,0.08)] lg:grid-cols-[0.9fr_1.1fr]">
 
-          {/* ================= LEFT CONTENT ================= */}
-          <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-14">
+          {/* ================= LEFT ================= */}
+          <div className="flex flex-col justify-center px-5 py-6 sm:px-7 sm:py-7 lg:px-9 lg:py-8">
 
-            {/* Small Label */}
+            {/* LABEL */}
             <div className="mb-3 flex items-center gap-2">
-              <span className="h-[2px] w-7 bg-[#e0ad38]" />
+              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#0b2341] text-[#e0ad38]">
+                <Users size={14} />
+              </div>
 
-              <span className="text-[9px] font-bold uppercase tracking-[2px] text-[#d29b28]">
-                Who We Are
-              </span>
+              <div>
+                <span className="text-[8px] font-bold uppercase tracking-[2px] text-[#c6922b]">
+                  Who We Are
+                </span>
+
+                <div className="mt-1 flex items-center gap-1">
+                  <span className="h-[2px] w-6 rounded-full bg-[#dca936]" />
+                  <span className="h-[2px] w-1 rounded-full bg-[#dca936]" />
+                </div>
+              </div>
             </div>
 
-            {/* Heading */}
-            <h2 className="max-w-[520px] font-serif text-[30px] font-bold leading-[1.15] text-[#102742] sm:text-[36px] lg:text-[42px]">
+            {/* HEADING */}
+            <h2 className="max-w-[570px] font-serif text-[27px] font-bold leading-[1.12] tracking-tight text-[#0b2341] sm:text-[32px] lg:text-[37px]">
               Connecting People,
               <br />
               <span className="text-[#dca936]">
@@ -29,123 +82,192 @@ const AboutSection: React.FC = () => {
               </span>
             </h2>
 
-            {/* First Paragraph */}
-            <p className="mt-5 max-w-[530px] text-[12px] leading-6 text-[#6d7e92] sm:text-[13px]">
+            {/* SINGLE MERGED DESCRIPTION */}
+            <p className="mt-3 max-w-[570px] text-[11px] leading-[1.7] text-[#63758a] sm:text-[12px]">
               At{" "}
-              <span className="font-semibold text-[#102742]">
-                YES TIME GLOBAL
+              <strong className="font-bold text-[#0b2341]">
+                YES TIME GLOBAL PRIVATE LIMITED
+              </strong>
+              , we connect people, businesses, and communities through trusted
+              programs, strategic partnerships, and meaningful opportunities,
+              creating simple pathways for growth, collaboration, and
+              long-term success.
+            </p>
+
+            {/* MINI VALUES */}
+            <div className="mt-4 grid grid-cols-3 gap-2">
+
+              <div className="flex items-center gap-1.5">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#fff5dc] text-[#d49d28]">
+                  <Target size={11} />
+                </span>
+
+                <span className="text-[8px] font-semibold text-[#243b55]">
+                  Mission
+                </span>
+              </div>
+
+              <div className="flex items-center gap-1.5">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#fff5dc] text-[#d49d28]">
+                  <Eye size={11} />
+                </span>
+
+                <span className="text-[8px] font-semibold text-[#243b55]">
+                  Vision
+                </span>
+              </div>
+
+              <div className="flex items-center gap-1.5">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#fff5dc] text-[#d49d28]">
+                  <Sparkles size={11} />
+                </span>
+
+                <span className="text-[8px] font-semibold text-[#243b55]">
+                  Values
+                </span>
+              </div>
+
+            </div>
+
+            {/* DIVIDER */}
+            <div className="my-4 h-px w-full bg-[#e7edf3]" />
+
+            {/* SHORT TRUST LINE */}
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+
+              <span className="text-[8px] font-semibold text-[#53677d]">
+                Global Opportunities
               </span>
-              , we are committed to connecting people, businesses, and
-              opportunities across the globe through one trusted and
-              transparent platform.
-            </p>
 
-            {/* Second Paragraph */}
-            <p className="mt-3 max-w-[530px] text-[12px] leading-6 text-[#6d7e92] sm:text-[13px]">
-              Our mission is to create accessible programs and strategic
-              partnerships that empower individuals and businesses to grow,
-              achieve, and succeed together.
-            </p>
+              <span className="h-1 w-1 rounded-full bg-[#dca936]" />
 
-            {/* ================= FEATURES ================= */}
-            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <span className="text-[8px] font-semibold text-[#53677d]">
+                Trusted Process
+              </span>
 
-              {/* Feature 1 */}
-              <div className="flex items-center gap-2">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#fff5d9] text-[10px] font-bold text-[#d49d28]">
-                  ✓
-                </span>
+              <span className="h-1 w-1 rounded-full bg-[#dca936]" />
 
-                <span className="text-[11px] font-semibold text-[#263b54]">
-                  Global Opportunities
-                </span>
-              </div>
-
-              {/* Feature 2 */}
-              <div className="flex items-center gap-2">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#fff5d9] text-[10px] font-bold text-[#d49d28]">
-                  ✓
-                </span>
-
-                <span className="text-[11px] font-semibold text-[#263b54]">
-                  Transparent Process
-                </span>
-              </div>
-
-              {/* Feature 3 */}
-              <div className="flex items-center gap-2">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#fff5d9] text-[10px] font-bold text-[#d49d28]">
-                  ✓
-                </span>
-
-                <span className="text-[11px] font-semibold text-[#263b54]">
-                  Member Focused
-                </span>
-              </div>
-
-              {/* Feature 4 */}
-              <div className="flex items-center gap-2">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#fff5d9] text-[10px] font-bold text-[#d49d28]">
-                  ✓
-                </span>
-
-                <span className="text-[11px] font-semibold text-[#263b54]">
-                  Trusted Platform
-                </span>
-              </div>
+              <span className="text-[8px] font-semibold text-[#53677d]">
+                Strategic Partnerships
+              </span>
 
             </div>
 
-            {/* ================= BUTTON ================= */}
-            <div className="mt-8">
+            {/* BUTTON */}
+            <div className="mt-4">
               <a
-                href="/programs"
-                className="group inline-flex items-center gap-3 rounded-lg px-6 py-3 text-xs font-semibold shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-                style={{
-                  backgroundColor: "#0b1b2d",
-                  color: "#facc15",
-                }}
-              >
-                <span style={{ color: "#facc15" }}>
-                  Discover Our Programs
-                </span>
+  href="/about"
+  className="group inline-flex h-[36px] items-center justify-center gap-2 rounded-lg bg-[#dca936] px-4 text-[9px] font-bold text-[#0b2341] shadow-[0_6px_18px_rgba(220,169,54,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#f0c451] hover:shadow-[0_8px_22px_rgba(220,169,54,0.35)]"
+>
+  Discover Our Story
 
-                <span
-                  style={{ color: "#facc15" }}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                >
-                  →
-                </span>
-              </a>
+  <ArrowRight
+    size={12}
+    className="text-[#0b2341] transition-transform duration-300 group-hover:translate-x-1"
+  />
+</a>
             </div>
           </div>
 
-          {/* ================= RIGHT IMAGE ================= */}
-          <div className="relative min-h-[320px] overflow-hidden sm:min-h-[400px] lg:min-h-[500px]">
+          {/* ================= RIGHT PROGRAMS ================= */}
+          <div className="relative overflow-hidden bg-[#071a31] px-4 py-5 sm:px-6 sm:py-6 lg:px-7 lg:py-7">
 
-            <img
-              src="/about-global.png"
-              alt="YES TIME GLOBAL connecting people and businesses"
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-            />
+            {/* BACKGROUND GLOW */}
+            <div className="pointer-events-none absolute -right-20 -top-20 h-52 w-52 rounded-full bg-[#dca936]/10 blur-3xl" />
 
-            {/* Image Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#061a35cc] via-transparent to-transparent" />
+            <div className="pointer-events-none absolute -bottom-20 -left-20 h-52 w-52 rounded-full bg-[#1c5d91]/20 blur-3xl" />
 
-            {/* ================= IMAGE BADGE ================= */}
-            <div className="absolute bottom-6 left-6 rounded-xl border border-white/20 bg-[#061a35dd] px-5 py-3 backdrop-blur-md">
+            {/* HEADER */}
+            <div className="relative mb-4">
 
-              <p className="text-[9px] uppercase tracking-[2px] text-[#f3c75d]">
-                YES TIME GLOBAL
-              </p>
+              <div className="flex items-center gap-2">
+                <span className="h-[2px] w-7 bg-[#dca936]" />
 
-              <p className="mt-1 text-[11px] font-semibold text-white">
-                Connecting Opportunities Worldwide
-              </p>
+                <span className="text-[8px] font-bold uppercase tracking-[2px] text-[#e5b84b]">
+                  Our Programs
+                </span>
+              </div>
+
+              <h3 className="mt-1.5 text-[19px] font-bold text-white sm:text-[22px]">
+                Programs Designed{" "}
+                <span className="text-[#e0ad38]">For You.</span>
+              </h3>
 
             </div>
-          </div>
 
+            {/* PROGRAM GRID */}
+            <div className="relative grid grid-cols-2 gap-3">
+
+              {programs.map((program, index) => {
+                const Icon = program.icon;
+
+                return (
+                  <div
+                    key={program.title}
+                    className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-[#dca936]/60"
+                  >
+
+                    {/* IMAGE */}
+                    <div className="relative h-[125px] overflow-hidden sm:h-[140px]">
+
+                      <img
+                        src={program.image}
+                        alt={program.title}
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+
+                      {/* OVERLAY */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#06172c] via-[#06172c]/20 to-transparent" />
+
+                      {/* ICON */}
+                      <div className="absolute left-2.5 top-2.5 flex h-8 w-8 items-center justify-center rounded-full border border-[#f1c95b]/60 bg-[#071a31]/90 text-[#f3c75d] shadow-lg backdrop-blur-sm">
+                        <Icon size={14} />
+                      </div>
+
+                      {/* NUMBER */}
+                      <span className="absolute right-2.5 top-2.5 text-[8px] font-bold tracking-[1px] text-white/50">
+                        0{index + 1}
+                      </span>
+
+                      {/* TITLE */}
+                      <div className="absolute bottom-2.5 left-2.5 right-2.5">
+
+                        <h4 className="text-[11px] font-bold text-white sm:text-[12px]">
+                          {program.title}
+                        </h4>
+
+                        <div className="mt-1 h-[2px] w-6 bg-[#dca936] transition-all duration-300 group-hover:w-10" />
+
+                      </div>
+
+                    </div>
+                  </div>
+                );
+              })}
+
+            </div>
+
+            {/* BOTTOM LINE */}
+            <div className="relative mt-3 flex items-center justify-between rounded-lg border border-[#dca936]/20 bg-[#dca936]/5 px-3 py-2">
+
+              <div className="flex items-center gap-2">
+
+                <span className="h-1.5 w-1.5 rounded-full bg-[#dca936]" />
+
+                <p className="text-[8px] font-medium text-white/65">
+                  Trusted programs • Better opportunities
+                </p>
+
+              </div>
+
+              <ArrowRight
+                size={12}
+                className="text-[#dca936]"
+              />
+
+            </div>
+
+          </div>
         </div>
       </div>
     </section>

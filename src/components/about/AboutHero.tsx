@@ -1,220 +1,62 @@
 
 import React from "react";
+import { ChevronRight } from "lucide-react";
 
 const AboutHero: React.FC = () => {
   return (
-    <section
-      className="relative min-h-[500px] overflow-hidden bg-cover bg-center"
-      style={{
-        backgroundImage: "url('/about-hero.png')",
-      }}
-    >
-      {/* Hero Container */}
-      <div
-        className="
-          relative z-10 mx-auto flex min-h-[500px]
-          max-w-[1200px] items-center justify-center
-          px-5 py-16 text-center sm:px-8 lg:px-10
-        "
-      >
-        <div className="mx-auto flex max-w-[800px] flex-col items-center">
+    <section className="relative min-h-[480px] w-full overflow-hidden bg-[#000000] text-white">
+      {/* BACKGROUND IMAGE & OVERLAYS */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Main Background Image (Earth + Building) */}
+        <div
+          className="absolute inset-0 bg-cover bg-right bg-no-repeat opacity-90"
+          style={{
+            backgroundImage: "url('/img12.png')",
+          }}
+        />
 
-          {/* Badge */}
-          <div
-            className="
-              mb-4 inline-flex rounded-full
-              border border-[#d6a43166]
-              bg-[#061a35aa]
-              px-3.5 py-1.5
-              backdrop-blur-sm
-            "
-          >
-            <span
-              className="
-                text-[10px] font-bold
-                uppercase tracking-[2.5px]
-                text-[#f3d38a]
-              "
-            >
-              ✦ About Yes Time Global
+        {/* Gradient Overlays for smooth blend */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#000000] via-[#000000]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-[#000000]/40" />
+      </div>
+
+      {/* CONTENT CONTAINER */}
+      <div className="relative mx-auto flex min-h-[480px] max-w-[1280px] flex-col justify-center px-6 py-12 lg:px-12">
+        <div className="z-10 max-w-[580px]">
+          {/* BADGE */}
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#d3a344]/40 bg-black/40 px-3.5 py-1.5 backdrop-blur-md">
+            <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#e5a51e] text-[10px] font-bold text-black">
+              A
+            </span>
+            <span className="text-[11px] font-semibold tracking-wider text-white uppercase">
+              ABOUT US
             </span>
           </div>
 
-          {/* Heading */}
-          <h1
-            className="
-              font-serif font-extrabold
-              leading-[1.15] tracking-tight
-              text-white
-              text-[36px]
-              sm:text-[46px]
-              md:text-[56px]
-            "
-          >
-            <span className="block">
-              Connecting People,
-            </span>
-
-            <span className="block whitespace-nowrap text-[#f2c45c]">
-              Businesses & Global Opportunities
-            </span>
+          {/* MAIN HEADING */}
+          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Connecting People, <br />
+            <span className="text-[#e5a51e]">Businesses & Global Opportunities</span>
           </h1>
 
-          {/* Description */}
-          <p
-            className="
-              mt-4 max-w-[550px]
-              text-[12px] leading-relaxed
-              text-white
-              sm:text-[13px]
-            "
-          >
-            Building a trusted global ecosystem from Pakistan with strategic
-            partnerships and accessible programs.
+          {/* DESCRIPTION */}
+          <p className="mt-4 max-w-[480px] text-sm leading-relaxed text-gray-300 sm:text-base">
+            Building a trusted global ecosystem from Pakistan with strategic partnerships and accessible programs for everyone.
           </p>
 
-          {/* Buttons */}
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
-
-            {/* Explore Programs */}
-            <a
-              href="/programs"
-              className="
-                inline-flex h-[44px] min-w-[160px]
-                items-center justify-center gap-2
-                rounded-lg
-                bg-[#e0ad38]
-                px-6
-                text-[12px] font-bold
-                text-[#07172d]
-                shadow-lg shadow-black/20
-                transition-all duration-300
-                hover:-translate-y-1
-                hover:bg-[#f3c75d]
-                hover:shadow-xl
-              "
-            >
+          {/* CALL TO ACTION BUTTONS */}
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            {/* Primary CTA */}
+            <button className="cursor-pointer inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#e5a51e] to-[#c68c18] px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all hover:brightness-110 active:scale-95">
               <span>Explore Programs</span>
+              <ChevronRight className="h-4 w-4" />
+            </button>
 
-              <span
-                className="text-base font-bold"
-                style={{ color: "#07172d" }}
-              >
-                →
-              </span>
-            </a>
-
-            {/* Contact Us */}
-           <a
-  href="/contact"
-  className="
-    inline-flex h-[44px] min-w-[160px]
-    items-center justify-center
-    rounded-lg
-    bg-[#e0ad38]
-    px-6
-    text-[12px] font-bold
-    text-[#07172d]
-    shadow-lg shadow-black/20
-    transition-all duration-300
-    hover:-translate-y-1
-    hover:bg-[#f3c75d]
-    hover:shadow-xl
-  "
->
-  Contact Us
-</a>
-
-          </div>
-
-          {/* Stats */}
-          <div
-            className="
-              mt-8 grid grid-cols-2 gap-3
-              sm:flex sm:flex-wrap sm:justify-center
-            "
-          >
-
-            {/* Global */}
-            <div
-              className="
-                min-w-[130px]
-                rounded-lg border
-                border-[#d9aa3a55]
-                bg-[#061a35cc]
-                px-4 py-2.5
-                backdrop-blur-md
-              "
-            >
-              <strong className="block text-[15px] font-bold text-white">
-                Global
-              </strong>
-
-              <span className="text-[9px] text-[#aebdd0]">
-                Opportunities
-              </span>
-            </div>
-
-            {/* Trusted */}
-            <div
-              className="
-                min-w-[130px]
-                rounded-lg border
-                border-[#d9aa3a55]
-                bg-[#061a35cc]
-                px-4 py-2.5
-                backdrop-blur-md
-              "
-            >
-              <strong className="block text-[15px] font-bold text-white">
-                Trusted
-              </strong>
-
-              <span className="text-[9px] text-[#aebdd0]">
-                Platform
-              </span>
-            </div>
-
-            {/* Transparent */}
-            <div
-              className="
-                min-w-[130px]
-                rounded-lg border
-                border-[#d9aa3a55]
-                bg-[#061a35cc]
-                px-4 py-2.5
-                backdrop-blur-md
-              "
-            >
-              <strong className="block text-[15px] font-bold text-white">
-                Transparent
-              </strong>
-
-              <span className="text-[9px] text-[#aebdd0]">
-                Process
-              </span>
-            </div>
-
-            {/* Support */}
-            <div
-              className="
-                min-w-[130px]
-                rounded-lg border
-                border-[#d9aa3a55]
-                bg-[#061a35cc]
-                px-4 py-2.5
-                backdrop-blur-md
-              "
-            >
-              <strong className="block text-[15px] font-bold text-white">
-                24/7
-              </strong>
-
-              <span className="text-[9px] text-[#aebdd0]">
-                Member Support
-              </span>
-            </div>
-
+            {/* Secondary CTA */}
+            <button className="cursor-pointer inline-flex items-center gap-2 rounded-xl border border-white/20 bg-black/30 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition-all hover:bg-white/10 active:scale-95">
+              <span>Contact Us</span>
+              <ChevronRight className="h-4 w-4" />
+            </button>
           </div>
         </div>
       </div>

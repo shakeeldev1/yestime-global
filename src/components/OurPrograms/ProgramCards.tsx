@@ -1,245 +1,272 @@
 import React from "react";
 import {
-  CarFront,
-  House,
+  ShoppingCart,
+  Package,
+  Fuel,
   Bike,
+  Car,
+  Home,
+  Wheat,
   UserRound,
-  Check,
+  ArrowRight,
+  Clock3,
 } from "lucide-react";
 
 interface Program {
   number: string;
   title: string;
-  description: string;
   image: string;
-  alt: string;
-  icon: React.ReactNode;
+  description: string;
   points: string[];
-  note: string;
+  icon: React.ReactNode;
 }
 
 const programs: Program[] = [
   {
-    number: "01 — Vehicle Plan",
-    title: "Vehicle Plan",
-    description:
-      "Installment based plans for buying a vehicle, chosen according to your budget and need, with every plan's price, duration, eligibility and terms set out clearly upfront.",
-
-    image: "/img1.png",
-
-    alt: "Car showroom for the Yes Time Global Vehicle Plan",
-
-    icon: <CarFront size={22} />,
-
+    number: "01",
+    title: "Shopping Saving",
+    image: "/images/programs/shopping.jpg",
+    description: "Daily Essentials",
     points: [
-      "Plans from Rs. 30 Lakh up to Rs. 2.1 Crore vehicles",
-      "Fixed monthly installment e.g. Rs. 36,000/month for a 30 Lakh plan",
-      "Every plan's amount, duration & eligibility shown upfront",
-      "Payment record kept safe against your account",
+      "Everyday shopping made easy and affordable",
+      "Save more on daily essentials",
+      "Participate every 1 minute",
     ],
-
-    note:
-      "Vehicle price, installment, method of work and other terms will differ per plan and are shared clearly before you join.",
+    icon: <ShoppingCart size={18} />,
   },
-
   {
-    number: "02 — Property Plan",
-    title: "Property Plan",
-    description:
-      "A modern platform for people who want to buy, sell or invest in property bringing buyers, owners and business partners together with clear, verified information.",
-
-    image: "/img2.png",
-
-    alt: "Modern property for the Yes Time Global Property Plan",
-
-    icon: <House size={22} />,
-
+    number: "02",
+    title: "Wholesale Saving",
+    image: "/images/programs/wholesale.jpg",
+    description: "Bulk Purchases",
     points: [
-      "Residential property homes, flats & more",
-      "Commercial property shops, offices, plazas, markets",
-      "Agricultural land & related opportunities",
-      "Future construction & development plans, where applicable",
+      "Best option for bulk buyers",
+      "Save big on wholesale orders",
+      "Participate every 1 minute",
     ],
-
-    note:
-      "Every deal is confirmed only after buyer, seller and legal documents are verified — the company does not guarantee legal title on its own.",
+    icon: <Package size={18} />,
   },
-
   {
-    number: "03 — New Vehicle",
-    title: "New Vehicle",
-    description:
-      "An organized, easy digital platform to buy and sell new or used cars, motorcycles and scooters with genuine listing details for every vehicle.",
-
-    image: "/img3.png",
-
-    alt: "New and used vehicles lot",
-
-    icon: <Bike size={22} />,
-
+    number: "03",
+    title: "Petrol & Diesel Saving",
+    image: "/images/programs/fuel.jpg",
+    description: "Fuel Purchases",
     points: [
-      "Cars, motorcycles & scooters new and used",
-      "Listings include model, year, condition, price & photos",
-      "Direct contact with the seller or their representative",
-      "Buyers are encouraged to verify condition & documents themselves",
+      "Save more on fuel expenses",
+      "For petrol and diesel",
+      "Participate every 1 minute",
     ],
-
-    note:
-      "Listing information is provided to help your search it is not a substitute for your own inspection before purchase.",
+    icon: <Fuel size={18} />,
   },
-
   {
-    number: "04 — Buy & Sell Program",
-    title: "Buy & Sell Program",
-    description:
-      "Connects customers with registered dealers on one organized platform built to bring buying and selling together, according to the company's set rules.",
-
-    image: "/img4.png",
-
-    alt: "Dealer and customer completing a Buy and Sell deal",
-
-    icon: <UserRound size={22} />,
-
+    number: "04",
+    title: "Motorcycle & Scooty Saving",
+    image: "/images/programs/bikes.jpg",
+    description: "New or Used",
     points: [
-      "Search or register as a company verified dealer",
-      "A personal dashboard to track your buying record",
-      "View program announcements & results in one place",
-      "Buying eligibility set per the company's system",
+      "Buy new or used motorcycles and scooties",
+      "Great offers for all",
+      "Participate every 1 minute",
     ],
-
-    note:
-      "Benefit, eligibility and outcomes under this program follow the company's set terms and applicable law.",
+    icon: <Bike size={18} />,
+  },
+  {
+    number: "05",
+    title: "Car Saving",
+    image: "/images/programs/cars.jpg",
+    description: "New or Used Cars",
+    points: [
+      "Buy new or used cars",
+      "Best deals for everyone",
+      "Participate every 1 minute",
+    ],
+    icon: <Car size={18} />,
+  },
+  {
+    number: "06",
+    title: "Property Saving",
+    image: "/images/programs/property.jpg",
+    description: "Buy / Sell Property",
+    points: [
+      "Buy or sell property easily",
+      "Good opportunities, great deals",
+      "Participate every 1 minute",
+    ],
+    icon: <Home size={18} />,
+  },
+  {
+    number: "07",
+    title: "Crop Saving",
+    image: "/images/programs/crops.jpg",
+    description: "Buy / Sell Crops",
+    points: [
+      "Buy or sell crops",
+      "Support for farmers & buyers",
+      "Participate every 1 minute",
+    ],
+    icon: <Wheat size={18} />,
+  },
+  {
+    number: "08",
+    title: "Self-Service Saving",
+    image: "/images/programs/self-service.jpg",
+    description: "Buy or Sell Yourself",
+    points: [
+      "Buy or sell by yourself",
+      "You are in full control",
+      "Participate every 1 minute",
+    ],
+    icon: <UserRound size={18} />,
   },
 ];
 
 const ProgramCards: React.FC = () => {
   return (
-    <section className="px-6 pb-[110px] pt-[56px] lg:px-8">
-      <div className="mx-auto max-w-[1160px]">
+    <section className="bg-[#faf9f6] px-5 py-16 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-[1250px]">
 
-        <div className="grid gap-6 md:grid-cols-2">
+        {/* ================= HEADING ================= */}
+        <div className="mx-auto max-w-[700px] text-center">
+          <span className="inline-flex rounded-full border border-[#e6d9bd] bg-[#fffaf0] px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#b8892f]">
+            What We Offer
+          </span>
 
+          <h2 className="mt-4 text-2xl font-semibold leading-tight text-[#0e1b30] sm:text-3xl">
+            Programs Built for{" "}
+            <span className="font-serif italic text-[#b8892f]">
+              Real Opportunities
+            </span>
+          </h2>
+
+          <p className="mt-3 text-sm leading-6 text-[#68717f] sm:text-[15px]">
+            Our programs are designed to give you real chances every 1 minute.
+            Choose any option, participate and win rewards.
+          </p>
+        </div>
+
+        {/* ================= CARDS ================= */}
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {programs.map((program) => (
             <article
               key={program.number}
               className="
-                flex
-                flex-col
+                group
                 overflow-hidden
-                rounded
+                rounded-lg
                 border
-                border-[#1e3a5f]
-                border-t-[3px]
-                border-t-[#f5c54e]
-                bg-[#020c1c]
-                transition-all
+                border-[#e5e2db]
+                bg-white
+                shadow-[0_4px_18px_rgba(14,27,48,0.05)]
+                transition
                 duration-300
                 hover:-translate-y-1
-                hover:shadow-[0_15px_40px_rgba(0,0,0,0.4)]
+                hover:shadow-[0_12px_30px_rgba(14,27,48,0.1)]
               "
             >
-
-      <div className="flex h-[280px] w-full items-center justify-center overflow-hidden bg-[#07182d]">
+              {/* ================= IMAGE ================= */}
+              <div className="relative h-[165px] overflow-hidden bg-[#f2f1ed]">
                 <img
                   src={program.image}
-                  alt={program.alt}
-                  loading="lazy"
+                  alt={program.title}
                   className="
-                    block
                     h-full
                     w-full
-                    object-center
-                    transition-transform
+                    object-cover
+                    transition
                     duration-500
-                    hover:scale-105
+                    group-hover:scale-105
                   "
                 />
+
+                {/* Number */}
+                <span
+                  className="
+                    absolute
+                    left-3
+                    top-3
+                    flex
+                    h-8
+                    w-8
+                    items-center
+                    justify-center
+                    rounded-full
+                    bg-[#061225]
+                    text-[11px]
+                    font-bold
+                    text-white
+                  "
+                >
+                  {program.number}
+                </span>
               </div>
 
               {/* ================= CONTENT ================= */}
-              <div className="flex flex-1 flex-col px-[34px] pb-[38px] pt-7">
+              <div className="p-5">
 
-                {/* Icon + Title */}
-                <div className="mb-[18px] flex items-center gap-4">
-
-                  {/* Icon */}
-                  <div
+                {/* Title */}
+                <div className="flex items-start gap-3">
+                  <span
                     className="
                       flex
-                      h-[52px]
-                      w-[52px]
+                      h-9
+                      w-9
                       shrink-0
                       items-center
                       justify-center
                       rounded-full
-                      bg-[#0b3b6e]
-                      text-[#f0c75e]
+                      bg-[#f5f0e4]
+                      text-[#b8892f]
                     "
                   >
                     {program.icon}
-                  </div>
+                  </span>
 
-                  {/* Number + Heading */}
-                  <div>
-                    <span
-                      className="
-                        mb-1
-                        block
-                        font-serif
-                        text-[0.78rem]
-                        font-semibold
-                        tracking-[0.08em]
-                        text-[#f5c54e]
-                      "
-                    >
-                      {program.number}
-                    </span>
-
-                    <h3
-                      className="
-                        text-[1.3rem]
-                        font-semibold
-                        text-white
-                      "
-                    >
-                      {program.title}
-                    </h3>
-                  </div>
+                  <h3
+                    className="
+                      pt-1
+                      text-[15px]
+                      font-bold
+                      leading-snug
+                      text-[#0e1b30]
+                    "
+                  >
+                    {program.title}
+                  </h3>
                 </div>
 
                 {/* Description */}
                 <p
                   className="
-                    mb-[18px]
-                    text-[0.95rem]
-                    leading-7
-                    text-slate-300
+                    mt-4
+                    text-[12px]
+                    font-semibold
+                    text-[#465064]
                   "
                 >
                   {program.description}
                 </p>
 
                 {/* Points */}
-                <ul className="mb-[22px]">
+                <ul className="mt-3 space-y-2.5">
                   {program.points.map((point) => (
                     <li
                       key={point}
                       className="
                         flex
                         gap-2.5
-                        border-t
-                        border-[#1e3a5f]
-                        py-2
-                        text-[0.88rem]
-                        text-white
+                        text-[11px]
+                        leading-[1.55]
+                        text-[#68717f]
                       "
                     >
-                      <Check
-                        size={17}
+                      <span
                         className="
-                          mt-0.5
+                          mt-[7px]
+                          h-1.5
+                          w-1.5
                           shrink-0
-                          text-[#f5c54e]
+                          rounded-full
+                          bg-[#b8892f]
                         "
                       />
 
@@ -248,27 +275,75 @@ const ProgramCards: React.FC = () => {
                   ))}
                 </ul>
 
-                {/* Note */}
-                <p
+                {/* ================= BOTTOM ================= */}
+                <div
                   className="
-                    mt-auto
+                    mt-5
+                    flex
+                    items-center
+                    justify-between
                     border-t
-                    border-dashed
-                    border-[#1e3a5f]
-                    pt-3.5
-                    text-[0.78rem]
-                    italic
-                    leading-5
-                    text-slate-400
+                    border-[#eeeae2]
+                    pt-4
                   "
                 >
-                  {program.note}
-                </p>
+                  <div className="flex items-center gap-2">
+                    <Clock3
+                      size={15}
+                      strokeWidth={1.8}
+                      className="text-[#596476]"
+                    />
 
+                    <div>
+                      <p
+                        className="
+                          text-[10px]
+                          font-bold
+                          leading-tight
+                          text-[#172238]
+                        "
+                      >
+                        Every 1 Minute
+                      </p>
+
+                      <p
+                        className="
+                          mt-0.5
+                          text-[10px]
+                          leading-tight
+                          text-[#8b929d]
+                        "
+                      >
+                        ہر 1 منٹ میں
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Arrow */}
+                  <button
+                    aria-label={`Explore ${program.title}`}
+                    className="
+                      flex
+                      h-8
+                      w-8
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-full
+                      bg-[#061225]
+                      text-[#d3a344]
+                      transition
+                      duration-300
+                      group-hover:bg-[#b8892f]
+                      group-hover:text-white
+                    "
+                  >
+                    <ArrowRight size={15} />
+                  </button>
+                </div>
               </div>
             </article>
           ))}
-
         </div>
       </div>
     </section>

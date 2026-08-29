@@ -1,139 +1,107 @@
-import React from "react";
+import {
+  CalendarDays,
+  Layers3,
+  Globe2,
+  ShieldCheck,
+} from "lucide-react";
 
-const Hero: React.FC = () => {
+export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#faf9f6] px-6 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14">
+    <section 
+      className="relative overflow-hidden text-white bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "linear-gradient(to right, rgba(6, 19, 44, 0.9), rgba(6, 19, 44, 0.75)), url('/img12.png')" }}
+    >
 
-        <div className="text-left lg:col-span-7">
+      {/* Background glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_40%,rgba(245,181,27,.18),transparent_35%)]" />
 
-          <span
-            className="
-              inline-flex
-              items-center
-              gap-2.5
-              font-sans
-              text-[0.72rem]
-              font-bold
-              uppercase
-              tracking-[0.22em]
-              text-[#b8892f]
-            "
-          >
-  
+      <div className="relative mx-auto grid min-h-[570px] max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:px-10">
+
+        {/* Left */}
+        <div className="relative z-10">
+
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-[#f5b51b]">
             Our Purpose
-          </span>
-
-          <h1
-            className="
-              mt-[18px]
-              text-4xl
-              font-semibold
-              leading-tight
-              tracking-tight
-              text-[#0e1b30]
-              sm:text-5xl
-              lg:text-[4.1rem]
-            "
-          >
-            Vision & Mission
-          </h1>
-
-          <p
-            className="
-              mt-[22px]
-              max-w-[580px]
-              text-[1.08rem]
-              leading-relaxed
-              text-[#5b6472]
-            "
-          >
-            Yes Time Global (Private) Limited was built on one idea:
-            every worthwhile opportunity has a right time and a right
-            place. We exist to bring people, vehicles and property
-            together easily, transparently, and on organized terms.
           </p>
 
-          <div className="mt-8 flex items-center gap-4 sm:mt-10">
-            <div
-              className="
-                h-[9px]
-                w-[9px]
-                rounded-full
-                bg-[#b8892f]
-                shadow-[0_0_0_8px_rgba(184,137,47,0.12)]
-              "
-            />
-
-            <span
-              className="
-                text-xs
-                font-medium
-                uppercase
-                tracking-widest
-                text-[#8a94a6]
-              "
-            >
-              Establishing New Standards
+          <h1 className="text-5xl font-extrabold leading-[1.05] sm:text-6xl">
+            Vision &{" "}
+            <span className="text-[#f5b51b]">
+              Mission
             </span>
+          </h1>
+
+          <p className="mt-7 max-w-xl text-base leading-7 text-white/75">
+            At YES TIME GLOBAL, our vision and mission are the core of
+            everything we do. They guide our decisions, shape our programs,
+            and drive us to create opportunities that empower people,
+            businesses, and communities across the world.
+          </p>
+
+          {/* Statistics */}
+          <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
+
+            <div className="flex items-center gap-2">
+              <CalendarDays className="h-7 w-7 text-[#f5b51b]" />
+              <div>
+                <strong className="block text-sm text-[#f5b51b]">
+                  1400+
+                </strong>
+                <span className="text-[11px] text-white/60">
+                  Daily Draws
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Layers3 className="h-7 w-7 text-[#f5b51b]" />
+              <div>
+                <strong className="block text-sm text-[#f5b51b]">
+                  8
+                </strong>
+                <span className="text-[11px] text-white/60">
+                  Saving Programs
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Globe2 className="h-7 w-7 text-[#f5b51b]" />
+              <div>
+                <strong className="block text-sm text-[#f5b51b]">
+                  Global
+                </strong>
+                <span className="text-[11px] text-white/60">
+                  Opportunities
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="h-7 w-7 text-[#f5b51b]" />
+              <div>
+                <strong className="block text-sm text-[#f5b51b]">
+                  Trusted
+                </strong>
+                <span className="text-[11px] text-white/60">
+                  Platform
+                </span>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <div className="relative lg:col-span-5">
-
-          <div
-            className="
-              absolute
-              -right-2
-              -top-2
-              z-10
-              h-16
-              w-16
-              border-r-2
-              border-t-2
-              border-[#b8892f]
-              opacity-80
-            "
-          />
-
-          <div className="relative mx-auto max-w-md lg:max-w-none">
-            <img
-              src="/img5.png"
-              alt="Yes Time Global - Global Opportunities"
-              className="
-                h-full
-                w-full
-                rounded-2xl
-                object-cover
-                object-center
-                shadow-[0_20px_45px_rgba(14,27,48,0.15)]
-                transition-transform
-                duration-700
-                hover:scale-[1.02]
-              "
-            />
-          </div>
-
-          <div
-            className="
-              absolute
-              -bottom-3
-              -left-3
-              h-8
-              w-8
-              rounded-full
-              border
-              border-[#b8892f]
-              bg-[#faf9f6]
-            "
-          >
-            <div className="m-auto mt-[9px] h-2 w-2 rounded-full bg-[#b8892f]" />
-          </div>
+        {/* Right Side (Agar aap yahan koi aur illustration ya card rakhna chahein) */}
+        <div className="relative hidden lg:flex justify-center lg:justify-end">
+          <div className="absolute h-[420px] w-[420px] rounded-full bg-[#f5b51b]/10 blur-3xl" />
         </div>
 
       </div>
+
+      {/* Bottom gold line */}
+      <div className="absolute bottom-0 left-0 h-1 w-full bg-[#f5b51b]" />
+
     </section>
   );
-};
-
-export default Hero;
+}

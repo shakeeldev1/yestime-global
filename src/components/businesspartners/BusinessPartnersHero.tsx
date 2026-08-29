@@ -85,14 +85,12 @@ const BusinessPartnersHero: React.FC = () => {
               <span className="bg-gradient-to-r from-[#C6922B] via-[#dfa838] to-[#C6922B] bg-clip-text text-transparent">
                 Future Alliances.
               </span>
-            </h1>
+            </h1> 
 
             {/* Description */}
             <p className="mt-6 text-base font-normal leading-relaxed text-[#31527A] sm:text-lg">
-              We cultivate high-performance ecosystems uniting retail
-              leaders, strategic investors, dealers, and specialized
-              enterprises. Scale your capabilities and unlock unprecedented
-              commercial momentum through curated collaboration.
+              YES TIME GLOBAL PRIVATE LIMITED cultivates high-performance ecosystems uniting retail leaders, strategic investors, dealers, and specialized enterprises. Scale your capabilities and unlock unprecedented commercial momentum through curated collaboration.
+
             </p>
 
             {/* Feature Grid */}
@@ -155,7 +153,7 @@ const BusinessPartnersHero: React.FC = () => {
                 <div>
                   <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-[#C6922B]">
                     <ShieldCheck size={16} />
-                    <span>Network Verticals</span>
+                    <span>Yestime Global</span>
                   </div>
 
                   <h2 className="mt-1 text-2xl font-bold tracking-tight text-[#0B2341] sm:text-3xl">
@@ -200,6 +198,7 @@ const BusinessPartnersHero: React.FC = () => {
                         {/* Top */}
                         <div>
                           <div className="mb-4 flex items-center justify-between">
+
                             {/* Icon */}
                             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/95 text-[#0B2341] shadow-lg transition-all duration-500 group-hover:rotate-6 group-hover:bg-[#C6922B] group-hover:text-white">
                               <Icon size={22} strokeWidth={2} />
@@ -254,6 +253,7 @@ const BusinessPartnersHero: React.FC = () => {
                   </p>
                 </div>
               </div>
+
             </div>
           </div>
 
@@ -264,3 +264,4 @@ const BusinessPartnersHero: React.FC = () => {
 };
 
 export default BusinessPartnersHero;
+

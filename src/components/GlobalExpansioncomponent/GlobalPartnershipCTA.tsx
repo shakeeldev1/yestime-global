@@ -1,9 +1,7 @@
 import React from "react";
 import {
   ArrowRight,
-  Globe2,
   Handshake,
-  Mail,
   Sparkles,
 } from "lucide-react";
 

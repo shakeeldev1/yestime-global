@@ -43,6 +43,7 @@ export type ProgramData = {
   benefits: ProgramFeature[];
   audience: string[];
   stats: ProgramStat[];
+  gallery?: string[];
   planCards?: PlanCard[];
 };
 
@@ -86,6 +87,12 @@ export const programData: ProgramData[] = [
       { value: '24/7', label: 'Support', icon: 'support' },
       { value: '100%', label: 'Secure', icon: 'shield' },
     ],
+    gallery: [
+      'https://i.pinimg.com/736x/79/50/c9/7950c9c99ae24ac87b478dd5ec956358.jpg',
+      'https://i.pinimg.com/1200x/e2/63/0d/e2630d1a6078064e87832af3ce2f8093.jpg',
+      'https://i.pinimg.com/736x/d8/03/b0/d803b02de161aef06713bb5155114110.jpg',
+      'https://i.pinimg.com/1200x/47/f5/14/47f5146538c4fbb40e0f496e617f095a.jpg',
+    ],
   },
   {
     slug: 'wholesale-saving',
@@ -125,6 +132,12 @@ export const programData: ProgramData[] = [
       { value: '500+', label: 'Bulk Items', icon: 'users' },
       { value: '24/7', label: 'Order Support', icon: 'support' },
       { value: '100%', label: 'Verified Supply', icon: 'shield' },
+    ],
+    gallery: [
+      'https://i.pinimg.com/1200x/17/7e/96/177e96aa548497b44177ad454dbadb66.jpg',
+      'https://i.pinimg.com/1200x/73/1a/51/731a514112c6ac3baa5326f4c50116bb.jpg',
+      'https://i.pinimg.com/736x/03/ae/fc/03aefc2aa5b745a4bc137f1be47ead70.jpg',
+      'https://i.pinimg.com/736x/87/76/d2/8776d2b458392e8ade96b58b4d647439.jpg',
     ],
   },
   {
@@ -166,6 +179,12 @@ export const programData: ProgramData[] = [
       { value: '24/7', label: 'Support', icon: 'support' },
       { value: '100%', label: 'Trusted Value', icon: 'shield' },
     ],
+    gallery: [
+      'https://i.pinimg.com/1200x/95/2c/e2/952ce2416530eee61a15331155f02a63.jpg',
+      'https://i.pinimg.com/1200x/88/c0/a5/88c0a5dfdbc10bf9fb7243bf0ed35e89.jpg',
+      'https://i.pinimg.com/736x/0d/46/80/0d4680d2b004ce8956775ed79723c469.jpg',
+      'https://i.pinimg.com/1200x/11/9a/a9/119aa9f5e4779bd1cbd99d05f5373f97.jpg',
+    ],
   },
   {
     slug: 'motorcycle-scooty-saving',
@@ -205,6 +224,12 @@ export const programData: ProgramData[] = [
       { value: '1000+', label: 'Riders', icon: 'users' },
       { value: '24/7', label: 'Guidance', icon: 'support' },
       { value: '100%', label: 'Trusted Deal', icon: 'shield' },
+    ],
+    gallery: [
+      'https://i.pinimg.com/736x/e4/f4/7c/e4f47c1ffb2bf14402ab9d302d3a6aee.jpg',
+      'https://i.pinimg.com/736x/c8/33/f0/c833f05590b328156bf707c8447eea81.jpg',
+      'https://i.pinimg.com/1200x/57/83/8c/57838cb155f5676968b248ff65bdb19a.jpg',
+      'https://i.pinimg.com/1200x/7a/98/63/7a986305a131c2cb5a67a53f92c65751.jpg',
     ],
   },
   {
@@ -396,6 +421,12 @@ export const programData: ProgramData[] = [
       { value: '24/7', label: 'Consultation', icon: 'support' },
       { value: '100%', label: 'Secure', icon: 'shield' },
     ],
+    gallery: [
+      'https://i.pinimg.com/1200x/97/41/61/974161ada4f6782b21c171a8bba137d3.jpg',
+      'https://i.pinimg.com/736x/3f/a2/7c/3fa27cee4da70f53b06a80622a731c6e.jpg',
+      'https://i.pinimg.com/1200x/b6/27/4d/b6274dd7f7fbe202c57c3acbb8fa7c30.jpg',
+      'https://i.pinimg.com/736x/09/ef/44/09ef443d057fa88ab71c77a3c5230cbe.jpg',
+    ],
   },
   {
     slug: 'crop-saving',
@@ -436,6 +467,12 @@ export const programData: ProgramData[] = [
       { value: '24/7', label: 'Support', icon: 'support' },
       { value: '100%', label: 'Reliable', icon: 'shield' },
     ],
+    gallery: [
+      'https://i.pinimg.com/1200x/23/6a/8d/236a8da3b426bcf66da83c4947359e7d.jpg',
+      'https://i.pinimg.com/736x/4b/82/24/4b8224992ef4973d9add44bc2d67cc9e.jpg',
+      'https://i.pinimg.com/736x/db/5b/2c/db5b2cd67414fbab3a2bba36e348ba1d.jpg',
+      'https://i.pinimg.com/1200x/da/31/fc/da31fcaa2c11bc9a2ee534b5fce5a9c6.jpg',
+    ],
   },
   {
     slug: 'self-service-saving',
@@ -475,6 +512,12 @@ export const programData: ProgramData[] = [
       { value: '100%', label: 'Transparent', icon: 'shield' },
       { value: '1000+', label: 'Members', icon: 'users' },
       { value: '1 Click', label: 'Ease', icon: 'store' },
+    ],
+    gallery: [
+      'https://i.pinimg.com/736x/f3/e2/bf/f3e2bf00d7dd755c45ce8a27541760f5.jpg',
+      'https://i.pinimg.com/736x/76/a6/a8/76a6a84a9b73317a0cd471542cd8731f.jpg',
+      'https://i.pinimg.com/1200x/df/16/a0/df16a058a1709cc216228686262c6256.jpg',
+      'https://i.pinimg.com/736x/f3/8a/18/f38a18f3a9cda18df59f2b01af407f99.jpg',
     ],
   },
 ];

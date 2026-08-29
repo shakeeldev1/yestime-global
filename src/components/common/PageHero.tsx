@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react'
-import heroImage from '../../assets/hero.png'
 
 type PageHeroProps = {
   eyebrow: string
@@ -11,8 +10,8 @@ type PageHeroProps = {
 const PageHero = ({ eyebrow, title, description, children }: PageHeroProps) => {
   return (
     <section
-      className="relative overflow-hidden bg-[#071a36] bg-center px-6 py-20 text-center text-white md:px-12 lg:px-20 lg:py-28"
-      style={{ backgroundImage: `linear-gradient(rgba(7, 26, 54, 0.88), rgba(7, 26, 54, 0.94)), url(${heroImage})` }}
+      className="relative overflow-hidden bg-[#000000] bg-cover bg-center px-6 py-20 text-center text-white md:px-12 lg:px-20 lg:py-28"
+      style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero-yes.png')" }}
     >
       <div className="relative mx-auto flex max-w-4xl flex-col items-center">
         <p className="mb-5 text-sm font-semibold tracking-[0.24em] text-[#f0c75e]">{eyebrow}</p>

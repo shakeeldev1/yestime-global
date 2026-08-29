@@ -39,9 +39,57 @@ function ProgramDetailPage() {
     <div>
       <HeroSection program={program} />
       <AboutSection program={program} />
-      {program.planCards && program.planCards.length > 0 && <PlanMediaSection program={program} />}
+      {program.planCards && program.planCards.length > 0 ? (
+        <PlanMediaSection program={program} />
+      ) : (
+        <GallerySection program={program} />
+      )}
       <BenefitsSection program={program} />
     </div>
+  );
+}
+
+function GallerySection({ program }: { program: ProgramData }) {
+  const galleryImages = program.gallery && program.gallery.length > 0
+    ? program.gallery
+    : [program.image, program.secondaryImage, program.image, program.secondaryImage];
+
+  return (
+    <section className="relative bg-[#f8fafc] px-4 py-16 sm:px-8 lg:px-16">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-8 text-center">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c5962e]/30 bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#a97916] shadow-sm">
+            <Sparkles size={14} className="text-[#c5962e]" />
+            Gallery
+          </div>
+          <h2 className="text-3xl font-black tracking-tight text-[#071a36] sm:text-4xl">
+            Explore the <span className="text-[#c5962e]">{program.title}</span> experience
+          </h2>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {galleryImages.slice(0, 4).map((image, index) => (
+            <div
+              key={`${image}-${index}`}
+              className="group relative overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-[0_18px_40px_rgba(9,20,35,0.08)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_rgba(197,150,46,0.16)]"
+            >
+              <div className="overflow-hidden">
+                <img
+                  src={image}
+                  alt={`${program.title} gallery ${index + 1}`}
+                  className="h-72 w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f0c75e]">
+                  {program.category}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 

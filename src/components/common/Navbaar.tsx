@@ -119,6 +119,7 @@ const Dropdown = ({
               onClick={() => {
                 setIsOpen(false);
                 onClose();
+                window.scrollTo({ top: 0, behavior: "smooth" });
               }}
               className={`block px-5 py-3.5 text-base transition-colors duration-200 ${
                 active
@@ -176,7 +177,10 @@ const MobileDropdown = ({
               <Link
                 key={item.path}
                 to={item.path}
-                onClick={onNavigate}
+                onClick={() => {
+                  onNavigate();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 className={`block rounded-md px-4 py-3 text-base transition-colors ${
                   active ? "bg-[#D4AF37]/20 text-[#D4AF37] font-medium" : "text-gray-300 hover:text-[#D4AF37]"
                 }`}
@@ -198,6 +202,15 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const location = useLocation();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNavigate = () => {
+    closeMenu();
+    scrollToTop();
+  };
+
   const toggleMobileDropdown = (name: string) => {
     setOpenMobileDropdown((prev) => (prev === name ? null : name));
   };
@@ -215,7 +228,7 @@ const Navbar = () => {
         
         {/* LEFT: LOGO */}
         <div className="flex-1 flex justify-start">
-          <Link to="/" onClick={closeMenu} className="flex items-center">
+          <Link to="/" onClick={handleNavigate} className="flex items-center">
             <img
               src="/logo.png"
               alt="Yes Time Global"
@@ -228,7 +241,7 @@ const Navbar = () => {
         <div className="hidden items-center justify-center gap-1.5 lg:flex flex-none">
           <Link
             to="/"
-            onClick={closeMenu}
+            onClick={handleNavigate}
             className={`px-3.5 py-2 text-base font-semibold transition-colors duration-200 ${
               isActive("/") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
             }`}
@@ -250,7 +263,7 @@ const Navbar = () => {
         <div className="hidden items-center justify-end gap-4 lg:flex flex-1">
           <Link
             to="/contact-us"
-            onClick={closeMenu}
+            onClick={handleNavigate}
             className={`rounded-full border border-[#D4AF37] px-6 py-2.5 text-base font-bold transition-all duration-300 ${
               isActive("/contact-us")
                 ? "bg-[#D4AF37] text-black"
@@ -262,7 +275,7 @@ const Navbar = () => {
 
           <Link
             to="/legal-pages"
-            onClick={closeMenu}
+            onClick={handleNavigate}
             className={`px-3 py-2 text-base font-semibold transition-colors duration-200 ${
               isActive("/legal-pages") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
             }`}
@@ -286,7 +299,7 @@ const Navbar = () => {
         <div className="max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-[#D4AF37]/20 bg-black px-5 pb-6 pt-2 lg:hidden">
           <Link
             to="/"
-            onClick={closeMenu}
+            onClick={handleNavigate}
             className={`block border-b border-white/10 py-3.5 text-base font-semibold ${
               isActive("/") ? "text-[#D4AF37]" : "text-white"
             }`}
@@ -307,7 +320,7 @@ const Navbar = () => {
 
           <Link
             to="/contact-us"
-            onClick={closeMenu}
+            onClick={handleNavigate}
             className="mt-6 block rounded-full bg-[#D4AF37] px-6 py-3.5 text-center text-base font-bold text-black transition-colors hover:bg-[#c5a06a]"
           >
             Contact Us
@@ -315,7 +328,7 @@ const Navbar = () => {
 
           <Link
             to="/legal-pages"
-            onClick={closeMenu}
+            onClick={handleNavigate}
             className="mt-2 block py-3.5 text-center text-base font-medium text-gray-300 transition-colors hover:text-[#D4AF37]"
           >
             Legal Pages

@@ -15,14 +15,6 @@ interface NavSection {
 
 const NAV_SECTIONS: NavSection[] = [
   {
-    id: "about",
-    title: "About",
-    items: [
-      { name: "About Us", path: "/about" },
-      { name: "Vision & Mission", path: "/vision-mission" },
-    ],
-  },
-  {
     id: "programs",
     title: "Programs",
     items: [
@@ -249,6 +241,16 @@ const Navbar = () => {
             Home
           </Link>
 
+          <Link
+            to="/about"
+            onClick={handleNavigate}
+            className={`px-3.5 py-2 text-base font-semibold transition-colors duration-200 ${
+              isActive("/about") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
+            }`}
+          >
+            About
+          </Link>
+
           {NAV_SECTIONS.map((section) => (
             <Dropdown
               key={section.id}
@@ -305,6 +307,16 @@ const Navbar = () => {
             }`}
           >
             Home
+          </Link>
+
+          <Link
+            to="/about"
+            onClick={handleNavigate}
+            className={`block border-b border-white/10 py-3.5 text-base font-semibold ${
+              isActive("/about") ? "text-[#D4AF37]" : "text-white"
+            }`}
+          >
+            About
           </Link>
 
           {NAV_SECTIONS.map((section) => (

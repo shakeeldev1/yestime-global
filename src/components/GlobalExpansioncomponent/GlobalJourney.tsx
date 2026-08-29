@@ -5,11 +5,14 @@ import {
   Globe2,
   CheckCircle2,
 } from "lucide-react";
+import video1 from "../../assets/video1.mp4";
+import video2 from "../../assets/video2.mp4";
 
 interface JourneyItem {
   id: number;
   country: string;
-  image: string;
+  image?: string;
+  video?: string;
   title: string;
   description: string;
   status: string;
@@ -20,8 +23,8 @@ const GlobalJourney: React.FC = () => {
     {
       id: 1,
       country: "Pakistan",
-      image:
-        "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=85",
+      video:
+        "https://v1.pinimg.com/videos/mc/720p/e8/8a/08/e88a08107acb3b6f044a9f5d72fae200.mp4",
       title: "Where Our Journey Begins",
       description:
         "Pakistan represents an important part of our global journey and the foundation from which YES TIME GLOBAL continues to grow.",
@@ -40,8 +43,7 @@ const GlobalJourney: React.FC = () => {
     {
       id: 3,
       country: "Indonesia",
-      image:
-        "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=85",
+      video: video2,
       title: "Expanding Our Reach",
       description:
         "Indonesia is another important part of our growing international presence as we continue exploring new markets and opportunities.",
@@ -50,8 +52,7 @@ const GlobalJourney: React.FC = () => {
     {
       id: 4,
       country: "Future Markets",
-      image:
-        "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=85",
+      video: video1,
       title: "The Journey Continues",
       description:
         "Our vision goes beyond today's markets. We continue looking toward new countries, partnerships, and opportunities for future expansion.",
@@ -62,7 +63,7 @@ const GlobalJourney: React.FC = () => {
   return (
     <section
       id="global-journey"
-      className="relative overflow-hidden bg-[#020B1C] py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12"
     >
       {/* =========================================
           BACKGROUND
@@ -160,13 +161,29 @@ const GlobalJourney: React.FC = () => {
                   >
                     <article
                       className="global-journey-card group relative w-full overflow-hidden rounded-2xl border border-white/10 bg-[#07152D]/70 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#D9A21B]/50 hover:bg-[#091A35] sm:p-7 lg:max-w-xl"
-                      style={{
-                        backgroundImage: `url(${item.image})`,
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                      }}
+                      style={
+                        item.image
+                          ? {
+                              backgroundImage: `url(${item.image})`,
+                              backgroundPosition: "center",
+                              backgroundSize: "cover",
+                            }
+                          : undefined
+                      }
                     >
-                      <div className="global-journey-card-overlay absolute inset-0 transition duration-300" />
+                      {item.video ? (
+                        <video
+                          src={item.video}
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          preload="auto"
+                          className="absolute inset-0 h-full w-full scale-105 object-cover"
+                        />
+                      ) : null}
+
+                      <div className="global-journey-card-overlay absolute inset-0 bg-gradient-to-br from-[#020B1C]/80 via-[#020B1C]/35 to-[#020B1C]/80 transition duration-300" />
 
                       <div className="relative z-10">
                       {/* Top Border */}

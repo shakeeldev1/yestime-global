@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import VissionMission from './pages/VissionMission'
 import OurPrograms from './pages/OurPrograms'
+import ProgramDetailPage from './pages/ProgramDetailPage'
 import HowItWorks from './pages/HowItWorks'
 import BusinessPartners from './pages/BusinessPartners'
 import GlobalExpansion from './pages/GlobalExpansion'
@@ -27,32 +28,57 @@ const MainFunction = () => {
       <Navbaar />
       <Outlet />
       <Footer />
-
     </div>
   )
 }
-      <Footer />
 
 const router = createBrowserRouter([
   {
     element: <MainFunction />,
     children: [
       { path: '/', element: <Home /> },
+
       { path: '/about', element: <AboutUs /> },
+      { path: '/AboutUs', element: <AboutUs /> },
+
       { path: '/vision-mission', element: <VissionMission /> },
+      { path: '/VisionMission', element: <VissionMission /> },
+  { path: '/how-it-works', element: <HowItWorks /> },
+      { path: '/our-programs', element: <OurPrograms /> },
       { path: '/OurPrograms', element: <OurPrograms /> },
+      { path: '/program/:slug', element: <ProgramDetailPage /> },
+      { path: '/shop-saving', element: <ProgramDetailPage /> },
+      { path: '/wholesale-saving', element: <ProgramDetailPage /> },
+      { path: '/petrol-diesel-saving', element: <ProgramDetailPage /> },
+      { path: '/motorcycle-scooty-saving', element: <ProgramDetailPage /> },
+      { path: '/car-saving', element: <ProgramDetailPage /> },
+      { path: '/property-saving', element: <ProgramDetailPage /> },
+      { path: '/crop-saving', element: <ProgramDetailPage /> },
+      { path: '/self-service-saving', element: <ProgramDetailPage /> },
       { path: '/HowItWorks', element: <HowItWorks /> },
 
-      { path: '/BusinessPartners', element: <BusinessPartners /> },
-      { path: '/global-expansion', element: <GlobalExpansion /> },
       { path: '/business-partners', element: <BusinessPartners /> },
+      { path: '/BusinessPartners', element: <BusinessPartners /> },
+
+      { path: '/global-expansion', element: <GlobalExpansion /> },
       { path: '/GlobalExpansion', element: <GlobalExpansion /> },
+
+      { path: '/investors', element: <Investors /> },
       { path: '/Investors', element: <Investors /> },
+
+      { path: '/banks-financial', element: <BanksFinancial /> },
       { path: '/BanksFinancial', element: <BanksFinancial /> },
+
+      { path: '/customer', element: <Customer /> },
       { path: '/Customer', element: <Customer /> },
+
+      { path: '/faqs', element: <FAQs /> },
       { path: '/FAQs', element: <FAQs /> },
-      { path: '/ContactUs', element: <ContactUs /> },
+
       { path: '/contact-us', element: <ContactUs /> },
+      { path: '/ContactUs', element: <ContactUs /> },
+
+      { path: '/legal-pages', element: <LegalPages /> },
       { path: '/LegalPages', element: <LegalPages /> },
       { path: '/terms-conditions', element: <TermsConditions /> },
       { path: '/privacy-policy', element: <PrivacyPolicy /> },

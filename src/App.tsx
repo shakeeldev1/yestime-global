@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import VissionMission from './pages/VissionMission'
 import OurPrograms from './pages/OurPrograms'
+import ProgramDetailPage from './pages/ProgramDetailPage'
 import HowItWorks from './pages/HowItWorks'
 import BusinessPartners from './pages/BusinessPartners'
 import GlobalExpansion from './pages/GlobalExpansion'
@@ -41,6 +42,15 @@ const router = createBrowserRouter([
       { path: '/about', element: <AboutUs /> },
       { path: '/vision-mission', element: <VissionMission /> },
       { path: '/OurPrograms', element: <OurPrograms /> },
+      { path: '/program/:slug', element: <ProgramDetailPage /> },
+      { path: '/shop-saving', element: <ProgramDetailPage /> },
+      { path: '/wholesale-saving', element: <ProgramDetailPage /> },
+      { path: '/petrol-diesel-saving', element: <ProgramDetailPage /> },
+      { path: '/motorcycle-scooty-saving', element: <ProgramDetailPage /> },
+      { path: '/car-saving', element: <ProgramDetailPage /> },
+      { path: '/property-saving', element: <ProgramDetailPage /> },
+      { path: '/crop-saving', element: <ProgramDetailPage /> },
+      { path: '/self-service-saving', element: <ProgramDetailPage /> },
       { path: '/HowItWorks', element: <HowItWorks /> },
 
       { path: '/BusinessPartners', element: <BusinessPartners /> },

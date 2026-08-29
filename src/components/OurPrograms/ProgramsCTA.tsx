@@ -11,7 +11,7 @@ const ProgramsCTA: React.FC = () => {
     <>
     
       <section
-        className="relative overflow-hidden px-6 py-24 text-white lg:px-8"
+        className="relative overflow-hidden px-6 py-2 text-white lg:px-8"
         style={{
           backgroundImage: "url('/img11.png')",
           backgroundSize: "cover",
@@ -33,7 +33,7 @@ const ProgramsCTA: React.FC = () => {
 
         <div className="relative z-10 mx-auto max-w-[1120px]">
 
-          <div className="mb-10 text-center">
+          <div className="hidden text-center">
 
             <div className="mb-4 inline-flex items-center gap-2 text-[0.7rem] font-bold uppercase tracking-[0.25em] text-[#d8ad5e]">
               <Sparkles size={14} />
@@ -54,17 +54,17 @@ const ProgramsCTA: React.FC = () => {
 
           </div>
 
-          <div className="relative overflow-hidden rounded-[4px] border border-white/20 bg-[#0e1b30]/65 px-6 py-8 shadow-2xl shadow-black/30 backdrop-blur-md md:px-10 md:py-9">
+          <div className="relative overflow-hidden rounded-lg border-2 border-[#b8892f] bg-[#0e1b30]/85 px-5 py-2 shadow-2xl shadow-black/30 backdrop-blur-md md:px-8 md:py-3">
 
             <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-[#b8892f]/15 blur-3xl" />
 
             <div className="absolute bottom-0 left-0 h-[2px] w-32 bg-[#b8892f]" />
 
-            <div className="relative z-10 flex flex-col items-center justify-between gap-8 md:flex-row">
+            <div className="relative z-10 flex flex-col items-start justify-between gap-3 md:flex-row md:items-center">
 
               <div className="flex items-start gap-5">
 
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#d8ad5e]/80 bg-[#d8ad5e]/10 text-[#d8ad5e] shadow-lg shadow-[#b8892f]/10">
+                <div className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#d8ad5e]/80 bg-[#d8ad5e]/10 text-[#d8ad5e] shadow-lg shadow-[#b8892f]/10 sm:flex">
                   <Headphones
                     size={22}
                     strokeWidth={1.6}
@@ -107,7 +107,7 @@ const ProgramsCTA: React.FC = () => {
 
               <a
                 href="/contact"
-                className="group inline-flex shrink-0 items-center gap-3 rounded-sm border border-[#d8ad5e] bg-[#b8892f] px-7 py-4 text-sm font-bold tracking-wide text-[#0e1b30] shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#d8ad5e] hover:shadow-xl hover:shadow-[#b8892f]/30"
+                className="group inline-flex shrink-0 items-center gap-2 rounded-sm border border-[#d8ad5e] bg-[#b8892f] px-5 py-2 text-[9px] font-bold tracking-wide text-[#0e1b30] shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#d8ad5e] hover:shadow-xl hover:shadow-[#b8892f]/30"
               >
                 Contact Us
 
@@ -120,7 +120,7 @@ const ProgramsCTA: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-12 flex items-center justify-center gap-4">
+          <div className="hidden mt-12 items-center justify-center gap-4">
 
             <span className="hidden h-px w-16 bg-gradient-to-r from-transparent to-[#b8892f]/70 sm:block" />
 
@@ -136,7 +136,7 @@ const ProgramsCTA: React.FC = () => {
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-t border-[#e7e3da] bg-[#faf9f6] px-6 py-14 text-center">
+      <section className="hidden relative overflow-hidden border-t border-[#e7e3da] bg-[#faf9f6] px-6 py-14 text-center">
 
         <div className="pointer-events-none absolute left-1/2 top-0 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#b8892f]/10" />
 

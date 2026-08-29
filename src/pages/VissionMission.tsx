@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Hero from '../components/VissionMission/Hero'
 import WhyWeExist from '../components/VissionMission/WhyWeExist'
 import VisionMission from '../components/VissionMission/VisionMission'

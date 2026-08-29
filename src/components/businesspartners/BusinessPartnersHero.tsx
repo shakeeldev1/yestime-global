@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  ArrowDown,
   Handshake,
   Store,
   Building2,

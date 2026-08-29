@@ -53,7 +53,7 @@ const GlobalImpact: React.FC = () => {
   return (
     <section
       id="global-impact"
-      className="relative overflow-hidden bg-[#020B1C] py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12"
     >
       {/* =========================================
           BACKGROUND GLOW
@@ -172,23 +172,21 @@ const GlobalImpact: React.FC = () => {
             BOTTOM MESSAGE
         ========================================= */}
 
-        <div className="mt-10 rounded-2xl border border-white/10 bg-[#07152D]/50 px-6 py-6 sm:px-8">
+        <div className="mt-10 rounded-[22px] border border-[#d8dfe9] bg-[#f5f7fb] px-5 py-5 shadow-[0_18px_45px_-22px_rgba(11,59,110,0.25)] sm:px-8 sm:py-6">
           <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
-            <div>
-              <p className="text-sm font-semibold text-[#FFD45A]">
+            <div className="max-w-3xl">
+              <p className="text-2xl font-medium leading-snug tracking-[-0.03em] text-[#071a36]">
                 A growing international presence
               </p>
 
-              <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-400">
-                From our current markets to future destinations,
-                YES TIME GLOBAL continues to build connections that
-                create opportunities across borders.
+              <p className="mt-2 max-w-3xl text-base leading-7 text-[#41566f]">
+                From our current markets to future destinations, YES TIME GLOBAL continues to build connections that create opportunities across borders.
               </p>
             </div>
 
             <a
               href="#global-journey"
-              className="inline-flex shrink-0 items-center justify-center rounded-lg border border-[#D9A21B]/40 px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:border-[#FFD45A] hover:bg-[#D9A21B]/10"
+              className="inline-flex shrink-0 items-center justify-center rounded-xl border border-[#d9a21b]/60 bg-transparent px-6 py-3.5 text-base font-semibold text-[#071a36] transition duration-300 hover:border-[#d9a21b] hover:bg-[#fffaf0]"
             >
               Explore Our Journey
             </a>

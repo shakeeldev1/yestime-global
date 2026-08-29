@@ -27,32 +27,50 @@ const MainFunction = () => {
       <Navbaar />
       <Outlet />
       <Footer />
-
     </div>
   )
 }
-      <Footer />
 
 const router = createBrowserRouter([
   {
     element: <MainFunction />,
     children: [
       { path: '/', element: <Home /> },
+
       { path: '/about', element: <AboutUs /> },
+      { path: '/AboutUs', element: <AboutUs /> },
+
       { path: '/vision-mission', element: <VissionMission /> },
+      { path: '/VisionMission', element: <VissionMission /> },
+
+      { path: '/our-programs', element: <OurPrograms /> },
       { path: '/OurPrograms', element: <OurPrograms /> },
+
+      { path: '/how-it-works', element: <HowItWorks /> },
       { path: '/HowItWorks', element: <HowItWorks /> },
 
-      { path: '/BusinessPartners', element: <BusinessPartners /> },
-      { path: '/global-expansion', element: <GlobalExpansion /> },
       { path: '/business-partners', element: <BusinessPartners /> },
+      { path: '/BusinessPartners', element: <BusinessPartners /> },
+
+      { path: '/global-expansion', element: <GlobalExpansion /> },
       { path: '/GlobalExpansion', element: <GlobalExpansion /> },
+
+      { path: '/investors', element: <Investors /> },
       { path: '/Investors', element: <Investors /> },
+
+      { path: '/banks-financial', element: <BanksFinancial /> },
       { path: '/BanksFinancial', element: <BanksFinancial /> },
+
+      { path: '/customer', element: <Customer /> },
       { path: '/Customer', element: <Customer /> },
+
+      { path: '/faqs', element: <FAQs /> },
       { path: '/FAQs', element: <FAQs /> },
-      { path: '/ContactUs', element: <ContactUs /> },
+
       { path: '/contact-us', element: <ContactUs /> },
+      { path: '/ContactUs', element: <ContactUs /> },
+
+      { path: '/legal-pages', element: <LegalPages /> },
       { path: '/LegalPages', element: <LegalPages /> },
       { path: '/terms-conditions', element: <TermsConditions /> },
       { path: '/privacy-policy', element: <PrivacyPolicy /> },

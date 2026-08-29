@@ -69,7 +69,7 @@ const Dropdown = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isParentActive = items.some((item) => item.path === location.pathname);
 
   const handleMouseEnter = () => {

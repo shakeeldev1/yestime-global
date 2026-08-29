@@ -1,9 +1,10 @@
 import LandingHero from '../components/home/LandingHero'
-import CompanyOverview from '../components/home/CompanyOverview'
-// import DirectionSection from '../components/home/DirectionSection'
+import DirectionSection from '../components/home/DirectionSection'
 import ProgramsSection from '../components/home/ProgramsSection'
 import CommunitySection from '../components/home/CommunitySection'
 import AboutUsCard from '../components/home/HomeAbout'
+import HowItWorks from '../components/home/HowItWorks'
+import ManagementTeam from '../components/home/ManagementTeam'
 
 const Home = () => (
   <main className="overflow-hidden bg-white">
@@ -11,8 +12,9 @@ const Home = () => (
     <AboutUsCard/>
     <ProgramsSection />
     <CommunitySection />
-    <CompanyOverview />
-    {/* <DirectionSection /> */}
+    <ManagementTeam />
+    <HowItWorks/>
+    <DirectionSection />
   </main>
 )
 

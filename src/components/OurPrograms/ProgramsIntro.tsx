@@ -4,19 +4,19 @@ const ProgramsIntro: React.FC = () => {
   return (
     <section className="px-6 pb-5 pt-[88px] text-center lg:px-8">
       <div className="mx-auto max-w-[680px]">
-        <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#b8892f]">
-       
+        <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#f5c54e]">
+        
           What We Offer
         </span>
 
-        <h2 className="mt-[14px] text-[clamp(1.9rem,3.4vw,2.4rem)] font-semibold leading-tight text-[#0e1b30]">
+        <h2 className="mt-[14px] text-[clamp(1.9rem,3.4vw,2.4rem)] font-semibold leading-tight text-white">
           Programs Built for{" "}
-          <em className="font-serif text-[#b8892f]">
+          <em className="font-serif text-[#f5c54e]">
             Real Opportunities
           </em>
         </h2>
 
-        <p className="mt-[18px] text-[1.02rem] leading-7 text-[#5b6472]">
+        <p className="mt-[18px] text-[1.02rem] leading-7 text-slate-300">
           Our programs are designed to give customers organized access to
           vehicles, property and buying and selling opportunities through a
           simple and transparent system.

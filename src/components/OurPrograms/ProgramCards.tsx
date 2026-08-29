@@ -128,18 +128,18 @@ const ProgramCards: React.FC = () => {
                 overflow-hidden
                 rounded
                 border
-                border-[#e7e3da]
+                border-[#1e3a5f]
                 border-t-[3px]
-                border-t-[#b8892f]
-                bg-[#f8f6f1]
+                border-t-[#f5c54e]
+                bg-[#020c1c]
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:shadow-[0_15px_40px_rgba(14,27,48,0.10)]
+                hover:shadow-[0_15px_40px_rgba(0,0,0,0.4)]
               "
             >
 
-    <div className="flex h-[280px] w-full items-center justify-center overflow-hidden bg-[#0e1b30]">
+      <div className="flex h-[280px] w-full items-center justify-center overflow-hidden bg-[#07182d]">
                 <img
                   src={program.image}
                   alt={program.alt}
@@ -172,8 +172,8 @@ const ProgramCards: React.FC = () => {
                       items-center
                       justify-center
                       rounded-full
-                      bg-[#0e1b30]
-                      text-[#d8ad5e]
+                      bg-[#0b3b6e]
+                      text-[#f0c75e]
                     "
                   >
                     {program.icon}
@@ -189,7 +189,7 @@ const ProgramCards: React.FC = () => {
                         text-[0.78rem]
                         font-semibold
                         tracking-[0.08em]
-                        text-[#b8892f]
+                        text-[#f5c54e]
                       "
                     >
                       {program.number}
@@ -199,7 +199,7 @@ const ProgramCards: React.FC = () => {
                       className="
                         text-[1.3rem]
                         font-semibold
-                        text-[#0e1b30]
+                        text-white
                       "
                     >
                       {program.title}
@@ -213,7 +213,7 @@ const ProgramCards: React.FC = () => {
                     mb-[18px]
                     text-[0.95rem]
                     leading-7
-                    text-[#5b6472]
+                    text-slate-300
                   "
                 >
                   {program.description}
@@ -228,10 +228,10 @@ const ProgramCards: React.FC = () => {
                         flex
                         gap-2.5
                         border-t
-                        border-[#e7e3da]
+                        border-[#1e3a5f]
                         py-2
                         text-[0.88rem]
-                        text-[#16202f]
+                        text-white
                       "
                     >
                       <Check
@@ -239,7 +239,7 @@ const ProgramCards: React.FC = () => {
                         className="
                           mt-0.5
                           shrink-0
-                          text-[#b8892f]
+                          text-[#f5c54e]
                         "
                       />
 
@@ -254,12 +254,12 @@ const ProgramCards: React.FC = () => {
                     mt-auto
                     border-t
                     border-dashed
-                    border-[#e7e3da]
+                    border-[#1e3a5f]
                     pt-3.5
                     text-[0.78rem]
                     italic
                     leading-5
-                    text-[#8a92a0]
+                    text-slate-400
                   "
                 >
                   {program.note}

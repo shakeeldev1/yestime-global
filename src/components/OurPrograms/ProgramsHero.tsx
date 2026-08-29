@@ -37,7 +37,7 @@ const features: Feature[] = [
 
 const ProgramsHero: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-white h-[98vh]">
+    <section className="relative overflow-hidden bg-[#020c1c] h-[98vh]">
       <div
         className="
           relative
@@ -58,7 +58,7 @@ const ProgramsHero: React.FC = () => {
         "
       >
         <div className="flex items-center gap-2">
-     
+      
 
           <span
             className="
@@ -66,7 +66,7 @@ const ProgramsHero: React.FC = () => {
               font-bold
               uppercase
               tracking-[0.24em]
-              text-[#b8892f]
+              text-[#f5c54e]
               sm:text-[11px]
             "
           >
@@ -85,7 +85,7 @@ const ProgramsHero: React.FC = () => {
             font-semibold
             leading-[1.08]
             tracking-[-0.035em]
-            text-[#0e1b30]
+            text-white
             sm:mt-6
             sm:text-[3rem]
             lg:text-[3.65rem]
@@ -94,17 +94,17 @@ const ProgramsHero: React.FC = () => {
           Our Programs, Built
           <br />
 
-          <span className="text-[#0e1b30]">
+          <span className="text-white">
             Around{" "}
           </span>
 
-          <em className="font-serif font-semibold text-[#b8892f]">
+          <em className="font-serif font-semibold text-[#f5c54e]">
             Real
           </em>
 
           <br className="sm:hidden" />
 
-          <em className="font-serif font-semibold text-[#b8892f]">
+          <em className="font-serif font-semibold text-[#f5c54e]">
             {" "}Opportunities
           </em>
         </h1>
@@ -117,7 +117,7 @@ const ProgramsHero: React.FC = () => {
             text-center
             text-[0.86rem]
             leading-6
-            text-[#68717f]
+            text-slate-200
             sm:mt-6
             sm:text-[0.96rem]
             sm:leading-7
@@ -137,9 +137,9 @@ const ProgramsHero: React.FC = () => {
             overflow-hidden
             rounded-[4px]
             border
-            border-[#e8e4dc]
-            bg-[#f8f6f1]
-            shadow-[0_8px_25px_rgba(14,27,48,0.03)]
+            border-[#1e3a5f]
+            bg-[#07182d]
+            shadow-[0_8px_25px_rgba(0,0,0,0.3)]
             sm:mt-12
             sm:grid-cols-2
             lg:grid-cols-4
@@ -158,7 +158,7 @@ const ProgramsHero: React.FC = () => {
                 sm:px-6
                 ${
                   index !== features.length - 1
-                    ? "border-b border-[#e8e4dc] lg:border-b-0 lg:border-r"
+                    ? "border-b border-[#1e3a5f] lg:border-b-0 lg:border-r"
                     : ""
                 }
               `}
@@ -173,9 +173,9 @@ const ProgramsHero: React.FC = () => {
                   justify-center
                   rounded-full
                   border
-                  border-[#e6dfd0]
-                  bg-white
-                  text-[#b8892f]
+                  border-[#0b3b6e]
+                  bg-[#020c1c]
+                  text-[#f5c54e]
                   shadow-sm
                 "
               >
@@ -189,7 +189,7 @@ const ProgramsHero: React.FC = () => {
                     text-[0.92rem]
                     font-bold
                     leading-snug
-                    text-[#172238]
+                    text-white
                     sm:text-[0.98rem]
                   "
                 >
@@ -202,7 +202,7 @@ const ProgramsHero: React.FC = () => {
                     text-left
                     text-[0.8rem]
                     leading-relaxed
-                    text-[#68717f]
+                    text-slate-300
                     sm:text-[0.85rem]
                   "
                 >
@@ -214,9 +214,9 @@ const ProgramsHero: React.FC = () => {
         </div>
 
         <div className="mt-10 flex items-center gap-2 opacity-70">
-          <span className="h-px w-8 bg-[#e7e3da]" />
-          <span className="h-1 w-1 rounded-full bg-[#b8892f]" />
-          <span className="h-px w-8 bg-[#e7e3da]" />
+          <span className="h-px w-8 bg-[#1e3a5f]" />
+          <span className="h-1 w-1 rounded-full bg-[#f5c54e]" />
+          <span className="h-px w-8 bg-[#1e3a5f]" />
         </div>
       </div>
     </section>

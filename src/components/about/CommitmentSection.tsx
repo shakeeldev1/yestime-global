@@ -43,7 +43,7 @@ export default function CorePrioritiesSection() {
   ];
 
   return (
-    <section className="w-full overflow-hidden bg-[#FBFAF7] px-4 py-24 sm:px-6 lg:px-10">
+    <section className="w-full overflow-hidden bg-white px-4 py-24 sm:px-6 lg:px-10">
       <div className="mx-auto max-w-7xl">
 
         {/* Section Heading */}

@@ -1,223 +1,172 @@
 import { Link } from "react-router-dom";
 import {
-  Car,
-  Building2,
-  ShoppingBag,
-  Briefcase,
   ShieldCheck,
   Phone,
   Mail,
   MapPin,
   ChevronRight,
+  ArrowUpRight,
 } from "lucide-react";
+import { BsWhatsapp } from "react-icons/bs";
+
+interface FooterLink {
+  label: string;
+  path: string;
+}
+
+const PROGRAM_LINKS: FooterLink[] = [
+  { label: "Car Program", path: "/OurPrograms" },
+  { label: "Real Estate Program", path: "/OurPrograms" },
+  { label: "Vehicles", path: "/OurPrograms" },
+  { label: "Shopping & Savings", path: "/OurPrograms" },
+  { label: "Automated Savings System", path: "/how-it-works" },
+];
+
+const QUICK_LINKS: FooterLink[] = [
+  { label: "About Us", path: "/about" },
+  { label: "Vision & Mission", path: "/vision-mission" },
+  { label: "Business Partners", path: "/business-partners" },
+  { label: "Banks & Financial", path: "/banks-financial" },
+  { label: "FAQs & Support", path: "/faqs" },
+];
 
 const Footer = () => {
-  return (
-    <footer className="relative border-t border-[#D4AF37]/20 bg-[#000000] text-white">
-      {/* Top Decorative Line / Accent */}
-      <div className="h-1 w-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
+  const currentYear = new Date().getFullYear();
 
-      {/* Main Footer Content */}
-      <div className="mx-auto max-w-[1450px] px-5 py-12 md:px-8 lg:px-10 lg:py-16">
+  return (
+    <footer className="relative border-t border-[#D4AF37]/40 bg-black text-white">
+      {/* Top Gold Accent Line */}
+      <div 
+        className="h-[3px] w-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-90" 
+        aria-hidden="true" 
+      />
+
+      <div className="mx-auto max-w-[1450px] px-6 py-14 md:px-10 lg:px-12 lg:py-16">
+        {/* Main Footer Grid */}
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
-          
+
           {/* Col 1: Brand Info & About */}
-          <div className="lg:col-span-2">
-            <Link to="/" className="mb-4 inline-block">
+          <div className="space-y-5 sm:col-span-2 lg:col-span-2">
+            <Link to="/" className="inline-block transition-transform duration-300 hover:scale-105">
               <img
                 src="/logo.png"
-                alt="Yes Time Global"
-                className="h-16 w-auto object-contain transition duration-300 hover:scale-105"
+                alt="Yes Time Global Logo"
+                className="h-20 w-auto object-contain"
               />
             </Link>
-            <p className="mb-4 max-w-sm text-sm leading-relaxed text-gray-400">
+
+            <p className="max-w-md text-base leading-relaxed text-gray-300 font-normal">
               Yes Time Global Private Limited — Connecting global opportunities with innovation, transparency, and trust through car programs, real estate ventures, and automated savings plans.
             </p>
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[#D4AF37]">
-              <ShieldCheck className="h-4 w-4" />
+
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-[#D4AF37]/40 bg-[#D4AF37]/10 px-4 py-2 text-sm font-semibold text-[#D4AF37]">
+              <ShieldCheck className="h-5 w-5 shrink-0" />
               <span>Transparency • Trust • Accessibility</span>
             </div>
           </div>
 
           {/* Col 2: Our Programs */}
           <div>
-            <h3 className="mb-4 text-base font-semibold text-[#D4AF37]">
+            <h3 className="mb-5 text-lg font-bold uppercase tracking-wider text-[#D4AF37]">
               Our Programs
             </h3>
-            <ul className="space-y-2.5 text-sm text-gray-300">
-              <li>
-                <Link
-                  to="/our-programs"
-                  className="group flex items-center gap-1.5 transition duration-300 hover:text-[#D4AF37]"
-                >
-                  <ChevronRight className="h-3.5 w-3.5 text-[#D4AF37] transition-transform group-hover:translate-x-1" />
-                  <span>Car Program</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/our-programs"
-                  className="group flex items-center gap-1.5 transition duration-300 hover:text-[#D4AF37]"
-                >
-                  <ChevronRight className="h-3.5 w-3.5 text-[#D4AF37] transition-transform group-hover:translate-x-1" />
-                  <span>Real Estate Program</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/our-programs"
-                  className="group flex items-center gap-1.5 transition duration-300 hover:text-[#D4AF37]"
-                >
-                  <ChevronRight className="h-3.5 w-3.5 text-[#D4AF37] transition-transform group-hover:translate-x-1" />
-                  <span>Vehicles</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/our-programs"
-                  className="group flex items-center gap-1.5 transition duration-300 hover:text-[#D4AF37]"
-                >
-                  <ChevronRight className="h-3.5 w-3.5 text-[#D4AF37] transition-transform group-hover:translate-x-1" />
-                  <span>Shopping & Savings</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/how-it-works"
-                  className="group flex items-center gap-1.5 transition duration-300 hover:text-[#D4AF37]"
-                >
-                  <ChevronRight className="h-3.5 w-3.5 text-[#D4AF37] transition-transform group-hover:translate-x-1" />
-                  <span>Automated Savings System</span>
-                </Link>
-              </li>
+            <ul className="space-y-3.5 text-base">
+              {PROGRAM_LINKS.map((link, idx) => (
+                <li key={idx}>
+                  <Link
+                    to={link.path}
+                    className="group flex items-center gap-2 text-gray-200 transition-colors duration-200 hover:text-[#D4AF37]"
+                  >
+                    <ChevronRight className="h-4 w-4 text-[#D4AF37] transition-transform duration-200 group-hover:translate-x-1" />
+                    <span className="font-medium">{link.label}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Col 3: Quick Links */}
           <div>
-            <h3 className="mb-4 text-base font-semibold text-[#D4AF37]">
+            <h3 className="mb-5 text-lg font-bold uppercase tracking-wider text-[#D4AF37]">
               Quick Links
             </h3>
-            <ul className="space-y-2.5 text-sm text-gray-300">
-              <li>
-                <Link
-                  to="/about"
-                  className="group flex items-center gap-1.5 transition duration-300 hover:text-[#D4AF37]"
-                >
-                  <ChevronRight className="h-3.5 w-3.5 text-[#D4AF37] transition-transform group-hover:translate-x-1" />
-                  <span>About Us</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/vision-mission"
-                  className="group flex items-center gap-1.5 transition duration-300 hover:text-[#D4AF37]"
-                >
-                  <ChevronRight className="h-3.5 w-3.5 text-[#D4AF37] transition-transform group-hover:translate-x-1" />
-                  <span>Vision & Mission</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/business-partners"
-                  className="group flex items-center gap-1.5 transition duration-300 hover:text-[#D4AF37]"
-                >
-                  <ChevronRight className="h-3.5 w-3.5 text-[#D4AF37] transition-transform group-hover:translate-x-1" />
-                  <span>Business Partners</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/banks-financial"
-                  className="group flex items-center gap-1.5 transition duration-300 hover:text-[#D4AF37]"
-                >
-                  <ChevronRight className="h-3.5 w-3.5 text-[#D4AF37] transition-transform group-hover:translate-x-1" />
-                  <span>Banks & Financial</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/faqs"
-                  className="group flex items-center gap-1.5 transition duration-300 hover:text-[#D4AF37]"
-                >
-                  <ChevronRight className="h-3.5 w-3.5 text-[#D4AF37] transition-transform group-hover:translate-x-1" />
-                  <span>FAQs & Support</span>
-                </Link>
-              </li>
+            <ul className="space-y-3.5 text-base">
+              {QUICK_LINKS.map((link, idx) => (
+                <li key={idx}>
+                  <Link
+                    to={link.path}
+                    className="group flex items-center gap-2 text-gray-200 transition-colors duration-200 hover:text-[#D4AF37]"
+                  >
+                    <ChevronRight className="h-4 w-4 text-[#D4AF37] transition-transform duration-200 group-hover:translate-x-1" />
+                    <span className="font-medium">{link.label}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Col 4: Contact Info */}
+          {/* Col 4: Contact Us */}
           <div>
-            <h3 className="mb-4 text-base font-semibold text-[#D4AF37]">
+            <h3 className="mb-5 text-lg font-bold uppercase tracking-wider text-[#D4AF37]">
               Contact Us
             </h3>
-            <ul className="space-y-3 text-sm text-gray-300">
-              <li className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#D4AF37]" />
-                <span>Yes Time Global Head Office, Pakistan</span>
+            <ul className="space-y-4 text-base text-gray-200">
+              <li className="flex items-start gap-3">
+                <MapPin className="mt-1 h-5 w-5 shrink-0 text-[#D4AF37]" />
+                <span className="leading-snug font-medium">Yes Time Global Head Islamabad, Pakistan</span>
               </li>
-              <li className="flex items-center gap-2.5">
-                <Mail className="h-4 w-4 shrink-0 text-[#D4AF37]" />
+              <li>
                 <a
-                  href="mailto:support@yestimeglobal.com"
-                  className="transition hover:text-[#D4AF37]"
+                  href="mailto:info@yestimeglobal.com"
+                  className="group flex items-center gap-3 font-medium transition-colors duration-200 hover:text-[#D4AF37]"
                 >
-                  support@yestimeglobal.com
+                  <Mail className="h-5 w-5 shrink-0 text-[#D4AF37]" />
+                  <span className="truncate">info@yestimeglobal.com</span>
+                  <ArrowUpRight className="h-4 w-4 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
                 </a>
               </li>
-              <li className="flex items-center gap-2.5">
-                <Phone className="h-4 w-4 shrink-0 text-[#D4AF37]" />
+              <li>
                 <a
-                  href="tel:+920000000000"
-                  className="transition hover:text-[#D4AF37]"
+                  href="tel:+923357990041"
+                  className="group flex items-center gap-3 font-medium transition-colors duration-200 hover:text-[#D4AF37]"
                 >
-                  +92 (0)00 0000000
+                  <Phone className="h-5 w-5 shrink-0 text-[#D4AF37]" />
+                  <span>+92 335 7990041</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/923068509086"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 font-medium transition-colors duration-200 hover:text-[#25D366]"
+                >
+                  <BsWhatsapp className="h-5 w-5 shrink-0 text-[#25D366]" />
+                  <span>+92 306 8509086</span>
                 </a>
               </li>
             </ul>
           </div>
 
-        </div>
-
-        {/* Feature Highlights Bar */}
-        <div className="mt-12 rounded-xl border border-[#D4AF37]/20 bg-[#0a0a0a] p-4 backdrop-blur-md">
-          <div className="grid grid-cols-2 gap-4 text-center sm:grid-cols-4">
-            <div className="flex flex-col items-center justify-center border-r border-white/10 last:border-r-0">
-              <Car className="mb-1 h-5 w-5 text-[#D4AF37]" />
-              <span className="text-xs text-gray-300">Vehicle Schemes</span>
-            </div>
-            <div className="flex flex-col items-center justify-center border-r border-white/10 sm:border-r last:border-r-0">
-              <Building2 className="mb-1 h-5 w-5 text-[#D4AF37]" />
-              <span className="text-xs text-gray-300">Real Estate</span>
-            </div>
-            <div className="flex flex-col items-center justify-center border-r border-white/10 last:border-r-0">
-              <ShoppingBag className="mb-1 h-5 w-5 text-[#D4AF37]" />
-              <span className="text-xs text-gray-300">Shopping & Savings</span>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <Briefcase className="mb-1 h-5 w-5 text-[#D4AF37]" />
-              <span className="text-xs text-gray-300">Banking & Partners</span>
-            </div>
-          </div>
         </div>
 
         {/* Bottom Bar / Copyright */}
-        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-gray-400 sm:flex-row">
-          <p>© {new Date().getFullYear()} Yes Time Global Private Limited. All rights reserved.</p>
-          <div className="flex flex-wrap items-center gap-4">
-            <Link to="/legal-pages" className="transition hover:text-[#D4AF37]">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-8 text-sm text-gray-300 sm:flex-row">
+          <p className="font-medium">© {currentYear} Yes Time Global Private Limited. All rights reserved.</p>
+
+          <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-medium">
+            <Link to="/legal-pages" className="transition-colors duration-200 hover:text-[#D4AF37]">
               Privacy Policy
             </Link>
-            <span>•</span>
-            <Link to="/legal-pages" className="transition hover:text-[#D4AF37]">
+            <span className="text-gray-500" aria-hidden="true">•</span>
+            <Link to="/legal-pages" className="transition-colors duration-200 hover:text-[#D4AF37]">
               Terms & Conditions
             </Link>
-            <span>•</span>
-            <Link to="/legal-pages" className="transition hover:text-[#D4AF37]">
+            <span className="text-gray-500" aria-hidden="true">•</span>
+            <Link to="/legal-pages" className="transition-colors duration-200 hover:text-[#D4AF37]">
               Legal Disclaimer
             </Link>
-          </div>
+          </nav>
         </div>
 
       </div>

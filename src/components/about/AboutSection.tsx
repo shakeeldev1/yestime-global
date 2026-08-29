@@ -1,136 +1,155 @@
-export default function AboutSection() {
+import React from "react";
+
+const AboutSection: React.FC = () => {
   return (
-    <section className="w-full bg-[#FBFAF7] px-4 pt-8 pb-6 sm:px-6 sm:pt-10 sm:pb-6 lg:px-10">
-      <div className="mx-auto max-w-6xl">
+    <section className="bg-[#f6f8fb] py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10">
 
-        {/* Section Heading */}
-        <div className="mx-auto mb-10 max-w-2xl text-center">
+        {/* Main Card */}
+        <div className="grid overflow-hidden rounded-2xl bg-white shadow-[0_15px_45px_rgba(10,35,55,0.08)] lg:grid-cols-2">
 
-          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#B08D57]">
-            WHO WE ARE
-          </p>
+          {/* ================= LEFT CONTENT ================= */}
+          <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-14">
 
-          <h2 className="font-serif text-3xl font-semibold leading-tight text-[#102A43] sm:text-4xl">
-            The Yes Time Global concept
-          </h2>
+            {/* Small Label */}
+            <div className="mb-3 flex items-center gap-2">
+              <span className="h-[2px] w-7 bg-[#e0ad38]" />
 
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-[#52606D]">
-            Our core idea is simple: bring different business facilities and
-            programs to people through one connected, organized system.
-          </p>
+              <span className="text-[9px] font-bold uppercase tracking-[2px] text-[#d29b28]">
+                Who We Are
+              </span>
+            </div>
 
-        </div>
+            {/* Heading */}
+            <h2 className="max-w-[520px] font-serif text-[30px] font-bold leading-[1.15] text-[#102742] sm:text-[36px] lg:text-[42px]">
+              Connecting People,
+              <br />
+              <span className="text-[#dca936]">
+                Businesses & Opportunities.
+              </span>
+            </h2>
 
-        {/* Main Content */}
-        <div className="grid gap-5 lg:grid-cols-[325px_1fr]">
+            {/* First Paragraph */}
+            <p className="mt-5 max-w-[530px] text-[12px] leading-6 text-[#6d7e92] sm:text-[13px]">
+              At{" "}
+              <span className="font-semibold text-[#102742]">
+                YES TIME GLOBAL
+              </span>
+              , we are committed to connecting people, businesses, and
+              opportunities across the globe through one trusted and
+              transparent platform.
+            </p>
 
-          {/* Left Image */}
-          <div className="relative h-[480px] overflow-hidden rounded-xl">
+            {/* Second Paragraph */}
+            <p className="mt-3 max-w-[530px] text-[12px] leading-6 text-[#6d7e92] sm:text-[13px]">
+              Our mission is to create accessible programs and strategic
+              partnerships that empower individuals and businesses to grow,
+              achieve, and succeed together.
+            </p>
+
+            {/* ================= FEATURES ================= */}
+            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+
+              {/* Feature 1 */}
+              <div className="flex items-center gap-2">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#fff5d9] text-[10px] font-bold text-[#d49d28]">
+                  ✓
+                </span>
+
+                <span className="text-[11px] font-semibold text-[#263b54]">
+                  Global Opportunities
+                </span>
+              </div>
+
+              {/* Feature 2 */}
+              <div className="flex items-center gap-2">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#fff5d9] text-[10px] font-bold text-[#d49d28]">
+                  ✓
+                </span>
+
+                <span className="text-[11px] font-semibold text-[#263b54]">
+                  Transparent Process
+                </span>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="flex items-center gap-2">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#fff5d9] text-[10px] font-bold text-[#d49d28]">
+                  ✓
+                </span>
+
+                <span className="text-[11px] font-semibold text-[#263b54]">
+                  Member Focused
+                </span>
+              </div>
+
+              {/* Feature 4 */}
+              <div className="flex items-center gap-2">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#fff5d9] text-[10px] font-bold text-[#d49d28]">
+                  ✓
+                </span>
+
+                <span className="text-[11px] font-semibold text-[#263b54]">
+                  Trusted Platform
+                </span>
+              </div>
+
+            </div>
+
+            {/* ================= BUTTON ================= */}
+            <div className="mt-8">
+              <a
+                href="/programs"
+                className="group inline-flex items-center gap-3 rounded-lg px-6 py-3 text-xs font-semibold shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                style={{
+                  backgroundColor: "#0b1b2d",
+                  color: "#facc15",
+                }}
+              >
+                <span style={{ color: "#facc15" }}>
+                  Discover Our Programs
+                </span>
+
+                <span
+                  style={{ color: "#facc15" }}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </a>
+            </div>
+          </div>
+
+          {/* ================= RIGHT IMAGE ================= */}
+          <div className="relative min-h-[320px] overflow-hidden sm:min-h-[400px] lg:min-h-[500px]">
 
             <img
-              src="https://i.pinimg.com/736x/3f/ee/e5/3feee507a07c642e33f9b2af47caa14e.jpg"
-              alt="Yes Time Global team"
-              className="h-full w-full object-cover"
+              src="/about-global.png"
+              alt="YES TIME GLOBAL connecting people and businesses"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
             />
 
             {/* Image Overlay */}
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#102A43]/90 via-[#102A43]/20 to-transparent p-5 pt-20">
-              <p className="text-xs font-medium text-white">
-                Built on trust between customers and business partners
-              </p>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#061a35cc] via-transparent to-transparent" />
 
+            {/* ================= IMAGE BADGE ================= */}
+            <div className="absolute bottom-6 left-6 rounded-xl border border-white/20 bg-[#061a35dd] px-5 py-3 backdrop-blur-md">
+
+              <p className="text-[9px] uppercase tracking-[2px] text-[#f3c75d]">
+                YES TIME GLOBAL
+              </p>
+
+              <p className="mt-1 text-[11px] font-semibold text-white">
+                Connecting Opportunities Worldwide
+              </p>
+
+            </div>
           </div>
 
-          {/* Right Cards */}
-          <div className="flex flex-col gap-5">
-
-            {/* Who We Are */}
-            <div className="min-h-[230px] rounded-xl border border-[#102A43]/10 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md sm:p-7">
-
-              {/* Icon */}
-              <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-lg bg-[#F6E8BF] text-[#B08D57]">
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.7"
-                  className="h-5 w-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"
-                  />
-
-                  <circle cx="9" cy="7" r="4" />
-
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
-                  />
-                </svg>
-
-              </div>
-
-              <h3 className="font-serif text-xl font-semibold text-[#102A43]">
-                Who we are
-              </h3>
-
-              <p className="mt-3 max-w-2xl text-xs leading-6 text-[#52606D] sm:text-sm">
-                Yes Time Global Private Limited is a modern business company.
-                Our goal is to create new opportunities for customers and
-                business individuals across different sectors, using modern
-                technology and an organized business system that makes
-                activities easier, clearer and more effective.
-              </p>
-
-            </div>
-
-            {/* Our Purpose */}
-            <div className="min-h-[180px] rounded-xl border border-[#102A43]/10 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md sm:p-7">
-
-              {/* Icon */}
-              <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-lg bg-[#F6E8BF] text-[#B08D57]">
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.7"
-                  className="h-5 w-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M2.25 12s3.75-6 9.75-6 9.75 6 9.75 6-3.75 6-9.75 6-9.75-6-9.75-6z"
-                  />
-
-                  <circle cx="12" cy="12" r="2.5" />
-                </svg>
-
-              </div>
-
-              <h3 className="font-serif text-xl font-semibold text-[#102A43]">
-                Our purpose
-              </h3>
-
-              <p className="mt-3 max-w-2xl text-xs leading-6 text-[#52606D] sm:text-sm">
-                Our purpose is to provide a simple, organized system where
-                people can benefit from different programs according to their
-                needs, gaining easy access to business opportunities,
-                wherever they are.
-              </p>
-
-            </div>
-
-          </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default AboutSection;

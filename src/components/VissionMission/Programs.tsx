@@ -1,98 +1,89 @@
 import React from "react";
-
-interface Program {
-  number: string;
-  title: string;
-  description: string;
-  image: string;
-}
-
-const programs: Program[] = [
-  {
-    number: "01",
-    title: "Vehicle Plan",
-    description:
-      "Installment based vehicle plans, tailored to each customer's need and affordability with amount, duration, eligibility and terms set out clearly upfront.",
-    image: "/img6.png",
-  },
-  {
-    number: "02",
-    title: "Property Plan",
-    description:
-      "An organized platform that gives customers access to genuine property buying and selling opportunities, connected through one clear process.",
-    image: "/img7.png",
-  },
-  {
-    number: "03",
-    title: "New Vehicles",
-    description:
-      "Facilities for buying and selling new and used vehicles, motorbikes and scooters matched to what each customer is actually looking for.",
-    image: "/img8.png",
-  },
-  {
-    number: "04",
-    title: "Buy & Sell Program",
-    description:
-      "Registering dealers who want to buy vehicles from customers, and running the exchange according to the company's set principles.",
-    image: "/img9.png",
-  },
-];
+import {
+  ShoppingBag,
+  Car,
+  Building2,
+  Bike,
+  PiggyBank,
+  UserRound,
+} from "lucide-react";
 
 const Programs: React.FC = () => {
+  const programs = [
+    {
+      title: "Shopping\n& Savings",
+      image: "/vs7.png",
+      icon: ShoppingBag,
+    },
+    {
+      title: "Car\nProgram",
+      image: "/vs6.png",
+      icon: Car,
+    },
+    {
+      title: "Property\nProgram",
+      image: "/vs11.png",
+      icon: Building2,
+    },
+    {
+      title: "Motorcycle /\nScooter Program",
+      image: "/vs8.png",
+      icon: Bike,
+    },
+    {
+      title: "Saving\nPrograms",
+      image: "/vs9.png",
+      icon: PiggyBank,
+    },
+    {
+      title: "Self-Service\nSaving",
+      image: "/vs10.png",
+      icon: UserRound,
+    },
+  ];
+
   return (
-    <section
-      id="programs"
-      className="bg-[#f8f6f1] px-8 py-28"
-    >
-      <div className="mx-auto max-w-[1120px]">
-        <div className="mx-auto max-w-[620px] text-center">
-          <span className="inline-flex items-center gap-2.5 font-sans text-[0.72rem] font-bold uppercase tracking-[0.22em] text-[#b8892f]">
-            What We Offer
-          </span>
+    <section className="bg-white px-4 py-16 sm:px-6 lg:px-12">
+      <div className="mx-auto max-w-[1400px]">
 
-          <h2 className="mt-3 text-3xl font-semibold text-[#0e1b30] sm:text-4xl">
-            Our Programs
-          </h2>
+        {/* Heading */}
+        <h2 className="text-center text-xl font-bold text-[#172238] md:text-2xl">
+          Our Programs That Create Opportunities
+        </h2>
 
-          <p className="mt-3 text-[#5b6472]">
-            Four organized programs, each designed around one goal:
-            putting the right opportunity in front of the right
-            person, at the right time.
-          </p>
-        </div>
+        {/* Programs */}
+        <div className="mt-8 grid grid-cols-2 divide-x divide-y divide-gray-200 overflow-hidden rounded-xl border border-gray-200 bg-[#F7F7F7] sm:grid-cols-3 lg:grid-cols-6 lg:divide-y-0">
 
-        <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2">
-          {programs.map((program) => (
-            <div
-              key={program.number}
-              className="overflow-hidden rounded-[4px] border border-[#e7e3da] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-            >
-             
-              <div className="h-[210px] w-full overflow-hidden">
-                <img
-                  src={program.image}
-                  alt={program.title}
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </div>
+          {programs.map((program) => {
+            const Icon = program.icon;
 
-              <div className="flex gap-5 p-8">
-                <div className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-full border border-[#b8892f] font-serif font-semibold text-[#b8892f]">
-                  {program.number}
+            return (
+              <div
+                key={program.title}
+                className="flex min-h-[180px] w-full flex-col items-center justify-center p-5 text-center"
+              >
+
+                {/* Image */}
+                <div className="relative h-20 w-24">
+                  <img
+                    src={program.image}
+                    alt={program.title.replace("\n", " ")}
+                    className="h-full w-full rounded-md object-contain"
+                  />
                 </div>
 
-                <div>
-                  <h3 className="text-lg font-semibold text-[#0e1b30]">
+                {/* Title */}
+                <div className="mt-4 flex items-center justify-center gap-2">
+                  <Icon className="h-4 w-4 shrink-0 text-[#d69b22]" />
+                  <p className="whitespace-pre-line text-sm font-semibold leading-5 text-[#222c3c] md:text-[15px]">
                     {program.title}
-                  </h3>
-
-                  <p className="mt-2 text-[0.93rem] leading-relaxed text-[#5b6472]">
-                    {program.description}
                   </p>
                 </div>
+
               </div>
-            </div>
-          ))}
+            );
+          })}
+
         </div>
       </div>
     </section>

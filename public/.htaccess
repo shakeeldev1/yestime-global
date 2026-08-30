@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve the app entry on direct URL loads or refreshes
+  RewriteRule ^index\.html$ - [L]
+
+  # Route all other requests back to the SPA
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Fallback for 404s on hosted static pages
+ErrorDocument 404 /index.html
+
+Options -Indexes

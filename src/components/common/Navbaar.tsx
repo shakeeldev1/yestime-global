@@ -10,7 +10,8 @@ interface DropdownItem {
 interface NavSection {
   id: string;
   title: string;
-  items: DropdownItem[];
+  items?: DropdownItem[];
+  path?: string;
 }
 
 const NAV_SECTIONS: NavSection[] = [
@@ -37,6 +38,11 @@ const NAV_SECTIONS: NavSection[] = [
       { name: "Investors", path: "/investors" },
       { name: "Banks & Financial", path: "/banks-financial" },
     ],
+  },
+  {
+    id: "events",
+    title: "Events",
+    path: "/events",
   },
   {
     id: "support",
@@ -96,8 +102,8 @@ const Dropdown = ({
       {/* DROPDOWN MENU */}
       <div
         className={`absolute left-1/2 -translate-x-1/2 top-full w-60 overflow-hidden rounded-xl border border-[#D4AF37]/30 bg-[#0a0a0a] shadow-2xl backdrop-blur-md transition-all duration-200 ${isOpen
-            ? "visible opacity-100 translate-y-0"
-            : "invisible opacity-0 -translate-y-2 pointer-events-none"
+          ? "visible opacity-100 translate-y-0"
+          : "invisible opacity-0 -translate-y-2 pointer-events-none"
           }`}
       >
         {items.map((item) => {
@@ -112,8 +118,8 @@ const Dropdown = ({
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
               className={`block px-5 py-3.5 text-base transition-colors duration-200 ${active
-                  ? "bg-[#D4AF37]/20 text-[#D4AF37] font-semibold"
-                  : "text-gray-200 hover:bg-[#D4AF37]/10 hover:text-[#D4AF37]"
+                ? "bg-[#D4AF37]/20 text-[#D4AF37] font-semibold"
+                : "text-gray-200 hover:bg-[#D4AF37]/10 hover:text-[#D4AF37]"
                 }`}
             >
               {item.name}
@@ -244,23 +250,31 @@ const Navbar = () => {
             About
           </Link>
 
-          <Link
-            to="/events"
-            onClick={handleNavigate}
-            className={`px-3.5 py-2 text-base font-semibold transition-colors duration-200 ${isActive("/events") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
-              }`}
-          >
-            Events
-          </Link>
 
-          {NAV_SECTIONS.map((section) => (
-            <Dropdown
-              key={section.id}
-              title={section.title}
-              items={section.items}
-              onClose={closeMenu}
-            />
-          ))}
+
+          {NAV_SECTIONS.map((section) => {
+            if (!section.items || section.items.length === 0) {
+              return (
+                <Link
+                  key={section.id}
+                  to={section.path || "/"}
+                  onClick={handleNavigate}
+                  className={`px-3.5 py-2 text-base font-semibold transition-colors duration-200 ${isActive(section.path || "/") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"}`}
+                >
+                  {section.title}
+                </Link>
+              )
+            }
+
+            return (
+              <Dropdown
+                key={section.id}
+                title={section.title}
+                items={section.items}
+                onClose={closeMenu}
+              />
+            )
+          })}
         </div>
 
         {/* RIGHT: CONTACT & LEGAL */}
@@ -269,21 +283,21 @@ const Navbar = () => {
             to="/contact-us"
             onClick={handleNavigate}
             className={`rounded-full border border-[#D4AF37] px-6 py-2.5 text-base font-bold transition-all duration-300 ${isActive("/contact-us")
-                ? "bg-[#D4AF37] text-black"
-                : "text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black"
+              ? "bg-[#D4AF37] text-black"
+              : "text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black"
               }`}
           >
             Contact Us
           </Link>
 
-          <Link
+          {/* <Link
             to="/legal-pages"
             onClick={handleNavigate}
             className={`px-3 py-2 text-base font-semibold transition-colors duration-200 ${isActive("/legal-pages") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
               }`}
           >
             Legal
-          </Link>
+          </Link> */}
         </div>
 
         {/* MOBILE TRIGGER */}
@@ -326,16 +340,31 @@ const Navbar = () => {
             Events
           </Link>
 
-          {NAV_SECTIONS.map((section) => (
-            <MobileDropdown
-              key={section.id}
-              title={section.title}
-              items={section.items}
-              isOpen={openMobileDropdown === section.id}
-              onToggle={() => toggleMobileDropdown(section.id)}
-              onNavigate={closeMenu}
-            />
-          ))}
+          {NAV_SECTIONS.map((section) => {
+            if (!section.items || section.items.length === 0) {
+              return (
+                <Link
+                  key={section.id}
+                  to={section.path || "/"}
+                  onClick={handleNavigate}
+                  className={`block border-b border-white/10 py-3.5 text-base font-semibold ${isActive(section.path || "/") ? "text-[#D4AF37]" : "text-white"}`}
+                >
+                  {section.title}
+                </Link>
+              )
+            }
+
+            return (
+              <MobileDropdown
+                key={section.id}
+                title={section.title}
+                items={section.items}
+                isOpen={openMobileDropdown === section.id}
+                onToggle={() => toggleMobileDropdown(section.id)}
+                onNavigate={closeMenu}
+              />
+            )
+          })}
 
           <Link
             to="/contact-us"
@@ -345,13 +374,13 @@ const Navbar = () => {
             Contact Us
           </Link>
 
-          <Link
+          {/* <Link
             to="/legal-pages"
             onClick={handleNavigate}
             className="mt-2 block py-3.5 text-center text-base font-medium text-gray-300 transition-colors hover:text-[#D4AF37]"
           >
             Legal Pages
-          </Link>
+          </Link> */}
         </div>
       )}
     </nav>

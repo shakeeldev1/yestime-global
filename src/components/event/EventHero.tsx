@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, MapPin, Sparkles } from 'lucide-react'
+import { ArrowRight, Calendar, Sparkles } from 'lucide-react'
 
 export const EventHero = () => {
     return (

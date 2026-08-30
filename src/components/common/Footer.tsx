@@ -113,7 +113,7 @@ const Footer = () => {
             <ul className="space-y-4 text-base text-gray-200">
               <li className="flex items-start gap-3">
                 <MapPin className="mt-1 h-5 w-5 shrink-0 text-[#D4AF37]" />
-                <span className="leading-snug font-medium">Yes Time Global Head Islamabad, Pakistan</span>
+                <span className="leading-snug font-medium">Yes Time Global Head Lahore, Pakistan</span>
               </li>
               <li>
                 <a
@@ -131,7 +131,7 @@ const Footer = () => {
                   className="group flex items-center gap-3 font-medium transition-colors duration-200 hover:text-[#D4AF37]"
                 >
                   <Phone className="h-5 w-5 shrink-0 text-[#D4AF37]" />
-                  <span>+92 335 7990041</span>
+                  <span>+92 302 7392442</span>
                 </a>
               </li>
               <li>
@@ -142,7 +142,7 @@ const Footer = () => {
                   className="group flex items-center gap-3 font-medium transition-colors duration-200 hover:text-[#25D366]"
                 >
                   <BsWhatsapp className="h-5 w-5 shrink-0 text-[#25D366]" />
-                  <span>+92 306 8509086</span>
+                  <span> +92 335 7990041</span>
                 </a>
               </li>
             </ul>

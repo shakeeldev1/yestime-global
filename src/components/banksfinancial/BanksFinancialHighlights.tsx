@@ -1,4 +1,3 @@
-import React from 'react'
 import { ArrowRight, Check } from 'lucide-react'
 
 // Self-contained, vector-based bank logos (No external link/CORS issues)

@@ -62,11 +62,11 @@ const Shops: React.FC = () => {
           </div>
 
           <h2 className="text-4xl font-extrabold tracking-tight text-[#0B2341] sm:text-5xl lg:text-6xl">
-  Scale Your Retail Empire <br className="hidden sm:inline" />
-  <span className="bg-linear-to-r from-[#C6922B] via-[#dfa838] to-[#C6922B] bg-clip-text text-transparent text-3xl font-semibold sm:text-4xl lg:text-5xl">
-    Through Our Ecosystem
-  </span>
-</h2>
+            Scale Your Retail Empire <br className="hidden sm:inline" />
+            <span className="bg-linear-to-r from-[#C6922B] via-[#dfa838] to-[#C6922B] bg-clip-text text-transparent text-3xl font-semibold sm:text-4xl lg:text-5xl">
+              Through Our Ecosystem
+            </span>
+          </h2>
 
           <p className="mt-6 text-base font-normal leading-relaxed text-[#55708F] sm:text-lg">
             Empower your physical storefront with institutional infrastructure, structured partnership models, and continuous commercial expansion avenues.
@@ -198,7 +198,7 @@ const Shops: React.FC = () => {
               </div>
 
               <p className="mt-3 text-sm leading-relaxed text-[#55708F] sm:text-base">
-               Yestime Global engineers reliable, elite enterprise relationships built to withstand market evolution. Approved partners unlock priority access to high-tier commercial tools and sustained cross-collaboration opportunities.
+                Yestime Global engineers reliable, elite enterprise relationships built to withstand market evolution. Approved partners unlock priority access to high-tier commercial tools and sustained cross-collaboration opportunities.
 
               </p>
             </div>

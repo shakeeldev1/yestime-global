@@ -103,12 +103,12 @@ const Dealers: React.FC = () => {
               </h3>
 
               <p className="mt-5 leading-8 text-[#55708F]">
-               Dealers can partner with us to expand our network and drive sustainable business growth.
+                Dealers can partner with us to expand our network and drive sustainable business growth.
 
               </p>
 
               <p className="mt-4 leading-8 text-[#55708F]">
-              Interested dealers can submit their business details for review and approval under agreed terms.
+                Interested dealers can submit their business details for review and approval under agreed terms.
 
               </p>
 

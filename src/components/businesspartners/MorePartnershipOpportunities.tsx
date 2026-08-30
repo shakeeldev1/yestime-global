@@ -154,19 +154,19 @@ const MorePartnershipOpportunities: React.FC = () => {
           </span>
 
           <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-[#0B2341] sm:text-5xl">
-  More Partnership{" "}
-  <span className="text-[#C6922B]">
-    Opportunities
-  </span>
-</h2>
+            More Partnership{" "}
+            <span className="text-[#C6922B]">
+              Opportunities
+            </span>
+          </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#55708F]">
-           We build long-term partnerships with organizations and professionals, creating opportunities for collaboration and growth.
+            We build long-term partnerships with organizations and professionals, creating opportunities for collaboration and growth.
 
           </p>
 
         </div>
 
-      
+
         <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 
           {partnerTypes.map((partner) => {
@@ -207,7 +207,7 @@ const MorePartnershipOpportunities: React.FC = () => {
 
         </div>
 
-    
+
         <div className="mt-10">
 
           <div className="mx-auto max-w-3xl text-center">
@@ -309,11 +309,10 @@ const MorePartnershipOpportunities: React.FC = () => {
                   return (
                     <div
                       key={item.title}
-                      className={`group text-center lg:px-5 ${
-                        index !== 0
-                          ? "lg:border-l lg:border-white/10"
-                          : ""
-                      }`}
+                      className={`group text-center lg:px-5 ${index !== 0
+                        ? "lg:border-l lg:border-white/10"
+                        : ""
+                        }`}
                     >
 
                       <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#C6922B]/40 bg-[#C6922B]/10 text-[#C6922B] transition-all duration-300 group-hover:bg-[#C6922B] group-hover:text-white">

@@ -86,7 +86,7 @@ const BusinessPartnersHero: React.FC = () => {
               <span className="bg-gradient-to-r from-[#C6922B] via-[#dfa838] to-[#C6922B] bg-clip-text text-transparent">
                 Future Alliances.
               </span>
-            </h1> 
+            </h1>
 
             {/* Description */}
             <p className="mt-6 text-base font-normal leading-relaxed text-[#31527A] sm:text-lg">

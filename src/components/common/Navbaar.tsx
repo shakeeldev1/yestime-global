@@ -83,9 +83,8 @@ const Dropdown = ({
     >
       <button
         type="button"
-        className={`flex items-center gap-1.5 px-3.5 py-6 text-base font-semibold transition-colors duration-200 ${
-          isParentActive || isOpen ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
-        }`}
+        className={`flex items-center gap-1.5 px-3.5 py-6 text-base font-semibold transition-colors duration-200 ${isParentActive || isOpen ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
+          }`}
       >
         {title}
         <ChevronDown
@@ -96,11 +95,10 @@ const Dropdown = ({
 
       {/* DROPDOWN MENU */}
       <div
-        className={`absolute left-1/2 -translate-x-1/2 top-full w-60 overflow-hidden rounded-xl border border-[#D4AF37]/30 bg-[#0a0a0a] shadow-2xl backdrop-blur-md transition-all duration-200 ${
-          isOpen
+        className={`absolute left-1/2 -translate-x-1/2 top-full w-60 overflow-hidden rounded-xl border border-[#D4AF37]/30 bg-[#0a0a0a] shadow-2xl backdrop-blur-md transition-all duration-200 ${isOpen
             ? "visible opacity-100 translate-y-0"
             : "invisible opacity-0 -translate-y-2 pointer-events-none"
-        }`}
+          }`}
       >
         {items.map((item) => {
           const active = location.pathname === item.path;
@@ -113,11 +111,10 @@ const Dropdown = ({
                 onClose();
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className={`block px-5 py-3.5 text-base transition-colors duration-200 ${
-                active
+              className={`block px-5 py-3.5 text-base transition-colors duration-200 ${active
                   ? "bg-[#D4AF37]/20 text-[#D4AF37] font-semibold"
                   : "text-gray-200 hover:bg-[#D4AF37]/10 hover:text-[#D4AF37]"
-              }`}
+                }`}
             >
               {item.name}
             </Link>
@@ -150,9 +147,8 @@ const MobileDropdown = ({
     <div className="border-b border-white/10">
       <button
         onClick={onToggle}
-        className={`flex w-full items-center justify-between py-3.5 text-base font-semibold transition-colors ${
-          isParentActive ? "text-[#D4AF37]" : "text-white"
-        }`}
+        className={`flex w-full items-center justify-between py-3.5 text-base font-semibold transition-colors ${isParentActive ? "text-[#D4AF37]" : "text-white"
+          }`}
       >
         {title}
         <ChevronDown
@@ -173,9 +169,8 @@ const MobileDropdown = ({
                   onNavigate();
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
-                className={`block rounded-md px-4 py-3 text-base transition-colors ${
-                  active ? "bg-[#D4AF37]/20 text-[#D4AF37] font-medium" : "text-gray-300 hover:text-[#D4AF37]"
-                }`}
+                className={`block rounded-md px-4 py-3 text-base transition-colors ${active ? "bg-[#D4AF37]/20 text-[#D4AF37] font-medium" : "text-gray-300 hover:text-[#D4AF37]"
+                  }`}
               >
                 {item.name}
               </Link>
@@ -217,7 +212,7 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-[#D4AF37]/30 bg-black text-white shadow-xl backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-[1450px] items-center justify-between px-5 md:px-8 lg:px-10">
-        
+
         {/* LEFT: LOGO */}
         <div className="flex-1 flex justify-start">
           <Link to="/" onClick={handleNavigate} className="flex items-center">
@@ -234,9 +229,8 @@ const Navbar = () => {
           <Link
             to="/"
             onClick={handleNavigate}
-            className={`px-3.5 py-2 text-base font-semibold transition-colors duration-200 ${
-              isActive("/") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
-            }`}
+            className={`px-3.5 py-2 text-base font-semibold transition-colors duration-200 ${isActive("/") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
+              }`}
           >
             Home
           </Link>
@@ -244,11 +238,19 @@ const Navbar = () => {
           <Link
             to="/about"
             onClick={handleNavigate}
-            className={`px-3.5 py-2 text-base font-semibold transition-colors duration-200 ${
-              isActive("/about") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
-            }`}
+            className={`px-3.5 py-2 text-base font-semibold transition-colors duration-200 ${isActive("/about") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
+              }`}
           >
             About
+          </Link>
+
+          <Link
+            to="/events"
+            onClick={handleNavigate}
+            className={`px-3.5 py-2 text-base font-semibold transition-colors duration-200 ${isActive("/events") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
+              }`}
+          >
+            Events
           </Link>
 
           {NAV_SECTIONS.map((section) => (
@@ -266,11 +268,10 @@ const Navbar = () => {
           <Link
             to="/contact-us"
             onClick={handleNavigate}
-            className={`rounded-full border border-[#D4AF37] px-6 py-2.5 text-base font-bold transition-all duration-300 ${
-              isActive("/contact-us")
+            className={`rounded-full border border-[#D4AF37] px-6 py-2.5 text-base font-bold transition-all duration-300 ${isActive("/contact-us")
                 ? "bg-[#D4AF37] text-black"
                 : "text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black"
-            }`}
+              }`}
           >
             Contact Us
           </Link>
@@ -278,9 +279,8 @@ const Navbar = () => {
           <Link
             to="/legal-pages"
             onClick={handleNavigate}
-            className={`px-3 py-2 text-base font-semibold transition-colors duration-200 ${
-              isActive("/legal-pages") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
-            }`}
+            className={`px-3 py-2 text-base font-semibold transition-colors duration-200 ${isActive("/legal-pages") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
+              }`}
           >
             Legal
           </Link>
@@ -302,9 +302,8 @@ const Navbar = () => {
           <Link
             to="/"
             onClick={handleNavigate}
-            className={`block border-b border-white/10 py-3.5 text-base font-semibold ${
-              isActive("/") ? "text-[#D4AF37]" : "text-white"
-            }`}
+            className={`block border-b border-white/10 py-3.5 text-base font-semibold ${isActive("/") ? "text-[#D4AF37]" : "text-white"
+              }`}
           >
             Home
           </Link>
@@ -312,11 +311,19 @@ const Navbar = () => {
           <Link
             to="/about"
             onClick={handleNavigate}
-            className={`block border-b border-white/10 py-3.5 text-base font-semibold ${
-              isActive("/about") ? "text-[#D4AF37]" : "text-white"
-            }`}
+            className={`block border-b border-white/10 py-3.5 text-base font-semibold ${isActive("/about") ? "text-[#D4AF37]" : "text-white"
+              }`}
           >
             About
+          </Link>
+
+          <Link
+            to="/events"
+            onClick={handleNavigate}
+            className={`block border-b border-white/10 py-3.5 text-base font-semibold ${isActive("/events") ? "text-[#D4AF37]" : "text-white"
+              }`}
+          >
+            Events
           </Link>
 
           {NAV_SECTIONS.map((section) => (

@@ -1,10 +1,11 @@
-import { createBrowserRouter, Outlet, RouterProvider,  } from 'react-router-dom'
+import { createBrowserRouter, Outlet, RouterProvider, } from 'react-router-dom'
 import './App.css'
 
 import Navbaar from './components/common/Navbaar'
 
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
+import Event from './pages/Event'
 import VissionMission from './pages/VissionMission'
 import OurPrograms from './pages/OurPrograms'
 import ProgramDetailPage from './pages/ProgramDetailPage'
@@ -42,9 +43,12 @@ const router = createBrowserRouter([
       { path: '/about', element: <AboutUs /> },
       { path: '/AboutUs', element: <AboutUs /> },
 
+      { path: '/events', element: <Event /> },
+      { path: '/Event', element: <Event /> },
+
       { path: '/vision-mission', element: <VissionMission /> },
       { path: '/VisionMission', element: <VissionMission /> },
-  { path: '/how-it-works', element: <HowItWorks /> },
+      { path: '/how-it-works', element: <HowItWorks /> },
       { path: '/our-programs', element: <OurPrograms /> },
       { path: '/OurPrograms', element: <OurPrograms /> },
       { path: '/program/:slug', element: <ProgramDetailPage /> },

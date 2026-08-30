@@ -18,6 +18,7 @@ import {
 import { getProgramBySlug, type ProgramData } from '../data/programData';
 
 const benefitIcons = [Tag, Coins, ShoppingBag, Gift, ShieldCheck, Sparkles];
+
 const statsIcons = {
   users: Users,
   store: Store,
@@ -26,6 +27,8 @@ const statsIcons = {
 };
 
 function ProgramDetailPage() {
+
+  
   const { slug: paramSlug } = useParams();
   const location = useLocation();
   const resolvedSlug = paramSlug ?? (
@@ -34,16 +37,18 @@ function ProgramDetailPage() {
       : location.pathname.replace(/^\//, '').replace(/\/$/, '')
   );
   const program: ProgramData = getProgramBySlug(resolvedSlug || 'shop-saving');
-
+// const program.planCards=
   return (
     <div>
       <HeroSection program={program} />
       <AboutSection program={program} />
-      {program.planCards && program.planCards.length > 0 ? (
+      {program.slug === 'car-saving' ? (
+        <GallerySection program={program} />
+      ) : (program.planCards && program.planCards.length > 0 ? (
         <PlanMediaSection program={program} />
       ) : (
         <GallerySection program={program} />
-      )}
+      ))}
       <BenefitsSection program={program} />
     </div>
   );
@@ -68,7 +73,7 @@ function GallerySection({ program }: { program: ProgramData }) {
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {galleryImages.slice(0, 4).map((image, index) => (
+          {galleryImages.map((image, index) => (
             <div
               key={`${image}-${index}`}
               className="group relative overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-[0_18px_40px_rgba(9,20,35,0.08)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_45px_rgba(197,150,46,0.16)]"
@@ -94,6 +99,10 @@ function GallerySection({ program }: { program: ProgramData }) {
 }
 
 function PlanMediaSection({ program }: { program: ProgramData }) {
+  const galleryImages = program.gallery && program.gallery.length > 0
+    ? program.gallery
+    : [program.image, program.secondaryImage, program.image, program.secondaryImage];
+
   return (
     <section className="relative bg-[#f8fafc] px-4 py-16 sm:px-8 lg:px-16">
       <div className="mx-auto max-w-7xl">
@@ -106,6 +115,35 @@ function PlanMediaSection({ program }: { program: ProgramData }) {
             Choose the right <span className="text-[#c5962e]">car plan</span> for your journey
           </h2>
         </div>
+
+        {program.slug === 'car-saving' && (
+          <div className="mb-10 grid gap-5 lg:grid-cols-[1.4fr_0.6fr]">
+            <div className="overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_20px_45px_rgba(9,20,35,0.08)]">
+              <img
+                src={galleryImages[0]}
+                alt={`${program.title} main gallery`}
+                className="h-[360px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[420px]"
+              />
+            </div>
+
+            <div className="grid gap-5">
+              <div className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-[0_20px_45px_rgba(9,20,35,0.08)]">
+                <img
+                  src={galleryImages[1] || galleryImages[0]}
+                  alt={`${program.title} gallery side one`}
+                  className="h-[200px] w-full object-cover transition duration-700 hover:scale-105"
+                />
+              </div>
+              <div className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-[0_20px_45px_rgba(9,20,35,0.08)]">
+                <img
+                  src={galleryImages[2] || galleryImages[0]}
+                  alt={`${program.title} gallery side two`}
+                  className="h-[200px] w-full object-cover transition duration-700 hover:scale-105"
+                />
+              </div>
+            </div>
+          </div>
+        )}
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {program.planCards?.map((plan) => (

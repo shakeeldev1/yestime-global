@@ -8,6 +8,7 @@ import AboutUs from './pages/AboutUs'
 import VissionMission from './pages/VissionMission'
 import OurPrograms from './pages/OurPrograms'
 import ProgramDetailPage from './pages/ProgramDetailPage'
+import CarPlanPage from './pages/CarPlanPage'
 import HowItWorks from './pages/HowItWorks'
 import BusinessPartners from './pages/BusinessPartners'
 import GlobalExpansion from './pages/GlobalExpansion'
@@ -55,6 +56,8 @@ const router = createBrowserRouter([
       { path: '/property-saving', element: <ProgramDetailPage /> },
       { path: '/crop-saving', element: <ProgramDetailPage /> },
       { path: '/self-service-saving', element: <ProgramDetailPage /> },
+      { path: '/car-plan', element: <CarPlanPage /> },
+      { path: '/CarPlan', element: <CarPlanPage /> },
       { path: '/HowItWorks', element: <HowItWorks /> },
 
       { path: '/business-partners', element: <BusinessPartners /> },

@@ -1,36 +1,36 @@
-import { ArrowUpRight, Star } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const BanksFinancialCTA = () => {
   return (
-    <section className="relative overflow-hidden bg-white px-4 pb-10 pt-8 sm:pb-12">
-      <div className="relative z-10 mx-auto w-[calc(100%-2rem)] max-w-[1280px] p-0 sm:w-[90%] lg:w-[63%]">
-        <div className="relative overflow-hidden rounded-3xl border border-[rgba(11,59,110,0.16)] bg-[linear-gradient(145deg,#ffffff_0%,#f4f8fc_100%)] p-5 shadow-[0_18px_45px_-18px_rgba(11,59,110,0.14)] sm:p-8">
-          <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-[rgba(14,116,184,0.12)] blur-[80px] sm:-left-28 sm:-top-28 sm:h-96 sm:w-96" />
-          <div className="pointer-events-none absolute -bottom-24 -right-20 h-64 w-64 rounded-full bg-[rgba(240,199,94,0.16)] blur-[80px] sm:-bottom-32 sm:-right-24 sm:h-96 sm:w-96" />
+    <section className="px-5 pb-12 pt-2 sm:px-8 lg:px-[5.5%] lg:pb-16">
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-[30px] bg-[linear-gradient(90deg,#020b1b_0%,#061b34_40%,#0b2a4f_100%)] p-7 sm:p-9 lg:p-12">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="max-w-[650px]">
+            <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#f5c54e]">Take the next step</p>
+            <h3 className="mt-3 text-3xl font-black tracking-[-0.04em] text-white sm:text-5xl">
+              Take the Next Step Toward a
+              <span className="block text-[#f5c54e]">Smarter Financial Future.</span>
+            </h3>
+            <p className="mt-4 max-w-[520px] text-base leading-7 text-slate-200">
+              Secure, transparent and reliable financial solutions with our trusted banking partners.
+            </p>
+          </div>
 
-          <div className="relative z-10 grid min-w-0 grid-cols-1 items-center gap-6 md:grid-cols-[minmax(0,2fr)_minmax(190px,1fr)] md:gap-8">
-            <div className="flex min-w-0 flex-col gap-4">
-              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#d6b35a] bg-[#eff6ff] px-3.5 py-[0.45rem] text-[0.7rem] font-bold tracking-[0.15em] text-[#0b2b52]">
-                <Star size={16} className="text-[#c5962e]" />
-                <span>Let&apos;s build together</span>
-              </div>
-
-              <h2 className="m-0 break-words text-5xl font-bold leading-[1.15] tracking-[-0.03em] text-[#071a36]">
-                Let us build something{' '}
-                <span className="italic text-[#c5962e]">useful together.</span>
-              </h2>
-            </div>
-
-            <div className="flex w-full min-w-0 flex-col items-stretch justify-center gap-3 md:max-w-[240px]">
-              <Link
-                to="/ContactUs"
-                className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-[1.4rem] py-[0.85rem] text-base font-bold text-[#071a36] shadow-[0_10px_22px_rgba(197,150,46,0.24)] no-underline transition duration-300 ease-out hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5962e] focus-visible:ring-offset-2"
-              >
-                Start the discussion
-                <ArrowUpRight size={16} />
-              </Link>
-            </div>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              to="/ContactUs"
+              className="inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-[#f5c54e] to-[#d99420] px-6 py-3 text-sm font-bold text-[#07182d] shadow-[0_16px_32px_rgba(245,197,78,0.25)] transition-all duration-200 hover:-translate-y-0.5"
+            >
+              Explore Services
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              to="/contact-us"
+              className="inline-flex text-white items-center gap-2 rounded-xl border border-[#f5c54e]/60 bg-[#07182d]/50 px-6 py-3 text-sm font-bold text-white transition-all duration-200 hover:bg-white/10"
+            >
+              <span className="text-white">Contact Finance Team</span>
+            </Link>
           </div>
         </div>
       </div>

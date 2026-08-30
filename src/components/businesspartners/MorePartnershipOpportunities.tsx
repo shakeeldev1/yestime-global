@@ -13,6 +13,7 @@ import {
   Users,
   Globe2,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface PartnerType {
   icon: React.ElementType;
@@ -159,7 +160,7 @@ const MorePartnershipOpportunities: React.FC = () => {
     Opportunities
   </span>
 </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#55708F]">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#31527A]">
            We build long-term partnerships with organizations and professionals, creating opportunities for collaboration and growth.
 
           </p>
@@ -175,7 +176,7 @@ const MorePartnershipOpportunities: React.FC = () => {
             return (
               <div
                 key={partner.title}
-                className="group relative overflow-hidden rounded-3xl border border-[#D9E3EF] bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#C6922B]/50 hover:shadow-xl hover:shadow-[#0B2341]/10"
+                className="group relative overflow-hidden rounded-3xl border border-[#D9E3EF] bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#C6922B]/60 hover:bg-[#0B2341] hover:shadow-xl hover:shadow-[#0B2341]/10"
               >
 
                 {/* Top Accent */}
@@ -197,7 +198,7 @@ const MorePartnershipOpportunities: React.FC = () => {
 
                 <div className="mt-3 h-px w-8 bg-[#C6922B] transition-all duration-300 group-hover:w-14" />
 
-                <p className="mt-4 text-sm leading-7 text-[#55708F]">
+                <p className="mt-4 text-sm leading-7 text-[#31527A] transition-colors duration-300 group-hover:text-slate-200">
                   {partner.description}
                 </p>
 
@@ -220,7 +221,7 @@ const MorePartnershipOpportunities: React.FC = () => {
               Our Partnership Process
             </h2>
 
-            <p className="mt-4 text-base leading-7 text-[#55708F]">
+            <p className="mt-4 text-base leading-7 text-[#31527A]">
               A clear and professional process helps us evaluate suitable
               business partnerships and establish mutually agreed terms.
             </p>
@@ -241,7 +242,7 @@ const MorePartnershipOpportunities: React.FC = () => {
                 return (
                   <div
                     key={step.number}
-                    className="group relative rounded-2xl border border-[#D9E3EF] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#C6922B] hover:shadow-lg hover:shadow-[#0B2341]/5"
+                    className="group relative rounded-2xl border border-[#D9E3EF] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#C6922B]/70 hover:bg-[#0B2341] hover:shadow-lg hover:shadow-[#0B2341]/5"
                   >
 
                     {/* Number */}
@@ -261,7 +262,7 @@ const MorePartnershipOpportunities: React.FC = () => {
                       {step.title}
                     </h3>
 
-                    <p className="mt-2 text-sm leading-6 text-[#55708F]">
+                    <p className="mt-2 text-sm leading-6 text-[#31527A] transition-colors duration-300 group-hover:text-slate-200">
                       {step.description}
                     </p>
 
@@ -361,7 +362,7 @@ const MorePartnershipOpportunities: React.FC = () => {
                   Become Our Business Partner
                 </h3>
 
-                <p className="mt-2 max-w-2xl text-sm leading-6 text-[#55708F]">
+                <p className="mt-2 max-w-2xl text-sm leading-6 text-[#31527A]">
                   Join our growing business network and explore suitable
                   opportunities for professional and long-term collaboration.
                 </p>
@@ -370,6 +371,8 @@ const MorePartnershipOpportunities: React.FC = () => {
             </div>
 
             {/* CTA Button */}
+
+            <Link to="/contact-us">
             <button className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-xl bg-[#C6922B] px-7 py-4 font-semibold text-white shadow-lg shadow-[#C6922B]/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#0B2341] hover:shadow-[#0B2341]/20">
 
               Get Started
@@ -380,6 +383,7 @@ const MorePartnershipOpportunities: React.FC = () => {
               />
 
             </button>
+            </Link>
 
           </div>
 

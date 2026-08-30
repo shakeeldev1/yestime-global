@@ -146,7 +146,7 @@ const Shops: React.FC = () => {
               return (
                 <div
                   key={feature.title}
-                  className="group relative flex flex-col justify-between rounded-3xl border border-[#D9E3EF] bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[#C6922B] hover:shadow-xl hover:shadow-[#C6922B]/10 overflow-hidden"
+                  className="group relative flex flex-col justify-between rounded-3xl border border-[#D9E3EF] bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[#C6922B]/70 hover:bg-[#0B2341] hover:shadow-xl hover:shadow-[#0B2341]/10 overflow-hidden"
                 >
                   {/* Subtle top indicator border */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#C6922B]/0 to-transparent transition-all duration-500 group-hover:via-[#C6922B]" />
@@ -167,7 +167,7 @@ const Shops: React.FC = () => {
                       {feature.title}
                     </h4>
 
-                    <p className="mt-3 text-sm leading-relaxed text-[#55708F]">
+                    <p className="mt-3 text-sm leading-relaxed text-[#55708F] transition-colors duration-300 group-hover:text-slate-200">
                       {feature.description}
                     </p>
                   </div>

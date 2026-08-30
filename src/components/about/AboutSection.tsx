@@ -9,99 +9,195 @@ import {
   ChevronRight,
   ShoppingBag,
   Car,
-  Bike,
-  PiggyBank,
-  ArrowUpRight,
+  Home,
+  Tractor,
 } from "lucide-react";
 
-const AboutSection: React.FC = () => {
-  return (
-    <section className="relative w-full bg-white py-12 text-slate-800 ">
-      <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-12 relative z-10">
+export const AboutSection: React.FC = () => {
+  const ecosystemItems = [
+    {
+      id: "01",
+      title: "Shopping & Savings",
+      description: "Smart shopping, better savings",
+      image:
+        "https://i.pinimg.com/736x/6c/8a/dc/6c8adc05fa12dd0f64a4ba1ef6c05fe2.jpg",
+      icon: (
+        <ShoppingBag
+          size={20}
+          className="text-slate-700 transition-colors duration-300 group-hover:text-amber-600"
+        />
+      ),
+    },
+    {
+      id: "02",
+      title: "Vehicles Solutions",
+      description: "Mobility solutions made easy",
+      image:
+        "https://i.pinimg.com/1200x/75/7d/a6/757da6961b6cf5c6af412b4418b8ddb0.jpg",
+      icon: (
+        <Car
+          size={20}
+          className="text-slate-700 transition-colors duration-300 group-hover:text-amber-600"
+        />
+      ),
+    },
+    {
+      id: "03",
+      title: "Property Opportunities",
+      description: "Access to property & real estate",
+      image:
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80",
+      icon: (
+        <Home
+          size={20}
+          className="text-slate-700 transition-colors duration-300 group-hover:text-amber-600"
+        />
+      ),
+    },
+    {
+      id: "04",
+      title: "Agriculture & Farming",
+      description: "Supporting farmers & agriculture",
+      image:
+        "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80",
+      icon: (
+        <Tractor
+          size={20}
+          className="text-slate-700 transition-colors duration-300 group-hover:text-amber-600"
+        />
+      ),
+    },
+    {
+      id: "05",
+      title: "Business Solutions",
+      description: "Empowering businesses for growth",
+      image:
+        "https://i.pinimg.com/1200x/6a/9a/66/6a9a661a89881207fcc24bf0c16e5bf5.jpg",
+      icon: (
+        <Handshake
+          size={20}
+          className="text-slate-700 transition-colors duration-300 group-hover:text-amber-600"
+        />
+      ),
+    },
+  ];
 
+  return (
+    <section className="relative w-full overflow-hidden bg-white py-12">
+      <div className="mx-auto max-w-[1280px] px-6 lg:px-12">
         {/* ========== WHO WE ARE SECTION ========== */}
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 items-center mb-24">
-          
+        <div className="mb-12 grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           {/* LEFT CONTENT */}
-          <div className="lg:col-span-7 text-center lg:text-left">
+          <div className="text-center lg:col-span-7 lg:text-left">
             {/* Badge */}
-            <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-amber-500/30 bg-amber-50 px-4 py-2">
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-amber-400 text-[10px] font-black text-white">
+            <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-amber-500/30 bg-amber-50 px-4 py-2 transition-transform duration-300 hover:scale-105">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-amber-400 text-[10px] font-black text-white shadow-sm">
                 W
               </span>
-              <span className="text-xs font-bold tracking-widest text-amber-600 uppercase">
+              <span className="text-xs font-bold uppercase tracking-widest text-amber-600">
                 WHO WE ARE
               </span>
             </div>
 
             {/* Heading */}
-            <h2 className="text-5xl font-bold text-slate-900  mb-6 ">
-              Connecting People,<br />
+            <h2 className="mb-6 text-5xl font-bold text-slate-900">
+              Connecting People,
+              <br />
               <span className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 bg-clip-text text-transparent">
-                Businesses & Opportunities.
-              </span>
+                Businesses &amp;{" "}
+              </span>{" "}
+              Opportunities.
             </h2>
 
-            {/* Story Card */}
-            <div className="mb-4 p-6 rounded-2xl bg-amber-50/50 border border-amber-200/60 shadow-sm relative overflow-hidden group hover:border-amber-300 transition-all">
-              <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-amber-500 to-emerald-500" />
-              <p className="text-base leading-relaxed text-slate-800 font-medium mb-3">
-                Founded in <span className="font-bold text-amber-600 underline decoration-amber-500/40 underline-offset-4">2023</span>, YES TIME GLOBAL PRIVATE LIMITED emerged with a bold vision: to revolutionize how people, businesses, and communities connect.
+            {/* Seamless Story Narrative Text */}
+            <div className="mb-8 space-y-4 text-slate-600">
+              <p className="text-base leading-relaxed sm:text-lg">
+                Founded in{" "}
+                <span className="font-semibold text-slate-900">2023</span>,{" "}
+                <strong className="font-semibold text-slate-900">
+                  YES TIME GLOBAL PRIVATE LIMITED
+                </strong>{" "}
+                emerged with a bold vision to revolutionize how people,
+                businesses, and communities connect.
               </p>
-              <p className="text-sm leading-relaxed text-slate-600">
-                What started as an ambitious idea has grown into a trusted platform, connecting thousands of users to life-changing opportunities in shopping, vehicles, property, agriculture, and more.
+
+              <p className="text-sm leading-relaxed sm:text-base">
+                What started as an ambitious idea has grown into a trusted
+                platform, connecting thousands of users to life-changing
+                opportunities in shopping, vehicles, property, agriculture, and
+                more. We empower individuals through transparent processes,
+                helping you save more, invest smarter, and build lasting success.
               </p>
             </div>
 
-            {/* Main Description */}
-            <p className="text-sm sm:text-base leading-relaxed text-slate-600 mb-8 max-w-xl mx-auto lg:mx-0">
-              At <strong className="text-slate-900 font-semibold">YES TIME GLOBAL PRIVATE LIMITED</strong>, we empower individuals through trusted programs, strategic partnerships, and transparent processes—helping you save more, invest smarter, and build lasting success.
-            </p>
-
-            {/* Values Grid */}
-            <div className="mb-8 p-6 rounded-2xl border border-slate-200 bg-slate-50/80 shadow-sm">
-              <span className="text-xs font-bold text-amber-600 uppercase tracking-widest block mb-4">
+            {/* Core Pillars Grid - ALL CARDS BLACK */}
+            <div className="mb-8 rounded-2xl border border-slate-200 bg-slate-50/80 p-6 shadow-sm">
+              <span className="mb-4 block text-xs font-bold uppercase tracking-widest text-amber-600">
                 Our Core Pillars
               </span>
               <div className="grid grid-cols-3 gap-4">
-                <div className="flex flex-col items-center text-center p-3 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-amber-400 transition">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-600 mb-2">
+                {/* 1. MISSION CARD */}
+                <div className="group flex flex-col items-center rounded-xl border border-slate-800 bg-slate-950 p-3.5 text-center shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-amber-400 hover:shadow-lg">
+                  <span className="mb-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/20 text-amber-400 transition-colors group-hover:bg-amber-500 group-hover:text-slate-950">
                     <Target size={20} />
                   </span>
-                  <span className="text-xs font-bold text-slate-900">Mission</span>
-                  <span className="text-[11px] text-slate-500 mt-0.5">Connect & Empower</span>
+                  <span className="text-xs font-bold text-white transition-colors group-hover:text-amber-400">
+                    Mission
+                  </span>
+                  <span className="mt-0.5 text-[11px] font-medium text-slate-400">
+                    Connect &amp; Empower
+                  </span>
                 </div>
 
-                <div className="flex flex-col items-center text-center p-3 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-amber-400 transition">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-600 mb-2">
+                {/* 2. VISION CARD */}
+                <div className="group flex flex-col items-center rounded-xl border border-slate-800 bg-slate-950 p-3.5 text-center shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-amber-400 hover:shadow-lg">
+                  <span className="mb-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/20 text-amber-400 transition-colors group-hover:bg-amber-500 group-hover:text-slate-950">
                     <Eye size={20} />
                   </span>
-                  <span className="text-xs font-bold text-slate-900">Vision</span>
-                  <span className="text-[11px] text-slate-500 mt-0.5">Global Leadership</span>
+                  <span className="text-xs font-bold text-white transition-colors group-hover:text-amber-400">
+                    Vision
+                  </span>
+                  <span className="mt-0.5 text-[11px] font-medium text-slate-400">
+                    Global Leadership
+                  </span>
                 </div>
 
-                <div className="flex flex-col items-center text-center p-3 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-amber-400 transition">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-600 mb-2">
+                {/* 3. VALUES CARD */}
+                <div className="group flex flex-col items-center rounded-xl border border-slate-800 bg-slate-950 p-3.5 text-center shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-amber-400 hover:shadow-lg">
+                  <span className="mb-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/20 text-amber-400 transition-colors group-hover:bg-amber-500 group-hover:text-slate-950">
                     <Sparkles size={20} />
                   </span>
-                  <span className="text-xs font-bold text-slate-900">Values</span>
-                  <span className="text-[11px] text-slate-500 mt-0.5">Trust & Innovation</span>
+                  <span className="text-xs font-bold text-white transition-colors group-hover:text-amber-400">
+                    Values
+                  </span>
+                  <span className="mt-0.5 text-[11px] font-medium text-slate-400">
+                    Trust &amp; Innovation
+                  </span>
                 </div>
               </div>
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8 pb-8 border-b border-slate-200 text-xs font-semibold text-slate-700">
-              <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-100 border border-slate-200">
-                <Globe size={16} className="text-amber-500" />
+            <div className="mb-8 flex flex-wrap items-center justify-center gap-4 border-b border-slate-200 pb-8 text-xs font-semibold text-slate-700 lg:justify-start">
+              <div className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-100 px-3.5 py-2 transition-all duration-300 hover:border-amber-300 hover:bg-amber-50/50">
+                <Globe
+                  size={16}
+                  className="text-amber-500 transition-transform duration-300 hover:rotate-12"
+                />
                 <span>Global Reach</span>
               </div>
-              <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-100 border border-slate-200">
-                <ShieldCheck size={16} className="text-emerald-600" />
+              <div className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-100 px-3.5 py-2 transition-all duration-300 hover:border-emerald-300 hover:bg-emerald-50/50">
+                <ShieldCheck
+                  size={16}
+                  className="text-emerald-600 transition-transform duration-300 hover:scale-110"
+                />
                 <span>100% Transparent</span>
               </div>
-              <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-100 border border-slate-200">
-                <Handshake size={16} className="text-amber-500" />
+              <div className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-100 px-3.5 py-2 transition-all duration-300 hover:border-amber-300 hover:bg-amber-50/50">
+                <Handshake
+                  size={16}
+                  className="text-amber-500 transition-transform duration-300 hover:scale-110"
+                />
                 <span>Strategic Partners</span>
               </div>
             </div>
@@ -110,10 +206,10 @@ const AboutSection: React.FC = () => {
             <div className="flex justify-center lg:justify-start">
               <a
                 href="/about"
-                className="group relative inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-amber-500/20 transition-all hover:scale-105 active:scale-95"
+                className="group relative inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-amber-500/20 transition-all duration-300 hover:scale-105 hover:shadow-amber-500/40 active:scale-95"
               >
                 <span className="text-white">Discover Our Full Story</span>
-                <ChevronRight className="h-4 text-white w-4 transition-transform group-hover:translate-x-1" />
+                <ChevronRight className="h-4 w-4 text-white transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>
           </div>
@@ -122,145 +218,115 @@ const AboutSection: React.FC = () => {
           <div className="lg:col-span-5">
             <div className="grid gap-4">
               {/* Top Large Image */}
-              <div className="group relative h-[280px] w-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-xl">
+              <div className="group relative h-[280px] w-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-xl transition-all duration-500 hover:shadow-2xl">
                 <img
                   src="/programs.png"
                   alt="Programs Header"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
-                <div className="absolute top-4 right-4 rounded-full border border-amber-300 bg-white/90 px-4 py-1.5 backdrop-blur-md shadow-sm">
-                  <span className="text-xs font-extrabold text-amber-600">Since 2023</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-80" />
+                <div className="absolute right-4 top-4 rounded-full border border-amber-300 bg-white/90 px-4 py-1.5 shadow-sm backdrop-blur-md transition-transform duration-300 group-hover:scale-105">
+                  <span className="text-xs font-extrabold text-amber-600">
+                    Since 2023
+                  </span>
                 </div>
               </div>
 
               {/* Bottom Split Images */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="group relative h-[180px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-md">
+                <div className="group relative h-[180px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-md transition-all duration-500 hover:shadow-xl">
                   <img
                     src="/img.webp"
                     alt="Global Network"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
-                  <span className="absolute bottom-3 left-3 rounded-md bg-white/90 px-2.5 py-1 text-[10px] font-bold text-amber-700 backdrop-blur-md shadow-sm">
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
+                  <span className="absolute bottom-3 left-3 rounded-md bg-white/90 px-2.5 py-1 text-[10px] font-bold text-amber-700 shadow-sm backdrop-blur-md transition-transform duration-300 group-hover:translate-x-1">
                     Global Network
                   </span>
                 </div>
 
-                <div className="group relative h-[180px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-md">
+                <div className="group relative h-[180px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-md transition-all duration-500 hover:shadow-xl">
                   <img
                     src="/img1.png"
                     alt="Community Impact"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
-                  <span className="absolute bottom-3 left-3 rounded-md bg-white/90 px-2.5 py-1 text-[10px] font-bold text-emerald-700 backdrop-blur-md shadow-sm">
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
+                  <span className="absolute bottom-3 left-3 rounded-md bg-white/90 px-2.5 py-1 text-[10px] font-bold text-emerald-700 shadow-sm backdrop-blur-md transition-transform duration-300 group-hover:translate-x-1">
                     Community First
                   </span>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
 
-        {/* ========== OUR PROGRAMS SECTION ========== */}
-        <div className="pt-4 ">
+        {/* ========== OUR ECOSYSTEM SECTION ========== */}
+        <div className="pt-4">
           {/* Section Header */}
-          <div className="mb-4 text-center max-w-xl mx-auto">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-50 px-4 py-1.5">
-              <span className="flex h-4 w-4 items-center justify-center rounded-full bg-emerald-600 text-[10px] font-black text-white">
-                P
-              </span>
-              <span className="text-xs font-bold tracking-widest text-emerald-600 uppercase">
-                OUR PROGRAMS
+          <div className="mx-auto mb-10 max-w-2xl text-center">
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-1.5 shadow-sm transition-transform duration-300 hover:scale-105">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-white">
+                OUR ECOSYSTEM
               </span>
             </div>
 
-            <h3 className="text-3xl font-black text-slate-900 sm:text-4xl lg:text-5xl tracking-tight">
-              Programs Designed <br />
-              <span className="text-amber-500">For Your Success.</span>
+            <h3 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+              One Ecosystem. Multiple{" "}
+              <span className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">
+                Opportunities.
+              </span>
             </h3>
           </div>
 
-          {/* Programs Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                number: "01",
-                title: "Shopping Program",
-                image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=85",
-                icon: <ShoppingBag size={20} />,
-              },
-              {
-                number: "02",
-                title: "Car Program",
-                image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=900&q=85",
-                icon: <Car size={20} />,
-              },
-              {
-                number: "03",
-                title: "Motorcycle Program",
-                image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=85",
-                icon: <Bike size={20} />,
-              },
-              {
-                number: "04",
-                title: "Savings Programs",
-                image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=900&q=85",
-                icon: <PiggyBank size={20} />,
-              },
-            ].map((program) => (
-              <div
-                key={program.number}
-                className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-3 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-amber-400 hover:shadow-xl"
-              >
-                {/* Card Image Container */}
-                <div className="relative h-48 w-full overflow-hidden rounded-xl bg-slate-100">
-                  <img
-                    src={program.image}
-                    alt={program.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/10 to-transparent" />
+          {/* Ecosystem Flow Timeline */}
+          <div className="relative mx-auto max-w-6xl">
+            {/* Horizontal Connecting Dotted Line (Desktop View) */}
+            <div className="absolute top-[88px] left-[10%] right-[10%] hidden h-[2px] border-b-2 border-dashed border-amber-300/80 lg:block" />
 
-                  {/* Number Badge */}
-                  <div className="absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-xl bg-white/90 font-mono text-xs font-bold text-amber-600 backdrop-blur-md border border-amber-200 shadow-sm">
-                    {program.number}
+            {/* Nodes Grid */}
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
+              {ecosystemItems.map((item, index) => (
+                <div
+                  key={item.id}
+                  className="group relative flex flex-col items-center text-center"
+                >
+                  {/* Circle Image Frame */}
+                  <div className="relative z-10 mb-5 flex h-44 w-44 items-center justify-center rounded-full border-[3px] border-amber-400/80 bg-white p-1.5 shadow-md transition-all duration-500 ease-out group-hover:-translate-y-2 group-hover:border-amber-500 group-hover:shadow-2xl hover:shadow-amber-500/20">
+                    <div className="relative h-full w-full overflow-hidden rounded-full">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                      />
+                    </div>
+
+                    {/* Floating Bottom Icon Badge */}
+                    <div className="absolute -bottom-3 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full border border-slate-200 bg-white shadow-md transition-all duration-300 group-hover:scale-110 group-hover:border-amber-400 group-hover:shadow-lg">
+                      {item.icon}
+                    </div>
+
+                    {/* Connecting Dot between nodes */}
+                    {index < ecosystemItems.length - 1 && (
+                      <div className="absolute -right-5 top-1/2 hidden h-3 w-3 -translate-y-1/2 rounded-full border-2 border-white bg-amber-400 shadow-sm transition-all duration-300 group-hover:scale-125 group-hover:bg-amber-500 lg:block" />
+                    )}
                   </div>
 
-                  {/* Floating Category Icon */}
-                  <div className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-xl bg-amber-500 text-white shadow-md">
-                    {program.icon}
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-3 pt-4 flex items-center justify-between">
-                  <div>
-                    <h4 className="text-base font-bold text-slate-900 group-hover:text-amber-600 transition-colors">
-                      {program.title}
+                  {/* Node Title & Description */}
+                  <div className="mt-2 max-w-[200px]">
+                    <h4 className="text-lg font-bold leading-tight text-slate-900 transition-colors duration-300 group-hover:text-amber-600">
+                      {item.title}
                     </h4>
-                    <p className="text-[11px] text-slate-500 mt-0.5">Explore benefits & access</p>
-                  </div>
-
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 text-slate-500 group-hover:bg-amber-500 group-hover:text-white transition-colors">
-                    <ArrowUpRight size={16} />
+                    <p className="mt-1.5 text-xs font-normal leading-relaxed text-slate-500 transition-colors duration-300 group-hover:text-slate-700">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Bottom Footer Note */}
-          <div className="mt-12 text-center">
-            <span className="inline-block rounded-full bg-slate-100 border border-slate-200 px-6 py-2 text-xs font-medium text-slate-600">
-              Trusted programs • Sustainable growth • Better opportunities
-            </span>
+              ))}
+            </div>
           </div>
         </div>
-
       </div>
     </section>
   );

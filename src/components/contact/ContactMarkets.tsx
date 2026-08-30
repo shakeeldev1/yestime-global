@@ -1,26 +1,28 @@
 import { FiMapPin } from 'react-icons/fi'
-import HomeCTA from '../home/HomeCTA'
-import { globalMarkets } from './contactData'
 
 const ContactMarkets = () => {
   return (
-    <HomeCTA
-      className="bg-slate-100/70"
-      badge="Global Reach"
-      title="Connect with"
-      highlight="opportunities worldwide."
-      description="Our direction connects people, programs, and partnerships across Pakistan, Nepal, and Indonesia."
-      actions={(
-        <div className="grid w-full gap-3">
-          {globalMarkets.map((market) => (
-            <div key={market} className="group flex items-center gap-3 rounded-xl border border-[#0b3b6e]/20 bg-[#0b3b6e] px-4 py-3 text-white shadow-[0_8px_18px_rgba(11,59,110,0.12)] transition duration-300 hover:-translate-y-0.5 hover:border-[#d99420] hover:bg-[#06234b]">
-              <FiMapPin className="shrink-0 text-[#f5c54e] transition-transform duration-300 group-hover:scale-110" size={17} />
-              <span className="text-sm font-semibold">{market}</span>
-            </div>
-          ))}
+    <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-3 shadow-xl shadow-slate-200/50 sm:p-4">
+        <div className="mb-3 flex items-center gap-2 px-2 pt-1">
+          <FiMapPin className="text-amber-500" size={18} />
+          <span className="text-xs font-bold uppercase tracking-widest text-slate-700">
+            Head Office — Lahore, Pakistan
+          </span>
         </div>
-      )}
-    />
+
+        <div className="relative h-80 w-full overflow-hidden rounded-2xl sm:h-96">
+          <iframe
+            title="YES TIME GLOBAL Head Office Lahore Location"
+            src="https://maps.google.com/maps?q=Lahore,Pakistan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            className="h-full w-full border-0"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </div>
+    </section>
   )
 }
 

@@ -12,12 +12,6 @@ const ContactChannels = () => {
   return (
     <section className="relative w-full overflow-hidden bg-slate-100/70 py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl">
-          <span className="inline-flex rounded-full border border-amber-300/50 bg-amber-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-amber-700">How we can help</span>
-          <h2 className="mt-4 text-3xl font-black tracking-tight text-[#061832] sm:text-4xl">
-            Start with the right conversation.
-          </h2>
-        </div>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {contactChannels.map((channel) => {
             const Icon = icons[channel.icon]

@@ -11,17 +11,17 @@ interface PillarItem {
 const PILLARS: readonly PillarItem[] = [
   {
     icon: Target,
-    title: 'Our Mission',
+    title: 'Mission',
     description: 'Empowering lives through global access & shared opportunities.',
   },
   {
     icon: Eye,
-    title: 'Our Vision',
+    title: 'Vision',
     description: 'A connected world of transparent and equal opportunities for all.',
   },
   {
     icon: Handshake,
-    title: 'Our Values',
+    title: 'Core Values',
     description: 'Built on trust, integrity, transparency, and sustainable growth.',
   },
 ] as const

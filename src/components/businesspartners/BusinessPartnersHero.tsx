@@ -13,6 +13,7 @@ import {
   Zap,
   type LucideIcon,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface PartnerCard {
   icon: LucideIcon;
@@ -29,7 +30,7 @@ const partnerCards: PartnerCard[] = [
     text: "Expand your local reach and drive revenue by integrating into our high-demand merchant network.",
     badge: "High Growth",
     image:
-      "https://i.pinimg.com/1200x/d2/d1/51/d2d151519ca3e66708329bfa2cea72ab.jpg",
+      "https://i.pinimg.com/736x/73/73/33/737333b121b2291d32497439795b10bf.jpg",
   },
   {
     icon: Building2,
@@ -37,7 +38,7 @@ const partnerCards: PartnerCard[] = [
     text: "Forge high-impact alliances designed to scale operations, maximize market share, and ensure long-term stability.",
     badge: "Core Alliance",
     image:
-      "https://i.pinimg.com/736x/b3/00/85/b300855fd574a7946555a2fde9ac139a.jpg",
+      "https://i.pinimg.com/1200x/6a/9a/66/6a9a661a89881207fcc24bf0c16e5bf5.jpg",
   },
   {
     icon: TrendingUp,
@@ -45,7 +46,7 @@ const partnerCards: PartnerCard[] = [
     text: "Unlock high-yield opportunities backed by robust metrics within our accelerating, scalable digital ecosystem.",
     badge: "High ROI",
     image:
-      "https://i.pinimg.com/1200x/8b/e5/07/8be507b915df99cd62f80b22a817ce47.jpg",
+      "https://i.pinimg.com/736x/b1/a8/ee/b1a8ee6bcbce0d3cf35f6bfb1ebc7520.jpg",
   },
   {
     icon: Users,
@@ -78,7 +79,7 @@ const BusinessPartnersHero: React.FC = () => {
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl font-extrabold tracking-tight text-[#0B2341] sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="text-5xl font-bold text-[#0B2341] sm:text-6xl ">
               Architecting
               <br />
 
@@ -106,13 +107,13 @@ const BusinessPartnersHero: React.FC = () => {
                 return (
                   <div
                     key={idx}
-                    className="group flex items-center gap-3 rounded-xl border border-[#D9E3EF]/80 bg-white/80 p-3 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-[#C6922B]/50 hover:shadow-md"
-                  >
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#0B2341]/5 text-[#0B2341] transition-colors duration-300 group-hover:bg-[#C6922B] group-hover:text-white">
-                      <ItemIcon size={17} strokeWidth={2.2} />
-                    </div>
+                      className="group flex items-center gap-3 rounded-xl border border-[#D9E3EF]/80 bg-white/80 p-3 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#C6922B]/60 hover:bg-[#0B2341] hover:shadow-lg hover:shadow-[#0B2341]/10"
+                    >
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#0B2341]/5 text-[#0B2341] transition-colors duration-300 group-hover:bg-[#C6922B] group-hover:text-white">
+                        <ItemIcon size={17} strokeWidth={2.2} />
+                      </div>
 
-                    <span className="text-xs font-semibold text-[#0B2341]">
+                      <span className="text-xs font-semibold text-[#0B2341] transition-colors duration-300 group-hover:text-white">
                       {item.label}
                     </span>
                   </div>
@@ -122,18 +123,19 @@ const BusinessPartnersHero: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <button
+              <Link
+                to="/contact-us"
                 type="button"
                 className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-[#0B2341] px-8 py-4 text-sm font-bold text-white shadow-xl shadow-[#0B2341]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#16385F] hover:shadow-[#0B2341]/30 active:translate-y-0"
               >
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="relative text-white z-10 flex items-center gap-2">
                   Become a Partner
                   <Zap
                     size={16}
                     className="text-[#C6922B] transition-transform duration-300 group-hover:scale-110"
                   />
                 </span>
-              </button>
+              </Link>
 
               <button
                 type="button"
@@ -174,7 +176,7 @@ const BusinessPartnersHero: React.FC = () => {
                   return (
                     <div
                       key={partner.title}
-                      className="group relative flex min-h-[245px] flex-col justify-between overflow-hidden rounded-2xl border border-[#D9E3EF] bg-white shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[#C6922B] hover:shadow-xl hover:shadow-[#C6922B]/10"
+                      className="group relative flex min-h-[245px] flex-col justify-between overflow-hidden rounded-2xl border border-[#D9E3EF] bg-white shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[#C6922B]/70 hover:bg-[#0B2341] hover:shadow-xl hover:shadow-[#0B2341]/10"
                     >
                       {/* Background Image */}
                       <img
@@ -183,22 +185,19 @@ const BusinessPartnersHero: React.FC = () => {
                         className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
 
-                      {/* Image Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-b from-[#0B2341]/75 via-[#0B2341]/55 to-[#0B2341]/90" />
+                      {/* Base dark overlay for readability */}
+                      <div className="absolute inset-0 bg-gradient-to-b from-[#0B2341]/10 via-[#0B2341]/25 to-[#0B2341]/70 transition-all duration-500 group-hover:from-[#0B2341]/45 group-hover:via-[#0B2341]/65 group-hover:to-[#0B2341]/90" />
 
                       {/* Gold Hover Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#C6922B]/0 via-transparent to-[#C6922B]/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#C6922B]/0 via-[#0B2341]/10 to-[#C6922B]/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                       {/* Top Gold Line */}
-                      <div className="absolute left-0 right-0 top-0 z-20 h-1 bg-gradient-to-r from-transparent via-transparent to-transparent transition-all duration-500 group-hover:via-[#C6922B]" />
+                      <div className="absolute left-0 right-0 top-0 z-20 h-1 bg-gradient-to-r from-transparent via-[#C6922B]/0 to-transparent transition-all duration-500 group-hover:via-[#C6922B]" />
 
                       {/* Card Content */}
                       <div className="relative z-10 flex h-full flex-col justify-between p-6">
-
-                        {/* Top */}
-                        <div>
+                        <div className="translate-y-2 opacity-0 transition-all duration-400 group-hover:translate-y-0 group-hover:opacity-100">
                           <div className="mb-4 flex items-center justify-between">
-
                             {/* Icon */}
                             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/95 text-[#0B2341] shadow-lg transition-all duration-500 group-hover:rotate-6 group-hover:bg-[#C6922B] group-hover:text-white">
                               <Icon size={22} strokeWidth={2} />

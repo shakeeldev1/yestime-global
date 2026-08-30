@@ -9,7 +9,7 @@ import {
 
 // ================= IMAGE =================
 // Public assets are served from /public and referenced as a root URL.
-const GlobalImage = "/vision.png";
+const GlobalImage = "/homeAbout.png";
 
 // ================= SERVICE TYPE =================
 
@@ -194,7 +194,7 @@ const WhatWeDoGlobally: React.FC = () => {
             return (
               <article
                 key={service.id}
-                className="group relative flex min-h-[330px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#07152D]/70 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#D9A21B]/50 hover:bg-[#091A35]"
+                className="group relative flex min-h-[330px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#000000] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#D9A21B]/50 hover:bg-[#091A35]"
               >
 
                 {/* ================= NUMBER ================= */}
@@ -259,7 +259,7 @@ const WhatWeDoGlobally: React.FC = () => {
 
           {/* ================= CONNECTING MARKETS ================= */}
 
-          <div className="rounded-2xl border border-white/10 bg-[#07152D]/50 p-7 transition duration-300 hover:border-[#D9A21B]/30">
+          <div className="rounded-2xl border border-white/10 bg-[#000000] p-7 transition duration-300 hover:border-[#D9A21B]/30">
 
             <div className="flex items-start gap-4">
 
@@ -288,7 +288,7 @@ const WhatWeDoGlobally: React.FC = () => {
 
           {/* ================= BUILDING RELATIONSHIPS ================= */}
 
-          <div className="rounded-2xl border border-white/10 bg-[#07152D]/50 p-7 transition duration-300 hover:border-[#D9A21B]/30">
+          <div className="rounded-2xl border border-white/10 bg-[#000000] p-7 transition duration-300 hover:border-[#D9A21B]/30">
 
             <div className="flex items-start gap-4">
 

@@ -117,7 +117,7 @@ const GlobalJourney: React.FC = () => {
 
           {/* Description */}
 
-          <p className="text-base leading-7 text-slate-300 sm:text-lg">
+          <p className="text-base leading-7 text-slate-900 sm:text-lg">
             Our international journey continues to evolve as we
             connect new countries, build stronger relationships,
             and explore opportunities beyond borders.
@@ -259,7 +259,7 @@ const GlobalJourney: React.FC = () => {
             BOTTOM MESSAGE
         ========================================= */}
 
-        <div className="mt-14 rounded-2xl border border-[#D9A21B]/20 bg-[#07152D]/60 p-7 sm:p-8">
+        <div className="mt-14 rounded-2xl border border-[#D9A21B]/20 bg-[#000000] p-7 sm:p-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div className="max-w-3xl">
               <div className="mb-2 flex items-center gap-2">

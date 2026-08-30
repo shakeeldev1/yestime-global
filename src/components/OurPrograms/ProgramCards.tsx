@@ -43,7 +43,11 @@ const programs: Program[] = [
     category: "Shopping",
     buttonBg: "bg-emerald-600",
     buttonHover: "hover:bg-emerald-700",
-    points: ["Daily Essentials", "Every 1 Minute", "1 منٹ میں 1 پر"],
+    points: [
+      "Daily Essentials",
+      "Smart savings on groceries, household items, and daily needs",
+      "Every 1 Minute • 1 منٹ میں 1 پر",
+    ],
     icon: <ShoppingCart size={18} />,
   },
   {
@@ -56,7 +60,11 @@ const programs: Program[] = [
     category: "Daily Essentials",
     buttonBg: "bg-blue-600",
     buttonHover: "hover:bg-blue-700",
-    points: ["Bulk Purchases", "Every 1 Minute", "ہر 1 منٹ میں"],
+    points: [
+      "Bulk Purchases",
+      "Better value on wholesale essentials and business stock-ups",
+      "Every 1 Minute • ہر 1 منٹ میں",
+    ],
     icon: <Package size={18} />,
   },
   {
@@ -69,7 +77,11 @@ const programs: Program[] = [
     category: "Vehicles",
     buttonBg: "bg-orange-600",
     buttonHover: "hover:bg-orange-700",
-    points: ["Fuel Purchases", "Every 1 Minute", "ہر 1 منٹ میں"],
+    points: [
+      "Fuel Purchases",
+      "Smart savings for daily travel, commuting, and business transport",
+      "Every 1 Minute • ہر 1 منٹ میں",
+    ],
     icon: <Fuel size={18} />,
   },
   {
@@ -82,7 +94,11 @@ const programs: Program[] = [
     category: "Vehicles",
     buttonBg: "bg-purple-600",
     buttonHover: "hover:bg-purple-700",
-    points: ["New or Used", "Every 1 Minute", "ہر 1 منٹ میں 1 پر"],
+    points: [
+      "New or Used",
+      "Affordable benefits for riders, commuters, and two-wheeler families",
+      "Every 1 Minute • ہر 1 منٹ میں 1 پر",
+    ],
     icon: <Bike size={18} />,
   },
   {
@@ -95,11 +111,32 @@ const programs: Program[] = [
     category: "Vehicles",
     buttonBg: "bg-indigo-600",
     buttonHover: "hover:bg-indigo-700",
-    points: ["New or Used Cars", "Every 1 Minute", "1 منٹ میں 1 پر"],
+    points: [
+      "New or Used Cars",
+      "Smarter value for your next vehicle purchase and ownership plan",
+      "Every 1 Minute • 1 منٹ میں 1 پر",
+    ],
     icon: <Car size={18} />,
   },
   {
     number: 6,
+    slug: "car-plan",
+    title: "CAR PLAN",
+    urduTitle: "کار پلان",
+    image:
+      "/img3.png",
+    category: "Vehicles",
+    buttonBg: "bg-cyan-600",
+    buttonHover: "hover:bg-cyan-700",
+    points: [
+      "Flexible Payments",
+      "Affordable car plan designed for new or used vehicle ownership",
+      "Every 1 Minute • کار پلان",
+    ],
+    icon: <Car size={18} />,
+  },
+  {
+    number: 7,
     slug: "property-saving",
     title: "PROPERTY SAVING",
     urduTitle: "پراپرٹی سیونگ",
@@ -110,14 +147,13 @@ const programs: Program[] = [
     buttonHover: "hover:bg-teal-700",
     points: [
       "Buy / Sell Property",
-      "پراپرٹی خرید و فروخت",
-      "Every 1 Minute",
-      "ہر 1 منٹ میں 1 پر",
+      "Smart opportunities for dependable property purchase and resale decisions",
+      "Every 1 Minute • ہر 1 منٹ میں 1 پر",
     ],
     icon: <Home size={18} />,
   },
   {
-    number: 7,
+    number: 8,
     slug: "crop-saving",
     title: "CROP SAVING",
     urduTitle: "فصل سیونگ",
@@ -128,14 +164,13 @@ const programs: Program[] = [
     buttonHover: "hover:bg-amber-700",
     points: [
       "Buy / Sell Crops",
-      "فصل خرید و فروخت",
-      "Every 1 Minute",
-      "ہر 1 منٹ میں 1 پر",
+      "Support for agriculture value, crop planning, and better farm decisions",
+      "Every 1 Minute • ہر 1 منٹ میں 1 پر",
     ],
     icon: <Wheat size={18} />,
   },
   {
-    number: 8,
+    number: 9,
     slug: "self-service-saving",
     title: "SELF-SERVICE SAVING",
     urduTitle: "سیلف سروس سیونگ",
@@ -144,9 +179,14 @@ const programs: Program[] = [
     category: "Self Service",
     buttonBg: "bg-rose-600",
     buttonHover: "hover:bg-rose-700",
-    points: ["Buy or Sell by Yourself", "اپنی خرید یا فروخت خود کریں"],
+    points: [
+      "Buy or Sell by Yourself",
+      "Flexible self-service saving for direct buying, selling, and value growth",
+      "Every 1 Minute • ہر 1 منٹ میں",
+    ],
     icon: <UserRound size={18} />,
   },
+  
 ];
 
 const categories = [
@@ -178,7 +218,7 @@ const ProgramCards: React.FC = () => {
               G
             </span>
             <span className="text-[10px] font-bold tracking-wider text-[#c5962e] uppercase">
-              DISCOVER OUR PROGRAMS
+              GDISCOVER OUR PROGRAMS
             </span>
           </div>
 
@@ -188,7 +228,7 @@ const ProgramCards: React.FC = () => {
           </h2>
 
           <p className="mt-2 text-xs text-slate-500 sm:text-sm">
-            YES TIME GLOBAL offers 8 powerful programs to help you save more,
+            YES TIME GLOBAL offers 9 powerful programs to help you save more,
             spend smartly and create a better future for yourself and your
             family.
           </p>
@@ -202,7 +242,7 @@ const ProgramCards: React.FC = () => {
             </div>
             <div className="text-left">
               <span className="block text-lg font-extrabold leading-none text-slate-900">
-                8
+                9
               </span>
               <span className="text-[11px] font-semibold text-slate-500">
                 Powerful Programs
@@ -281,7 +321,7 @@ const ProgramCards: React.FC = () => {
         </div>
 
         {/* CARDS GRID */}
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {filteredPrograms.map((program) => (
             <article
               key={program.number}
@@ -330,10 +370,10 @@ const ProgramCards: React.FC = () => {
 
                 {/* COLORFUL CATEGORY BUTTON */}
                 <button
-                  onClick={() => navigate(`/program/${program.slug}`)}
+                  onClick={() => navigate(program.slug === 'car-plan' ? '/car-plan' : `/program/${program.slug}`)}
                   className="mt-6 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-5 py-2.5 text-xs font-bold text-[#000000] shadow-[0_10px_22px_rgba(197,150,46,0.24)] transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110 active:scale-95"
                 >
-                  <span>View Program</span>
+                  <span>{program.slug === 'car-plan' ? 'View Car Plan' : 'View Program'}</span>
                   <ChevronRight
                     size={14}
                     className="transition-transform duration-300 group-hover:translate-x-1"

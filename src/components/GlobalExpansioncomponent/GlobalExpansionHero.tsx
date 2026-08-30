@@ -4,7 +4,7 @@ import {
   Autoplay,
   EffectFade,
   Pagination,
-  Navigation,
+ 
 } from "swiper/modules";
 
 import {
@@ -34,8 +34,7 @@ const GlobalExpansionHero: React.FC = () => {
   const slides: Slide[] = [
     {
       id: 1,
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2200&q=90",
+      image: "/hero-yes.png",
       badge: "YES TIME GLOBAL",
       title: "Global Expansion",
       subtitle: "Expanding Our Reach Beyond Borders",
@@ -46,8 +45,7 @@ const GlobalExpansionHero: React.FC = () => {
 
     {
       id: 2,
-      image:
-        "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=2200&q=90",
+      image: "/hero-yes.png",
       badge: "OUR GLOBAL PRESENCE",
       title: "Connecting Countries",
       subtitle: "Pakistan • Nepal • Indonesia",
@@ -62,8 +60,7 @@ const GlobalExpansionHero: React.FC = () => {
 
     {
       id: 3,
-      image:
-        "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=2200&q=90",
+      image: "/hero-yes.png",
       badge: "THE JOURNEY CONTINUES",
       title: "Future Expansion",
       subtitle: "Beyond Our Current Borders",
@@ -81,19 +78,14 @@ const GlobalExpansionHero: React.FC = () => {
   return (
     <section
       id="global-expansion"
-      className="relative  py- min-h-[720px] w-full overflow-hidden bg-[#020c1c]"
+      className="relative  h-screen w-full overflow-hidden bg-[#020c1c]"
     >
       {/* =========================================
           SWIPER
       ========================================= */}
 
       <Swiper
-        modules={[
-          Autoplay,
-          EffectFade,
-          Pagination,
-          Navigation,
-        ]}
+        modules={[Autoplay, EffectFade, Pagination]}
         effect="fade"
         fadeEffect={{
           crossFade: true,
@@ -107,7 +99,7 @@ const GlobalExpansionHero: React.FC = () => {
           clickable: true,
           dynamicBullets: true,
         }}
-        navigation
+       
         loop
         className="global-expansion-swiper h-full w-full"
       >
@@ -158,7 +150,7 @@ const GlobalExpansionHero: React.FC = () => {
                   CONTENT
               ========================================= */}
 
-              <div className="relative z-20 mx-auto flex h-full max-w-7xl items-center px-5 pb-16 pt-8 sm:px-8 sm:pb-16 lg:px-[7%] lg:pt-10">
+              <div className="relative z-20 mx-auto flex h-full max-w-7xl items-center px-5 pb-16  sm:px-8 sm:pb-16 lg:px-[7%] ">
                 <div className="grid w-full items-center gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-10">
                   {/* =====================================
                       LEFT CONTENT
@@ -182,7 +174,7 @@ const GlobalExpansionHero: React.FC = () => {
 
                     {/* Heading */}
 
-                    <h1 className="max-w-3xl text-[2.4rem] font-black leading-[0.96] tracking-[-0.04em] text-white sm:text-[3rem] lg:text-[3.3rem] xl:text-[3.8rem]">
+                    <h1 className="max-w-3xl text-5xl font-bold text-white ">
                       {slide.title}
                     </h1>
 
@@ -224,7 +216,7 @@ const GlobalExpansionHero: React.FC = () => {
                               className="text-[#FFD45A]"
                             />
 
-                            <span className="whitespace-nowrap text-[11px] font-medium text-[#0b2b52] sm:text-xs">
+                            <span className="whitespace-nowrap text-[11px] font-medium text-white sm:text-xs">
                               {country}
                             </span>
                           </div>
@@ -257,8 +249,8 @@ const GlobalExpansionHero: React.FC = () => {
                         href="#global-journey"
                         className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/25 bg-white/5 px-5 py-3 text-sm font-medium text-white transition duration-300 hover:border-[#FFD45A] hover:bg-white/10"
                       >
-                        Our Global Journey
-
+                       <span className="text-white"> Our Global Journey
+</span>
                         <ChevronRight size={17} />
                       </a>
                     </div>

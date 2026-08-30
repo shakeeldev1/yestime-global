@@ -32,11 +32,6 @@ export const contactChannels: ContactChannel[] = [
     description: 'Discuss business, dealer, property, bank, and investment opportunities.',
     icon: 'briefcase',
   },
-  {
-    title: 'Global opportunities',
-    description: 'Connect with our direction across Pakistan, Nepal, and Indonesia.',
-    icon: 'globe',
-  },
 ]
 
 export const globalMarkets = ['Pakistan', 'Nepal', 'Indonesia']

@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   TrendingUp,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface DealerBenefit {
   icon: React.ElementType;
@@ -131,14 +132,17 @@ const Dealers: React.FC = () => {
                 </div>
               </div>
 
-              <button className="group mt-8 inline-flex items-center gap-2 rounded-md bg-[#0B2341] px-7 py-3.5 font-semibold text-white shadow-lg shadow-[#0B2341]/10 transition duration-300 hover:-translate-y-0.5 hover:bg-[#C6922B] hover:shadow-[#C6922B]/20">
-                Become a Dealer
+              <Link
+                to="/contact-us"
+                className="group mt-8 inline-flex items-center gap-2 rounded-md bg-[#0B2341] px-7 py-3.5 font-semibold text-white shadow-lg shadow-[#0B2341]/10 transition duration-300 hover:-translate-y-0.5 hover:bg-[#C6922B] hover:shadow-[#C6922B]/20"
+              >
+              <span className="text-white">  Become a Dealer</span>
 
                 <ArrowUpRight
                   size={19}
-                  className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  className="transition-transform text-white duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 />
-              </button>
+              </Link>
             </div>
 
             {/* Benefits With Background Images */}

@@ -126,7 +126,7 @@ const BusinessPartnersHero: React.FC = () => {
               <Link
                 to="/contact-us"
                 type="button"
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-[#0B2341] px-8 py-4 text-sm font-bold text-white shadow-xl shadow-[#0B2341]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#16385F] hover:shadow-[#0B2341]/30 active:translate-y-0"
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-[#0B2341] px-5 py-2.5 text-sm font-bold text-white shadow-xl shadow-[#0B2341]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#16385F] hover:shadow-[#0B2341]/30 active:translate-y-0"
               >
                 <span className="relative text-white z-10 flex items-center gap-2">
                   Become a Partner
@@ -139,7 +139,7 @@ const BusinessPartnersHero: React.FC = () => {
 
               <button
                 type="button"
-                className="inline-flex items-center justify-center rounded-full border-2 border-[#C6922B]/80 bg-white/50 px-8 py-4 text-sm font-bold text-[#0B2341] shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-[#C6922B] hover:bg-[#C6922B] hover:text-white"
+                className="inline-flex items-center justify-center rounded-full border-2 border-[#C6922B]/80 bg-white/50 px-5 py-2.5 text-sm font-bold text-[#0B2341] shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-[#C6922B] hover:bg-[#C6922B] hover:text-white"
               >
                 Explore Framework
               </button>

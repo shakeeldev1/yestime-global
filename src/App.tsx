@@ -23,6 +23,7 @@ import TermsConditions from './pages/TermsConditions'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Disclaimer from './pages/Disclaimer'
 import Footer from './components/common/Footer'
+import WhatsAppButton from './components/common/WhatsAppButton'
 
 const MainFunction = () => {
   return (
@@ -30,6 +31,7 @@ const MainFunction = () => {
       <Navbaar />
       <Outlet />
       <Footer />
+      <WhatsAppButton />
     </div>
   )
 }

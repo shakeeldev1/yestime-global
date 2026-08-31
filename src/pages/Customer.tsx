@@ -46,14 +46,14 @@ const supportSteps = [
 const Customer = () => {
   return (
     <main className="bg-[linear-gradient(180deg,#ffffff_0%,#f6f9fc_100%)] text-[#071a36]">
-      <section className="relative overflow-hidden bg-[#020b1b] px-5 py-10 text-white md:px-8 lg:px-[5.5%] lg:py-12">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,197,78,0.18),transparent_25%),linear-gradient(90deg,#020b1b_0%,#020b1b_38%,rgba(2,11,27,0.9)_100%)]" />
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#f5c54e 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
+      <section className="relative overflow-hidden bg-[#000000] px-5 py-10 text-white md:px-8 lg:px-[5.5%] lg:py-12">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,197,78,0.18),transparent_25%),linear-gradient(90deg,#000000_0%,#000000_38%,rgba(2,11,27,0.9)_100%)]" />
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#000000 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
 
         <div className="relative z-10 mx-auto max-w-7xl">
           <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#f5c54e]/40 bg-[#07182d]/70 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#f5c54e]">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#f5c54e]/40 bg-[#000000]/70 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#f5c54e]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#f5c54e]" />
                 Customer / member information
               </span>
@@ -212,7 +212,7 @@ const Customer = () => {
       </section>
 
       <section className="px-5 pb-16 sm:px-8 lg:px-[5.5%]">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[30px] bg-[linear-gradient(90deg,#020b1b_0%,#071a36_40%,#0b2b52_100%)] p-7 sm:p-9 lg:p-12">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[30px] bg-[linear-gradient(90deg,#020b1b_0%,#000000_40%,#000000_100%)] p-7 sm:p-9 lg:p-12">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-2xl">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#f5c54e]">Still have a question?</p>

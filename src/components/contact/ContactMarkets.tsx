@@ -3,10 +3,10 @@ import { FiMapPin } from 'react-icons/fi'
 const ContactMarkets = () => {
   return (
     <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <div className="overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-3 shadow-xl shadow-slate-200/50 sm:p-4">
+      <div className="overflow-hidden rounded-3xl border border-[#d6b35a]/25 bg-white p-3 shadow-[0_18px_50px_rgba(2,12,28,0.08)] sm:p-4">
         <div className="mb-3 flex items-center gap-2 px-2 pt-1">
-          <FiMapPin className="text-amber-500" size={18} />
-          <span className="text-xs font-bold uppercase tracking-widest text-slate-700">
+          <FiMapPin className="text-[#f5c54e]" size={18} />
+          <span className="text-xs font-bold uppercase tracking-widest text-slate-200">
             Head Office — Lahore, Pakistan
           </span>
         </div>

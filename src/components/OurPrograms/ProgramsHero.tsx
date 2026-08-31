@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ChevronRight, Play } from "lucide-react";
 
 const ProgramsHero: React.FC = () => {
@@ -46,18 +47,24 @@ const ProgramsHero: React.FC = () => {
           {/* CALL TO ACTION BUTTONS */}
           <div className="mt-8 flex flex-wrap items-center gap-4">
             {/* Primary CTA */}
-            <button className="cursor-pointer inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#e5a51e] to-[#c68c18] px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all hover:brightness-110 active:scale-95">
+            <Link
+              to="/OurPrograms"
+              className="cursor-pointer inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#e5a51e] to-[#c68c18] px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all hover:brightness-110 active:scale-95"
+            >
               <span>Explore Programs</span>
               <ChevronRight className="h-4 w-4" />
-            </button>
+            </Link>
 
             {/* Secondary CTA */}
-            <button className="cursor-pointer inline-flex items-center gap-2 rounded-xl border border-white/20 bg-black/30 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition-all hover:bg-white/10 active:scale-95">
+            <Link
+              to="/how-it-works"
+              className="cursor-pointer inline-flex items-center gap-2 rounded-xl border border-white/20 bg-black/30 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition-all hover:bg-white/10 active:scale-95"
+            >
               <span>How It Works</span>
               <div className="flex h-5 w-5 items-center justify-center rounded-full bg-white/10">
                 <Play className="h-2.5 w-2.5 fill-white text-white" />
               </div>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

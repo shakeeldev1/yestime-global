@@ -14,6 +14,14 @@ interface NavSection {
   path?: string;
 }
 
+const LANGUAGE_OPTIONS = [
+  { code: "ENG", label: "Eng" },
+  { code: "URDU", label: "Urdu" },
+  { code: "ARABIC", label: "Arabic" },
+] as const;
+
+type LanguageCode = (typeof LANGUAGE_OPTIONS)[number]["code"];
+
 const NAV_SECTIONS: NavSection[] = [
   {
     id: "programs",
@@ -193,6 +201,8 @@ const MobileDropdown = ({
 const Navbar = () => {
   const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>("ENG");
+  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const location = useLocation();
 
   const scrollToTop = () => {
@@ -211,6 +221,7 @@ const Navbar = () => {
   const closeMenu = () => {
     setOpenMobileDropdown(null);
     setMobileMenu(false);
+    setLanguageMenuOpen(false);
   };
 
   const isActive = (path: string) => location.pathname === path;
@@ -231,11 +242,11 @@ const Navbar = () => {
         </div>
 
         {/* CENTER: DESKTOP MENU */}
-        <div className="hidden items-center justify-center gap-1.5 lg:flex flex-none">
+        <div className="hidden items-center justify-center gap-1 lg:flex flex-none">
           <Link
             to="/"
             onClick={handleNavigate}
-            className={`px-3.5 py-2 text-base font-semibold transition-colors duration-200 ${isActive("/") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
+            className={`px-3.5 py-2 text-sm font-semibold transition-colors duration-200 ${isActive("/") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
               }`}
           >
             Home
@@ -244,7 +255,7 @@ const Navbar = () => {
           <Link
             to="/about"
             onClick={handleNavigate}
-            className={`px-3.5 py-2 text-base font-semibold transition-colors duration-200 ${isActive("/about") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
+            className={`px-3.5 py-2 text-sm font-semibold transition-colors duration-200 ${isActive("/about") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
               }`}
           >
             About
@@ -259,7 +270,7 @@ const Navbar = () => {
                   key={section.id}
                   to={section.path || "/"}
                   onClick={handleNavigate}
-                  className={`px-3.5 py-2 text-base font-semibold transition-colors duration-200 ${isActive(section.path || "/") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"}`}
+                  className={`px-3.5 py-2 text-sm font-semibold transition-colors duration-200 ${isActive(section.path || "/") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"}`}
                 >
                   {section.title}
                 </Link>
@@ -277,27 +288,55 @@ const Navbar = () => {
           })}
         </div>
 
-        {/* RIGHT: CONTACT & LEGAL */}
+        {/* RIGHT: CONTACT & LANGUAGE */}
         <div className="hidden items-center justify-end gap-4 lg:flex flex-1">
+          <div className="relative">
+            <button
+              type="button"
+              onClick={() => setLanguageMenuOpen((prev) => !prev)}
+              className="flex items-center gap-2 rounded-full border border-[#D4AF37]/60 bg-white/5 px-3 py-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#F5E6A6] transition-all duration-200 hover:border-[#D4AF37] hover:bg-[#D4AF37]/10"
+              aria-label="Select language"
+            >
+              <span>{selectedLanguage}</span>
+              <ChevronDown
+                size={16}
+                className={`transition-transform duration-200 ${languageMenuOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+
+            {languageMenuOpen && (
+              <div className="absolute right-0 top-full mt-2 w-36 overflow-hidden rounded-xl border border-[#D4AF37]/30 bg-[#0a0a0a] shadow-2xl">
+                {LANGUAGE_OPTIONS.map((language) => (
+                  <button
+                    key={language.code}
+                    type="button"
+                    onClick={() => {
+                      setSelectedLanguage(language.code);
+                      setLanguageMenuOpen(false);
+                    }}
+                    className={`flex w-full items-center justify-between px-4 py-2.5 text-left text-sm font-medium transition-colors ${selectedLanguage === language.code
+                      ? "bg-[#D4AF37]/20 text-[#D4AF37]"
+                      : "text-gray-200 hover:bg-[#D4AF37]/10 hover:text-[#D4AF37]"
+                      }`}
+                  >
+                    <span>{language.label}</span>
+                    <span className="text-[10px] uppercase tracking-[0.18em]">{language.code}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
           <Link
             to="/contact-us"
             onClick={handleNavigate}
-            className={`rounded-full border border-[#D4AF37] px-6 py-2.5 text-base font-bold transition-all duration-300 ${isActive("/contact-us")
+            className={`rounded-full border border-[#D4AF37] px-4 text-nowrap py-2.5 text-sm font-bold transition-all duration-300 ${isActive("/contact-us")
               ? "bg-[#D4AF37] text-black"
               : "text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black"
               }`}
           >
             Contact Us
           </Link>
-
-          {/* <Link
-            to="/legal-pages"
-            onClick={handleNavigate}
-            className={`px-3 py-2 text-base font-semibold transition-colors duration-200 ${isActive("/legal-pages") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
-              }`}
-          >
-            Legal
-          </Link> */}
         </div>
 
         {/* MOBILE TRIGGER */}
@@ -366,6 +405,44 @@ const Navbar = () => {
             )
           })}
 
+          <div className="mt-5 rounded-xl border border-[#D4AF37]/20 bg-white/5 p-3">
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setLanguageMenuOpen((prev) => !prev)}
+                className="flex w-full items-center justify-between rounded-lg border border-[#D4AF37]/40 bg-black px-4 py-3 text-left text-base font-semibold text-[#F5E6A6]"
+              >
+                <span>Language</span>
+                <span className="flex items-center gap-2">
+                  <span className="uppercase tracking-[0.2em]">{selectedLanguage}</span>
+                  <ChevronDown size={18} className={`transition-transform duration-200 ${languageMenuOpen ? "rotate-180" : ""}`} />
+                </span>
+              </button>
+
+              {languageMenuOpen && (
+                <div className="mt-2 overflow-hidden rounded-lg border border-[#D4AF37]/30 bg-[#0a0a0a] shadow-xl">
+                  {LANGUAGE_OPTIONS.map((language) => (
+                    <button
+                      key={language.code}
+                      type="button"
+                      onClick={() => {
+                        setSelectedLanguage(language.code);
+                        setLanguageMenuOpen(false);
+                      }}
+                      className={`flex w-full items-center justify-between px-4 py-3 text-left text-base transition-colors ${selectedLanguage === language.code
+                        ? "bg-[#D4AF37]/20 text-[#D4AF37]"
+                        : "text-gray-200 hover:bg-[#D4AF37]/10 hover:text-[#D4AF37]"
+                        }`}
+                    >
+                      <span>{language.label}</span>
+                      <span className="uppercase tracking-[0.15em]">{language.code}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+
           <Link
             to="/contact-us"
             onClick={handleNavigate}
@@ -373,14 +450,6 @@ const Navbar = () => {
           >
             Contact Us
           </Link>
-
-          {/* <Link
-            to="/legal-pages"
-            onClick={handleNavigate}
-            className="mt-2 block py-3.5 text-center text-base font-medium text-gray-300 transition-colors hover:text-[#D4AF37]"
-          >
-            Legal Pages
-          </Link> */}
         </div>
       )}
     </nav>

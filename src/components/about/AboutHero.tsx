@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ChevronRight, Calendar, Grid, ShieldCheck, Globe } from "lucide-react";
 
 const AboutHero: React.FC = () => {
@@ -46,16 +47,22 @@ const AboutHero: React.FC = () => {
           {/* CTA BUTTONS */}
           <div className="mt-8 flex flex-wrap items-center gap-4">
             {/* Primary CTA */}
-            <button className="cursor-pointer inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#f39c12] to-[#d68910] px-6 py-3 text-sm font-bold text-white shadow-lg transition-all hover:brightness-110 active:scale-95">
+            <Link
+              to="/about"
+              className="cursor-pointer inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#f39c12] to-[#d68910] px-6 py-3 text-sm font-bold text-white shadow-lg transition-all hover:brightness-110 active:scale-95"
+            >
               <span>Discover Our Story</span>
               <ChevronRight className="h-4 w-4" />
-            </button>
+            </Link>
 
             {/* Secondary CTA */}
-            <button className="cursor-pointer inline-flex items-center gap-2 rounded-xl border border-white/20 bg-black/40 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition-all hover:bg-white/10 active:scale-95">
+            <Link
+              to="/OurPrograms"
+              className="cursor-pointer inline-flex items-center gap-2 rounded-xl border border-white/20 bg-black/40 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition-all hover:bg-white/10 active:scale-95"
+            >
               <span>Explore Programs</span>
               <ChevronRight className="h-4 w-4" />
-            </button>
+            </Link>
           </div>
         </div>
 

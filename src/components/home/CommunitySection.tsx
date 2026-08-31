@@ -63,7 +63,7 @@ export const CommunitySection = () => {
 
         {/* 5 Cards Grid */}
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-          {FEATURES.map(({ title, text, icon: Icon, image }) => (
+          {FEATURES.map(({ title, text, image }) => (
             <div
               key={title}
               className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-md transition-all duration-300 ease-out hover:-translate-y-2 hover:border-amber-400/80 hover:shadow-xl hover:shadow-amber-500/10"
@@ -80,11 +80,6 @@ export const CommunitySection = () => {
                     loading="lazy"
                     className="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-110"
                   />
-                  
-                  {/* Floating Icon Badge Overlapping Seam */}
-                  <div className="absolute -bottom-5 left-5 z-10 flex h-11 w-11 items-center justify-center rounded-xl bg-[#06234b] text-[#E2A22C] shadow-lg ring-4 ring-white transition-all duration-300 group-hover:scale-110 group-hover:bg-[#E2A22C] group-hover:text-[#06234b]">
-                    <Icon className="h-5 w-5 transition-transform duration-300 group-hover:rotate-6" aria-hidden="true" />
-                  </div>
                 </div>
 
                 {/* Text Content */}

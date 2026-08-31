@@ -1,7 +1,19 @@
 import { useState } from 'react'
 import type { FormEvent, ChangeEvent } from 'react'
-import { FaWhatsapp, FaPhone, FaEnvelope } from 'react-icons/fa6'
-import { HiChevronDown, HiCheck } from 'react-icons/hi2'
+import {
+  FaWhatsapp,
+  FaPhone,
+  FaEnvelope,
+  FaPaperPlane,
+  FaUser,
+  FaGlobe,
+  FaListCheck,
+  FaShieldHalved,
+  FaUsers,
+  FaBolt,
+  FaMessage,
+} from 'react-icons/fa6'
+import { HiChevronDown, HiCheck, HiArrowRight } from 'react-icons/hi2'
 import { inquiryTypes } from './contactData'
 
 type FormValues = {
@@ -24,8 +36,8 @@ const initialValues: FormValues = {
   consent: false,
 }
 
-const fieldBaseClass =
-  'w-full rounded-2xl border border-slate-200/80 bg-slate-50/50 px-4 py-3.5 text-sm text-slate-900 shadow-sm outline-none transition-all duration-200 placeholder:text-slate-400 hover:border-slate-300 focus:border-amber-500 focus:bg-white focus:ring-4 focus:ring-amber-500/10'
+const inputClass =
+  'w-full rounded-xl border border-slate-200 bg-[#f9fafb] pl-11 pr-4 py-3 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 hover:border-slate-300 focus:border-[#d99420] focus:bg-white focus:ring-2 focus:ring-[#d99420]/20'
 
 const ContactForm = () => {
   const [values, setValues] = useState<FormValues>(initialValues)
@@ -54,247 +66,355 @@ const ContactForm = () => {
   }
 
   return (
-    <section id="contact-form" className="bg-slate-50/50 px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-12 lg:items-start">
-        {/* Form Container */}
-        <div className="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xl shadow-slate-200/50 sm:p-10 lg:col-span-7">
-          <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-amber-500 animate-pulse" />
-            <span className="text-xs font-bold uppercase tracking-widest text-amber-600">
-              Send an Inquiry
-            </span>
-          </div>
+    <section id="contact-form" className="bg-[#f2f5f9] px-4 py-12 sm:px-6 lg:px-8">
+      {/* 12-column grid container */}
+      <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-12 lg:items-stretch">
+        
+        {/* LEFT SIDEBAR - GET IN TOUCH (~34% width / col-span-4) */}
+        <div className="relative flex flex-col justify-between overflow-hidden rounded-3xl border border-slate-800 bg-[#070e17] p-6 text-white shadow-xl sm:p-8 lg:col-span-4">
+          {/* Background Image Layer */}
+          <img
+            src="/homeAbout.png"
+            alt="Corporate Office Building"
+            className="absolute inset-0 h-full w-full object-cover opacity-35"
+          />
 
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-            Let's start a conversation.
-          </h2>
-          <p className="mt-2 text-sm text-slate-600 sm:text-base">
-            Share a few details and our team will guide you to the right next step.
-          </p>
+          {/* Overlay Gradients */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#070e17] via-[#070e17]/35 to-transparent" />
 
-          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-            {/* Name & Email */}
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="space-y-1.5">
-                <label htmlFor="name" className="block text-xs font-semibold uppercase tracking-wider text-slate-700">
-                  Full Name <span className="text-amber-500">*</span>
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  required
-                  value={values.name}
-                  onChange={handleChange}
-                  className={fieldBaseClass}
-                  placeholder="Your full name"
-                />
+          {/* Content Wrapper */}
+          <div className="relative z-10 flex flex-col justify-between h-full space-y-6">
+            
+            {/* Top Header & Status Pill */}
+            <div className="space-y-4">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-widest text-[#d99420]">
+                  GET IN TOUCH
+                </span>
+                <h3 className="mt-1 text-2xl font-extrabold text-white">
+                  YES TIME GLOBAL
+                </h3>
               </div>
 
-              <div className="space-y-1.5">
-                <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-slate-700">
-                  Email Address <span className="text-amber-500">*</span>
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  value={values.email}
-                  onChange={handleChange}
-                  className={fieldBaseClass}
-                  placeholder="you@example.com"
-                />
-              </div>
-            </div>
-
-            {/* Phone & Country */}
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="space-y-1.5">
-                <label htmlFor="phone" className="block text-xs font-semibold uppercase tracking-wider text-slate-700">
-                  Phone / WhatsApp
-                </label>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  value={values.phone}
-                  onChange={handleChange}
-                  className={fieldBaseClass}
-                  placeholder="+92 300 0000000"
-                />
-              </div>
-
-              <div className="space-y-1.5">
-                <label htmlFor="country" className="block text-xs font-semibold uppercase tracking-wider text-slate-700">
-                  Country
-                </label>
-                <input
-                  id="country"
-                  name="country"
-                  value={values.country}
-                  onChange={handleChange}
-                  className={fieldBaseClass}
-                  placeholder="Your country"
-                />
-              </div>
-            </div>
-
-            {/* Inquiry Select */}
-            <div className="space-y-1.5">
-              <label htmlFor="inquiry" className="block text-xs font-semibold uppercase tracking-wider text-slate-700">
-                Inquiry Type <span className="text-amber-500">*</span>
-              </label>
-              <div className="relative">
-                <select
-                  id="inquiry"
-                  name="inquiry"
-                  required
-                  value={values.inquiry}
-                  onChange={handleChange}
-                  className={`${fieldBaseClass} appearance-none pr-10`}
-                >
-                  {inquiryTypes.map((type) => (
-                    <option key={type} value={type}>
-                      {type}
-                    </option>
-                  ))}
-                </select>
-                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
-                  <HiChevronDown className="h-5 w-5" />
+              {/* Status Pill */}
+              <div className="inline-flex items-center gap-2 rounded-xl bg-[#000000]/90 px-3 py-2 border border-slate-700/60 backdrop-blur-sm">
+                <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                <div className="text-[11px] leading-tight">
+                  <p className="text-slate-400">Usually responds</p>
+                  <p className="font-bold text-amber-400">within 24 hours</p>
                 </div>
               </div>
             </div>
 
-            {/* Message Textarea */}
-            <div className="space-y-1.5">
-              <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-slate-700">
-                Message <span className="text-amber-500">*</span>
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                minLength={10}
-                rows={4}
-                value={values.message}
-                onChange={handleChange}
-                className={`${fieldBaseClass} resize-y`}
-                placeholder="Tell us what you would like to discuss."
-              />
-            </div>
-
-            {/* Consent Checkbox */}
-            <div className="flex items-start gap-3 pt-1">
-              <input
-                id="consent"
-                name="consent"
-                type="checkbox"
-                required
-                checked={values.consent}
-                onChange={handleChange}
-                className="mt-1 h-4 w-4 rounded border-slate-300 text-amber-600 focus:ring-amber-500"
-              />
-              <label htmlFor="consent" className="cursor-pointer text-xs leading-5 text-slate-600 select-none">
-                I agree that YES TIME GLOBAL may use these details to respond to my inquiry.
-              </label>
-            </div>
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="group relative flex w-full items-center justify-center gap-2 rounded-2xl bg-slate-900 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition-all duration-200 hover:bg-slate-800 hover:shadow-xl hover:shadow-slate-900/20 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
-            >
-              {isSubmitting ? (
-                <span>Sending...</span>
-              ) : (
-                <span>Send Message</span>
-              )}
-            </button>
-
-            {/* Status Alert */}
-            {submitted && (
-              <div
-                role="status"
-                aria-live="polite"
-                className="flex items-center gap-3 rounded-2xl border border-emerald-200/80 bg-emerald-50/80 p-4 text-sm text-emerald-900 animate-in fade-in slide-in-from-bottom-2"
+            {/* Middle Contact Options */}
+            <div className="space-y-3">
+              {/* WhatsApp Card */}
+              <a
+                href="https://wa.me/923068509086"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between rounded-2xl border border-slate-800/80 bg-[#0d1622]/90 p-3.5 transition-all hover:border-slate-700 hover:bg-[#111c2e]"
               >
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 font-bold text-emerald-600">
-                  <HiCheck className="h-5 w-5" />
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#25D366] text-white">
+                    <FaWhatsapp className="h-5 w-5" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-xs text-slate-400">WhatsApp Support</p>
+                    <p className="text-xs font-bold text-white truncate">+92 306 8509086</p>
+                  </div>
+                </div>
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-800/60 text-slate-400 transition-all group-hover:bg-slate-700 group-hover:text-white">
+                  <HiArrowRight className="h-3.5 w-3.5" />
+                </div>
+              </a>
+
+              {/* Direct Call Card */}
+              <a
+                href="tel:+923196336984"
+                className="group flex items-center justify-between rounded-2xl border border-slate-800/80 bg-[#0d1622]/90 p-3.5 transition-all hover:border-slate-700 hover:bg-[#111c2e]"
+              >
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#007AFF] text-white">
+                    <FaPhone className="h-4 w-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-xs text-slate-400">Direct Call</p>
+                    <p className="text-xs font-bold text-white truncate">+92 319 6336984</p>
+                  </div>
+                </div>
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-800/60 text-slate-400 transition-all group-hover:bg-slate-700 group-hover:text-white">
+                  <HiArrowRight className="h-3.5 w-3.5" />
+                </div>
+              </a>
+
+              {/* Email Support Card */}
+              <a
+                href="mailto:info@yestimeglobal.com"
+                className="group flex items-center justify-between rounded-2xl border border-slate-800/80 bg-[#0d1622]/90 p-3.5 transition-all hover:border-slate-700 hover:bg-[#111c2e]"
+              >
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EA4335] text-white">
+                    <FaEnvelope className="h-4 w-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-xs text-slate-400">Email Support</p>
+                    <p className="text-xs font-bold text-white truncate">info@yestimeglobal.com</p>
+                  </div>
+                </div>
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-800/60 text-slate-400 transition-all group-hover:bg-slate-700 group-hover:text-white">
+                  <HiArrowRight className="h-3.5 w-3.5" />
+                </div>
+              </a>
+            </div>
+
+            {/* Prefer WhatsApp Banner Card */}
+            <div className="flex flex-col gap-3 rounded-2xl border border-slate-800/80 bg-[#0d1622]/90 p-3.5">
+              <div className="flex items-center gap-2.5">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-amber-500/20 bg-amber-500/10 text-amber-400">
+                  <FaMessage className="h-3.5 w-3.5" />
                 </div>
                 <div>
-                  <p className="font-semibold">Message Sent!</p>
-                  <p className="text-xs text-emerald-700">Thank you. Your inquiry has been received by YES TIME GLOBAL.</p>
+                  <p className="text-xs font-bold text-amber-400">Prefer WhatsApp?</p>
+                  <p className="text-[11px] text-slate-400">Chat directly with our team.</p>
                 </div>
               </div>
-            )}
-          </form>
+
+              <a
+                href="https://wa.me/923068509086"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#00a884] px-5 py-2 text-xs font-bold text-white transition-all hover:bg-[#008f70]"
+              >
+                <FaWhatsapp className="h-4 w-4" />
+                <span>Chat on WhatsApp</span>
+                <HiArrowRight className="h-3.5 w-3.5" />
+              </a>
+            </div>
+
+            {/* Bottom Location Tag */}
+            <div className="flex justify-end pt-1">
+              <div className="inline-flex items-center gap-2 rounded-xl border border-slate-800 bg-[#0b131e]/90 px-3 py-2 backdrop-blur-md">
+                <span className="text-amber-400 text-xs">📍</span>
+                <div className="text-right">
+                  <p className="text-xs font-bold text-white leading-tight">YES TIME GLOBAL</p>
+                  <p className="text-[10px] text-slate-400 leading-tight">Lahore, Pakistan</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
-        {/* Sidebar Contact Card */}
-        <aside className="rounded-3xl bg-slate-900 p-8 text-white shadow-xl shadow-slate-900/10 lg:col-span-5 lg:sticky lg:top-8">
-          <span className="inline-block rounded-full bg-amber-500/10 px-3.5 py-1 text-xs font-semibold tracking-wider text-amber-400 ring-1 ring-inset ring-amber-500/20">
-            Head Office
-          </span>
-          <h3 className="mt-4 text-2xl font-bold tracking-tight text-white">
-            YES TIME GLOBAL
-          </h3>
-          <p className="mt-1 text-xs font-medium uppercase tracking-wider text-slate-400">
-            Lahore, Pakistan
-          </p>
+        {/* RIGHT FORM CONTAINER - SEND AN INQUIRY (~66% width / col-span-8) */}
+        <div className="flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10 lg:col-span-8">
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-[#d99420]" />
+              <span className="text-xs font-bold uppercase tracking-wider text-[#d99420]">
+                SEND AN INQUIRY
+              </span>
+            </div>
 
-          <div className="mt-8 space-y-5 border-t border-slate-800 pt-6">
-            {/* WhatsApp Support */}
-            <a
-              href="https://wa.me/923357990041"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-800/50 p-3.5 transition-all hover:border-[#25D366]/50 hover:bg-slate-800"
-            >
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#25D366] text-white shadow-md shadow-[#25D366]/20">
-                <FaWhatsapp className="h-6 w-6" />
-              </div>
-              <div>
-                <p className="text-xs font-medium text-slate-400">WhatsApp Support</p>
-                <p className="text-sm font-semibold text-slate-100 transition-colors group-hover:text-[#25D366]">
-                  +92 335 7990041
-                </p>
-              </div>
-            </a>
+            <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+              Let’s Talk About Your Next <span className="text-[#d99420]">Opportunity</span>.
+            </h2>
+            <p className="mt-3 text-sm text-slate-600 sm:text-base leading-relaxed">
+              Whether you have a question about our programs, partnerships, financial services or membership, our team is here to help.
+            </p>
 
-            {/* Direct Call */}
-            <a
-              href="tel:+923027392442"
-              className="group flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-800/50 p-3.5 transition-all hover:border-[#007AFF]/50 hover:bg-slate-800"
-            >
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#007AFF] text-white shadow-md shadow-[#007AFF]/20">
-                <FaPhone className="h-5 w-5" />
+            {/* Badges / Features */}
+            <div className="mt-6 flex flex-wrap items-center gap-4 border-b border-slate-100 pb-6 text-xs font-semibold text-slate-600">
+              <div className="flex items-center gap-2">
+                <FaBolt className="text-[#d99420]" />
+                <span>Quick Response</span>
               </div>
-              <div>
-                <p className="text-xs font-medium text-slate-400">Direct Call</p>
-                <p className="text-sm font-semibold text-slate-100 transition-colors group-hover:text-[#007AFF]">
-                  +92 302 7392442
-                </p>
+              <span className="text-slate-300">|</span>
+              <div className="flex items-center gap-2">
+                <FaShieldHalved className="text-[#d99420]" />
+                <span>Secure Inquiry</span>
               </div>
-            </a>
+              <span className="text-slate-300">|</span>
+              <div className="flex items-center gap-2">
+                <FaUsers className="text-[#d99420]" />
+                <span>Dedicated Support</span>
+              </div>
+            </div>
 
-            {/* Email Address */}
-            <a
-              href="mailto:info@yestimeglobal.com"
-              className="group flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-800/50 p-3.5 transition-all hover:border-[#EA4335]/50 hover:bg-slate-800"
-            >
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#EA4335] text-white shadow-md shadow-[#EA4335]/20">
-                <FaEnvelope className="h-5 w-5" />
+            {/* Form */}
+            <form className="mt-6 space-y-5" onSubmit={handleSubmit}>
+              {/* Full Name & Email */}
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="space-y-1">
+                  <label htmlFor="name" className="text-xs font-bold text-slate-700">
+                    Full Name <span className="text-[#d99420]">*</span>
+                  </label>
+                  <div className="relative">
+                    <FaUser className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs" />
+                    <input
+                      id="name"
+                      name="name"
+                      required
+                      value={values.name}
+                      onChange={handleChange}
+                      className={inputClass}
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <label htmlFor="email" className="text-xs font-bold text-slate-700">
+                    Email Address <span className="text-[#d99420]">*</span>
+                  </label>
+                  <div className="relative">
+                    <FaEnvelope className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs" />
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      value={values.email}
+                      onChange={handleChange}
+                      className={inputClass}
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                </div>
               </div>
-              <div>
-                <p className="text-xs font-medium text-slate-400">Email Address</p>
-                <p className="text-sm font-semibold text-slate-100 transition-colors group-hover:text-[#EA4335]">
-                  info@yestimeglobal.com
-                </p>
+
+              {/* Phone & Country */}
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="space-y-1">
+                  <label htmlFor="phone" className="text-xs font-bold text-slate-700">
+                    Phone / WhatsApp <span className="text-[#d99420]">*</span>
+                  </label>
+                  <div className="relative">
+                    <FaPhone className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs" />
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      required
+                      value={values.phone}
+                      onChange={handleChange}
+                      className={inputClass}
+                      placeholder="Enter your number"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <label htmlFor="country" className="text-xs font-bold text-slate-700">
+                    Country <span className="text-[#d99420]">*</span>
+                  </label>
+                  <div className="relative">
+                    <FaGlobe className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs" />
+                    <input
+                      id="country"
+                      name="country"
+                      required
+                      value={values.country}
+                      onChange={handleChange}
+                      className={inputClass}
+                      placeholder="Select your country"
+                    />
+                    <HiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 h-5 w-5" />
+                  </div>
+                </div>
               </div>
-            </a>
+
+              {/* Inquiry Type Select */}
+              <div className="space-y-1">
+                <label htmlFor="inquiry" className="text-xs font-bold text-slate-700">
+                  Inquiry Type <span className="text-[#d99420]">*</span>
+                </label>
+                <div className="relative">
+                  <FaListCheck className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs" />
+                  <select
+                    id="inquiry"
+                    name="inquiry"
+                    required
+                    value={values.inquiry}
+                    onChange={handleChange}
+                    className={`${inputClass} appearance-none pr-10`}
+                  >
+                    {inquiryTypes.map((type) => (
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
+                    ))}
+                  </select>
+                  <HiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 h-5 w-5" />
+                </div>
+              </div>
+
+              {/* Message Textarea */}
+              <div className="space-y-1">
+                <label htmlFor="message" className="text-xs font-bold text-slate-700">
+                  Your Message <span className="text-[#d99420]">*</span>
+                </label>
+                <div className="relative">
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    minLength={10}
+                    rows={4}
+                    value={values.message}
+                    onChange={handleChange}
+                    className="w-full rounded-xl border border-slate-200 bg-[#f9fafb] p-3.5 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 hover:border-slate-300 focus:border-[#d99420] focus:bg-white focus:ring-2 focus:ring-[#d99420]/20"
+                    placeholder="Tell us what you would like to discuss..."
+                  />
+                 
+                </div>
+              </div>
+
+              {/* Consent Checkbox & Submit Button Grid */}
+              <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-start gap-2.5 max-w-xs">
+                  <input
+                    id="consent"
+                    name="consent"
+                    type="checkbox"
+                    required
+                    checked={values.consent}
+                    onChange={handleChange}
+                    className="mt-0.5 h-4 w-4 rounded border-slate-300 text-[#d99420] focus:ring-[#d99420]"
+                  />
+                  <label htmlFor="consent" className="cursor-pointer text-xs text-slate-500 leading-tight select-none">
+                    I agree that YES TIME GLOBAL may use these details to respond to my inquiry.
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#d99420] px-5 py-2 text-sm font-bold text-white shadow-md transition-all hover:bg-[#c48316] focus:outline-none focus:ring-2 focus:ring-[#d99420] focus:ring-offset-2 disabled:opacity-70"
+                >
+                  <FaPaperPlane className="text-xs" />
+                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                </button>
+              </div>
+
+              {/* Success Banner */}
+              {submitted && (
+                <div
+                  role="status"
+                  aria-live="polite"
+                  className="flex items-center gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900"
+                >
+                  <HiCheck className="h-5 w-5 text-emerald-600" />
+                  <div>
+                    <p className="font-semibold">Message Sent!</p>
+                    <p className="text-xs text-emerald-700">Thank you. Your inquiry has been received.</p>
+                  </div>
+                </div>
+              )}
+            </form>
           </div>
-        </aside>
+        </div>
+
       </div>
     </section>
   )

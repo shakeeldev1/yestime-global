@@ -141,3 +141,21 @@
     animation: none;
   }
 }
+button,
+[type="button"],
+[type="submit"],
+.btn,
+.primary-btn,
+.secondary-btn {
+  cursor: pointer;
+  padding: 0.625rem 1.25rem;
+}
+
+.btn,
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}

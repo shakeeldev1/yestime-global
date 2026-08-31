@@ -127,11 +127,11 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="tel:+923357990041"
+                  href="tel:+923196336984"
                   className="group flex items-center gap-3 font-medium transition-colors duration-200 hover:text-[#D4AF37]"
                 >
                   <Phone className="h-5 w-5 shrink-0 text-[#D4AF37]" />
-                  <span>+92 302 7392442</span>
+                  <span>+92 319 6336984</span>
                 </a>
               </li>
               <li>
@@ -142,7 +142,7 @@ const Footer = () => {
                   className="group flex items-center gap-3 font-medium transition-colors duration-200 hover:text-[#25D366]"
                 >
                   <BsWhatsapp className="h-5 w-5 shrink-0 text-[#25D366]" />
-                  <span> +92 335 7990041</span>
+                  <span> +92 306 8509086</span>
                 </a>
               </li>
             </ul>
@@ -155,15 +155,15 @@ const Footer = () => {
           <p className="font-medium">© {currentYear} Yes Time Global Private Limited. All rights reserved.</p>
 
           <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-medium">
-            <Link to="/legal-pages" className="transition-colors duration-200 hover:text-[#D4AF37]">
+            <Link to="/privacy-policy" className="transition-colors duration-200 hover:text-[#D4AF37]">
               Privacy Policy
             </Link>
             <span className="text-gray-500" aria-hidden="true">•</span>
-            <Link to="/legal-pages" className="transition-colors duration-200 hover:text-[#D4AF37]">
+            <Link to="/terms-conditions" className="transition-colors duration-200 hover:text-[#D4AF37]">
               Terms & Conditions
             </Link>
             <span className="text-gray-500" aria-hidden="true">•</span>
-            <Link to="/legal-pages" className="transition-colors duration-200 hover:text-[#D4AF37]">
+            <Link to="/disclaimer" className="transition-colors duration-200 hover:text-[#D4AF37]">
               Legal Disclaimer
             </Link>
           </nav>

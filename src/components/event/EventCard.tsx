@@ -49,7 +49,7 @@ const categoryStyles = {
 
   conference: {
     badge:
-      "bg-amber-100 text-amber-500 border-amber-300",
+      "bg-amber-100 text-[#061832] border-amber-300",
   },
 };
 
@@ -97,15 +97,15 @@ const VideoModal = ({
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 p-0 backdrop-blur-sm lg:p-6"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-4xl overflow-hidden rounded-2xl bg-[#061832] shadow-2xl"
+        className="relative flex h-full w-full flex-col overflow-hidden rounded-none bg-[#061832] shadow-2xl lg:h-auto lg:max-h-[85vh] lg:w-[50%] lg:max-w-none lg:rounded-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
-        <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+        <div className="flex shrink-0 items-center justify-between border-b border-white/10 px-5 py-3 sm:py-4">
           <h3 className="truncate pr-4 text-base font-bold text-white sm:text-lg">
             {title}
           </h3>
@@ -119,8 +119,8 @@ const VideoModal = ({
           </button>
         </div>
 
-        {/* Video */}
-        <div className="flex aspect-video w-full items-center justify-center bg-black">
+        {/* Video Container */}
+        <div className="relative flex flex-1 items-center justify-center bg-black lg:aspect-video lg:max-h-[calc(85vh-60px)] lg:flex-initial">
           <video
             ref={videoRef}
             src={videoSrc}

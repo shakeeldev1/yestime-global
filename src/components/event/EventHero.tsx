@@ -23,7 +23,7 @@ export const EventHero = () => {
                     <span className="text-xs md:text-sm font-bold uppercase tracking-widest text-[#f5c54e]">Global Events</span>
                 </div>
 
-                <h1 className="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+                <h1 className="text-5xl font-bold ">
                     Connect, Learn &
                     <br />
                     <span className="bg-gradient-to-r from-[#f5c54e] via-[#e5b338] to-[#d99420] bg-clip-text text-transparent">

@@ -14,6 +14,7 @@ import {
   Globe2,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface PartnerType {
   icon: React.ElementType;
@@ -34,106 +35,94 @@ interface Highlight {
   description: string;
 }
 
-const partnerTypes: PartnerType[] = [
-  {
-    icon: TrendingUp,
-    title: "Investors",
-    description:
-      "Business investors can explore suitable opportunities and potential collaboration as the company continues to grow.",
-  },
-  {
-    icon: Users,
-    title: "Service Providers",
-    description:
-      "Professional service providers can collaborate with us to support relevant business activities and operations.",
-  },
-  {
-    icon: Building2,
-    title: "Corporate Partners",
-    description:
-      "Corporate organizations can build professional partnerships with us for mutual business development and long-term cooperation.",
-  },
-  {
-    icon: BriefcaseBusiness,
-    title: "Business Associates",
-    description:
-      "Relevant businesses and organizations may become partners according to business requirements and mutual understanding.",
-  },
-];
-
-const processSteps: ProcessStep[] = [
-  {
-    number: "01",
-    icon: FileCheck,
-    title: "Submit Information",
-    description:
-      "Interested partners provide the required business information for consideration.",
-  },
-  {
-    number: "02",
-    icon: SearchCheck,
-    title: "Review",
-    description:
-      "The submitted information is reviewed according to the company's business requirements.",
-  },
-  {
-    number: "03",
-    icon: Target,
-    title: "Assessment",
-    description:
-      "The potential partnership is assessed according to relevant business and partnership criteria.",
-  },
-  {
-    number: "04",
-    icon: ShieldCheck,
-    title: "Approval",
-    description:
-      "Suitable partners may be approved for the relevant business partnership opportunity.",
-  },
-  {
-    number: "05",
-    icon: Handshake,
-    title: "Agreement",
-    description:
-      "Partnership terms and conditions are discussed and mutually agreed upon.",
-  },
-  {
-    number: "06",
-    icon: CheckCircle2,
-    title: "Partnership",
-    description:
-      "A formal business relationship is established between the company and partner.",
-  },
-];
-
-const highlights: Highlight[] = [
-  {
-    icon: TrendingUp,
-    title: "Business Expansion",
-    description:
-      "Build stronger business connections and support wider market development.",
-  },
-  {
-    icon: Handshake,
-    title: "Long-Term Relations",
-    description:
-      "Develop professional relationships focused on sustainable business cooperation.",
-  },
-  {
-    icon: Target,
-    title: "Mutual Success",
-    description:
-      "Create opportunities through collaboration, trust and shared business objectives.",
-  },
-  {
-    icon: Globe2,
-    title: "Future Opportunities",
-    description:
-      "As the business grows, new opportunities for collaboration and development may arise.",
-  },
-];
-
 const MorePartnershipOpportunities: React.FC = () => {
+  const { t } = useTranslation("business");
+
+  const partnerTypes: PartnerType[] = [
+    {
+      icon: TrendingUp,
+      title: t("more.partnerTypes.0.title"),
+      description: t("more.partnerTypes.0.description"),
+    },
+    {
+      icon: Users,
+      title: t("more.partnerTypes.1.title"),
+      description: t("more.partnerTypes.1.description"),
+    },
+    {
+      icon: Building2,
+      title: t("more.partnerTypes.2.title"),
+      description: t("more.partnerTypes.2.description"),
+    },
+    {
+      icon: BriefcaseBusiness,
+      title: t("more.partnerTypes.3.title"),
+      description: t("more.partnerTypes.3.description"),
+    },
+  ];
+
+  const processSteps: ProcessStep[] = [
+    {
+      number: "01",
+      icon: FileCheck,
+      title: t("more.processSteps.0.title"),
+      description: t("more.processSteps.0.description"),
+    },
+    {
+      number: "02",
+      icon: SearchCheck,
+      title: t("more.processSteps.1.title"),
+      description: t("more.processSteps.1.description"),
+    },
+    {
+      number: "03",
+      icon: Target,
+      title: t("more.processSteps.2.title"),
+      description: t("more.processSteps.2.description"),
+    },
+    {
+      number: "04",
+      icon: ShieldCheck,
+      title: t("more.processSteps.3.title"),
+      description: t("more.processSteps.3.description"),
+    },
+    {
+      number: "05",
+      icon: Handshake,
+      title: t("more.processSteps.4.title"),
+      description: t("more.processSteps.4.description"),
+    },
+    {
+      number: "06",
+      icon: CheckCircle2,
+      title: t("more.processSteps.5.title"),
+      description: t("more.processSteps.5.description"),
+    },
+  ];
+
+  const highlights: Highlight[] = [
+    {
+      icon: TrendingUp,
+      title: t("more.highlights.0.title"),
+      description: t("more.highlights.0.description"),
+    },
+    {
+      icon: Handshake,
+      title: t("more.highlights.1.title"),
+      description: t("more.highlights.1.description"),
+    },
+    {
+      icon: Target,
+      title: t("more.highlights.2.title"),
+      description: t("more.highlights.2.description"),
+    },
+    {
+      icon: Globe2,
+      title: t("more.highlights.3.title"),
+      description: t("more.highlights.3.description"),
+    },
+  ];
+
   return (
     <section className="relative overflow-hidden bg-white py-10">
 
@@ -150,18 +139,18 @@ const MorePartnershipOpportunities: React.FC = () => {
 
           <span className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.25em] text-[#C6922B]">
             <span className="h-px w-7 bg-[#C6922B]" />
-            Business Opportunities
+            {t("more.badge")}
             <span className="h-px w-7 bg-[#C6922B]" />
           </span>
 
           <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-[#0B2341] sm:text-5xl">
-  More Partnership{" "}
+  {t("more.title.before")}{" "}
   <span className="text-[#C6922B]">
-    Opportunities
+    {t("more.title.highlight")}
   </span>
 </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#31527A]">
-           We build long-term partnerships with organizations and professionals, creating opportunities for collaboration and growth.
+           {t("more.description")}
 
           </p>
 
@@ -214,16 +203,15 @@ const MorePartnershipOpportunities: React.FC = () => {
           <div className="mx-auto max-w-3xl text-center">
 
             <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#C6922B]">
-              How It Works
+              {t("more.howItWorks")}
             </span>
 
             <h2 className="mt-4 text-3xl font-bold text-[#0B2341] sm:text-4xl">
-              Our Partnership Process
+              {t("more.processHeading")}
             </h2>
 
             <p className="mt-4 text-base leading-7 text-[#31527A]">
-              A clear and professional process helps us evaluate suitable
-              business partnerships and establish mutually agreed terms.
+              {t("more.processDescription")}
             </p>
 
           </div>
@@ -292,11 +280,11 @@ const MorePartnershipOpportunities: React.FC = () => {
               <div className="text-center">
 
                 <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#C6922B]">
-                  Partnership Highlights
+                  {t("more.highlightsBadge")}
                 </span>
 
                 <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
-                  Building Business Together
+                  {t("more.highlightsHeading")}
                 </h2>
 
               </div>
@@ -354,16 +342,15 @@ const MorePartnershipOpportunities: React.FC = () => {
 
               <div>
                 <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#C6922B]">
-                  Start a Partnership
+                  {t("more.cta.badge")}
                 </span>
 
                 <h3 className="mt-2 text-2xl font-bold text-[#0B2341] sm:text-3xl">
-                  Become Our Business Partner
+                  {t("more.cta.heading")}
                 </h3>
 
                 <p className="mt-2 max-w-2xl text-sm leading-6 text-[#31527A]">
-                  Join our growing business network and explore suitable
-                  opportunities for professional and long-term collaboration.
+                  {t("more.cta.text")}
                 </p>
               </div>
 
@@ -374,7 +361,7 @@ const MorePartnershipOpportunities: React.FC = () => {
             <Link to="/contact-us">
             <button className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-xl bg-[#C6922B] px-7 py-4 font-semibold text-white shadow-lg shadow-[#C6922B]/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#0B2341] hover:shadow-[#0B2341]/20">
 
-              Get Started
+              {t("more.cta.button")}
 
               <ArrowRight
                 size={19}

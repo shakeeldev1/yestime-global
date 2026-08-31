@@ -1,14 +1,17 @@
 import { ArrowRight, BadgeCheck, Building2, CircleDollarSign, ShieldCheck, Target } from 'lucide-react'
 import { Link } from 'react-router-dom'
-
-const heroPoints = [
-  { icon: ShieldCheck, title: 'Secure Banking', text: 'Your money, always safe.' },
-  { icon: BadgeCheck, title: 'Trusted Partners', text: 'Working with leading banks' },
-  { icon: CircleDollarSign, title: 'Transparent Process', text: 'Clear and reliable system' },
-  { icon: Building2, title: 'Smart Solutions', text: 'For a better financial future' },
-]
+import { useTranslation } from 'react-i18next'
 
 const BanksFinancialHero = () => {
+  const { t } = useTranslation("banks")
+
+  const heroPoints = [
+    { icon: ShieldCheck, title: t('hero.points.secureBanking.title'), text: t('hero.points.secureBanking.text') },
+    { icon: BadgeCheck, title: t('hero.points.trustedPartners.title'), text: t('hero.points.trustedPartners.text') },
+    { icon: CircleDollarSign, title: t('hero.points.transparentProcess.title'), text: t('hero.points.transparentProcess.text') },
+    { icon: Building2, title: t('hero.points.smartSolutions.title'), text: t('hero.points.smartSolutions.text') },
+  ]
+
   return (
     <section className="relative min-h-[520px] overflow-hidden bg-[#020b1b] px-6 py-12 text-white sm:px-10 lg:px-16">
       {/* Clear Background Image Layer */}
@@ -31,21 +34,21 @@ const BanksFinancialHero = () => {
           <div className="inline-flex items-center gap-2 rounded-full border border-[#f5c54e]/40 bg-[#061426]/80 px-4 py-1.5 backdrop-blur-md">
             <Target size={14} className="text-[#f5c54e]" />
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#f5c54e]">
-              Banks &amp; Financial Partners
+              {t('hero.badge')}
             </span>
           </div>
 
           {/* Heading */}
           <h1 className="mt-6 text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl">
-            Trusted Banking &amp; <br />
+            {t('hero.titleLine1')} <br />
             <span className="bg-gradient-to-r from-[#f5c54e] via-[#e2b354] to-[#f5c54e] bg-clip-text text-transparent">
-              Financial Partnerships
+              {t('hero.titleHighlight')}
             </span>
           </h1>
 
           {/* Description */}
           <p className="mt-5 max-w-lg text-base leading-relaxed text-slate-200 sm:text-lg">
-            Connecting you with trusted banks and financial institutions for secure transactions, smart savings and a stronger financial future.
+            {t('hero.description')}
           </p>
 
           {/* Action Buttons */}
@@ -54,7 +57,7 @@ const BanksFinancialHero = () => {
               to="/ContactUs"
               className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-[#f5c54e] to-[#d99420] px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-[#020b1b] shadow-lg shadow-[#f5c54e]/20 transition-all duration-300 hover:scale-105 active:scale-95"
             >
-              <span>Explore Financial Partners</span>
+              <span>{t('hero.exploreButton')}</span>
               <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             
@@ -62,7 +65,7 @@ const BanksFinancialHero = () => {
               to="/ContactUs"
               className="group inline-flex items-center gap-2.5 rounded-full border border-[#f5c54e]/40 bg-[#061426]/60 px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm transition-all duration-300 hover:border-[#f5c54e] hover:bg-white/10"
             >
-              <span>Contact Finance Team</span>
+              <span>{t('hero.contactButton')}</span>
               <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>

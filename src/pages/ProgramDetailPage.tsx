@@ -15,6 +15,7 @@ import {
   Gift,
   ArrowRight,
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { getProgramBySlug, type ProgramData } from '../data/programData';
 
 const benefitIcons = [Tag, Coins, ShoppingBag, Gift, ShieldCheck, Sparkles];
@@ -28,7 +29,7 @@ const statsIcons = {
 
 function ProgramDetailPage() {
 
-  
+  const { i18n } = useTranslation('programs');
   const { slug: paramSlug } = useParams();
   const location = useLocation();
   const resolvedSlug = paramSlug ?? (
@@ -36,7 +37,7 @@ function ProgramDetailPage() {
       ? location.pathname.replace('/program/', '')
       : location.pathname.replace(/^\//, '').replace(/\/$/, '')
   );
-  const program: ProgramData = getProgramBySlug(resolvedSlug || 'shop-saving');
+  const program: ProgramData = getProgramBySlug(resolvedSlug || 'shop-saving', i18n.language);
 // const program.planCards=
   return (
     <div>
@@ -55,6 +56,7 @@ function ProgramDetailPage() {
 }
 
 function GallerySection({ program }: { program: ProgramData }) {
+  const { t } = useTranslation('programs');
   const galleryImages = program.gallery && program.gallery.length > 0
     ? program.gallery
     : [program.image, program.secondaryImage, program.image, program.secondaryImage];
@@ -65,10 +67,10 @@ function GallerySection({ program }: { program: ProgramData }) {
         <div className="mb-8 text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c5962e]/30 bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#a97916] shadow-sm">
             <Sparkles size={14} className="text-[#c5962e]" />
-            Gallery
+            {t('gallery.badge')}
           </div>
           <h2 className="text-3xl font-black tracking-tight text-[#071a36] sm:text-4xl">
-            Explore the <span className="text-[#c5962e]">{program.title}</span> experience
+            {t('gallery.headingPrefix')} <span className="text-[#c5962e]">{program.title}</span> {t('gallery.headingSuffix')}
           </h2>
         </div>
 
@@ -81,7 +83,7 @@ function GallerySection({ program }: { program: ProgramData }) {
               <div className="overflow-hidden">
                 <img
                   src={image}
-                  alt={`${program.title} gallery ${index + 1}`}
+                  alt={t('gallery.imageAlt', { title: program.title, index: index + 1 })}
                   className="h-72 w-full object-cover transition duration-700 group-hover:scale-105"
                 />
               </div>
@@ -99,6 +101,7 @@ function GallerySection({ program }: { program: ProgramData }) {
 }
 
 function PlanMediaSection({ program }: { program: ProgramData }) {
+  const { t } = useTranslation('programs');
   const galleryImages = program.gallery && program.gallery.length > 0
     ? program.gallery
     : [program.image, program.secondaryImage, program.image, program.secondaryImage];
@@ -109,10 +112,10 @@ function PlanMediaSection({ program }: { program: ProgramData }) {
         <div className="mb-8 text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c5962e]/30 bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#a97916] shadow-sm">
             <Sparkles size={14} className="text-[#c5962e]" />
-            Our Plans
+            {t('plans.badge')}
           </div>
           <h2 className="text-3xl font-black tracking-tight text-[#071a36] sm:text-4xl">
-            Choose the right <span className="text-[#c5962e]">car plan</span> for your journey
+            {t('plans.headingPrefix')} <span className="text-[#c5962e]">{t('plans.headingHighlight')}</span> {t('plans.headingSuffix')}
           </h2>
         </div>
 
@@ -121,7 +124,7 @@ function PlanMediaSection({ program }: { program: ProgramData }) {
             <div className="overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_20px_45px_rgba(9,20,35,0.08)]">
               <img
                 src={galleryImages[0]}
-                alt={`${program.title} main gallery`}
+                alt={t('plans.mainAlt', { title: program.title })}
                 className="h-[360px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[420px]"
               />
             </div>
@@ -130,14 +133,14 @@ function PlanMediaSection({ program }: { program: ProgramData }) {
               <div className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-[0_20px_45px_rgba(9,20,35,0.08)]">
                 <img
                   src={galleryImages[1] || galleryImages[0]}
-                  alt={`${program.title} gallery side one`}
+                  alt={t('plans.sideOneAlt', { title: program.title })}
                   className="h-[200px] w-full object-cover transition duration-700 hover:scale-105"
                 />
               </div>
               <div className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-[0_20px_45px_rgba(9,20,35,0.08)]">
                 <img
                   src={galleryImages[2] || galleryImages[0]}
-                  alt={`${program.title} gallery side two`}
+                  alt={t('plans.sideTwoAlt', { title: program.title })}
                   className="h-[200px] w-full object-cover transition duration-700 hover:scale-105"
                 />
               </div>
@@ -168,7 +171,7 @@ function PlanMediaSection({ program }: { program: ProgramData }) {
               <div className="space-y-4 p-5">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#a97916]">Luxury Vehicle Plan</p>
+                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#a97916]">{t('planCard.luxuryVehiclePlan')}</p>
                     <h3 className="mt-2 text-[24px] font-black leading-none text-[#071a36]">{plan.amount}</h3>
                   </div>
                   <div className="rounded-full border border-[#c5962e]/30 bg-[#fffaf0] px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.12em] text-[#a97916]">
@@ -178,21 +181,21 @@ function PlanMediaSection({ program }: { program: ProgramData }) {
 
                 <div className="rounded-2xl border border-[#c5962e]/20 bg-[#fffaf0] p-3.5">
                   <div className="mb-2 flex items-center justify-between gap-3 text-[11px] font-bold uppercase tracking-[0.12em] text-[#a97916]">
-                    <span>Plan Summary</span>
+                    <span>{t('planCard.planSummary')}</span>
                     <span className="h-1.5 w-1.5 rounded-full bg-[#c5962e]" />
                   </div>
 
                   <div className="space-y-2 text-sm text-slate-700">
                     <div className="flex items-center justify-between gap-3">
-                      <span className="text-slate-500">Daily</span>
+                      <span className="text-slate-500">{t('planCard.daily')}</span>
                       <span className="font-bold text-[#071a36]">{plan.daily.replace('Daily ', '')}</span>
                     </div>
                     <div className="flex items-center justify-between gap-3">
-                      <span className="text-slate-500">Monthly</span>
+                      <span className="text-slate-500">{t('planCard.monthly')}</span>
                       <span className="font-bold text-[#071a36]">{plan.monthly.replace('Monthly ', '')}</span>
                     </div>
                     <div className="flex items-center justify-between gap-3">
-                      <span className="text-slate-500">Prize</span>
+                      <span className="text-slate-500">{t('planCard.prize')}</span>
                       <span className="font-bold text-emerald-600">{plan.prize.replace('Prize ', '')}</span>
                     </div>
                   </div>
@@ -200,7 +203,7 @@ function PlanMediaSection({ program }: { program: ProgramData }) {
 
                 {plan.details && plan.details.length > 0 && (
                   <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3.5 text-left">
-                    <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#a97916]">Plan Details</p>
+                    <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#a97916]">{t('planCard.planDetails')}</p>
                     <ul className="space-y-1.5 text-xs leading-5 text-slate-600">
                       {plan.details.map((detail) => (
                         <li key={detail} className="flex items-start gap-2">
@@ -222,7 +225,7 @@ function PlanMediaSection({ program }: { program: ProgramData }) {
                 )}
 
                 <button className="w-full rounded-xl bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-4 py-3 text-xs font-bold text-[#071a36] shadow-[0_10px_20px_rgba(197,150,46,0.22)] transition hover:brightness-110 active:scale-95">
-                  Apply Now
+                  {t('planCard.applyNow')}
                 </button>
               </div>
             </article>
@@ -234,6 +237,7 @@ function PlanMediaSection({ program }: { program: ProgramData }) {
 }
 
 function HeroSection({ program }: { program: ProgramData }) {
+  const { t } = useTranslation('programs');
   return (
     <section className="relative min-h-[500px] w-full overflow-hidden bg-[#000000] px-4 py-8 text-white sm:px-8 lg:px-16">
       <div className="mx-auto max-w-7xl">
@@ -245,7 +249,7 @@ function HeroSection({ program }: { program: ProgramData }) {
               </span>
               <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
                 {program.heroTitle.split(' ')[0]}{' '}
-                <span className="text-[#f0c75e]">{program.heroTitle.split(' ').slice(1).join(' ') || 'Program'}</span>
+                <span className="text-[#f0c75e]">{program.heroTitle.split(' ').slice(1).join(' ') || t('hero.titleFallback')}</span>
               </h1>
             </div>
 
@@ -271,12 +275,12 @@ function HeroSection({ program }: { program: ProgramData }) {
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <button className="flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-7 py-3 text-xs font-bold text-[#071a36] shadow-[0_10px_22px_rgba(197,150,46,0.24)] transition hover:brightness-110 active:scale-95">
-                <span>Join Now</span>
+                <span>{t('hero.joinNow')}</span>
                 <ChevronRight size={14} />
               </button>
 
               <button className="flex items-center gap-2 rounded-xl border border-[#c5962e]/50 bg-[#000000] px-6 py-3 text-xs font-bold text-white transition hover:border-[#f0c75e] active:scale-95">
-                <span>How It Works</span>
+                <span>{t('hero.howItWorks')}</span>
                 <div className="flex h-4 w-4 items-center justify-center rounded-full bg-[#f0c75e] text-[#071a36]">
                   <Play size={8} className="ml-0.5 fill-current" />
                 </div>
@@ -296,6 +300,7 @@ function HeroSection({ program }: { program: ProgramData }) {
 }
 
 function AboutSection({ program }: { program: ProgramData }) {
+  const { t } = useTranslation('programs');
   return (
     <section className="relative w-full overflow-hidden bg-white px-4 py-12 sm:px-8 lg:px-16">
       <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-[#c5962e]/10 blur-3xl" />
@@ -314,10 +319,10 @@ function AboutSection({ program }: { program: ProgramData }) {
                   {program.category}
                 </div>
                 <div className="absolute bottom-6 left-6 right-6">
-                  <p className="text-sm font-medium text-white/80">Smart savings</p>
+                  <p className="text-sm font-medium text-white/80">{t('about.smartSavings')}</p>
                   <h3 className="mt-1 text-2xl font-extrabold text-white sm:text-3xl">
-                    Better Habits,
-                    <span className="text-[#f0c75e]"> Better Value.</span>
+                    {t('about.cardHeadingLine1')}
+                    <span className="text-[#f0c75e]"> {t('about.cardHeadingHighlight')}</span>
                   </h3>
                 </div>
               </div>
@@ -328,8 +333,8 @@ function AboutSection({ program }: { program: ProgramData }) {
                     <ShoppingBag size={21} />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-400">Member Benefits</p>
-                    <h4 className="text-sm font-bold">Smart Savings</h4>
+                    <p className="text-xs text-slate-400">{t('about.memberBenefits')}</p>
+                    <h4 className="text-sm font-bold">{t('about.smartSavingsTitle')}</h4>
                   </div>
                 </div>
                 <div className="mt-4 border-t border-white/10 pt-3">
@@ -342,12 +347,12 @@ function AboutSection({ program }: { program: ProgramData }) {
           <div className="lg:col-span-6 lg:pl-4">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#c5962e]/20 bg-[#fffaf0] px-4 py-2">
               <Target size={15} className="text-[#c5962e]" />
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#a97916]">About This Program</span>
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#a97916]">{t('about.badge')}</span>
             </div>
 
             <h2 className="max-w-2xl text-3xl font-black leading-tight tracking-tight text-[#071a36] sm:text-4xl lg:text-5xl">
               {program.aboutHeading.split(' ').slice(0, 3).join(' ')}{' '}
-              <span className="block text-[#c5962e]">{program.aboutHeading.split(' ').slice(3).join(' ') || 'For Everyone.'}</span>
+              <span className="block text-[#c5962e]">{program.aboutHeading.split(' ').slice(3).join(' ') || t('about.headingFallback')}</span>
             </h2>
 
             <div className="mt-6 max-w-2xl space-y-4">
@@ -389,6 +394,7 @@ function AboutSection({ program }: { program: ProgramData }) {
 }
 
 function BenefitsSection({ program }: { program: ProgramData }) {
+  const { t } = useTranslation('programs');
   return (
     <section className="relative w-full overflow-hidden bg-[#f8fafc] px-4 py-12 sm:px-8 lg:px-16 ">
       <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#c5962e]/10 blur-3xl" />
@@ -400,13 +406,13 @@ function BenefitsSection({ program }: { program: ProgramData }) {
             <span className="h-px w-8 bg-[#c5962e]" />
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#a97916]">
               <Sparkles size={15} />
-              Benefits For You
+              {t('benefits.badge')}
             </div>
             <span className="h-px w-8 bg-[#c5962e]" />
           </div>
 
           <h2 className="mx-auto max-w-3xl text-center text-3xl font-black tracking-tight text-[#071a36] sm:text-4xl lg:text-5xl">
-            More Reasons to
+            {t('benefits.headingPrefix')}
             <span className="text-[#c5962e]"> {program.title}</span>
           </h2>
 
@@ -438,16 +444,16 @@ function BenefitsSection({ program }: { program: ProgramData }) {
             <div className="relative">
               <div className="mb-5 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#f0c75e]">
                 <UsersIcon />
-                Who Can Join?
+                {t('audience.badge')}
               </div>
 
               <h2 className="text-3xl font-black leading-tight sm:text-4xl">
-                Savings Are
-                <span className="block text-[#f0c75e]">For Everyone.</span>
+                {t('audience.headingLine1')}
+                <span className="block text-[#f0c75e]">{t('audience.headingLine2')}</span>
               </h2>
 
               <p className="mt-5 text-sm leading-7 text-slate-300">
-                Whether you are planning a purchase or looking for better value, this program is designed to help you make smarter decisions and maximize your savings.
+                {t('audience.intro')}
               </p>
 
               <div className="mt-7 space-y-4">
@@ -462,7 +468,7 @@ function BenefitsSection({ program }: { program: ProgramData }) {
               </div>
 
               <button className="mt-8 flex items-center gap-2 rounded-xl border border-[#c5962e]/50 bg-[#fffaf0] px-5 py-3 text-xs font-bold text-[#a97916] transition hover:bg-[#c5962e] hover:text-[#071a36]">
-                Become a Member
+                {t('audience.becomeMember')}
                 <ArrowRight size={15} />
               </button>
             </div>
@@ -477,8 +483,8 @@ function BenefitsSection({ program }: { program: ProgramData }) {
                   {program.category}
                 </span>
                 <h3 className="text-xl font-black text-white sm:text-2xl">
-                  Better Shopping.
-                  <span className="text-[#f0c75e]"> Better Living.</span>
+                  {t('showcase.cardHeadingLine1')}
+                  <span className="text-[#f0c75e]"> {t('showcase.cardHeadingHighlight')}</span>
                 </h3>
               </div>
             </div>
@@ -487,15 +493,15 @@ function BenefitsSection({ program }: { program: ProgramData }) {
               <img src={program.secondaryImage} alt={program.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-black/20 transition group-hover:bg-black/5" />
               <div className="absolute bottom-4 left-4 rounded-xl bg-black/60 px-4 py-2 text-xs font-bold text-white backdrop-blur-md">
-                {program.category} Value
+                {program.category} {t('showcase.categoryValueSuffix')}
               </div>
             </div>
 
             <div className="group relative min-h-[200px] overflow-hidden rounded-[2rem]">
-              <img src="/logo.png" alt="Member lifestyle" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+              <img src="/logo.png" alt={t('showcase.memberLifestyleAlt')} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-black/20 transition group-hover:bg-black/5" />
               <div className="absolute bottom-4 left-4 rounded-xl bg-black/60 px-4 py-2 text-xs font-bold text-white backdrop-blur-md">
-                Member Rewards
+                {t('showcase.memberRewards')}
               </div>
             </div>
           </div>
@@ -504,11 +510,11 @@ function BenefitsSection({ program }: { program: ProgramData }) {
         <div className="mt-16 text-center">
           <div className="mx-auto flex w-fit items-center gap-2 rounded-full border border-[#c5962e]/30 bg-white px-5 py-2.5 text-xs font-bold text-slate-700 shadow-sm">
             <Sparkles size={15} className="text-[#c5962e]" />
-            Smart Choice
+            {t('footerTags.smartChoice')}
             <span className="text-[#c5962e]">•</span>
-            Better Value
+            {t('footerTags.betterValue')}
             <span className="text-[#c5962e]">•</span>
-            Stronger Future
+            {t('footerTags.strongerFuture')}
           </div>
         </div>
       </div>

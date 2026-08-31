@@ -8,8 +8,18 @@ import {
   CheckCircle2,
   Sparkles,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 function AboutShopSaving() {
+  const { t } = useTranslation("shopSaving");
+
+  const featurePoints = [
+    t("about.featurePoints.0"),
+    t("about.featurePoints.1"),
+    t("about.featurePoints.2"),
+    t("about.featurePoints.3"),
+  ];
+
   return (
     <section className="relative w-full overflow-hidden bg-white px-4 py-12 sm:px-8 lg:px-16 ">
       {/* Decorative Background */}
@@ -30,7 +40,7 @@ function AboutShopSaving() {
               <div className="group relative overflow-hidden rounded-[2rem] bg-slate-100 shadow-2xl">
                 <img
                   src="https://i.pinimg.com/1200x/f5/d7/3e/f5d73e49d24249e33d3b01f08248f1ed.jpg"
-                  alt="Woman shopping and saving"
+                  alt={t("about.imageAlt")}
                   className="h-[420px] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-[500px]"
                 />
 
@@ -40,17 +50,17 @@ function AboutShopSaving() {
                 {/* Top Badge */}
                 <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/30 bg-white/90 px-4 py-2 text-xs font-bold text-slate-900 shadow-lg backdrop-blur-md">
                   <Sparkles size={15} className="text-[#DFA42D]" />
-                  Exclusive Savings
+                  {t("about.badge")}
                 </div>
 
                 {/* Bottom Text */}
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-sm font-medium text-white/80">
-                    Shop smarter. Save more.
+                    {t("about.overlaySubtitle")}
                   </p>
                   <h3 className="mt-1 text-2xl font-extrabold text-white sm:text-3xl">
-                    Every Purchase,
-                    <span className="text-[#DFA42D]"> More Value.</span>
+                    {t("about.overlayTitle")}
+                    <span className="text-[#DFA42D]">{t("about.overlayTitleHighlight")}</span>
                   </h3>
                 </div>
               </div>
@@ -64,17 +74,17 @@ function AboutShopSaving() {
 
                   <div>
                     <p className="text-xs text-slate-400">
-                      Member Benefits
+                      {t("about.card.label")}
                     </p>
                     <h4 className="text-sm font-bold">
-                      Smart Shopping
+                      {t("about.card.title")}
                     </h4>
                   </div>
                 </div>
 
                 <div className="mt-4 border-t border-white/10 pt-3">
                   <p className="text-xs leading-relaxed text-slate-300">
-                    Exclusive discounts, cashback & special deals.
+                    {t("about.card.description")}
                   </p>
                 </div>
               </div>
@@ -88,45 +98,36 @@ function AboutShopSaving() {
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#DFA42D]/20 bg-[#DFA42D]/10 px-4 py-2">
               <Target size={15} className="text-[#DFA42D]" />
               <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#A87800]">
-                About This Program
+                {t("about.eyebrow")}
               </span>
             </div>
 
             {/* Main Heading */}
             <h2 className="max-w-2xl text-3xl font-black leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              Turn Everyday Shopping Into
+              {t("about.heading")}
               <span className="block text-[#DFA42D]">
-                Everyday Savings.
+                {t("about.headingBlock")}
               </span>
             </h2>
 
             {/* Description */}
             <div className="mt-6 max-w-2xl space-y-4">
               <p className="text-sm leading-7 text-slate-600 sm:text-base">
-                Shopping Saving Program is designed to help members save more
-                on their everyday purchases. From groceries and fashion to
-                electronics and home essentials, enjoy access to exclusive
-                discounts, cashback offers, and special deals from our trusted
-                partners.
+                {t("about.para1")}
               </p>
 
               <p className="text-sm leading-7 text-slate-600 sm:text-base">
-                Our goal is simple — make your everyday shopping
+                {t("about.para2.start")}
                 <span className="font-semibold text-slate-900">
-                  {" "}easier, smarter, and more rewarding
+                  {" "}{t("about.para2.bold")}
                 </span>
-                {" "}while helping you get more value from every purchase.
+                {" "}{t("about.para2.end")}
               </p>
             </div>
 
             {/* Feature Points */}
             <div className="mt-7 grid gap-3 sm:grid-cols-2">
-              {[
-                "Exclusive member discounts",
-                "Cashback & special offers",
-                "Trusted partner stores",
-                "Secure shopping experience",
-              ].map((item) => (
+              {featurePoints.map((item) => (
                 <div
                   key={item}
                   className="flex items-center gap-2.5"
@@ -154,7 +155,7 @@ function AboutShopSaving() {
                   1000+
                 </h3>
                 <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-[#B17F08]">
-                  Products
+                  {t("about.stats.products")}
                 </p>
               </div>
 
@@ -167,7 +168,7 @@ function AboutShopSaving() {
                   500+
                 </h3>
                 <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-[#B17F08]">
-                  Partner Stores
+                  {t("about.stats.partnerStores")}
                 </p>
               </div>
 
@@ -180,7 +181,7 @@ function AboutShopSaving() {
                   24/7
                 </h3>
                 <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-emerald-600">
-                  Support
+                  {t("about.stats.support")}
                 </p>
               </div>
 
@@ -193,7 +194,7 @@ function AboutShopSaving() {
                   100%
                 </h3>
                 <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-emerald-600">
-                  Secure
+                  {t("about.stats.secure")}
                 </p>
               </div>
 

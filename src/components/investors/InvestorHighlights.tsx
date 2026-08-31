@@ -1,24 +1,27 @@
 import { Handshake, LineChart, ShieldCheck } from 'lucide-react'
-
-const investorHighlights = [
-  {
-    icon: LineChart,
-    title: 'Shared growth',
-    description: 'Partner with a business focused on sustainable expansion and meaningful economic participation.',
-  },
-  {
-    icon: Handshake,
-    title: 'Strategic collaboration',
-    description: 'Bring your network, expertise, or market access to opportunities built for mutual success.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Trust and clarity',
-    description: 'Explore a transparent relationship with clear communication and long-term accountability.',
-  },
-]
+import { useTranslation } from 'react-i18next'
 
 const InvestorHighlights = () => {
+  const { t } = useTranslation('investors')
+
+  const investorHighlights = [
+    {
+      icon: LineChart,
+      title: t('highlights.cards.0.title'),
+      description: t('highlights.cards.0.description'),
+    },
+    {
+      icon: Handshake,
+      title: t('highlights.cards.1.title'),
+      description: t('highlights.cards.1.description'),
+    },
+    {
+      icon: ShieldCheck,
+      title: t('highlights.cards.2.title'),
+      description: t('highlights.cards.2.description'),
+    },
+  ]
+
   return (
     <section className="px-5 py-12 sm:px-8 lg:px-12">
       <div className="mx-auto max-w-7xl">
@@ -26,16 +29,16 @@ const InvestorHighlights = () => {
           <div className="flex items-center gap-3">
             <div className="h-1.5 w-12 rounded-full bg-[#d99b26]" aria-hidden="true" />
             <span className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#d99b26]">
-              Why partner with us
+              {t('highlights.eyebrow')}
             </span>
           </div>
 
           <h2 className="mt-4 text-3xl font-black tracking-tight text-[#061832] sm:text-4xl lg:text-5xl">
-            A relationship built for the <span className="text-[#d99b26]">long term.</span>
+            {t('highlights.headingLead')} <span className="text-[#d99b26]">{t('highlights.headingHighlight')}</span>
           </h2>
 
           <p className="mt-4 max-w-2xl text-base leading-7 text-[#41566f] sm:text-lg">
-            Our strongest partnerships begin with shared values, clear expectations, and a practical view of the opportunity ahead.
+            {t('highlights.subtitle')}
           </p>
         </div>
 

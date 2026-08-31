@@ -9,6 +9,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface ShowroomBenefit {
   icon: React.ElementType;
@@ -16,30 +17,32 @@ interface ShowroomBenefit {
   text: string;
 }
 
-const showroomBenefits: ShowroomBenefit[] = [
-  {
-    icon: Handshake,
-    title: "Business Collaboration",
-    text: "Showrooms can work with the company as business partners and build a professional, long-term relationship.",
-  },
-  {
-    icon: Target,
-    title: "Market Reach",
-    text: "Suitable showrooms can help strengthen market presence and improve customer access.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Growth Opportunities",
-    text: "Partnership can create opportunities for business development and market expansion.",
-  },
-  {
-    icon: BadgeCheck,
-    title: "Approved Partnership",
-    text: "Showroom partnerships are considered based on company requirements and agreed terms.",
-  },
-];
-
 export const Showrooms: React.FC = () => {
+  const { t } = useTranslation("business");
+
+  const showroomBenefits: ShowroomBenefit[] = [
+    {
+      icon: Handshake,
+      title: t("showrooms.benefits.0.title"),
+      text: t("showrooms.benefits.0.text"),
+    },
+    {
+      icon: Target,
+      title: t("showrooms.benefits.1.title"),
+      text: t("showrooms.benefits.1.text"),
+    },
+    {
+      icon: TrendingUp,
+      title: t("showrooms.benefits.2.title"),
+      text: t("showrooms.benefits.2.text"),
+    },
+    {
+      icon: BadgeCheck,
+      title: t("showrooms.benefits.3.title"),
+      text: t("showrooms.benefits.3.text"),
+    },
+  ];
+
   return (
     <section className="relative overflow-hidden bg-white py-16 sm:py-24">
       {/* Background Ambient Glows */}
@@ -52,21 +55,20 @@ export const Showrooms: React.FC = () => {
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#C6922B]/30 bg-[#C6922B]/10 px-4 py-1.5 backdrop-blur-md">
             <span className="h-1.5 w-1.5 rounded-full bg-[#C6922B]" />
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C6922B]">
-              Showroom Partnership
+              {t("showrooms.badge")}
             </span>
           </div>
 
           <h2 className="text-4xl font-black leading-tight tracking-tight text-[#0B2341] sm:text-5xl">
-            Build Your{" "}
+            {t("showrooms.title.before")}{" "}
             <span className="bg-gradient-to-r from-[#C6922B] via-[#E2B354] to-[#C6922B] bg-clip-text text-transparent">
-              Business
+              {t("showrooms.title.highlight")}
             </span>{" "}
-            With Our Partnership
+            {t("showrooms.title.after")}
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[#55708F] sm:text-lg">
-            Join our showroom network to build strong partnerships, expand
-            market reach, and support long-term business growth.
+            {t("showrooms.description")}
           </p>
         </div>
 
@@ -88,18 +90,16 @@ export const Showrooms: React.FC = () => {
 
                 {/* Heading */}
                 <h3 className="mt-7 text-2xl font-black text-[#0B2341] sm:text-3xl">
-                  Become a Showroom Partner
+                  {t("showrooms.becomeHeading")}
                 </h3>
 
                 {/* Description */}
                 <p className="mt-4 leading-relaxed text-[#55708F]">
-                  Showroom owners can submit their business information for
-                  review and become part of our growing partnership network.
+                  {t("showrooms.becomeText1")}
                 </p>
 
                 <p className="mt-3 leading-relaxed text-[#55708F]">
-                  Approved partnerships are established through mutually
-                  agreed terms and conditions.
+                  {t("showrooms.becomeText2")}
                 </p>
 
                 {/* Partnership Process */}
@@ -113,17 +113,16 @@ export const Showrooms: React.FC = () => {
                     {/* Content */}
                     <div>
                       <h4 className="text-sm font-bold text-[#0B2341]">
-                        Partnership Process
+                        {t("showrooms.process.title")}
                       </h4>
                       <p className="mt-1 text-sm leading-6 text-[#55708F]">
-                        Submit details → review → approval → agreed terms →
-                        partnership.
+                        {t("showrooms.process.text")}
                       </p>
                     </div>
                   </div>
                 </div>
 
-               
+
               </div>
             </div>
 
@@ -132,7 +131,7 @@ export const Showrooms: React.FC = () => {
               <div className="relative overflow-hidden rounded-[1.6rem]">
                 <img
                   src="https://media.istockphoto.com/id/1156318952/photo/happy-expecting-couple-communicating-with-manager-while-buying-a-car-in-a-showroom.jpg?s=612x612&w=0&k=20&c=YvMnoMNDt2SghkZzFecADg0ywjQb55_OXCau7VwXre4="
-                  alt="Showroom Partnership"
+                  alt={t("showrooms.imageAlt")}
                   className="h-[280px] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 sm:h-[320px]"
                 />
 
@@ -193,11 +192,10 @@ export const Showrooms: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-base font-bold text-[#0B2341]">
-                    A Partnership Built for Growth
+                    {t("showrooms.banner.title")}
                   </h4>
                   <p className="mt-1 text-sm leading-relaxed text-[#55708F]">
-                    We seek professional showroom partners who can contribute to
-                    business development and network growth.
+                    {t("showrooms.banner.text")}
                   </p>
                 </div>
               </div>
@@ -207,7 +205,7 @@ export const Showrooms: React.FC = () => {
             <div className="pt-2">
               <Link to="/contact-us">
               <button className="group inline-flex w-full items-center justify-center gap-3 rounded-xl bg-[#0B2341] px-8 py-4 text-base font-bold text-white shadow-lg shadow-[#0B2341]/10 transition-all duration-300 hover:bg-[#C6922B] hover:shadow-xl hover:shadow-[#C6922B]/25 active:scale-[0.99] sm:w-auto">
-                <span>Become a Showroom Partner</span>
+                <span>{t("showrooms.cta")}</span>
                 <ArrowRight
                   size={19}
                   className="transition-transform duration-300 group-hover:translate-x-1.5"

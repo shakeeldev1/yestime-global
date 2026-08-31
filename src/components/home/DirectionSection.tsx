@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Handshake, Sparkles } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 export const CallToActionSection = () => {
+  const { t } = useTranslation('home')
+
   return (
     <section className="relative w-full overflow-hidden bg-[#f4f7fb] px-4 py-10 sm:px-6  lg:px-8">
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(11,59,110,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(11,59,110,0.06)_1px,transparent_1px)] bg-size-[42px_42px] opacity-40" aria-hidden="true" />
@@ -14,21 +17,21 @@ export const CallToActionSection = () => {
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#f5c54e]">
                 <Sparkles className="size-4" aria-hidden="true" />
-                <span>Start Your Journey</span>
+                <span>{t('direction.badge')}</span>
               </div>
 
               <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-[2.7rem]">
-                Move forward with{' '}
-                <span className="text-[#f5c54e]">confidence.</span>
+                {t('direction.titlePrefix')}
+                <span className="text-[#f5c54e]">{t('direction.titleHighlight')}</span>
               </h2>
 
               <p className="mt-4 max-w-xl text-sm leading-7 text-slate-300 sm:text-base">
-                Explore practical programs and trusted partnerships designed to connect your next opportunity with a bigger global community.
+                {t('direction.subtitle')}
               </p>
 
               <div className="mt-5 flex items-center gap-2 text-xs font-semibold text-slate-400">
                 <Handshake className="size-4 text-[#e2a22c]" aria-hidden="true" />
-                <span>Built on transparency, trust, and shared progress.</span>
+                <span>{t('direction.tagline')}</span>
               </div>
             </div>
 
@@ -37,7 +40,7 @@ export const CallToActionSection = () => {
                 to="/OurPrograms"
                 className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-linear-to-r from-[#f5c54e] to-[#d99420] px-6 text-sm font-bold text-[#07182d] shadow-lg shadow-[#d99420]/20 transition duration-300 hover:-translate-y-0.5 hover:brightness-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f5c54e]"
               >
-                <span>Explore Programs</span>
+                <span>{t('direction.exploreProgramsBtn')}</span>
                 <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
               </Link>
 
@@ -45,7 +48,7 @@ export const CallToActionSection = () => {
                 to="/ContactUs"
                 className="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/20 px-6 text-sm font-semibold text-[#ffffff] transition duration-300 hover:border-[#f5c54e]/70 hover:bg-white/10 hover:text-[#f5c54e] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
-                <span className="text-[#ffffff]">Talk to Our Team</span>
+                <span className="text-[#ffffff]">{t('direction.talkToTeamBtn')}</span>
               </Link>
             </div>
           </div>

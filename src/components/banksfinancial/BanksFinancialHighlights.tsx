@@ -1,4 +1,5 @@
 import { ArrowRight, Check } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 // Self-contained, vector-based bank logos (No external link/CORS issues)
 const partnerLogos = [
@@ -35,30 +36,52 @@ const partnerLogos = [
 // Duplicate array to enable seamless marquee looping
 const marqueeLogos = [...partnerLogos, ...partnerLogos]
 
-const services = [
-  {
-    title: 'Personal Banking',
-    image: 'https://i.pinimg.com/736x/05/31/2d/05312d98bb521c62903e0a70683dc57f.jpg',
-    items: ['Savings Accounts', 'Current Accounts', 'Islamic Banking Options', 'Digital Banking'],
-  },
-  {
-    title: 'Business Banking',
-    image: 'https://i.pinimg.com/736x/63/58/dc/6358dc38268c97360a717405dc0beee6.jpg',
-    items: ['Business Accounts', 'Trade & Payments', 'SME Solutions', 'Corporate Services'],
-  },
-  {
-    title: 'Financing Solutions',
-    image: 'https://i.pinimg.com/736x/9f/b3/a0/9fb3a03b42704f89bb60be6632505a90.jpg',
-    items: ['Auto Financing', 'Home Financing', 'Business Loans', 'Investment Support'],
-  },
-  {
-    title: 'Digital & Online Banking',
-    image: 'https://i.pinimg.com/1200x/16/f5/e1/16f5e11c3ad572e0e31533d2738b957b.jpg',
-    items: ['Mobile Banking', 'Internet Banking', 'Instant Transfers', '24/7 Access'],
-  },
-]
-
 const BanksFinancialHighlights = () => {
+  const { t } = useTranslation("banks")
+
+  const services = [
+    {
+      title: t('highlights.services.personalBanking.title'),
+      image: 'https://i.pinimg.com/736x/05/31/2d/05312d98bb521c62903e0a70683dc57f.jpg',
+      items: [
+        t('highlights.services.personalBanking.items.savingsAccounts'),
+        t('highlights.services.personalBanking.items.currentAccounts'),
+        t('highlights.services.personalBanking.items.islamicBanking'),
+        t('highlights.services.personalBanking.items.digitalBanking'),
+      ],
+    },
+    {
+      title: t('highlights.services.businessBanking.title'),
+      image: 'https://i.pinimg.com/736x/63/58/dc/6358dc38268c97360a717405dc0beee6.jpg',
+      items: [
+        t('highlights.services.businessBanking.items.businessAccounts'),
+        t('highlights.services.businessBanking.items.tradePayments'),
+        t('highlights.services.businessBanking.items.smeSolutions'),
+        t('highlights.services.businessBanking.items.corporateServices'),
+      ],
+    },
+    {
+      title: t('highlights.services.financingSolutions.title'),
+      image: 'https://i.pinimg.com/736x/9f/b3/a0/9fb3a03b42704f89bb60be6632505a90.jpg',
+      items: [
+        t('highlights.services.financingSolutions.items.autoFinancing'),
+        t('highlights.services.financingSolutions.items.homeFinancing'),
+        t('highlights.services.financingSolutions.items.businessLoans'),
+        t('highlights.services.financingSolutions.items.investmentSupport'),
+      ],
+    },
+    {
+      title: t('highlights.services.digitalOnlineBanking.title'),
+      image: 'https://i.pinimg.com/1200x/16/f5/e1/16f5e11c3ad572e0e31533d2738b957b.jpg',
+      items: [
+        t('highlights.services.digitalOnlineBanking.items.mobileBanking'),
+        t('highlights.services.digitalOnlineBanking.items.internetBanking'),
+        t('highlights.services.digitalOnlineBanking.items.instantTransfers'),
+        t('highlights.services.digitalOnlineBanking.items.access247'),
+      ],
+    },
+  ]
+
   return (
     <section className="bg-white px-5 pb-12 pt-6 sm:px-8 lg:px-[5.5%] lg:pb-16">
       <style>{`
@@ -81,11 +104,11 @@ const BanksFinancialHighlights = () => {
         <div className="relative overflow-hidden rounded-[22px] border border-[#e7ebf0] bg-[#f8fafc] py-6 shadow-xs">
           <div className="mb-4 flex items-center justify-between gap-4 px-6">
             <p className="text-[12px] font-extrabold uppercase tracking-[0.18em] text-[#061832] opacity-80">
-              Our Financial Partners
+              {t('highlights.partnersLabel')}
             </p>
             <div className="hidden items-center gap-2 text-sm font-medium text-slate-500 sm:flex">
               <span className="inline-flex h-2.5 w-2.5 animate-pulse rounded-full bg-[#d99b26]" />
-              <span>We collaborate with leading banks</span>
+              <span>{t('highlights.partnersNote')}</span>
             </div>
           </div>
 
@@ -118,30 +141,30 @@ const BanksFinancialHighlights = () => {
             <div className="mb-4 flex items-center gap-3">
               <div className="h-1.5 w-12 rounded-full bg-[#d99b26]" aria-hidden="true" />
               <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#d99b26]">
-                About Banks &amp; Financial
+                {t('highlights.aboutLabel')}
               </span>
             </div>
 
             <h2 className="text-3xl font-black leading-tight tracking-tight text-[#071a36] sm:text-4xl lg:text-[3.1rem]">
-              Building a Stronger<br />
+              {t('highlights.aboutTitleLine1')}<br />
               <span className="bg-gradient-to-r from-[#d99b26] to-[#f0c75e] bg-clip-text text-transparent">
-                Financial Ecosystem
+                {t('highlights.aboutTitleHighlight')}
               </span>
             </h2>
 
             <p className="mt-5 text-base leading-8 text-[#41566f]">
-              YES TIME GLOBAL works with trusted banks and financial institutions to provide secure, transparent, and convenient financial solutions for our members, businesses, and partners.
+              {t('highlights.aboutPara1')}
             </p>
 
             <p className="mt-4 text-base leading-8 text-[#41566f]">
-              Whether it&apos;s saving, trading, or financing, we make sure our members have access to reliable services and modern financial tools.
+              {t('highlights.aboutPara2')}
             </p>
           </div>
 
           <div className="group relative overflow-hidden rounded-[26px] border border-[#dfe8f6] bg-[#f8fafc] shadow-[0_18px_45px_rgba(11,59,110,0.08)]">
             <img
               src="https://i.pinimg.com/1200x/2f/4c/d2/2f4cd25c7981e7217bf3aebbed749443.jpg"
-              alt="Business handshake and banking partnership"
+              alt={t('highlights.aboutImageAlt')}
               className="h-[340px] w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-[420px]"
             />
           </div>
@@ -151,10 +174,10 @@ const BanksFinancialHighlights = () => {
         <div className="mt-16">
           <div className="mb-10 text-center">
             <p className="text-[12px] font-extrabold uppercase tracking-[0.24em] text-[#d99b26]">
-              Our Financial Services
+              {t('highlights.servicesLabel')}
             </p>
             <h3 className="mt-3 text-3xl font-black tracking-tight text-[#071a36] sm:text-4xl">
-              Services We Offer
+              {t('highlights.servicesTitle')}
             </h3>
           </div>
 
@@ -191,7 +214,7 @@ const BanksFinancialHighlights = () => {
 
                 <div className="px-6 pb-6 pt-2">
                   <button className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#071a36] px-4 py-3 text-xs font-bold uppercase tracking-[0.08em] text-[#f5c54e] transition-all duration-300 hover:bg-[#d99b26] hover:text-[#071a36]">
-                    <span>Learn More</span>
+                    <span>{t('highlights.learnMore')}</span>
                     <ArrowRight className="h-3.5 w-3.5" />
                   </button>
                 </div>

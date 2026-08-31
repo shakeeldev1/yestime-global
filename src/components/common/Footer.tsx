@@ -8,30 +8,32 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 interface FooterLink {
   label: string;
   path: string;
 }
 
-const PROGRAM_LINKS: FooterLink[] = [
-  { label: "Car Program", path: "/OurPrograms" },
-  { label: "Real Estate Program", path: "/OurPrograms" },
-  { label: "Vehicles", path: "/OurPrograms" },
-  { label: "Shopping & Savings", path: "/OurPrograms" },
-  { label: "Automated Savings System", path: "/how-it-works" },
-];
-
-const QUICK_LINKS: FooterLink[] = [
-  { label: "About Us", path: "/about" },
-  { label: "Vision & Mission", path: "/vision-mission" },
-  { label: "Business Partners", path: "/business-partners" },
-  { label: "Banks & Financial", path: "/banks-financial" },
-  { label: "FAQs & Support", path: "/faqs" },
-];
-
 const Footer = () => {
+  const { t } = useTranslation("common");
   const currentYear = new Date().getFullYear();
+
+  const PROGRAM_LINKS: FooterLink[] = [
+    { label: t("footer.programLinks.car"), path: "/OurPrograms" },
+    { label: t("footer.programLinks.realEstate"), path: "/OurPrograms" },
+    { label: t("footer.programLinks.vehicles"), path: "/OurPrograms" },
+    { label: t("footer.programLinks.shopping"), path: "/OurPrograms" },
+    { label: t("footer.programLinks.automated"), path: "/how-it-works" },
+  ];
+
+  const QUICK_LINKS: FooterLink[] = [
+    { label: t("footer.quickLinks.about"), path: "/about" },
+    { label: t("footer.quickLinks.visionMission"), path: "/vision-mission" },
+    { label: t("footer.quickLinks.businessPartners"), path: "/business-partners" },
+    { label: t("footer.quickLinks.banksFinancial"), path: "/banks-financial" },
+    { label: t("footer.quickLinks.faqsSupport"), path: "/faqs" },
+  ];
 
   return (
     <footer className="relative border-t border-[#D4AF37]/40 bg-black text-white">
@@ -56,19 +58,19 @@ const Footer = () => {
             </Link>
 
             <p className="max-w-md text-base leading-relaxed text-gray-300 font-normal">
-              Yes Time Global Private Limited — Connecting global opportunities with innovation, transparency, and trust through car programs, real estate ventures, and automated savings plans.
+              {t("footer.description")}
             </p>
 
             <div className="inline-flex items-center gap-2.5 rounded-full border border-[#D4AF37]/40 bg-[#D4AF37]/10 px-4 py-2 text-sm font-semibold text-[#D4AF37]">
               <ShieldCheck className="h-5 w-5 shrink-0" />
-              <span>Transparency • Trust • Accessibility</span>
+              <span>{t("footer.badge")}</span>
             </div>
           </div>
 
           {/* Col 2: Our Programs */}
           <div>
             <h3 className="mb-5 text-lg font-bold uppercase tracking-wider text-[#D4AF37]">
-              Our Programs
+              {t("footer.programsHeading")}
             </h3>
             <ul className="space-y-3.5 text-base">
               {PROGRAM_LINKS.map((link, idx) => (
@@ -88,7 +90,7 @@ const Footer = () => {
           {/* Col 3: Quick Links */}
           <div>
             <h3 className="mb-5 text-lg font-bold uppercase tracking-wider text-[#D4AF37]">
-              Quick Links
+              {t("footer.quickLinksHeading")}
             </h3>
             <ul className="space-y-3.5 text-base">
               {QUICK_LINKS.map((link, idx) => (
@@ -108,12 +110,12 @@ const Footer = () => {
           {/* Col 4: Contact Us */}
           <div>
             <h3 className="mb-5 text-lg font-bold uppercase tracking-wider text-[#D4AF37]">
-              Contact Us
+              {t("footer.contactHeading")}
             </h3>
             <ul className="space-y-4 text-base text-gray-200">
               <li className="flex items-start gap-3">
                 <MapPin className="mt-1 h-5 w-5 shrink-0 text-[#D4AF37]" />
-                <span className="leading-snug font-medium">Yes Time Global Head Lahore, Pakistan</span>
+                <span className="leading-snug font-medium">{t("footer.address")}</span>
               </li>
               <li>
                 <a
@@ -152,19 +154,19 @@ const Footer = () => {
 
         {/* Bottom Bar / Copyright */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-8 text-sm text-gray-300 sm:flex-row">
-          <p className="font-medium">© {currentYear} Yes Time Global Private Limited. All rights reserved.</p>
+          <p className="font-medium">{t("footer.copyright", { year: currentYear })}</p>
 
           <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-medium">
             <Link to="/privacy-policy" className="transition-colors duration-200 hover:text-[#D4AF37]">
-              Privacy Policy
+              {t("footer.privacyPolicy")}
             </Link>
             <span className="text-gray-500" aria-hidden="true">•</span>
             <Link to="/terms-conditions" className="transition-colors duration-200 hover:text-[#D4AF37]">
-              Terms & Conditions
+              {t("footer.termsConditions")}
             </Link>
             <span className="text-gray-500" aria-hidden="true">•</span>
             <Link to="/disclaimer" className="transition-colors duration-200 hover:text-[#D4AF37]">
-              Legal Disclaimer
+              {t("footer.legalDisclaimer")}
             </Link>
           </nav>
         </div>

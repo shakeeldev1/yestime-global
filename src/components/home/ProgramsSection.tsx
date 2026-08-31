@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import {
   ArrowRight,
   Bike,
@@ -13,15 +14,6 @@ import {
   Star,
   UserCheck,
 } from 'lucide-react'
-
-// --- Data Configuration ---
-const NAVIGATION_TABS = [
-  { id: 'all', label: 'All Programs', icon: ShoppingBag },
-  { id: 'shop', label: 'Shop & Savings', icon: ShoppingBag },
-  { id: 'car', label: 'Car Program', icon: Car },
-  { id: 'bike', label: 'Motorcycle / Scooter', icon: Bike },
-  { id: 'other', label: 'Other Programs', icon: MoreHorizontal },
-] as const
 
 interface ProgramCardData {
   id: string
@@ -49,23 +41,35 @@ interface ProgramCardData {
   }
 }
 
-const PROGRAM_CARDS: ProgramCardData[] = [
+export const ProgramsSection = () => {
+  const { t } = useTranslation('home')
+  const [activeTab, setActiveTab] = useState('all')
+
+  const NAVIGATION_TABS = [
+    { id: 'all', label: t('programs.tabs.all'), icon: ShoppingBag },
+    { id: 'shop', label: t('programs.tabs.shop'), icon: ShoppingBag },
+    { id: 'car', label: t('programs.tabs.car'), icon: Car },
+    { id: 'bike', label: t('programs.tabs.bike'), icon: Bike },
+    { id: 'other', label: t('programs.tabs.other'), icon: MoreHorizontal },
+  ] as const
+
+  const PROGRAM_CARDS: ProgramCardData[] = [
   {
     id: 'shop',
     number: '01',
-    badge: 'Most Popular',
-    title: 'Our Shopping',
-    subtitle: 'Program',
-    description: 'Shop with confidence, save more, and enjoy exclusive member benefits.',
+    badge: t('programs.cards.shop.badge'),
+    title: t('programs.cards.shop.title'),
+    subtitle: t('programs.cards.shop.subtitle'),
+    description: t('programs.cards.shop.description'),
     image: 'https://i.pinimg.com/736x/89/ac/78/89ac7841d71b268c291db5110f1075a7.jpg',
     icon: ShoppingBag,
     features: [
-      'Exclusive Discounts',
-      'Cashback Rewards',
-      'Wide Network of Partner Shops',
-      'Flexible Plan Terms',
+      t('programs.cards.shop.features.0'),
+      t('programs.cards.shop.features.1'),
+      t('programs.cards.shop.features.2'),
+      t('programs.cards.shop.features.3'),
     ],
-    buttonText: 'View Shopping Program',
+    buttonText: t('programs.cards.shop.buttonText'),
     link: '/OurPrograms#shop',
     theme: {
       numberBg: 'bg-[#b86200]',
@@ -83,19 +87,19 @@ const PROGRAM_CARDS: ProgramCardData[] = [
   {
     id: 'car',
     number: '02',
-    title: 'Car Program',
-    subtitle: '',
-    description: 'Drive towards your dreams with affordable and flexible car plans.',
+    title: t('programs.cards.car.title'),
+    subtitle: t('programs.cards.car.subtitle'),
+    description: t('programs.cards.car.description'),
     image: 'https://i.pinimg.com/1200x/b9/1c/ed/b91cedeeef1ca5c9e51bff0df0c6a684.jpg',
     icon: Car,
     features: [
-      'Easy Monthly Plans',
-      'Wide Range of Car Options',
-      'Transparent Process',
-      'Ownership with Confidence',
-      'Comprehensive Support & Guidance',
+      t('programs.cards.car.features.0'),
+      t('programs.cards.car.features.1'),
+      t('programs.cards.car.features.2'),
+      t('programs.cards.car.features.3'),
+      t('programs.cards.car.features.4'),
     ],
-    buttonText: 'View Car Program',
+    buttonText: t('programs.cards.car.buttonText'),
     link: '/OurPrograms#car',
     theme: {
       numberBg: 'bg-[#00478f]',
@@ -113,19 +117,19 @@ const PROGRAM_CARDS: ProgramCardData[] = [
   {
     id: 'bike',
     number: '03',
-    title: 'Motorcycle ',
-    subtitle: 'Program',
-    description: 'Freedom on the move with reliable motorcycle and scooter plans.',
+    title: t('programs.cards.bike.title'),
+    subtitle: t('programs.cards.bike.subtitle'),
+    description: t('programs.cards.bike.description'),
     image: 'https://i.pinimg.com/1200x/75/06/48/750648da4ecca79d29ecb1dc69588a4d.jpg',
     icon: Bike,
     features: [
-      'Affordable Installments',
-      'Popular Brands & Models',
-      'Quick & Easy Process',
-      'Ideal for Personal & Family Use',
-      'Safety & Maintenance Support',
+      t('programs.cards.bike.features.0'),
+      t('programs.cards.bike.features.1'),
+      t('programs.cards.bike.features.2'),
+      t('programs.cards.bike.features.3'),
+      t('programs.cards.bike.features.4'),
     ],
-    buttonText: 'View Motorcycle Program',
+    buttonText: t('programs.cards.bike.buttonText'),
     link: '/OurPrograms#bike',
     theme: {
       numberBg: 'bg-[#006837]',
@@ -143,19 +147,19 @@ const PROGRAM_CARDS: ProgramCardData[] = [
   {
     id: 'other',
     number: '04',
-    title: 'Our Savings Programs',
-    subtitle: '',
-    description: 'Explore approved programs designed for your growth and long-term security.',
+    title: t('programs.cards.other.title'),
+    subtitle: t('programs.cards.other.subtitle'),
+    description: t('programs.cards.other.description'),
     image: 'https://i.pinimg.com/736x/23/c0/f3/23c0f372d60c65dc543bc9682aa09fb8.jpg',
     icon: MoreHorizontal,
     features: [
-      'Tailored Savings Plans',
-      'Flexible Contribution Options',
-      'Secure & Transparent Process',
-      'Access to Exclusive Opportunities',
-      'Dedicated Support & Guidance',
+      t('programs.cards.other.features.0'),
+      t('programs.cards.other.features.1'),
+      t('programs.cards.other.features.2'),
+      t('programs.cards.other.features.3'),
+      t('programs.cards.other.features.4'),
     ],
-    buttonText: 'Explore Savings Programs',
+    buttonText: t('programs.cards.other.buttonText'),
     link: '/OurPrograms#other',
     theme: {
       numberBg: 'bg-[#4a154b]',
@@ -170,10 +174,7 @@ const PROGRAM_CARDS: ProgramCardData[] = [
       btnHover: 'hover:brightness-110 hover:shadow-lg hover:shadow-purple-500/20 ',
     },
   },
-]
-
-export const ProgramsSection = () => {
-  const [activeTab, setActiveTab] = useState('all')
+  ]
 
   const visibleCards =
     activeTab === 'all'
@@ -195,18 +196,18 @@ export const ProgramsSection = () => {
             <span className="flex h-4 w-4 items-center justify-center rounded-full bg-amber-500 text-[9px] text-white">
               ⌂
             </span>
-            <span className="tracking-widest uppercase">Our Programs</span>
+            <span className="tracking-widest uppercase">{t('programs.badge')}</span>
           </div>
 
           <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#071930] sm:text-4xl lg:text-5xl">
-            Programs for{' '}
+            {t('programs.titlePrefix')}
             <span className="bg-linear-to-r from-[#f5b324] to-[#d99420] bg-clip-text text-transparent">
-              Participation &amp; Savings.
+              {t('programs.titleHighlight')}
             </span>
           </h2>
 
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
-            Explore our approved programs and take the next step towards a brighter future. Simple, secure, and full of opportunities.
+            {t('programs.subtitle')}
           </p>
         </div>
 
@@ -348,8 +349,8 @@ export const ProgramsSection = () => {
                 <Handshake className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-base font-bold text-[#071930] leading-snug">Trusted Programs</h4>
-                <p className="text-xs font-medium text-slate-500">Approved &amp; reliable</p>
+                <h4 className="text-base font-bold text-[#071930] leading-snug">{t('programs.trust.0.title')}</h4>
+                <p className="text-xs font-medium text-slate-500">{t('programs.trust.0.text')}</p>
               </div>
             </div>
 
@@ -359,8 +360,8 @@ export const ProgramsSection = () => {
                 <UserCheck className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-base font-bold text-[#071930] leading-snug">Member Focused</h4>
-                <p className="text-xs font-medium text-slate-500">Your growth is our priority</p>
+                <h4 className="text-base font-bold text-[#071930] leading-snug">{t('programs.trust.1.title')}</h4>
+                <p className="text-xs font-medium text-slate-500">{t('programs.trust.1.text')}</p>
               </div>
             </div>
 
@@ -370,8 +371,8 @@ export const ProgramsSection = () => {
                 <ShieldCheck className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-base font-bold text-[#071930] leading-snug">Secure &amp; Transparent</h4>
-                <p className="text-xs font-medium text-slate-500">A platform you can trust</p>
+                <h4 className="text-base font-bold text-[#071930] leading-snug">{t('programs.trust.2.title')}</h4>
+                <p className="text-xs font-medium text-slate-500">{t('programs.trust.2.text')}</p>
               </div>
             </div>
 
@@ -381,8 +382,8 @@ export const ProgramsSection = () => {
                 <Globe className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-base font-bold text-[#071930] leading-snug">Global Opportunities</h4>
-                <p className="text-xs font-medium text-slate-500">Connecting lives worldwide</p>
+                <h4 className="text-base font-bold text-[#071930] leading-snug">{t('programs.trust.3.title')}</h4>
+                <p className="text-xs font-medium text-slate-500">{t('programs.trust.3.text')}</p>
               </div>
             </div>
 

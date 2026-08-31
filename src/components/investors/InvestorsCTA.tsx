@@ -1,7 +1,10 @@
 import { ArrowUpRight, Star } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const InvestorsCTA = () => {
+  const { t } = useTranslation('investors')
+
   return (
     <section className="relative overflow-hidden bg-white px-4 pb-10 pt-8 sm:pb-12">
       <div className="relative z-10 mx-auto w-[calc(100%-2rem)] max-w-[1280px] p-0 sm:w-[90%] lg:w-[63%]">
@@ -13,16 +16,16 @@ const InvestorsCTA = () => {
             <div className="flex min-w-0 flex-col gap-4">
               <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#d6b35a] bg-[#eff6ff] px-3.5 py-[0.45rem] text-[0.7rem] font-bold tracking-[0.15em] text-[#0b2b52]">
                 <Star size={16} className="text-[#c5962e]" />
-                <span>Ready to explore?</span>
+                <span>{t('cta.badge')}</span>
               </div>
 
               <h2 className="m-0 break-words text-5xl font-bold leading-[1.15] tracking-[-0.03em] text-[#071a36]">
-                Ready to explore a{' '}
-                <span className="italic text-[#c5962e]">partnership?</span>
+                {t('cta.headingLead')}{' '}
+                <span className="italic text-[#c5962e]">{t('cta.headingHighlight')}</span>
               </h2>
 
               <p className="m-0 max-w-[42rem] break-words text-[0.95rem] font-normal leading-7 text-[#41566f]">
-                Tell us what you are building and where you see an opportunity to work together.
+                {t('cta.subtitle')}
               </p>
             </div>
 
@@ -31,7 +34,7 @@ const InvestorsCTA = () => {
                 to="/ContactUs"
                 className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-[1.4rem] py-[0.85rem] text-base font-bold text-[#071a36] shadow-[0_10px_22px_rgba(197,150,46,0.24)] no-underline transition duration-300 ease-out hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5962e] focus-visible:ring-offset-2"
               >
-                Contact our team
+                {t('cta.button')}
                 <ArrowUpRight size={16} />
               </Link>
             </div>

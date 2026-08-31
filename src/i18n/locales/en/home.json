@@ -1,0 +1,214 @@
+{
+  "hero": {
+    "imageAlt": "Illustration representing a connected global network",
+    "titleLine1": "Connect to",
+    "titleLine2": "Global Opportunities.",
+    "subtitle": "YES TIME GLOBAL PRIVATE LIMITED creates accessible programs and partnerships that connect people, businesses, and opportunities across the world.",
+    "exploreProgramsBtn": "Explore Programs",
+    "howItWorksBtn": "How It Works",
+    "highlights": [
+      {
+        "title": "Global Network",
+        "text": "Connect with verified partners worldwide."
+      },
+      {
+        "title": "Trusted Platform",
+        "text": "Secure, transparent & member-focused."
+      },
+      {
+        "title": "Real Impact",
+        "text": "Opportunities that create growth & change."
+      },
+      {
+        "title": "Always With You",
+        "text": "24/7 support for all our members."
+      }
+    ]
+  },
+  "about": {
+    "badge": "Who We Are",
+    "logoAlt": "YES TIME GLOBAL Logo",
+    "imageAlt": "YES TIME GLOBAL Platform Concept",
+    "introBefore": "At ",
+    "introAfter": ", we are a trusted international platform bridging members to accessible vehicle schemes, real estate ventures, and automated savings programs.",
+    "paragraph2": "We create accessible programs and strategic partnerships that empower individuals and communities to grow, achieve, and succeed together.",
+    "features": [
+      "Global Opportunities",
+      "Transparent Process"
+    ],
+    "pillars": [
+      {
+        "title": "Mission",
+        "description": "Empowering lives through global access & shared opportunities."
+      },
+      {
+        "title": "Vision",
+        "description": "A connected world of transparent and equal opportunities for all."
+      },
+      {
+        "title": "Core Values",
+        "description": "Built on trust, integrity, transparency, and sustainable growth."
+      }
+    ],
+    "button": "Discover Full Story"
+  },
+  "programs": {
+    "badge": "Our Programs",
+    "titlePrefix": "Programs for ",
+    "titleHighlight": "Participation & Savings.",
+    "subtitle": "Explore our approved programs and take the next step towards a brighter future. Simple, secure, and full of opportunities.",
+    "tabs": {
+      "all": "All Programs",
+      "shop": "Shop & Savings",
+      "car": "Car Program",
+      "bike": "Motorcycle / Scooter",
+      "other": "Other Programs"
+    },
+    "cards": {
+      "shop": {
+        "badge": "Most Popular",
+        "title": "Our Shopping",
+        "subtitle": "Program",
+        "description": "Shop with confidence, save more, and enjoy exclusive member benefits.",
+        "features": [
+          "Exclusive Discounts",
+          "Cashback Rewards",
+          "Wide Network of Partner Shops",
+          "Flexible Plan Terms"
+        ],
+        "buttonText": "View Shopping Program"
+      },
+      "car": {
+        "title": "Car Program",
+        "subtitle": "",
+        "description": "Drive towards your dreams with affordable and flexible car plans.",
+        "features": [
+          "Easy Monthly Plans",
+          "Wide Range of Car Options",
+          "Transparent Process",
+          "Ownership with Confidence",
+          "Comprehensive Support & Guidance"
+        ],
+        "buttonText": "View Car Program"
+      },
+      "bike": {
+        "title": "Motorcycle ",
+        "subtitle": "Program",
+        "description": "Freedom on the move with reliable motorcycle and scooter plans.",
+        "features": [
+          "Affordable Installments",
+          "Popular Brands & Models",
+          "Quick & Easy Process",
+          "Ideal for Personal & Family Use",
+          "Safety & Maintenance Support"
+        ],
+        "buttonText": "View Motorcycle Program"
+      },
+      "other": {
+        "title": "Our Savings Programs",
+        "subtitle": "",
+        "description": "Explore approved programs designed for your growth and long-term security.",
+        "features": [
+          "Tailored Savings Plans",
+          "Flexible Contribution Options",
+          "Secure & Transparent Process",
+          "Access to Exclusive Opportunities",
+          "Dedicated Support & Guidance"
+        ],
+        "buttonText": "Explore Savings Programs"
+      }
+    },
+    "trust": [
+      {
+        "title": "Trusted Programs",
+        "text": "Approved & reliable"
+      },
+      {
+        "title": "Member Focused",
+        "text": "Your growth is our priority"
+      },
+      {
+        "title": "Secure & Transparent",
+        "text": "A platform you can trust"
+      },
+      {
+        "title": "Global Opportunities",
+        "text": "Connecting lives worldwide"
+      }
+    ]
+  },
+  "community": {
+    "badge": "Why Choose Us",
+    "titlePrefix": "Why Join ",
+    "titleBrand": "YES TIME GLOBAL?",
+    "subtitle": "We are committed to building a transparent platform focused on your security, long-term growth, and financial empowerment.",
+    "features": [
+      {
+        "title": "Secure & Reliable",
+        "text": "Your security and operational safety are always our top priority."
+      },
+      {
+        "title": "A Place for Everyone",
+        "text": "A welcoming space where everyone has an equal place to grow."
+      },
+      {
+        "title": "Modern Solutions",
+        "text": "Continuous technological improvements for a better experience."
+      },
+      {
+        "title": "Creating Real Change",
+        "text": "Accessible opportunities that create real, sustainable change."
+      },
+      {
+        "title": "Your Success Comes First",
+        "text": "We are committed to your growth, progress, and long term success."
+      }
+    ]
+  },
+  "team": {
+    "badge": "Management Team",
+    "titlePrefix": "Meet the people behind ",
+    "titleBrand": "YES TIME GLOBAL.",
+    "subtitle": "Guided by experience, accountability, and a shared commitment to connecting opportunities worldwide.",
+    "roles": {
+      "ceo": "Chief Executive Officer (CEO)",
+      "coo": "Chief Operating Officer (COO)",
+      "chairman": "Chairman",
+      "cfo": "Chief Financial Officer (CFO)"
+    }
+  },
+  "howItWorks": {
+    "badge": "How It Works",
+    "titlePrefix": "Getting Started is ",
+    "titleHighlight": "Simple",
+    "subtitleBefore": "Follow these easy steps and start your journey with ",
+    "subtitleAfter": " today.",
+    "steps": [
+      {
+        "title": "Explore Programs",
+        "description": "Browse our wide range of approved programs and opportunities that match your goals."
+      },
+      {
+        "title": "Choose Your Program",
+        "description": "Select the program that suits your needs and future plans."
+      },
+      {
+        "title": "Complete the Process",
+        "description": "Follow our simple, transparent and secure membership process."
+      },
+      {
+        "title": "Start Your Journey",
+        "description": "Gain access to your program and step forward toward a better future."
+      }
+    ]
+  },
+  "direction": {
+    "badge": "Start Your Journey",
+    "titlePrefix": "Move forward with ",
+    "titleHighlight": "confidence.",
+    "subtitle": "Explore practical programs and trusted partnerships designed to connect your next opportunity with a bigger global community.",
+    "tagline": "Built on transparency, trust, and shared progress.",
+    "exploreProgramsBtn": "Explore Programs",
+    "talkToTeamBtn": "Talk to Our Team"
+  }
+}

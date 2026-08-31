@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "title": "Shopping",
+    "titleHighlight": "Saving",
+    "subtitle": "شاپنگ سیونگ",
+    "description": "Shop smart, save more and enjoy exclusive opportunities through our member-focused shopping saving program.",
+    "features": {
+      "discounts": {
+        "title": "Exclusive Discounts",
+        "description": "Special member discounts and cashback"
+      },
+      "essentials": {
+        "title": "Daily Essentials",
+        "description": "Groceries, clothing, electronics & more"
+      },
+      "trusted": {
+        "title": "Trusted Platform",
+        "description": "100% trusted and secure shopping experience"
+      }
+    },
+    "cta": {
+      "join": "Join Now",
+      "howItWorks": "How It Works"
+    },
+    "imageAlt": "Shopping Cart with Bags"
+  },
+  "about": {
+    "imageAlt": "Woman shopping and saving",
+    "badge": "Exclusive Savings",
+    "overlaySubtitle": "Shop smarter. Save more.",
+    "overlayTitle": "Every Purchase,",
+    "overlayTitleHighlight": " More Value.",
+    "card": {
+      "label": "Member Benefits",
+      "title": "Smart Shopping",
+      "description": "Exclusive discounts, cashback & special deals."
+    },
+    "eyebrow": "About This Program",
+    "heading": "Turn Everyday Shopping Into",
+    "headingBlock": "Everyday Savings.",
+    "para1": "Shopping Saving Program is designed to help members save more on their everyday purchases. From groceries and fashion to electronics and home essentials, enjoy access to exclusive discounts, cashback offers, and special deals from our trusted partners.",
+    "para2": {
+      "start": "Our goal is simple — make your everyday shopping",
+      "bold": "easier, smarter, and more rewarding",
+      "end": "while helping you get more value from every purchase."
+    },
+    "featurePoints": {
+      "0": "Exclusive member discounts",
+      "1": "Cashback & special offers",
+      "2": "Trusted partner stores",
+      "3": "Secure shopping experience"
+    },
+    "stats": {
+      "products": "Products",
+      "partnerStores": "Partner Stores",
+      "support": "Support",
+      "secure": "Secure"
+    }
+  },
+  "benefits": {
+    "label": "Benefits For You",
+    "heading": "More Reasons to",
+    "headingHighlight": " Shop & Save",
+    "subtitle": "Enjoy exclusive benefits designed to make your everyday shopping experience smarter, easier and more rewarding.",
+    "items": {
+      "0": {
+        "title": "Exclusive Discounts",
+        "description": "Get special member-only discounts across a wide range of products and services."
+      },
+      "1": {
+        "title": "Cashback Rewards",
+        "description": "Earn valuable cashback and get more back from your everyday purchases."
+      },
+      "2": {
+        "title": "Wide Variety",
+        "description": "Explore thousands of products across multiple shopping categories."
+      },
+      "3": {
+        "title": "Special Offers",
+        "description": "Enjoy seasonal, festival and limited-time offers available to members."
+      },
+      "4": {
+        "title": "Trusted Brands",
+        "description": "Shop confidently with trusted brands and verified partner sellers."
+      },
+      "5": {
+        "title": "Safe & Secure",
+        "description": "Enjoy a simple, secure and hassle-free shopping experience."
+      }
+    }
+  },
+  "whoCanJoin": {
+    "label": "Who Can Join?",
+    "heading": "Savings Are",
+    "headingBlock": "For Everyone.",
+    "description": "Whether you're shopping for yourself or your family, our program is designed to help you get more value from your everyday purchases.",
+    "points": {
+      "0": "Anyone who wants to save more while shopping.",
+      "1": "Individuals and families looking for better value.",
+      "2": "Members who want simple and hassle-free savings.",
+      "3": "Anyone ready to make everyday shopping more rewarding."
+    },
+    "button": "Become a Member"
+  },
+  "collage": {
+    "familyImageAlt": "Happy family",
+    "familyBadge": "Family Savings",
+    "familyTitle": "Better Shopping.",
+    "familyTitleHighlight": " Better Living.",
+    "groceryImageAlt": "Fresh grocery shopping",
+    "groceryBadge": "Grocery Savings",
+    "fashionImageAlt": "Fashion shopping",
+    "fashionBadge": "Fashion Deals"
+  },
+  "bottom": {
+    "shopMore": "Shop More",
+    "saveMore": "Save More",
+    "liveBetter": "Live Better"
+  }
+}

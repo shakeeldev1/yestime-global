@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface DropdownItem {
   name: string;
@@ -15,52 +16,9 @@ interface NavSection {
 }
 
 const LANGUAGE_OPTIONS = [
-  { code: "ENG", label: "Eng" },
-  { code: "URDU", label: "Urdu" },
-  { code: "ARABIC", label: "Arabic" },
+  { code: "en", label: "English" },
+  { code: "ur", label: "Urdu" },
 ] as const;
-
-type LanguageCode = (typeof LANGUAGE_OPTIONS)[number]["code"];
-
-const NAV_SECTIONS: NavSection[] = [
-  {
-    id: "programs",
-    title: "Programs",
-    items: [
-      { name: "Our Programs", path: "/OurPrograms" },
-      { name: "How It Works", path: "/how-it-works" },
-    ],
-  },
-  {
-    id: "business",
-    title: "Business",
-    items: [
-      { name: "Business Partners", path: "/business-partners" },
-      { name: "Global Expansion", path: "/global-expansion" },
-    ],
-  },
-  {
-    id: "finance",
-    title: "Finance",
-    items: [
-      { name: "Investors", path: "/investors" },
-      { name: "Banks & Financial", path: "/banks-financial" },
-    ],
-  },
-  {
-    id: "events",
-    title: "Events",
-    path: "/events",
-  },
-  {
-    id: "support",
-    title: "Support",
-    items: [
-      { name: "Customer Support", path: "/customer" },
-      { name: "FAQs", path: "/faqs" },
-    ],
-  },
-];
 
 /* ================= DESKTOP HOVER DROPDOWN ================= */
 
@@ -199,11 +157,60 @@ const MobileDropdown = ({
 /* ================= MAIN NAVBAR ================= */
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation("common");
   const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>("ENG");
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const location = useLocation();
+
+  const currentLanguage =
+    LANGUAGE_OPTIONS.find((language) => i18n.language?.startsWith(language.code)) ??
+    LANGUAGE_OPTIONS[0];
+
+  const changeLanguage = (code: string) => {
+    i18n.changeLanguage(code);
+    setLanguageMenuOpen(false);
+  };
+
+  const NAV_SECTIONS: NavSection[] = [
+    {
+      id: "programs",
+      title: t("nav.programs"),
+      items: [
+        { name: t("nav.items.ourPrograms"), path: "/OurPrograms" },
+        { name: t("nav.items.howItWorks"), path: "/how-it-works" },
+      ],
+    },
+    {
+      id: "business",
+      title: t("nav.business"),
+      items: [
+        { name: t("nav.items.businessPartners"), path: "/business-partners" },
+        { name: t("nav.items.globalExpansion"), path: "/global-expansion" },
+      ],
+    },
+    {
+      id: "finance",
+      title: t("nav.finance"),
+      items: [
+        { name: t("nav.items.investors"), path: "/investors" },
+        { name: t("nav.items.banksFinancial"), path: "/banks-financial" },
+      ],
+    },
+    {
+      id: "events",
+      title: t("nav.events"),
+      path: "/events",
+    },
+    {
+      id: "support",
+      title: t("nav.support"),
+      items: [
+        { name: t("nav.items.customerSupport"), path: "/customer" },
+        { name: t("nav.items.faqs"), path: "/faqs" },
+      ],
+    },
+  ];
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -249,7 +256,7 @@ const Navbar = () => {
             className={`px-3.5 py-2 text-sm font-semibold transition-colors duration-200 ${isActive("/") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
               }`}
           >
-            Home
+            {t("nav.home")}
           </Link>
 
           <Link
@@ -258,7 +265,7 @@ const Navbar = () => {
             className={`px-3.5 py-2 text-sm font-semibold transition-colors duration-200 ${isActive("/about") ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
               }`}
           >
-            About
+            {t("nav.about")}
           </Link>
 
 
@@ -295,9 +302,9 @@ const Navbar = () => {
               type="button"
               onClick={() => setLanguageMenuOpen((prev) => !prev)}
               className="flex items-center gap-2 rounded-full border border-[#D4AF37]/60 bg-white/5 px-3 py-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#F5E6A6] transition-all duration-200 hover:border-[#D4AF37] hover:bg-[#D4AF37]/10"
-              aria-label="Select language"
+              aria-label={t("nav.selectLanguage")}
             >
-              <span>{selectedLanguage}</span>
+              <span>{currentLanguage.code}</span>
               <ChevronDown
                 size={16}
                 className={`transition-transform duration-200 ${languageMenuOpen ? "rotate-180" : ""}`}
@@ -310,16 +317,13 @@ const Navbar = () => {
                   <button
                     key={language.code}
                     type="button"
-                    onClick={() => {
-                      setSelectedLanguage(language.code);
-                      setLanguageMenuOpen(false);
-                    }}
-                    className={`flex w-full items-center justify-between px-4 py-2.5 text-left text-sm font-medium transition-colors ${selectedLanguage === language.code
+                    onClick={() => changeLanguage(language.code)}
+                    className={`flex w-full items-center justify-between px-4 py-2.5 text-left text-sm font-medium transition-colors ${currentLanguage.code === language.code
                       ? "bg-[#D4AF37]/20 text-[#D4AF37]"
                       : "text-gray-200 hover:bg-[#D4AF37]/10 hover:text-[#D4AF37]"
                       }`}
                   >
-                    <span>{language.label}</span>
+                    <span>{t(`languages.${language.code}`)}</span>
                     <span className="text-[10px] uppercase tracking-[0.18em]">{language.code}</span>
                   </button>
                 ))}
@@ -335,7 +339,7 @@ const Navbar = () => {
               : "text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black"
               }`}
           >
-            Contact Us
+            {t("nav.contactUs")}
           </Link>
         </div>
 
@@ -343,7 +347,7 @@ const Navbar = () => {
         <button
           onClick={() => setMobileMenu(!mobileMenu)}
           className="rounded-lg p-2 text-white transition-colors hover:bg-white/10 lg:hidden"
-          aria-label="Toggle menu"
+          aria-label={t("nav.toggleMenu")}
         >
           {mobileMenu ? <X size={30} /> : <Menu size={30} />}
         </button>
@@ -358,7 +362,7 @@ const Navbar = () => {
             className={`block border-b border-white/10 py-3.5 text-base font-semibold ${isActive("/") ? "text-[#D4AF37]" : "text-white"
               }`}
           >
-            Home
+            {t("nav.home")}
           </Link>
 
           <Link
@@ -367,7 +371,7 @@ const Navbar = () => {
             className={`block border-b border-white/10 py-3.5 text-base font-semibold ${isActive("/about") ? "text-[#D4AF37]" : "text-white"
               }`}
           >
-            About
+            {t("nav.about")}
           </Link>
 
           <Link
@@ -376,7 +380,7 @@ const Navbar = () => {
             className={`block border-b border-white/10 py-3.5 text-base font-semibold ${isActive("/events") ? "text-[#D4AF37]" : "text-white"
               }`}
           >
-            Events
+            {t("nav.events")}
           </Link>
 
           {NAV_SECTIONS.map((section) => {
@@ -412,9 +416,9 @@ const Navbar = () => {
                 onClick={() => setLanguageMenuOpen((prev) => !prev)}
                 className="flex w-full items-center justify-between rounded-lg border border-[#D4AF37]/40 bg-black px-4 py-3 text-left text-base font-semibold text-[#F5E6A6]"
               >
-                <span>Language</span>
+                <span>{t("nav.language")}</span>
                 <span className="flex items-center gap-2">
-                  <span className="uppercase tracking-[0.2em]">{selectedLanguage}</span>
+                  <span className="uppercase tracking-[0.2em]">{currentLanguage.code}</span>
                   <ChevronDown size={18} className={`transition-transform duration-200 ${languageMenuOpen ? "rotate-180" : ""}`} />
                 </span>
               </button>
@@ -425,16 +429,13 @@ const Navbar = () => {
                     <button
                       key={language.code}
                       type="button"
-                      onClick={() => {
-                        setSelectedLanguage(language.code);
-                        setLanguageMenuOpen(false);
-                      }}
-                      className={`flex w-full items-center justify-between px-4 py-3 text-left text-base transition-colors ${selectedLanguage === language.code
+                      onClick={() => changeLanguage(language.code)}
+                      className={`flex w-full items-center justify-between px-4 py-3 text-left text-base transition-colors ${currentLanguage.code === language.code
                         ? "bg-[#D4AF37]/20 text-[#D4AF37]"
                         : "text-gray-200 hover:bg-[#D4AF37]/10 hover:text-[#D4AF37]"
                         }`}
                     >
-                      <span>{language.label}</span>
+                      <span>{t(`languages.${language.code}`)}</span>
                       <span className="uppercase tracking-[0.15em]">{language.code}</span>
                     </button>
                   ))}
@@ -448,7 +449,7 @@ const Navbar = () => {
             onClick={handleNavigate}
             className="mt-6 block rounded-full bg-[#D4AF37] px-6 py-3.5 text-center text-base font-bold text-black transition-colors hover:bg-[#c5a06a]"
           >
-            Contact Us
+            {t("nav.contactUs")}
           </Link>
         </div>
       )}

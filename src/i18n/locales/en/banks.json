@@ -1,0 +1,160 @@
+{
+  "hero": {
+    "badge": "Banks & Financial Partners",
+    "titleLine1": "Trusted Banking &",
+    "titleHighlight": "Financial Partnerships",
+    "description": "Connecting you with trusted banks and financial institutions for secure transactions, smart savings and a stronger financial future.",
+    "exploreButton": "Explore Financial Partners",
+    "contactButton": "Contact Finance Team",
+    "points": {
+      "secureBanking": {
+        "title": "Secure Banking",
+        "text": "Your money, always safe."
+      },
+      "trustedPartners": {
+        "title": "Trusted Partners",
+        "text": "Working with leading banks"
+      },
+      "transparentProcess": {
+        "title": "Transparent Process",
+        "text": "Clear and reliable system"
+      },
+      "smartSolutions": {
+        "title": "Smart Solutions",
+        "text": "For a better financial future"
+      }
+    }
+  },
+  "highlights": {
+    "partnersLabel": "Our Financial Partners",
+    "partnersNote": "We collaborate with leading banks",
+    "aboutLabel": "About Banks & Financial",
+    "aboutTitleLine1": "Building a Stronger",
+    "aboutTitleHighlight": "Financial Ecosystem",
+    "aboutPara1": "YES TIME GLOBAL works with trusted banks and financial institutions to provide secure, transparent, and convenient financial solutions for our members, businesses, and partners.",
+    "aboutPara2": "Whether it's saving, trading, or financing, we make sure our members have access to reliable services and modern financial tools.",
+    "aboutImageAlt": "Business handshake and banking partnership",
+    "servicesLabel": "Our Financial Services",
+    "servicesTitle": "Services We Offer",
+    "learnMore": "Learn More",
+    "services": {
+      "personalBanking": {
+        "title": "Personal Banking",
+        "items": {
+          "savingsAccounts": "Savings Accounts",
+          "currentAccounts": "Current Accounts",
+          "islamicBanking": "Islamic Banking Options",
+          "digitalBanking": "Digital Banking"
+        }
+      },
+      "businessBanking": {
+        "title": "Business Banking",
+        "items": {
+          "businessAccounts": "Business Accounts",
+          "tradePayments": "Trade & Payments",
+          "smeSolutions": "SME Solutions",
+          "corporateServices": "Corporate Services"
+        }
+      },
+      "financingSolutions": {
+        "title": "Financing Solutions",
+        "items": {
+          "autoFinancing": "Auto Financing",
+          "homeFinancing": "Home Financing",
+          "businessLoans": "Business Loans",
+          "investmentSupport": "Investment Support"
+        }
+      },
+      "digitalOnlineBanking": {
+        "title": "Digital & Online Banking",
+        "items": {
+          "mobileBanking": "Mobile Banking",
+          "internetBanking": "Internet Banking",
+          "instantTransfers": "Instant Transfers",
+          "access247": "24/7 Access"
+        }
+      }
+    }
+  },
+  "process": {
+    "whyLabel": "Why Choose Our Financial Partners?",
+    "whyTitle": "Reliable Solutions Tailored For You",
+    "comparisonPoints": {
+      "trustedNetwork": {
+        "title": "Trusted Network",
+        "text": "Partnership with leading banks"
+      },
+      "secure": {
+        "title": "100% Secure",
+        "text": "Advanced security measures"
+      },
+      "wideCoverage": {
+        "title": "Wide Coverage",
+        "text": "Access across regions"
+      },
+      "memberBenefits": {
+        "title": "Member Benefits",
+        "text": "Special opportunities for members"
+      },
+      "fastConvenient": {
+        "title": "Fast & Convenient",
+        "text": "Modern and easy process"
+      }
+    },
+    "howLabel": "How It Works",
+    "howTitle": "Simple & Transparent Process",
+    "processSteps": {
+      "exploreOptions": {
+        "title": "Explore Options",
+        "text": "Choose the service you need"
+      },
+      "submitDetails": {
+        "title": "Submit Details",
+        "text": "Share required information"
+      },
+      "bankVerification": {
+        "title": "Bank Verification",
+        "text": "Processed with trusted partners"
+      },
+      "getStarted": {
+        "title": "Get Started",
+        "text": "Enjoy secure and smooth banking"
+      }
+    },
+    "faqLabel": "Frequently Asked Questions",
+    "faqTitle": "FAQs – Banks & Financial",
+    "faqItems": {
+      "partneredBanks": {
+        "question": "Which banks are partnered with YES TIME GLOBAL?",
+        "answer": "We collaborate with premier institutions including HBL, Meezan Bank, MCB, UBL, Bank Alfalah, Allied Bank, and JS Bank to deliver robust financial services."
+      },
+      "openAccount": {
+        "question": "Can I open a bank account through YES TIME GLOBAL?",
+        "answer": "Yes, our platform facilitates streamlined onboarding and account opening requests through our official partner network."
+      },
+      "informationSecure": {
+        "question": "Is my financial information secure?",
+        "answer": "Absolutely. We enforce end-to-end encryption protocols and strictly adhere to central banking compliance standards."
+      },
+      "businessServices": {
+        "question": "Can businesses also avail banking services?",
+        "answer": "Yes, we provide dedicated SME loans, corporate accounts, trade financing, and tailored commercial banking solutions."
+      },
+      "contactSupport": {
+        "question": "How can I contact the financial support team?",
+        "answer": "You can reach out 24/7 via our member support portal, direct hotline, or by visiting any accredited partner desk."
+      }
+    },
+    "faqImageAlt": "Customer support financial guidance",
+    "assistLabel": "Need Immediate Assistance?",
+    "assistText": "Our financial advisory team is available to assist you with custom solutions."
+  },
+  "cta": {
+    "eyebrow": "Take the next step",
+    "titleLine1": "Take the Next Step Toward a",
+    "titleHighlight": "Smarter Financial Future.",
+    "description": "Secure, transparent and reliable financial solutions with our trusted banking partners.",
+    "exploreButton": "Explore Services",
+    "contactButton": "Contact Finance Team"
+  }
+}

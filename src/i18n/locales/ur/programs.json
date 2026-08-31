@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "joinNow": "ابھی شامل ہوں",
+    "howItWorks": "یہ کیسے کام کرتا ہے",
+    "titleFallback": "پروگرام"
+  },
+  "gallery": {
+    "badge": "گیلری",
+    "headingPrefix": "دیکھیں",
+    "headingSuffix": "کا تجربہ",
+    "imageAlt": "{{title}} گیلری {{index}}"
+  },
+  "plans": {
+    "badge": "ہمارے پلانز",
+    "headingPrefix": "اپنے سفر کے لیے صحیح",
+    "headingHighlight": "کار پلان",
+    "headingSuffix": "کا انتخاب کریں",
+    "mainAlt": "{{title}} مرکزی گیلری",
+    "sideOneAlt": "{{title}} گیلری سائیڈ ایک",
+    "sideTwoAlt": "{{title}} گیلری سائیڈ دو"
+  },
+  "planCard": {
+    "luxuryVehiclePlan": "لگژری گاڑی پلان",
+    "planSummary": "پلان کا خلاصہ",
+    "daily": "یومیہ",
+    "monthly": "ماہانہ",
+    "prize": "انعام",
+    "planDetails": "پلان کی تفصیلات",
+    "applyNow": "ابھی اپلائی کریں"
+  },
+  "about": {
+    "badge": "اس پروگرام کے بارے میں",
+    "smartSavings": "سمارٹ بچت",
+    "cardHeadingLine1": "بہتر عادات،",
+    "cardHeadingHighlight": "بہتر قدر۔",
+    "memberBenefits": "ممبر مراعات",
+    "smartSavingsTitle": "سمارٹ سیونگ",
+    "headingFallback": "سب کے لیے۔"
+  },
+  "benefits": {
+    "badge": "آپ کے لیے فوائد",
+    "headingPrefix": "مزید وجوہات"
+  },
+  "audience": {
+    "badge": "کون شامل ہو سکتا ہے؟",
+    "headingLine1": "بچت ہے",
+    "headingLine2": "سب کے لیے۔",
+    "intro": "چاہے آپ کوئی خریداری کی منصوبہ بندی کر رہے ہوں یا بہتر قدر کی تلاش میں ہوں، یہ پروگرام آپ کو سمارٹ فیصلے کرنے اور اپنی بچت کو زیادہ سے زیادہ بڑھانے میں مدد کے لیے بنایا گیا ہے۔",
+    "becomeMember": "ممبر بنیں"
+  },
+  "showcase": {
+    "cardHeadingLine1": "بہتر خریداری۔",
+    "cardHeadingHighlight": "بہتر زندگی۔",
+    "categoryValueSuffix": "قدر",
+    "memberRewards": "ممبر انعامات",
+    "memberLifestyleAlt": "ممبر لائف اسٹائل"
+  },
+  "footerTags": {
+    "smartChoice": "سمارٹ انتخاب",
+    "betterValue": "بہتر قدر",
+    "strongerFuture": "مضبوط مستقبل"
+  },
+  "carPlan": {
+    "badge": "مخصوص کار پلان",
+    "heroHeadingPrefix": "اپنے خوابوں کی گاڑی چلائیں ایک",
+    "heroHeadingHighlight": "سمارٹ کار پلان",
+    "heroDescription": "ایک لچکدار کار فنانسنگ راستہ منتخب کریں جو طویل مدتی قدر، ہموار ملکیت، اور آپ اور آپ کے خاندان کے لیے مضبوط مستقبل کے لیے بنایا گیا ہے۔",
+    "applyForPlan": "پلان کے لیے اپلائی کریں",
+    "comparePlans": "پلانز کا موازنہ کریں",
+    "featuredAlt": "کار پلان نمایاں",
+    "feature1Tag": "لچکدار",
+    "feature1Title": "متعدد اختیارات",
+    "feature1Desc": "ایک قابلِ اعتماد کار پلان منتخب کریں جو آپ کے بجٹ، ڈرائیونگ کے مقاصد اور مستقبل کی ضروریات کے مطابق ہو۔",
+    "feature2Tag": "سستا",
+    "feature2Title": "مستحکم بچت",
+    "feature2Desc": "منظم شراکتوں اور گاڑی کی ملکیت کی طرف قابلِ انتظام قدر کے ساتھ واضح راستے سے لطف اندوز ہوں۔",
+    "feature3Tag": "محفوظ",
+    "feature3Title": "قابلِ اعتماد عمل",
+    "feature3Desc": "ایک شفاف اور ممبر پر مرکوز کار پلان جو آپ کے اگلے فیصلے کو آسان اور محفوظ بنانے کے لیے ڈیزائن کیا گیا ہے۔",
+    "plansBadge": "کار پلانز",
+    "plansHeadingPrefix": "بہترین کا انتخاب کریں",
+    "plansHeadingHighlight": "کار پلان",
+    "plansHeadingSuffix": "اپنے سفر کے لیے"
+  }
+}

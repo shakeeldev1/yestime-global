@@ -6,6 +6,7 @@ import {
   Sparkles,
   ChevronRight,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface HeroData {
   image: string;
@@ -17,14 +18,20 @@ interface HeroData {
 }
 
 const GlobalExpansionHero: React.FC = () => {
+  const { t } = useTranslation("global");
+
   const heroContent: HeroData = {
     image: "/hero-yes.png",
-    badge: "YES TIME GLOBAL",
-    title: "Global Expansion",
-    subtitle: "Expanding Our Reach Beyond Borders",
-    description:
-      "YES TIME GLOBAL is expanding its presence across different countries, creating opportunities for wider international participation and building stronger global connections.",
-    countries: ["🇵🇰 Pakistan", "🇳🇵 Nepal", "🇮🇩 Indonesia", "🌍 Future Countries"],
+    badge: t("hero.badge"),
+    title: t("hero.title"),
+    subtitle: t("hero.subtitle"),
+    description: t("hero.description"),
+    countries: [
+      t("hero.countries.0"),
+      t("hero.countries.1"),
+      t("hero.countries.2"),
+      t("hero.countries.3"),
+    ],
   };
 
   return (
@@ -131,7 +138,7 @@ const GlobalExpansionHero: React.FC = () => {
                   href="#global-presence"
                   className="group inline-flex items-center justify-center gap-2 rounded-lg bg-[#D9A21B] px-6 py-2.5 text-sm font-semibold text-[#020B1C] transition duration-300 hover:bg-[#FFD45A]"
                 >
-                  Explore Global Presence
+                  {t("hero.ctaPrimary")}
                   <ArrowRight
                     size={17}
                     className="transition-transform duration-300 group-hover:translate-x-1"
@@ -143,7 +150,7 @@ const GlobalExpansionHero: React.FC = () => {
                   href="#global-journey"
                   className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/25 bg-white/5 px-6 py-2.5 text-sm font-medium text-white transition duration-300 hover:border-[#FFD45A] hover:bg-white/10"
                 >
-                  <span className="text-white">Our Global Journey</span>
+                  <span className="text-white">{t("hero.ctaSecondary")}</span>
                   <ChevronRight size={17} />
                 </a>
               </div>
@@ -182,14 +189,14 @@ const GlobalExpansionHero: React.FC = () => {
                 <div className="globe-marker globe-marker-pakistan absolute left-0 top-[38%] flex items-center gap-2">
                   <span className="h-2.5 w-2.5 rounded-full bg-[#FFD45A]" />
                   <span className="rounded-md border border-white/10 bg-[#020B1C]/90 px-3 py-1.5 text-xs font-medium text-white">
-                    Pakistan
+                    {t("hero.markers.pakistan")}
                   </span>
                 </div>
 
                 {/* Nepal Marker */}
                 <div className="globe-marker globe-marker-nepal absolute right-0 top-[25%] flex items-center gap-2">
                   <span className="rounded-md border border-white/10 bg-[#020B1C]/90 px-3 py-1.5 text-xs font-medium text-white">
-                    Nepal
+                    {t("hero.markers.nepal")}
                   </span>
                   <span className="h-2.5 w-2.5 rounded-full bg-[#FFD45A]" />
                 </div>
@@ -198,7 +205,7 @@ const GlobalExpansionHero: React.FC = () => {
                 <div className="globe-marker globe-marker-indonesia absolute bottom-[18%] right-2 flex items-center gap-2">
                   <span className="h-2.5 w-2.5 rounded-full bg-blue-400" />
                   <span className="rounded-md border border-white/10 bg-[#020B1C]/90 px-3 py-1.5 text-xs font-medium text-white">
-                    Indonesia
+                    {t("hero.markers.indonesia")}
                   </span>
                 </div>
               </div>

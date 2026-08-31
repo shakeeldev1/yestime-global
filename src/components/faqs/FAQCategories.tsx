@@ -1,23 +1,26 @@
+import { useTranslation } from 'react-i18next'
 import { FiArrowDown, FiBookOpen, FiCheckCircle, FiCreditCard, FiHelpCircle } from 'react-icons/fi'
 import { faqCategories } from './faqData'
 
 const categoryIcons = [FiBookOpen, FiCreditCard, FiCheckCircle, FiHelpCircle, FiBookOpen]
 
 const FAQCategories = () => {
+  const { t } = useTranslation('faqs')
+
   return (
     <section className="relative w-full overflow-hidden bg-[#edf2f8] py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
             <span className="inline-flex rounded-full border border-[#f5c54e]/50 bg-[#fff4d9] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#a97916]">
-              Browse by topic
+              {t('categoriesSection.eyebrow')}
             </span>
             <h2 className="mt-4 text-3xl font-black leading-tight tracking-[-0.04em] text-[#061832] sm:text-4xl">
-              Find the information you need.
+              {t('categoriesSection.heading')}
             </h2>
           </div>
           <a href="#faq-list" className="inline-flex items-center gap-2 text-sm font-bold text-[#0b3b6e] transition-all duration-300 hover:text-[#a97916]">
-            View all answers <FiArrowDown size={16} />
+            {t('categoriesSection.viewAll')} <FiArrowDown size={16} />
           </a>
         </div>
 
@@ -34,9 +37,9 @@ const FAQCategories = () => {
                   <Icon size={20} />
                 </div>
                 <h3 className="mt-4 text-sm font-bold text-[#061832] transition-colors duration-300 group-hover:text-[#a97916]">
-                  {category.label}
+                  {t(`categories.${category.id}.label`)}
                 </h3>
-                <p className="mt-1 text-xs leading-5 text-[#60748b]">{category.description}</p>
+                <p className="mt-1 text-xs leading-5 text-[#60748b]">{t(`categories.${category.id}.description`)}</p>
               </a>
             )
           })}

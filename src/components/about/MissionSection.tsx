@@ -7,8 +7,10 @@ import {
   ArrowUpRight,
   Sparkles,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const VisionMission: React.FC = () => {
+  const { t } = useTranslation("about");
   return (
     <section className="relative overflow-hidden bg-white px-4 py-20 sm:px-6 lg:px-12">
       {/* Background Subtle Gradient Glows */}
@@ -21,18 +23,17 @@ const VisionMission: React.FC = () => {
           <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-50 px-4 py-1.5 transition-all hover:bg-amber-100/60">
             <Sparkles className="h-3.5 w-3.5 text-[#d69b22]" />
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#d69b22]">
-              OUR VISION &amp; MISSION
+              {t("visionMission.badge")}
             </span>
           </div>
           <h2 className="text-3xl font-extrabold text-[#132033] sm:text-4xl md:text-5xl">
-            Our{" "}
+            {t("visionMission.headingPart1")}{" "}
             <span className="bg-gradient-to-r from-[#d69b22] via-amber-500 to-[#e5aa2d] bg-clip-text text-transparent">
-              Vision &amp; Mission
+              {t("visionMission.headingHighlight")}
             </span>
           </h2>
           <p className="mt-4 text-sm text-slate-500 sm:text-base">
-            Guiding principles driving our ecosystem toward sustainable growth
-            and shared success.
+            {t("visionMission.subtitle")}
           </p>
         </div>
 
@@ -54,7 +55,7 @@ const VisionMission: React.FC = () => {
               {/* Floating Badge on Image */}
               <div className="absolute left-4 top-4 rounded-xl border border-white/40 bg-white/80 px-3 py-1.5 shadow-sm backdrop-blur-md transition-transform duration-300 group-hover:scale-105">
                 <span className="text-[11px] font-bold text-[#111c2c]">
-                  01 / PURPOSE
+                  {t("visionMission.vision.badge")}
                 </span>
               </div>
             </div>
@@ -69,7 +70,7 @@ const VisionMission: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-[#111c2c] transition-colors duration-300 group-hover:text-[#d69b22]">
-                        Our Vision
+                        {t("visionMission.vision.title")}
                       </h3>
                       <div className="mt-1.5 h-[2px] w-8 bg-[#e5aa2d] transition-all duration-500 group-hover:w-16" />
                     </div>
@@ -82,10 +83,7 @@ const VisionMission: React.FC = () => {
                 </div>
 
                 <p className="mt-6 text-sm leading-relaxed text-slate-600 sm:text-base">
-                  To be a global leader in creating a reliable and innovative
-                  ecosystem where individuals and businesses can access
-                  life-changing opportunities that bring growth, security, and
-                  prosperity to all.
+                  {t("visionMission.vision.text")}
                 </p>
               </div>
 
@@ -95,7 +93,7 @@ const VisionMission: React.FC = () => {
                   <UsersRound className="h-5 w-5" />
                 </div>
                 <p className="text-xs font-semibold leading-normal text-slate-700 sm:text-sm">
-                  A world of equal opportunities for everyone.
+                  {t("visionMission.vision.highlight")}
                 </p>
               </div>
             </div>
@@ -117,7 +115,7 @@ const VisionMission: React.FC = () => {
               {/* Floating Badge on Image */}
               <div className="absolute left-4 top-4 rounded-xl border border-white/20 bg-slate-900/60 px-3 py-1.5 shadow-sm backdrop-blur-md transition-transform duration-300 group-hover:scale-105">
                 <span className="text-[11px] font-bold text-amber-400">
-                  02 / ACTION
+                  {t("visionMission.mission.badge")}
                 </span>
               </div>
             </div>
@@ -132,7 +130,7 @@ const VisionMission: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-white transition-colors duration-300 group-hover:text-amber-400">
-                        Our Mission
+                        {t("visionMission.mission.title")}
                       </h3>
                       <div className="mt-1.5 h-[2px] w-8 bg-[#e5aa2d] transition-all duration-500 group-hover:w-16" />
                     </div>
@@ -145,10 +143,7 @@ const VisionMission: React.FC = () => {
                 </div>
 
                 <p className="mt-6 text-sm leading-relaxed text-slate-300 sm:text-base">
-                  To connect people, businesses, and opportunities through
-                  accessible programs, strategic partnerships, and transparent
-                  processes — empowering communities to grow, achieve, and
-                  succeed together.
+                  {t("visionMission.mission.text")}
                 </p>
               </div>
 
@@ -158,7 +153,7 @@ const VisionMission: React.FC = () => {
                   <BarChart3 className="h-5 w-5" />
                 </div>
                 <p className="text-xs font-semibold leading-normal text-slate-200 sm:text-sm">
-                  Empower people. Build trust. Create lasting impact.
+                  {t("visionMission.mission.highlight")}
                 </p>
               </div>
             </div>

@@ -1,10 +1,18 @@
-import type { LegalDocument } from './legalData'
+import { useTranslation } from 'react-i18next'
+import type { LegalDocumentId } from './legalData'
 
-type LegalHeroProps = Pick<LegalDocument, 'label' | 'title' | 'highlight' | 'description'> & {
+type LegalHeroProps = {
+  documentId: LegalDocumentId
   updated?: string
 }
 
-const LegalHero = ({ label, title, highlight, description, updated }: LegalHeroProps) => {
+const LegalHero = ({ documentId, updated }: LegalHeroProps) => {
+  const { t } = useTranslation('legal')
+  const label = t(`documents.${documentId}.label`)
+  const title = t(`documents.${documentId}.title`)
+  const highlight = t(`documents.${documentId}.highlight`)
+  const description = t(`documents.${documentId}.description`)
+
   return (
     <section className="relative overflow-hidden bg-[radial-gradient(circle_at_72%_35%,#51452d_0%,#28251f_32%,#111111_78%)] px-6 py-12 text-white sm:px-10 sm:py-16 lg:px-[7%] lg:py-20">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#f6b93f90_1px,transparent_1px)] [background-size:38px_38px] opacity-[0.12]" />

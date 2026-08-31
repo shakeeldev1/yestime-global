@@ -9,6 +9,7 @@ import {
   Sparkles,
   CheckCircle2,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface ShopFeature {
   icon: React.ElementType;
@@ -17,34 +18,36 @@ interface ShopFeature {
   badge?: string;
 }
 
-const shopFeatures: ShopFeature[] = [
-  {
-    icon: Store,
-    title: "Retail Shop Owners",
-    description: "Retail merchants seamlessly plug into our high-volume merchant system, scaling local visibility.",
-    badge: "Merchant Hub",
-  },
-  {
-    icon: Handshake,
-    title: "Strategic Partnership",
-    description: "We forge institutional-grade bonds focused on mutual equity expansion and commercial stability.",
-    badge: "Long-Term",
-  },
-  {
-    icon: TrendingUp,
-    title: "Accelerated Growth",
-    description: "Harness shared pipelines and dynamic market traction engineered to compound your enterprise footprint.",
-    badge: "High Yield",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Secure Compliance",
-    description: "Operations run securely under strict regulatory frameworks, verified transparency, and legal alignment.",
-    badge: "Trusted",
-  },
-];
-
 const Shops: React.FC = () => {
+  const { t } = useTranslation("business");
+
+  const shopFeatures: ShopFeature[] = [
+    {
+      icon: Store,
+      title: t("shops.features.0.title"),
+      description: t("shops.features.0.description"),
+      badge: t("shops.features.0.badge"),
+    },
+    {
+      icon: Handshake,
+      title: t("shops.features.1.title"),
+      description: t("shops.features.1.description"),
+      badge: t("shops.features.1.badge"),
+    },
+    {
+      icon: TrendingUp,
+      title: t("shops.features.2.title"),
+      description: t("shops.features.2.description"),
+      badge: t("shops.features.2.badge"),
+    },
+    {
+      icon: ShieldCheck,
+      title: t("shops.features.3.title"),
+      description: t("shops.features.3.description"),
+      badge: t("shops.features.3.badge"),
+    },
+  ];
+
   return (
     <section className="relative overflow-hidden bg-white py-10 lg:py-1">
 
@@ -58,18 +61,18 @@ const Shops: React.FC = () => {
         <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#C6922B]/30 bg-[#C6922B]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-[#C6922B] backdrop-blur-md mb-4 shadow-sm">
             <Sparkles size={14} />
-            <span>Retail Network Initiative</span>
+            <span>{t("shops.badge")}</span>
           </div>
 
           <h2 className="text-4xl font-extrabold tracking-tight text-[#0B2341] sm:text-5xl lg:text-6xl">
-            Scale Your Retail Empire <br className="hidden sm:inline" />
+            {t("shops.title.line1")} <br className="hidden sm:inline" />
             <span className="bg-linear-to-r from-[#C6922B] via-[#dfa838] to-[#C6922B] bg-clip-text text-transparent text-3xl font-semibold sm:text-4xl lg:text-5xl">
-              Through Our Ecosystem
+              {t("shops.title.line2")}
             </span>
           </h2>
 
           <p className="mt-6 text-base font-normal leading-relaxed text-[#55708F] sm:text-lg">
-            Empower your physical storefront with institutional infrastructure, structured partnership models, and continuous commercial expansion avenues.
+            {t("shops.description")}
           </p>
         </div>
 
@@ -79,7 +82,7 @@ const Shops: React.FC = () => {
           {/* Left Hero Card (5 Cols) */}
           <div className="lg:col-span-5 relative group overflow-hidden rounded-[32px] shadow-2xl shadow-[#0B2341]/15 border border-[#D9E3EF] min-h-[640px] flex flex-col justify-between">
             {/* Background Image Container */}
-            <div 
+            <div
               className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
               style={{
                 backgroundImage: "url('https://www.retailgazette.co.uk/wp-content/uploads/shutterstock_286865720.jpg')",
@@ -97,19 +100,19 @@ const Shops: React.FC = () => {
                 <Store size={30} strokeWidth={2.2} />
               </div>
               <span className="rounded-full bg-white/10 border border-white/20 px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-white backdrop-blur-md">
-                Verified Portal
+                {t("shops.verifiedPortal")}
               </span>
             </div>
 
             {/* Bottom Content Area */}
             <div className="relative z-10 p-8 sm:p-10 pt-0">
               <h3 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Become an Approved <br />
-                <span className="text-[#C6922B]">Shop Partner</span>
+                {t("shops.cardTitle.line1")} <br />
+                <span className="text-[#C6922B]">{t("shops.cardTitle.line2")}</span>
               </h3>
 
               <p className="mt-4 text-sm leading-relaxed text-white/80">
-                Submit your storefront profile for multi-tier enterprise review. Approved partners gain instant admission into structured resource channels.
+                {t("shops.cardText")}
               </p>
 
               {/* Process Card Box */}
@@ -119,17 +122,17 @@ const Shops: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-white">
-                    Streamlined Integration Workflow
+                    {t("shops.workflow.title")}
                   </h4>
                   <p className="mt-1 text-xs leading-relaxed text-white/70">
-                    Submit Profile &rarr; Metric Review &rarr; Compliance Audit &rarr; Formal Agreement
+                    {t("shops.workflow.text")}
                   </p>
                 </div>
               </div>
 
               {/* Interactive CTA */}
               <button className="group/btn mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#C6922B] px-8 py-4 text-sm font-bold text-white shadow-xl shadow-[#C6922B]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#0B2341]">
-                <span>Join Our Shop Network</span>
+                <span>{t("shops.joinNetwork")}</span>
                 <ArrowUpRight
                   size={18}
                   className="transition-transform duration-300 group-hover/btn:-translate-y-1 group-hover/btn:translate-x-1"
@@ -174,7 +177,7 @@ const Shops: React.FC = () => {
 
                   <div className="mt-6 pt-4 border-t border-[#D9E3EF]/60 flex items-center gap-1.5 text-xs font-semibold text-[#0B2341]">
                     <CheckCircle2 size={15} className="text-[#C6922B]" />
-                    <span>Fully Verified Service</span>
+                    <span>{t("shops.featureFooter")}</span>
                   </div>
                 </div>
               );
@@ -193,20 +196,19 @@ const Shops: React.FC = () => {
                   <Handshake size={22} strokeWidth={2} />
                 </div>
                 <h3 className="text-2xl font-bold text-[#0B2341]">
-                  Building Long-Term Commercial Synergies
+                  {t("shops.callout.title")}
                 </h3>
               </div>
 
               <p className="mt-3 text-sm leading-relaxed text-[#55708F] sm:text-base">
-                Yestime Global engineers reliable, elite enterprise relationships built to withstand market evolution. Approved partners unlock priority access to high-tier commercial tools and sustained cross-collaboration opportunities.
-
+                {t("shops.callout.text")}
               </p>
             </div>
 
             <div className="shrink-0">
               <span className="inline-flex items-center gap-2 rounded-full border border-[#C6922B]/30 bg-[#C6922B]/10 px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-[#C6922B] shadow-sm backdrop-blur-md">
                 <Sparkles size={13} />
-                Professional Alliance
+                {t("shops.callout.badge")}
               </span>
             </div>
 

@@ -5,8 +5,11 @@ import {
   UsersRound,
   BarChart3,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const VisionMission: React.FC = () => {
+  const { t } = useTranslation("vision");
+
   return (
     <section className="bg-white px-4 py-16 sm:px-6 lg:px-12">
       <div className="mx-auto max-w-[1400px]">
@@ -14,12 +17,12 @@ const VisionMission: React.FC = () => {
         {/* Section Heading */}
         <div className="text-center">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d69b22]">
-            OUR VISION &amp; MISSION
+            {t("visionMission.eyebrow")}
           </p>
           <h2 className="mt-3 text-3xl font-bold text-[#132033] md:text-4xl">
-            Our{" "}
+            {t("visionMission.headingLine1")}{" "}
             <span className="text-[#d69b22]">
-              Vision &amp; Mission
+              {t("visionMission.headingHighlight")}
             </span>
           </h2>
         </div>
@@ -43,24 +46,21 @@ const VisionMission: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-[#111c2c]">
-                      Our Vision
+                      {t("visionMission.vision.title")}
                     </h3>
                     <div className="mt-1.5 h-[2px] w-10 bg-[#e5aa2d]" />
                   </div>
                 </div>
 
                 <p className="mt-5 text-sm sm:text-base leading-7 text-gray-600">
-                  To be a global leader in creating a reliable and
-                  innovative ecosystem where individuals and businesses
-                  can access life-changing opportunities that bring
-                  growth, security and prosperity to all.
+                  {t("visionMission.vision.description")}
                 </p>
               </div>
 
               <div className="mt-8 flex items-center gap-3.5 rounded-xl border border-gray-100 bg-gray-50 p-4">
                 <UsersRound className="h-6 w-6 shrink-0 text-[#d69b22]" />
                 <p className="text-sm text-gray-600">
-                  A world of equal opportunities for everyone.
+                  {t("visionMission.vision.highlight")}
                 </p>
               </div>
             </div>
@@ -83,24 +83,21 @@ const VisionMission: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">
-                      Our Mission
+                      {t("visionMission.mission.title")}
                     </h3>
                     <div className="mt-1.5 h-[2px] w-10 bg-[#e5aa2d]" />
                   </div>
                 </div>
 
                 <p className="mt-5 text-sm sm:text-base leading-7 text-gray-300">
-                  To connect people, businesses, and opportunities
-                  through accessible programs, strategic partnerships,
-                  and transparent processes — empowering communities
-                  to grow, achieve, and succeed together.
+                  {t("visionMission.mission.description")}
                 </p>
               </div>
 
               <div className="mt-8 flex items-center gap-3.5 rounded-xl border border-white/10 bg-white/5 p-4">
                 <BarChart3 className="h-6 w-6 shrink-0 text-[#e5aa2d]" />
                 <p className="text-sm text-gray-300">
-                  Empower people. Build trust. Create lasting impact.
+                  {t("visionMission.mission.highlight")}
                 </p>
               </div>
             </div>

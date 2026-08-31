@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "eyebrow": "How It Works",
+    "title": "How members save, participate, and win",
+    "description": "A simple step by step process where every member pay a 100 rupee membership, keeps building savings through purchase activity, and moves closer to the final draw or coupon opening."
+  },
+  "flow": {
+    "eyebrow": "The flow",
+    "titleLead": "From membership to final ",
+    "titleHighlight": "reward draw"
+  },
+  "steps": [
+    {
+      "title": "1. Pay the membership fee",
+      "description": "Every member starts by paying a RS:100 membership fee, which gives access to the program and activates participation in the savings and prize draw system."
+    },
+    {
+      "title": "2. Purchase and save",
+      "description": "When a member purchases through the program, their savings begin to build automatically. Every purchase adds positive value to the member journey."
+    },
+    {
+      "title": "3. Business coupon / draw participation",
+      "description": "Across all programs, business and purchase-based coupons are issued so that each member remains connected to the draw structure and reward cycle."
+    },
+    {
+      "title": "4. Savings keep growing",
+      "description": "The cumulative savings are tracked and reinforced as members continue purchasing, creating a stronger pool of value for the next stage."
+    },
+    {
+      "title": "5. Final coupon opens",
+      "description": "Once the collection phase is complete, the final coupon or draw is opened, giving the member a chance to win the final reward or prize result."
+    },
+    {
+      "title": "6. Reward is announced",
+      "description": "The final result is announced, and the winning member receives the reward, closing the cycle with a clear and rewarding conclusion."
+    }
+  ],
+  "why": {
+    "eyebrow": "Why this works",
+    "titleLead": "Every purchase supports member ",
+    "titleHighlight": "saving growth",
+    "paragraph": "The structure is built around a straightforward idea: a small membership creates entry, purchases drive value, and the savings process keeps moving forward until the last draw or final coupon is opened."
+  },
+  "flowList": [
+    "RS:100 membership entry",
+    "Member purchase is made under the active program",
+    "Savings begin to accumulate for the member",
+    "Business draw / coupon system remains active across all programs",
+    "The final prize in rupees is announced when the last coupon opens"
+  ],
+  "overview": {
+    "eyebrow": "Program Overview",
+    "title": "Member Journey",
+    "active": "Active",
+    "entryLabel": "Entry",
+    "entryValue": "RS:100",
+    "entryText": "Membership contribution to begin participation.",
+    "savingsLabel": "Savings",
+    "savingsValue": "Growing",
+    "savingsText": "Each purchase adds to the value created for the member.",
+    "drawLabel": "Draw",
+    "drawValue": "Final Coupon",
+    "drawText": "The last opening delivers the final opportunity for the reward."
+  },
+  "highlights": [
+    {
+      "title": "Community based program",
+      "text": "Members join as one connected group, creating a shared cycle of savings, rewards, and participation."
+    },
+    {
+      "title": "Transparent process",
+      "text": "The flow is designed to be clear and easy to understand, from membership to accumulation and final result."
+    },
+    {
+      "title": "Rewards are meaningful",
+      "text": "With each purchase and savings contribution, members move closer to the final lucky draw and benefit outcome."
+    },
+    {
+      "title": "Built for growth",
+      "text": "The structure encourages repeat participation while keeping the experience simple, rewarding, and professional."
+    }
+  ],
+  "benefits": {
+    "eyebrow": "Benefits",
+    "titleLead": "Why members choose this ",
+    "titleHighlight": "process",
+    "paragraph": "Empowering your journey with clarity, security, and proven value every step of the way."
+  },
+  "cta": {
+    "eyebrow": "Ready to begin",
+    "title": "Join the process and keep moving toward the final opening",
+    "paragraph": "The model is simple: pay membership, purchase, save, participate in the draw, and unlock the final reward moment when the last coupon opens.",
+    "joinNow": "Join Now",
+    "viewPrograms": "View Programs"
+  }
+}

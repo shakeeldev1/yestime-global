@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "badge": "Contact YES TIME GLOBAL",
+    "title": "Let’s connect and",
+    "titleHighlight": "move opportunities forward.",
+    "subtitle": "Contact us about programs, participation, customer support, partnerships, investment, and global opportunities.",
+    "cta": "Start a conversation",
+    "imageAlt": "Connected global opportunities"
+  },
+  "form": {
+    "sidebar": {
+      "eyebrow": "GET IN TOUCH",
+      "imageAlt": "Corporate Office Building",
+      "statusLabel": "Usually responds",
+      "statusValue": "within 24 hours",
+      "whatsappLabel": "WhatsApp Support",
+      "callLabel": "Direct Call",
+      "emailLabel": "Email Support",
+      "preferTitle": "Prefer WhatsApp?",
+      "preferSubtitle": "Chat directly with our team.",
+      "chatButton": "Chat on WhatsApp",
+      "location": "Lahore, Pakistan"
+    },
+    "eyebrow": "SEND AN INQUIRY",
+    "headingPre": "Let’s Talk About Your Next",
+    "headingHighlight": "Opportunity",
+    "headingSuffix": ".",
+    "subtitle": "Whether you have a question about our programs, partnerships, financial services or membership, our team is here to help.",
+    "badges": {
+      "quick": "Quick Response",
+      "secure": "Secure Inquiry",
+      "support": "Dedicated Support"
+    },
+    "labels": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone / WhatsApp",
+      "country": "Country",
+      "inquiry": "Inquiry Type",
+      "message": "Your Message"
+    },
+    "placeholders": {
+      "name": "Enter your full name",
+      "email": "Enter your email",
+      "phone": "Enter your number",
+      "country": "Select your country",
+      "message": "Tell us what you would like to discuss..."
+    },
+    "consent": "I agree that YES TIME GLOBAL may use these details to respond to my inquiry.",
+    "submit": "Send Message",
+    "submitting": "Sending...",
+    "successTitle": "Message Sent!",
+    "successBody": "Thank you. Your inquiry has been received."
+  },
+  "inquiryTypes": {
+    "general": { "label": "General Inquiry" },
+    "support": { "label": "Customer or Member Support" },
+    "program": { "label": "Program Information" },
+    "partnership": { "label": "Business Partnership" },
+    "investor": { "label": "Investor or Bank Inquiry" },
+    "dealer": { "label": "Dealer, Shop, or Showroom Partnership" },
+    "property": { "label": "Property Partnership" }
+  },
+  "markets": {
+    "heading": "Head Office — Lahore, Pakistan",
+    "mapTitle": "YES TIME GLOBAL Head Office Lahore Location"
+  }
+}

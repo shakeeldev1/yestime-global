@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "badge": "Customer / member information",
+    "titleLine1": "Everything you need,",
+    "titleLine2": "in one clear place.",
+    "subtitle": "Find straightforward guidance about programs, payments, membership, and the support available to you.",
+    "contactSupport": "Contact support",
+    "browseFaqs": "Browse FAQs"
+  },
+  "snapshot": {
+    "label": "Support snapshot",
+    "heading": "We’re here to help",
+    "items": {
+      "programQuestions": "Program questions and guidance",
+      "membershipPayment": "Membership and payment details",
+      "memberSupport": "Support for members and customers",
+      "nextStep": "Next-step assistance from our team"
+    }
+  },
+  "memberSupport": {
+    "label": "Member support",
+    "heading": "Simple answers for everyday needs.",
+    "subtitle": "Use these quick guides to find the information that matters most to you."
+  },
+  "supportAreas": {
+    "programsPayments": {
+      "title": "Programs & payments",
+      "description": "Understand each program, payment steps, and what is required before you proceed."
+    },
+    "memberGuidance": {
+      "title": "Member guidance",
+      "description": "Access useful details about membership, updates, and how your benefits work."
+    },
+    "needAssistance": {
+      "title": "Need assistance?",
+      "description": "Our support team can guide you to the right next step based on your situation."
+    }
+  },
+  "quickSupport": {
+    "secureInformation": {
+      "title": "Secure information",
+      "text": "Your details are reviewed safely and handled with care."
+    },
+    "clearCommunication": {
+      "title": "Clear communication",
+      "text": "We help you understand the process before you take action."
+    },
+    "helpfulGuidance": {
+      "title": "Helpful guidance",
+      "text": "Get the right direction for payments, membership, and plan questions."
+    },
+    "fasterResponse": {
+      "title": "Faster response",
+      "text": "Prepared information helps our team support you more efficiently."
+    }
+  },
+  "howSupportWorks": {
+    "label": "How support works",
+    "heading": "A smooth path to the right answer"
+  },
+  "supportSteps": {
+    "step1": {
+      "title": "Tell us what you need",
+      "text": "Share your question, membership detail, or program concern."
+    },
+    "step2": {
+      "title": "Check your details",
+      "text": "We confirm the right information and next actions required."
+    },
+    "step3": {
+      "title": "Get guided help",
+      "text": "Our team directs you to the best route for a clear answer."
+    },
+    "step4": {
+      "title": "Move forward confidently",
+      "text": "Continue with the right support, plan, or contact path."
+    }
+  },
+  "beforeContact": {
+    "label": "Before you contact us",
+    "heading": "Keep your member details close.",
+    "text": "Having your membership information ready helps us respond faster and direct your question to the right team."
+  },
+  "needAnswer": {
+    "label": "Need an answer now?",
+    "heading": "Browse common questions.",
+    "text": "Visit our FAQ section for quick answers to general questions about programs, membership, and the support available to you."
+  },
+  "cta": {
+    "label": "Still have a question?",
+    "heading": "We’ll guide you to the right next step.",
+    "button": "Contact support"
+  }
+}

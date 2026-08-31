@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight, Play } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const ProgramsHero: React.FC = () => {
+  const { t } = useTranslation("ourPrograms");
+
   return (
     <section className="relative min-h-[480px] w-full overflow-hidden bg-[#000000] text-white">
       {/* BACKGROUND IMAGE & OVERLAYS */}
@@ -29,19 +32,19 @@ const ProgramsHero: React.FC = () => {
               G
             </span>
             <span className="text-[11px] font-semibold tracking-wider text-white uppercase">
-              OUR PROGRAMS
+              {t("hero.badge")}
             </span>
           </div>
 
           {/* MAIN HEADING */}
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Programs &amp; <br />
-            <span className="text-[#e5a51e]">Opportunities</span>
+            {t("hero.headingLead")} <br />
+            <span className="text-[#e5a51e]">{t("hero.headingHighlight")}</span>
           </h1>
 
           {/* DESCRIPTION */}
           <p className="mt-4 max-w-[480px] text-sm leading-relaxed text-gray-300 sm:text-base">
-            Explore our diverse programs designed to provide savings, benefits and practical opportunities for a better tomorrow.
+            {t("hero.description")}
           </p>
 
           {/* CALL TO ACTION BUTTONS */}
@@ -51,7 +54,7 @@ const ProgramsHero: React.FC = () => {
               to="/OurPrograms"
               className="cursor-pointer inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#e5a51e] to-[#c68c18] px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all hover:brightness-110 active:scale-95"
             >
-              <span>Explore Programs</span>
+              <span>{t("hero.exploreButton")}</span>
               <ChevronRight className="h-4 w-4" />
             </Link>
 
@@ -60,7 +63,7 @@ const ProgramsHero: React.FC = () => {
               to="/how-it-works"
               className="cursor-pointer inline-flex items-center gap-2 rounded-xl border border-white/20 bg-black/30 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition-all hover:bg-white/10 active:scale-95"
             >
-              <span>How It Works</span>
+              <span>{t("hero.howItWorksButton")}</span>
               <div className="flex h-5 w-5 items-center justify-center rounded-full bg-white/10">
                 <Play className="h-2.5 w-2.5 fill-white text-white" />
               </div>

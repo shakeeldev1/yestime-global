@@ -1,4 +1,5 @@
 import { Crown, ShieldCheck, Sparkles } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 type TeamMember = {
   name: string
@@ -8,39 +9,41 @@ type TeamMember = {
   image: string
 }
 
-const MANAGEMENT_TEAM: TeamMember[] = [
-  {
-    name: 'Muhammad Afzal',
-    nativeName: 'محمد افضل',
-    role: 'Chief Executive Officer (CEO)',
-    nativeRole: 'چیف ایگزیکٹو آفیسر',
-    image: '/team/afzal-ceo.png',
-  },
-  
-  {
-    name: 'Hafiz Gulzar Ahmed Khalid',
-    nativeName: 'حافظ گلزار احمد خالد',
-    role: 'Chief Operating Officer (COO)',
-    nativeRole: 'چیف آپریٹنگ آفیسر',
-    image: '/team/gulzar-coo.png',
-  },
-  {
-    name: 'Haji Amanat Ali',
-    nativeName: 'حاجی امانت علی',
-    role: 'Chairman',
-    nativeRole: 'چیئرمین',
-    image: '/team/amanat-chairman.png',
-  },
-  {
-    name: 'Sajjad Ahmed',
-    nativeName: 'سجاد احمد',
-    role: 'Chief Financial Officer (CFO)',
-    nativeRole: 'چیف فنانشل آفیسر',
-    image: '/team/Sajjad-cfo.png',
-  },
-]
-
 const ManagementTeam = () => {
+  const { t } = useTranslation('home')
+
+  const MANAGEMENT_TEAM: TeamMember[] = [
+    {
+      name: 'Muhammad Afzal',
+      nativeName: 'محمد افضل',
+      role: t('team.roles.ceo'),
+      nativeRole: 'چیف ایگزیکٹو آفیسر',
+      image: '/team/afzal-ceo.png',
+    },
+
+    {
+      name: 'Hafiz Gulzar Ahmed Khalid',
+      nativeName: 'حافظ گلزار احمد خالد',
+      role: t('team.roles.coo'),
+      nativeRole: 'چیف آپریٹنگ آفیسر',
+      image: '/team/gulzar-coo.png',
+    },
+    {
+      name: 'Haji Amanat Ali',
+      nativeName: 'حاجی امانت علی',
+      role: t('team.roles.chairman'),
+      nativeRole: 'چیئرمین',
+      image: '/team/amanat-chairman.png',
+    },
+    {
+      name: 'Sajjad Ahmed',
+      nativeName: 'سجاد احمد',
+      role: t('team.roles.cfo'),
+      nativeRole: 'چیف فنانشل آفیسر',
+      image: '/team/Sajjad-cfo.png',
+    },
+  ]
+
   return (
     <section className="relative w-full overflow-hidden bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(11,59,110,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(11,59,110,0.045)_1px,transparent_1px)] bg-size-[42px_42px]" aria-hidden="true" />
@@ -49,16 +52,16 @@ const ManagementTeam = () => {
         <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-amber-500/10 px-4 py-1.5 text-sm font-bold uppercase tracking-[0.18em] text-amber-700">
             <Sparkles className="size-4 text-amber-600" aria-hidden="true" />
-            <span>Management Team</span>
+            <span>{t('team.badge')}</span>
           </div>
 
           <h2 className="mt-4 text-3xl font-black tracking-tight text-[#061832] sm:text-4xl lg:text-5xl">
-            Meet the people behind{' '}
-            <span className="text-[#e2a22c]">YES TIME GLOBAL.</span>
+            {t('team.titlePrefix')}
+            <span className="text-[#e2a22c]">{t('team.titleBrand')}</span>
           </h2>
 
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">
-            Guided by experience, accountability, and a shared commitment to connecting opportunities worldwide.
+            {t('team.subtitle')}
           </p>
         </div>
 

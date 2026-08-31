@@ -4,8 +4,11 @@ import {
   Globe2,
   ShieldCheck,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation("vision");
+
   return (
     <section 
       className="relative overflow-hidden text-white bg-cover bg-center bg-no-repeat"
@@ -21,21 +24,18 @@ export default function Hero() {
         <div className="relative z-10">
 
           <p className="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-[#f5b51b]">
-            Our Purpose
+            {t("hero.eyebrow")}
           </p>
 
           <h1 className="text-5xl font-extrabold leading-[1.05] sm:text-6xl">
-            Vision &{" "}
+            {t("hero.titleLine1")}{" "}
             <span className="text-[#f5b51b]">
-              Mission
+              {t("hero.titleHighlight")}
             </span>
           </h1>
 
           <p className="mt-7 max-w-xl text-base leading-7 text-white/75">
-            At YES TIME GLOBAL, our vision and mission are the core of
-            everything we do. They guide our decisions, shape our programs,
-            and drive us to create opportunities that empower people,
-            businesses, and communities across the world.
+            {t("hero.description")}
           </p>
 
           {/* Statistics */}
@@ -45,10 +45,10 @@ export default function Hero() {
               <CalendarDays className="h-7 w-7 text-[#f5b51b]" />
               <div>
                 <strong className="block text-sm text-[#f5b51b]">
-                  1400+
+                  {t("hero.stats.dailyDraws.value")}
                 </strong>
                 <span className="text-[11px] text-white/60">
-                  Daily Draws
+                  {t("hero.stats.dailyDraws.label")}
                 </span>
               </div>
             </div>
@@ -57,10 +57,10 @@ export default function Hero() {
               <Layers3 className="h-7 w-7 text-[#f5b51b]" />
               <div>
                 <strong className="block text-sm text-[#f5b51b]">
-                  8
+                  {t("hero.stats.savingPrograms.value")}
                 </strong>
                 <span className="text-[11px] text-white/60">
-                  Saving Programs
+                  {t("hero.stats.savingPrograms.label")}
                 </span>
               </div>
             </div>
@@ -69,10 +69,10 @@ export default function Hero() {
               <Globe2 className="h-7 w-7 text-[#f5b51b]" />
               <div>
                 <strong className="block text-sm text-[#f5b51b]">
-                  Global
+                  {t("hero.stats.opportunities.value")}
                 </strong>
                 <span className="text-[11px] text-white/60">
-                  Opportunities
+                  {t("hero.stats.opportunities.label")}
                 </span>
               </div>
             </div>
@@ -81,10 +81,10 @@ export default function Hero() {
               <ShieldCheck className="h-7 w-7 text-[#f5b51b]" />
               <div>
                 <strong className="block text-sm text-[#f5b51b]">
-                  Trusted
+                  {t("hero.stats.platform.value")}
                 </strong>
                 <span className="text-[11px] text-white/60">
-                  Platform
+                  {t("hero.stats.platform.label")}
                 </span>
               </div>
             </div>

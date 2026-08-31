@@ -5,8 +5,11 @@ import {
   Users,
   TrendingUp,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const WhyWeExist: React.FC = () => {
+  const { t } = useTranslation("vision");
+
   return (
     <section className="bg-white px-5 py-14 md:px-10">
 
@@ -14,19 +17,17 @@ const WhyWeExist: React.FC = () => {
 
         {/* Label */}
         <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d69b22]">
-          OUR PURPOSE
+          {t("whyWeExist.eyebrow")}
         </p>
 
         {/* Heading */}
         <h2 className="mt-3 text-3xl font-bold text-[#122033] md:text-4xl">
-          Why We Exist
+          {t("whyWeExist.heading")}
         </h2>
 
         {/* Description */}
         <p className="mx-auto mt-4 max-w-[760px] text-sm leading-6 text-gray-500 md:text-base md:leading-7">
-          Our purpose is to build an organized, transparent, and accessible
-          platform that connects people with the right opportunities to grow,
-          save, and succeed together with trust, transparency, and innovation.
+          {t("whyWeExist.description")}
         </p>
 
         {/* Cards */}
@@ -38,7 +39,7 @@ const WhyWeExist: React.FC = () => {
             <Globe2 className="h-6 w-6 shrink-0 text-[#d69b22]" />
 
             <p className="text-sm font-semibold text-gray-700 md:text-base">
-              Global Opportunities
+              {t("whyWeExist.cards.globalOpportunities")}
             </p>
 
           </div>
@@ -49,7 +50,7 @@ const WhyWeExist: React.FC = () => {
             <ShieldCheck className="h-6 w-6 shrink-0 text-[#d69b22]" />
 
             <p className="text-sm font-semibold text-gray-700 md:text-base">
-              Transparent Process
+              {t("whyWeExist.cards.transparentProcess")}
             </p>
 
           </div>
@@ -60,7 +61,7 @@ const WhyWeExist: React.FC = () => {
             <ShieldCheck className="h-6 w-6 shrink-0 text-[#d69b22]" />
 
             <p className="text-sm font-semibold text-gray-700 md:text-base">
-              Secure &amp; Trusted
+              {t("whyWeExist.cards.secureTrusted")}
             </p>
 
           </div>
@@ -71,7 +72,7 @@ const WhyWeExist: React.FC = () => {
             <Users className="h-6 w-6 shrink-0 text-[#d69b22]" />
 
             <p className="text-sm font-semibold text-gray-700 md:text-base">
-              Everyone Can Join
+              {t("whyWeExist.cards.everyoneCanJoin")}
             </p>
 
           </div>
@@ -82,7 +83,7 @@ const WhyWeExist: React.FC = () => {
             <TrendingUp className="h-6 w-6 shrink-0 text-[#d69b22]" />
 
             <p className="text-sm font-semibold text-gray-700 md:text-base">
-              Long-Term Growth
+              {t("whyWeExist.cards.longTermGrowth")}
             </p>
 
           </div>

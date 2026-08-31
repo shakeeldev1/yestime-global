@@ -9,54 +9,51 @@ import {
   ArrowRight,
   Sparkles,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 function BenefitsAndHowItWorks() {
+  const { t } = useTranslation("shopSaving");
+
   const benefits = [
     {
       icon: Tag,
-      title: "Exclusive Discounts",
-      description:
-        "Get special member-only discounts across a wide range of products and services.",
+      title: t("benefits.items.0.title"),
+      description: t("benefits.items.0.description"),
     },
     {
       icon: Coins,
-      title: "Cashback Rewards",
-      description:
-        "Earn valuable cashback and get more back from your everyday purchases.",
+      title: t("benefits.items.1.title"),
+      description: t("benefits.items.1.description"),
     },
     {
       icon: ShoppingBag,
-      title: "Wide Variety",
-      description:
-        "Explore thousands of products across multiple shopping categories.",
+      title: t("benefits.items.2.title"),
+      description: t("benefits.items.2.description"),
     },
     {
       icon: Gift,
-      title: "Special Offers",
-      description:
-        "Enjoy seasonal, festival and limited-time offers available to members.",
+      title: t("benefits.items.3.title"),
+      description: t("benefits.items.3.description"),
     },
     {
       icon: ShieldCheck,
-      title: "Trusted Brands",
-      description:
-        "Shop confidently with trusted brands and verified partner sellers.",
+      title: t("benefits.items.4.title"),
+      description: t("benefits.items.4.description"),
     },
     {
       icon: Lock,
-      title: "Safe & Secure",
-      description:
-        "Enjoy a simple, secure and hassle-free shopping experience.",
+      title: t("benefits.items.5.title"),
+      description: t("benefits.items.5.description"),
     },
   ];
 
-  
+
 
   const whoCanJoin = [
-    "Anyone who wants to save more while shopping.",
-    "Individuals and families looking for better value.",
-    "Members who want simple and hassle-free savings.",
-    "Anyone ready to make everyday shopping more rewarding.",
+    t("whoCanJoin.points.0"),
+    t("whoCanJoin.points.1"),
+    t("whoCanJoin.points.2"),
+    t("whoCanJoin.points.3"),
   ];
 
   return (
@@ -80,7 +77,7 @@ function BenefitsAndHowItWorks() {
 
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#B17F08]">
               <Sparkles size={15} />
-              Benefits For You
+              {t("benefits.label")}
             </div>
 
             <span className="h-px w-8 bg-[#DFA42D]" />
@@ -88,13 +85,12 @@ function BenefitsAndHowItWorks() {
 
           {/* Heading */}
           <h2 className="mx-auto max-w-3xl text-center text-3xl font-black tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-            More Reasons to
-            <span className="text-[#DFA42D]"> Shop & Save</span>
+            {t("benefits.heading")}
+            <span className="text-[#DFA42D]">{t("benefits.headingHighlight")}</span>
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-center text-sm leading-7 text-slate-500 sm:text-base">
-            Enjoy exclusive benefits designed to make your everyday shopping
-            experience smarter, easier and more rewarding.
+            {t("benefits.subtitle")}
           </p>
 
           {/* Benefits Grid */}
@@ -154,20 +150,18 @@ function BenefitsAndHowItWorks() {
 
               <div className="mb-5 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#DFA42D]">
                 <UsersIcon />
-                Who Can Join?
+                {t("whoCanJoin.label")}
               </div>
 
               <h2 className="text-3xl font-black leading-tight sm:text-4xl">
-                Savings Are
+                {t("whoCanJoin.heading")}
                 <span className="block text-[#DFA42D]">
-                  For Everyone.
+                  {t("whoCanJoin.headingBlock")}
                 </span>
               </h2>
 
               <p className="mt-5 text-sm leading-7 text-slate-300">
-                Whether you're shopping for yourself or your family, our
-                program is designed to help you get more value from your
-                everyday purchases.
+                {t("whoCanJoin.description")}
               </p>
 
               <div className="mt-7 space-y-4">
@@ -190,7 +184,7 @@ function BenefitsAndHowItWorks() {
               </div>
 
               <button className="mt-8 flex items-center gap-2 rounded-xl border border-[#DFA42D]/50 bg-[#DFA42D]/10 px-5 py-3 text-xs font-bold text-[#DFA42D] transition hover:bg-[#DFA42D] hover:text-slate-950">
-                Become a Member
+                {t("whoCanJoin.button")}
                 <ArrowRight size={15} />
               </button>
 
@@ -204,7 +198,7 @@ function BenefitsAndHowItWorks() {
             <div className="group relative overflow-hidden rounded-[2rem] sm:row-span-2">
               <img
                 src="https://i.pinimg.com/736x/14/c3/6e/14c36edcba1c8933bf4c95502a5b408e.jpg"
-                alt="Happy family"
+                alt={t("collage.familyImageAlt")}
                 className="h-full min-h-[300px] w-full object-cover transition duration-700 group-hover:scale-105"
               />
 
@@ -212,12 +206,12 @@ function BenefitsAndHowItWorks() {
 
               <div className="absolute bottom-6 left-6 right-6">
                 <span className="mb-2 inline-block rounded-full bg-[#DFA42D] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-950">
-                  Family Savings
+                  {t("collage.familyBadge")}
                 </span>
 
                 <h3 className="text-xl font-black text-white sm:text-2xl">
-                  Better Shopping.
-                  <span className="text-[#DFA42D]"> Better Living.</span>
+                  {t("collage.familyTitle")}
+                  <span className="text-[#DFA42D]">{t("collage.familyTitleHighlight")}</span>
                 </h3>
               </div>
             </div>
@@ -226,14 +220,14 @@ function BenefitsAndHowItWorks() {
             <div className="group relative min-h-[200px] overflow-hidden rounded-[2rem]">
               <img
                 src="https://i.pinimg.com/736x/ec/91/c1/ec91c1290b7d7596d564f1774d618573.jpg"
-                alt="Fresh grocery shopping"
+                alt={t("collage.groceryImageAlt")}
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
 
               <div className="absolute inset-0 bg-black/20 transition group-hover:bg-black/5" />
 
               <div className="absolute bottom-4 left-4 rounded-xl bg-black/60 px-4 py-2 text-xs font-bold text-white backdrop-blur-md">
-                Grocery Savings
+                {t("collage.groceryBadge")}
               </div>
             </div>
 
@@ -241,14 +235,14 @@ function BenefitsAndHowItWorks() {
             <div className="group relative min-h-[200px] overflow-hidden rounded-[2rem]">
               <img
                 src="https://i.pinimg.com/736x/c4/19/ba/c419ba91a367dc4ee7de31219c3a6943.jpg"
-                alt="Fashion shopping"
+                alt={t("collage.fashionImageAlt")}
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
 
               <div className="absolute inset-0 bg-black/20 transition group-hover:bg-black/5" />
 
               <div className="absolute bottom-4 left-4 rounded-xl bg-black/60 px-4 py-2 text-xs font-bold text-white backdrop-blur-md">
-                Fashion Deals
+                {t("collage.fashionBadge")}
               </div>
             </div>
 
@@ -263,11 +257,11 @@ function BenefitsAndHowItWorks() {
 
           <div className="mx-auto flex w-fit items-center gap-2 rounded-full border border-[#DFA42D]/30 bg-white px-5 py-2.5 text-xs font-bold text-slate-700 shadow-sm">
             <Sparkles size={15} className="text-[#DFA42D]" />
-            Shop More
+            {t("bottom.shopMore")}
             <span className="text-[#DFA42D]">•</span>
-            Save More
+            {t("bottom.saveMore")}
             <span className="text-[#DFA42D]">•</span>
-            Live Better
+            {t("bottom.liveBetter")}
           </div>
 
         </div>

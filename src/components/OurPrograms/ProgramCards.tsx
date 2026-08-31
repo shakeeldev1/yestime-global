@@ -18,6 +18,7 @@ import {
   Store,
   Sprout,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface Program {
   number: number;
@@ -32,179 +33,152 @@ interface Program {
   icon: React.ReactNode;
 }
 
-const programs: Program[] = [
-  {
-    number: 1,
-    slug: "shop-saving",
-    title: "SHOPPING SAVING",
-    urduTitle: "شاپنگ سیونگ",
-    image:
-      "https://i.pinimg.com/736x/89/ac/78/89ac7841d71b268c291db5110f1075a7.jpg",
-    category: "Shopping",
-    buttonBg: "bg-emerald-600",
-    buttonHover: "hover:bg-emerald-700",
-    points: [
-      "Daily Essentials",
-      "Smart savings on groceries, household items, and daily needs",
-      "Every 1 Minute • 1 منٹ میں 1 پر",
-    ],
-    icon: <ShoppingCart size={18} />,
-  },
-  {
-    number: 2,
-    slug: "wholesale-saving",
-    title: "WHOLESALE SAVING",
-    urduTitle: "ہول سیل سیونگ",
-    image:
-      "https://i.pinimg.com/736x/db/4a/bd/db4abde92ab95b14c22e716e524f9b19.jpg",
-    category: "Daily Essentials",
-    buttonBg: "bg-blue-600",
-    buttonHover: "hover:bg-blue-700",
-    points: [
-      "Bulk Purchases",
-      "Better value on wholesale essentials and business stock-ups",
-      "Every 1 Minute • ہر 1 منٹ میں",
-    ],
-    icon: <Package size={18} />,
-  },
-  {
-    number: 3,
-    slug: "petrol-diesel-saving",
-    title: "PETROL & DIESEL SAVING",
-    urduTitle: "پٹرول و ڈیزل سیونگ",
-    image:
-      "https://i.pinimg.com/1200x/8b/07/a6/8b07a673cc9b0bd1feb8c7011afa7852.jpg",
-    category: "Vehicles",
-    buttonBg: "bg-orange-600",
-    buttonHover: "hover:bg-orange-700",
-    points: [
-      "Fuel Purchases",
-      "Smart savings for daily travel, commuting, and business transport",
-      "Every 1 Minute • ہر 1 منٹ میں",
-    ],
-    icon: <Fuel size={18} />,
-  },
-  {
-    number: 4,
-    slug: "motorcycle-scooty-saving",
-    title: "MOTORCYCLE & SCOOTY SAVING",
-    urduTitle: "موٹر سائیکل و اسکوٹی سیونگ",
-    image:
-      "https://i.pinimg.com/1200x/75/06/48/750648da4ecca79d29ecb1dc69588a4d.jpg",
-    category: "Vehicles",
-    buttonBg: "bg-purple-600",
-    buttonHover: "hover:bg-purple-700",
-    points: [
-      "New or Used",
-      "Affordable benefits for riders, commuters, and two-wheeler families",
-      "Every 1 Minute • ہر 1 منٹ میں 1 پر",
-    ],
-    icon: <Bike size={18} />,
-  },
-  {
-    number: 5,
-    slug: "car-saving",
-    title: "CAR SAVING",
-    urduTitle: "کار سیونگ",
-    image:
-      "https://i.pinimg.com/1200x/59/e3/99/59e399be0539b9a6e5c0aca0d77907eb.jpg",
-    category: "Vehicles",
-    buttonBg: "bg-indigo-600",
-    buttonHover: "hover:bg-indigo-700",
-    points: [
-      "New or Used Cars",
-      "Smarter value for your next vehicle purchase and ownership plan",
-      "Every 1 Minute • 1 منٹ میں 1 پر",
-    ],
-    icon: <Car size={18} />,
-  },
-  {
-    number: 6,
-    slug: "car-plan",
-    title: "CAR PLAN",
-    urduTitle: "کار پلان",
-    image:
-      "/img3.png",
-    category: "Vehicles",
-    buttonBg: "bg-cyan-600",
-    buttonHover: "hover:bg-cyan-700",
-    points: [
-      "Flexible Payments",
-      "Affordable car plan designed for new or used vehicle ownership",
-      "Every 1 Minute • کار پلان",
-    ],
-    icon: <Car size={18} />,
-  },
-  {
-    number: 7,
-    slug: "property-saving",
-    title: "PROPERTY SAVING",
-    urduTitle: "پراپرٹی سیونگ",
-    image:
-      "https://i.pinimg.com/1200x/56/e6/51/56e65103b9d9741631507ad6484af831.jpg",
-    category: "Property",
-    buttonBg: "bg-teal-600",
-    buttonHover: "hover:bg-teal-700",
-    points: [
-      "Buy / Sell Property",
-      "Smart opportunities for dependable property purchase and resale decisions",
-      "Every 1 Minute • ہر 1 منٹ میں 1 پر",
-    ],
-    icon: <Home size={18} />,
-  },
-  {
-    number: 8,
-    slug: "crop-saving",
-    title: "CROP SAVING",
-    urduTitle: "فصل سیونگ",
-    image:
-      "https://i.pinimg.com/1200x/23/6a/8d/236a8da3b426bcf66da83c4947359e7d.jpg",
-    category: "Agriculture",
-    buttonBg: "bg-amber-600",
-    buttonHover: "hover:bg-amber-700",
-    points: [
-      "Buy / Sell Crops",
-      "Support for agriculture value, crop planning, and better farm decisions",
-      "Every 1 Minute • ہر 1 منٹ میں 1 پر",
-    ],
-    icon: <Wheat size={18} />,
-  },
-  {
-    number: 9,
-    slug: "self-service-saving",
-    title: "SELF-SERVICE SAVING",
-    urduTitle: "سیلف سروس سیونگ",
-    image:
-      "https://i.pinimg.com/1200x/33/41/a1/3341a1c69627a3e23f53db9ed14eb24a.jpg",
-    category: "Self Service",
-    buttonBg: "bg-rose-600",
-    buttonHover: "hover:bg-rose-700",
-    points: [
-      "Buy or Sell by Yourself",
-      "Flexible self-service saving for direct buying, selling, and value growth",
-      "Every 1 Minute • ہر 1 منٹ میں",
-    ],
-    icon: <UserRound size={18} />,
-  },
-  
-];
+interface CategoryDef {
+  key: string;
+  labelKey: string;
+  icon: React.ReactNode;
+}
 
-const categories = [
-  { name: "All Programs", icon: <LayoutGrid size={15} /> },
-  { name: "Shopping", icon: <ShoppingCart size={15} /> },
-  { name: "Vehicles", icon: <Car size={15} /> },
-  { name: "Property", icon: <Home size={15} /> },
-  { name: "Daily Essentials", icon: <Store size={15} /> },
-  { name: "Agriculture", icon: <Sprout size={15} /> },
-  { name: "Self Service", icon: <UserRound size={15} /> },
+// Stable (untranslated) category keys used for filtering — do not localize these values.
+const CATEGORY_ALL = "All Programs";
+
+const categoryDefs: CategoryDef[] = [
+  { key: "All Programs", labelKey: "categories.allPrograms", icon: <LayoutGrid size={15} /> },
+  { key: "Shopping", labelKey: "categories.shopping", icon: <ShoppingCart size={15} /> },
+  { key: "Vehicles", labelKey: "categories.vehicles", icon: <Car size={15} /> },
+  { key: "Property", labelKey: "categories.property", icon: <Home size={15} /> },
+  { key: "Daily Essentials", labelKey: "categories.dailyEssentials", icon: <Store size={15} /> },
+  { key: "Agriculture", labelKey: "categories.agriculture", icon: <Sprout size={15} /> },
+  { key: "Self Service", labelKey: "categories.selfService", icon: <UserRound size={15} /> },
 ];
 
 const ProgramCards: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("All Programs");
+  const { t } = useTranslation("ourPrograms");
+  const [activeTab, setActiveTab] = useState(CATEGORY_ALL);
   const navigate = useNavigate();
 
+  const programs: Program[] = [
+    {
+      number: 1,
+      slug: "shop-saving",
+      title: t("cards.shopSaving.title"),
+      urduTitle: t("cards.shopSaving.urduTitle"),
+      image:
+        "https://i.pinimg.com/736x/89/ac/78/89ac7841d71b268c291db5110f1075a7.jpg",
+      category: "Shopping",
+      buttonBg: "bg-emerald-600",
+      buttonHover: "hover:bg-emerald-700",
+      points: t("cards.shopSaving.points", { returnObjects: true }) as string[],
+      icon: <ShoppingCart size={18} />,
+    },
+    {
+      number: 2,
+      slug: "wholesale-saving",
+      title: t("cards.wholesaleSaving.title"),
+      urduTitle: t("cards.wholesaleSaving.urduTitle"),
+      image:
+        "https://i.pinimg.com/736x/db/4a/bd/db4abde92ab95b14c22e716e524f9b19.jpg",
+      category: "Daily Essentials",
+      buttonBg: "bg-blue-600",
+      buttonHover: "hover:bg-blue-700",
+      points: t("cards.wholesaleSaving.points", { returnObjects: true }) as string[],
+      icon: <Package size={18} />,
+    },
+    {
+      number: 3,
+      slug: "petrol-diesel-saving",
+      title: t("cards.petrolDieselSaving.title"),
+      urduTitle: t("cards.petrolDieselSaving.urduTitle"),
+      image:
+        "https://i.pinimg.com/1200x/8b/07/a6/8b07a673cc9b0bd1feb8c7011afa7852.jpg",
+      category: "Vehicles",
+      buttonBg: "bg-orange-600",
+      buttonHover: "hover:bg-orange-700",
+      points: t("cards.petrolDieselSaving.points", { returnObjects: true }) as string[],
+      icon: <Fuel size={18} />,
+    },
+    {
+      number: 4,
+      slug: "motorcycle-scooty-saving",
+      title: t("cards.motorcycleScootySaving.title"),
+      urduTitle: t("cards.motorcycleScootySaving.urduTitle"),
+      image:
+        "https://i.pinimg.com/1200x/75/06/48/750648da4ecca79d29ecb1dc69588a4d.jpg",
+      category: "Vehicles",
+      buttonBg: "bg-purple-600",
+      buttonHover: "hover:bg-purple-700",
+      points: t("cards.motorcycleScootySaving.points", { returnObjects: true }) as string[],
+      icon: <Bike size={18} />,
+    },
+    {
+      number: 5,
+      slug: "car-saving",
+      title: t("cards.carSaving.title"),
+      urduTitle: t("cards.carSaving.urduTitle"),
+      image:
+        "https://i.pinimg.com/1200x/59/e3/99/59e399be0539b9a6e5c0aca0d77907eb.jpg",
+      category: "Vehicles",
+      buttonBg: "bg-indigo-600",
+      buttonHover: "hover:bg-indigo-700",
+      points: t("cards.carSaving.points", { returnObjects: true }) as string[],
+      icon: <Car size={18} />,
+    },
+    {
+      number: 6,
+      slug: "car-plan",
+      title: t("cards.carPlan.title"),
+      urduTitle: t("cards.carPlan.urduTitle"),
+      image:
+        "/img3.png",
+      category: "Vehicles",
+      buttonBg: "bg-cyan-600",
+      buttonHover: "hover:bg-cyan-700",
+      points: t("cards.carPlan.points", { returnObjects: true }) as string[],
+      icon: <Car size={18} />,
+    },
+    {
+      number: 7,
+      slug: "property-saving",
+      title: t("cards.propertySaving.title"),
+      urduTitle: t("cards.propertySaving.urduTitle"),
+      image:
+        "https://i.pinimg.com/1200x/56/e6/51/56e65103b9d9741631507ad6484af831.jpg",
+      category: "Property",
+      buttonBg: "bg-teal-600",
+      buttonHover: "hover:bg-teal-700",
+      points: t("cards.propertySaving.points", { returnObjects: true }) as string[],
+      icon: <Home size={18} />,
+    },
+    {
+      number: 8,
+      slug: "crop-saving",
+      title: t("cards.cropSaving.title"),
+      urduTitle: t("cards.cropSaving.urduTitle"),
+      image:
+        "https://i.pinimg.com/1200x/23/6a/8d/236a8da3b426bcf66da83c4947359e7d.jpg",
+      category: "Agriculture",
+      buttonBg: "bg-amber-600",
+      buttonHover: "hover:bg-amber-700",
+      points: t("cards.cropSaving.points", { returnObjects: true }) as string[],
+      icon: <Wheat size={18} />,
+    },
+    {
+      number: 9,
+      slug: "self-service-saving",
+      title: t("cards.selfServiceSaving.title"),
+      urduTitle: t("cards.selfServiceSaving.urduTitle"),
+      image:
+        "https://i.pinimg.com/1200x/33/41/a1/3341a1c69627a3e23f53db9ed14eb24a.jpg",
+      category: "Self Service",
+      buttonBg: "bg-rose-600",
+      buttonHover: "hover:bg-rose-700",
+      points: t("cards.selfServiceSaving.points", { returnObjects: true }) as string[],
+      icon: <UserRound size={18} />,
+    },
+  ];
+
   const filteredPrograms =
-    activeTab === "All Programs"
+    activeTab === CATEGORY_ALL
       ? programs
       : programs.filter((p) => p.category === activeTab);
 
@@ -218,19 +192,17 @@ const ProgramCards: React.FC = () => {
               G
             </span>
             <span className="text-[10px] font-bold tracking-wider text-[#c5962e] uppercase">
-              GDISCOVER OUR PROGRAMS
+              {t("cardsSection.badge")}
             </span>
           </div>
 
           <h2 className="text-4xl font-extrabold text-[#071a36] sm:text-5xl">
-            Programs Designed for{" "}
-            <span className="text-[#c5962e]">Your Better Future</span>
+            {t("cardsSection.headingLead")}{" "}
+            <span className="text-[#c5962e]">{t("cardsSection.headingHighlight")}</span>
           </h2>
 
           <p className="mt-2 text-xs text-slate-500 sm:text-sm">
-            YES TIME GLOBAL offers 9 powerful programs to help you save more,
-            spend smartly and create a better future for yourself and your
-            family.
+            {t("cardsSection.subtitle")}
           </p>
         </div>
 
@@ -245,7 +217,7 @@ const ProgramCards: React.FC = () => {
                 9
               </span>
               <span className="text-[11px] font-semibold text-slate-500">
-                Powerful Programs
+                {t("cardsSection.stats.powerfulPrograms")}
               </span>
             </div>
           </div>
@@ -258,10 +230,10 @@ const ProgramCards: React.FC = () => {
             </div>
             <div className="text-left">
               <span className="block text-sm font-bold leading-tight text-slate-900">
-                Global
+                {t("cardsSection.stats.global")}
               </span>
               <span className="text-[11px] font-semibold text-slate-500">
-                Opportunities
+                {t("cardsSection.stats.opportunities")}
               </span>
             </div>
           </div>
@@ -274,10 +246,10 @@ const ProgramCards: React.FC = () => {
             </div>
             <div className="text-left">
               <span className="block text-sm font-bold leading-tight text-slate-900">
-                Trusted
+                {t("cardsSection.stats.trusted")}
               </span>
               <span className="text-[11px] font-semibold text-slate-500">
-                Platform
+                {t("cardsSection.stats.platform")}
               </span>
             </div>
           </div>
@@ -290,10 +262,10 @@ const ProgramCards: React.FC = () => {
             </div>
             <div className="text-left">
               <span className="block text-sm font-bold leading-tight text-slate-900">
-                Member
+                {t("cardsSection.stats.member")}
               </span>
               <span className="text-[11px] font-semibold text-slate-500">
-                Focused
+                {t("cardsSection.stats.focused")}
               </span>
             </div>
           </div>
@@ -301,12 +273,12 @@ const ProgramCards: React.FC = () => {
 
         {/* CATEGORY TABS */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
-          {categories.map((cat) => {
-            const isActive = activeTab === cat.name;
+          {categoryDefs.map((cat) => {
+            const isActive = activeTab === cat.key;
             return (
               <button
-                key={cat.name}
-                onClick={() => setActiveTab(cat.name)}
+                key={cat.key}
+                onClick={() => setActiveTab(cat.key)}
                 className={`inline-flex cursor-pointer items-center gap-2 rounded-full px-5 py-2 text-xs font-semibold transition-all duration-300 active:scale-95 ${
                   isActive
                     ? "scale-105 bg-slate-900 text-white shadow-md"
@@ -314,7 +286,7 @@ const ProgramCards: React.FC = () => {
                 }`}
               >
                 {cat.icon}
-                <span>{cat.name}</span>
+                <span>{t(cat.labelKey)}</span>
               </button>
             );
           })}
@@ -373,7 +345,7 @@ const ProgramCards: React.FC = () => {
                   onClick={() => navigate(program.slug === 'car-plan' ? '/car-plan' : `/program/${program.slug}`)}
                   className="mt-6 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-5 py-2.5 text-xs font-bold text-[#000000] shadow-[0_10px_22px_rgba(197,150,46,0.24)] transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110 active:scale-95"
                 >
-                  <span>{program.slug === 'car-plan' ? 'View Car Plan' : 'View Program'}</span>
+                  <span>{program.slug === 'car-plan' ? t("cardsSection.viewCarPlan") : t("cardsSection.viewProgram")}</span>
                   <ChevronRight
                     size={14}
                     className="transition-transform duration-300 group-hover:translate-x-1"

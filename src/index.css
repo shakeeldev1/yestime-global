@@ -159,3 +159,37 @@ button,
   justify-content: center;
   gap: 0.5rem;
 }
+
+/* =====================================================================
+   URDU / RTL SUPPORT
+   Scoped strictly to [lang="ur"] / [dir="rtl"] so the English (LTR)
+   experience is left completely unchanged.
+   ===================================================================== */
+
+/* Apply an Urdu-friendly typeface only when Urdu is active. */
+html[lang="ur"] body,
+[dir="rtl"] {
+  font-family: "Noto Naskh Arabic", "Noto Nastaliq Urdu", system-ui, sans-serif;
+}
+
+/* Nastaliq headings for a more authentic Urdu look (kept readable). */
+html[lang="ur"] h1,
+html[lang="ur"] h2,
+html[lang="ur"] h3 {
+  font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif;
+  line-height: 1.9;
+}
+
+/* Give Urdu text a little more breathing room without touching English. */
+html[lang="ur"] p,
+html[lang="ur"] li,
+html[lang="ur"] span,
+html[lang="ur"] a,
+html[lang="ur"] button {
+  line-height: 1.85;
+}
+
+/* In RTL, default text alignment flips to the right. */
+[dir="rtl"] body {
+  text-align: right;
+}

@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "badge": "Frequently Asked Questions",
+    "titleLine1": "Answers to help you",
+    "titleHighlight": "move forward with confidence.",
+    "subtitle": "Everything you need to know about YES TIME GLOBAL programs, participation, payments, and support — all in one place.",
+    "viewAnswers": "View Answers",
+    "contactSupport": "Contact Support",
+    "card": {
+      "eyebrow": "QUICK OVERVIEW",
+      "heading": "Before you start",
+      "point1": "Clear plan options for every budget",
+      "point2": "Simple registration and verification",
+      "point3": "Dedicated support at every step"
+    }
+  },
+  "categoriesSection": {
+    "eyebrow": "BROWSE BY TOPIC",
+    "heading": "Find answers by category",
+    "viewAll": "View all questions"
+  },
+  "categories": {
+    "about": {
+      "label": "About us",
+      "description": "The company and its opportunity-focused model."
+    },
+    "programs": {
+      "label": "Programs and plans",
+      "description": "Available programs, terms, draw options, and duration."
+    },
+    "participation": {
+      "label": "Participation",
+      "description": "Registration, payments, tokens, and verification."
+    },
+    "benefits": {
+      "label": "Benefits",
+      "description": "Participation outcomes and important conditions."
+    },
+    "support": {
+      "label": "Support and privacy",
+      "description": "Information handling, complaints, and support."
+    }
+  },
+  "filter": {
+    "heading": "Filter Questions",
+    "ariaLabel": "Filter FAQs by category",
+    "all": "All"
+  },
+  "items": {
+    "what-is-yes-time-global": {
+      "question": "What is YES TIME GLOBAL?",
+      "answer": "YES TIME GLOBAL connects customers, programs, partners, and opportunities through structured participation plans and clear program steps."
+    },
+    "available-programs": {
+      "question": "What programs are available?",
+      "answer": "The company material references Shop & Savings, car, motorcycle or scooter, property-related opportunities, and other approved programs. Availability and terms may vary by program and market."
+    },
+    "plan-types": {
+      "question": "What types of plans are offered?",
+      "answer": "The material refers to plans with eligibility and terms, plans without draw, plans with draw, and 12-month plans. Each plan should be reviewed before participation."
+    },
+    "how-participation-works": {
+      "question": "How does participation work?",
+      "answer": "The general journey is: register, choose a plan, purchase or pay, receive a token, complete verification, participate, and receive the applicable benefit."
+    },
+    "registration-information": {
+      "question": "What information is needed during registration?",
+      "answer": "Customers must provide accurate personal and program-related information. The required information can vary according to the selected program and may be reviewed before participation continues."
+    },
+    "eligibility": {
+      "question": "Who can participate?",
+      "answer": "Participation depends on the relevant program’s eligibility requirements, terms, submitted information, and successful verification. Program-specific requirements should be confirmed before registration."
+    },
+    "payment-process": {
+      "question": "How are payments or purchases handled?",
+      "answer": "After selecting a plan, the customer completes the required purchase, payment, or contribution according to that plan’s approved terms. Payment amounts and methods can vary by program."
+    },
+    "token": {
+      "question": "What is a token?",
+      "answer": "A token is issued after the required purchase or payment step and forms part of the participation and verification process."
+    },
+    "verification": {
+      "question": "Why is verification required?",
+      "answer": "Verification helps confirm the customer’s submitted information and eligibility before the customer proceeds through the program. Incomplete or inaccurate information may require correction or additional review."
+    },
+    "draw-and-non-draw": {
+      "question": "What is the difference between draw and non-draw plans?",
+      "answer": "The material distinguishes plans with a draw from plans without a draw. The exact draw schedule, selection method, and outcome conditions depend on the approved terms of the specific plan."
+    },
+    "twelve-month-plans": {
+      "question": "Are 12-month plans available?",
+      "answer": "Yes. The company material references 12-month plans. The monthly amount, completion conditions, and applicable benefit should be checked in the current plan terms."
+    },
+    "benefit-timing": {
+      "question": "When does a participant receive a benefit?",
+      "answer": "Benefits are connected to successful participation and compliance with the applicable plan terms. There is not one universal benefit timeline for every program."
+    },
+    "customer-responsibilities": {
+      "question": "What are the participant’s responsibilities?",
+      "answer": "Participants must provide correct information, complete required steps, follow the applicable terms, and meet payment and verification requirements."
+    },
+    "refunds-cancellation": {
+      "question": "Can a plan be cancelled or refunded?",
+      "answer": "Cancellation, transfer, and refund rules depend on the approved terms of the selected plan. Please confirm the current policy before publishing or relying on a specific answer."
+    },
+    "privacy": {
+      "question": "How is customer information handled?",
+      "answer": "The company material addresses personal information, data use, disclosure conditions, legal compliance, and customer information handling. The complete Privacy Policy should be consulted for detailed requirements."
+    },
+    "support-complaint": {
+      "question": "How can I request support or submit a complaint?",
+      "answer": "Use the company’s approved support or contact channel and include your name, relevant program information, and a clear description of the request. Official contact details should be supplied from the current company-approved information."
+    },
+    "global-markets": {
+      "question": "Where is YES TIME GLOBAL expanding?",
+      "answer": "The company material references expansion across Pakistan, Nepal, and Indonesia. Program availability may differ by market."
+    }
+  },
+  "cta": {
+    "eyebrow": "STILL HAVE QUESTIONS?",
+    "titleLine1": "Our team is ready to",
+    "titleHighlight": "help you decide.",
+    "description": "Can't find the answer you're looking for? Reach out to our support team and we'll walk you through your options.",
+    "contactUs": "Contact us"
+  }
+}

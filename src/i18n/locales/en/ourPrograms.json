@@ -1,0 +1,153 @@
+{
+  "hero": {
+    "badge": "OUR PROGRAMS",
+    "headingLead": "Programs &",
+    "headingHighlight": "Opportunities",
+    "description": "Explore our diverse programs designed to provide savings, benefits and practical opportunities for a better tomorrow.",
+    "exploreButton": "Explore Programs",
+    "howItWorksButton": "How It Works"
+  },
+  "cardsSection": {
+    "badge": "GDISCOVER OUR PROGRAMS",
+    "headingLead": "Programs Designed for",
+    "headingHighlight": "Your Better Future",
+    "subtitle": "YES TIME GLOBAL offers 9 powerful programs to help you save more, spend smartly and create a better future for yourself and your family.",
+    "stats": {
+      "powerfulPrograms": "Powerful Programs",
+      "global": "Global",
+      "opportunities": "Opportunities",
+      "trusted": "Trusted",
+      "platform": "Platform",
+      "member": "Member",
+      "focused": "Focused"
+    },
+    "viewProgram": "View Program",
+    "viewCarPlan": "View Car Plan"
+  },
+  "categories": {
+    "allPrograms": "All Programs",
+    "shopping": "Shopping",
+    "vehicles": "Vehicles",
+    "property": "Property",
+    "dailyEssentials": "Daily Essentials",
+    "agriculture": "Agriculture",
+    "selfService": "Self Service"
+  },
+  "cards": {
+    "shopSaving": {
+      "title": "SHOPPING SAVING",
+      "urduTitle": "شاپنگ سیونگ",
+      "points": [
+        "Daily Essentials",
+        "Smart savings on groceries, household items, and daily needs",
+        "Every 1 Minute • 1 منٹ میں 1 پر"
+      ]
+    },
+    "wholesaleSaving": {
+      "title": "WHOLESALE SAVING",
+      "urduTitle": "ہول سیل سیونگ",
+      "points": [
+        "Bulk Purchases",
+        "Better value on wholesale essentials and business stock-ups",
+        "Every 1 Minute • ہر 1 منٹ میں"
+      ]
+    },
+    "petrolDieselSaving": {
+      "title": "PETROL & DIESEL SAVING",
+      "urduTitle": "پٹرول و ڈیزل سیونگ",
+      "points": [
+        "Fuel Purchases",
+        "Smart savings for daily travel, commuting, and business transport",
+        "Every 1 Minute • ہر 1 منٹ میں"
+      ]
+    },
+    "motorcycleScootySaving": {
+      "title": "MOTORCYCLE & SCOOTY SAVING",
+      "urduTitle": "موٹر سائیکل و اسکوٹی سیونگ",
+      "points": [
+        "New or Used",
+        "Affordable benefits for riders, commuters, and two-wheeler families",
+        "Every 1 Minute • ہر 1 منٹ میں 1 پر"
+      ]
+    },
+    "carSaving": {
+      "title": "CAR SAVING",
+      "urduTitle": "کار سیونگ",
+      "points": [
+        "New or Used Cars",
+        "Smarter value for your next vehicle purchase and ownership plan",
+        "Every 1 Minute • 1 منٹ میں 1 پر"
+      ]
+    },
+    "carPlan": {
+      "title": "CAR PLAN",
+      "urduTitle": "کار پلان",
+      "points": [
+        "Flexible Payments",
+        "Affordable car plan designed for new or used vehicle ownership",
+        "Every 1 Minute • کار پلان"
+      ]
+    },
+    "propertySaving": {
+      "title": "PROPERTY SAVING",
+      "urduTitle": "پراپرٹی سیونگ",
+      "points": [
+        "Buy / Sell Property",
+        "Smart opportunities for dependable property purchase and resale decisions",
+        "Every 1 Minute • ہر 1 منٹ میں 1 پر"
+      ]
+    },
+    "cropSaving": {
+      "title": "CROP SAVING",
+      "urduTitle": "فصل سیونگ",
+      "points": [
+        "Buy / Sell Crops",
+        "Support for agriculture value, crop planning, and better farm decisions",
+        "Every 1 Minute • ہر 1 منٹ میں 1 پر"
+      ]
+    },
+    "selfServiceSaving": {
+      "title": "SELF-SERVICE SAVING",
+      "urduTitle": "سیلف سروس سیونگ",
+      "points": [
+        "Buy or Sell by Yourself",
+        "Flexible self-service saving for direct buying, selling, and value growth",
+        "Every 1 Minute • ہر 1 منٹ میں"
+      ]
+    }
+  },
+  "howItWorks": {
+    "badge": "HOW IT WORKS",
+    "headingLead": "Getting Started is",
+    "headingHighlight": "Simple",
+    "descPrefix": "Follow these easy steps and start your journey with",
+    "descSuffix": "today.",
+    "steps": [
+      {
+        "title": "Explore Programs",
+        "description": "Browse available programs and opportunities that match your needs."
+      },
+      {
+        "title": "Choose Your Program",
+        "description": "Select the program that suits your goals and start the process."
+      },
+      {
+        "title": "Complete the Process",
+        "description": "Follow the simple steps and submit required information to become a member."
+      },
+      {
+        "title": "Start Your Journey",
+        "description": "Start using your program and enjoy the benefits designed for your future."
+      }
+    ]
+  },
+  "cta": {
+    "badge": "READY TO GET STARTED?",
+    "headingLead": "Move forward with",
+    "headingHighlight": "confidence.",
+    "description": "Explore our programs and discover opportunities designed around your goals and a better future.",
+    "memberLine": "Join thousands of satisfied members today.",
+    "exploreButton": "Explore Programs",
+    "talkButton": "Talk to Our Team"
+  }
+}

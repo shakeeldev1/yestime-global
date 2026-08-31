@@ -1,27 +1,30 @@
 import { Compass, Handshake, TrendingUp } from 'lucide-react'
-
-const partnershipSteps = [
-  {
-    step: '01',
-    title: 'Connect',
-    text: 'Share your goals and the strengths you bring to a partnership.',
-    icon: Handshake,
-  },
-  {
-    step: '02',
-    title: 'Explore',
-    text: 'Together, we identify a practical opportunity for collaboration.',
-    icon: Compass,
-  },
-  {
-    step: '03',
-    title: 'Grow',
-    text: 'Build a clear relationship designed to create lasting value.',
-    icon: TrendingUp,
-  },
-]
+import { useTranslation } from 'react-i18next'
 
 const PartnershipProcess = () => {
+  const { t } = useTranslation('investors')
+
+  const partnershipSteps = [
+    {
+      step: '01',
+      title: t('process.steps.0.title'),
+      text: t('process.steps.0.text'),
+      icon: Handshake,
+    },
+    {
+      step: '02',
+      title: t('process.steps.1.title'),
+      text: t('process.steps.1.text'),
+      icon: Compass,
+    },
+    {
+      step: '03',
+      title: t('process.steps.2.title'),
+      text: t('process.steps.2.text'),
+      icon: TrendingUp,
+    },
+  ]
+
   return (
     <section className="relative overflow-hidden bg-[#020c1c] px-5 py-16 sm:px-8 lg:px-12">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,197,78,0.15),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(245,197,78,0.12),transparent_28%)]" />
@@ -30,10 +33,10 @@ const PartnershipProcess = () => {
         <div className="flex flex-col items-center text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#d6b35a]/50 bg-[#f5c54e]/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#f5c54e]">
             <Compass className="h-3.5 w-3.5" />
-            Partnership Process
+            {t('process.badge')}
           </span>
           <h2 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
-            How we build <span className="text-[#f5c54e]">meaningful partnerships</span>
+            {t('process.headingLead')} <span className="text-[#f5c54e]">{t('process.headingHighlight')}</span>
           </h2>
         </div>
 

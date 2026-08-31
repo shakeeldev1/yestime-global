@@ -1,0 +1,91 @@
+{
+  "hero": {
+    "badge": "ABOUT YES TIME GLOBAL",
+    "titleLine1": "Building Connections.",
+    "titleLine2": "Creating Opportunities.",
+    "titleLine3": "Changing Futures.",
+    "description": "is a trusted ecosystem that connects people, businesses and opportunities through transparent programs, strategic partnerships and accessible solutions.",
+    "cta": {
+      "discover": "Discover Our Story",
+      "explore": "Explore Programs"
+    },
+    "stats": {
+      "founded": { "label": "Founded" },
+      "programs": { "label": "Powerful Programs" },
+      "transparent": { "label": "Transparent" },
+      "global": { "value": "Global", "label": "Opportunities" }
+    }
+  },
+  "whoWeAre": {
+    "badge": "WHO WE ARE",
+    "headingLine1": "Connecting People,",
+    "headingBusinesses": "Businesses &",
+    "headingOpportunities": "Opportunities.",
+    "para1": {
+      "part1": "Founded in",
+      "part2": "emerged with a bold vision to revolutionize how people, businesses, and communities connect."
+    },
+    "para2": "What started as an ambitious idea has grown into a trusted platform, connecting thousands of users to life-changing opportunities in shopping, vehicles, property, agriculture, and more. We empower individuals through transparent processes, helping you save more, invest smarter, and build lasting success.",
+    "pillarsTitle": "Our Core Pillars",
+    "pillars": {
+      "mission": { "title": "Mission", "subtitle": "Connect & Empower" },
+      "vision": { "title": "Vision", "subtitle": "Global Leadership" },
+      "values": { "title": "Values", "subtitle": "Trust & Innovation" }
+    },
+    "badges": {
+      "globalReach": "Global Reach",
+      "transparent": "100% Transparent",
+      "partners": "Strategic Partners"
+    },
+    "cta": "Discover Our Full Story",
+    "images": {
+      "programsAlt": "Programs Header",
+      "since": "Since 2023",
+      "globalNetworkAlt": "Global Network",
+      "globalNetworkLabel": "Global Network",
+      "communityImpactAlt": "Community Impact",
+      "communityFirst": "Community First"
+    }
+  },
+  "ecosystem": {
+    "badge": "OUR ECOSYSTEM",
+    "headingPart1": "One Ecosystem. Multiple",
+    "headingHighlight": "Opportunities.",
+    "items": {
+      "shopping": { "title": "Shopping & Savings", "description": "Smart shopping, better savings" },
+      "vehicles": { "title": "Vehicles Solutions", "description": "Mobility solutions made easy" },
+      "property": { "title": "Property Opportunities", "description": "Access to property & real estate" },
+      "agriculture": { "title": "Agriculture & Farming", "description": "Supporting farmers & agriculture" },
+      "business": { "title": "Business Solutions", "description": "Empowering businesses for growth" }
+    }
+  },
+  "visionMission": {
+    "badge": "OUR VISION & MISSION",
+    "headingPart1": "Our",
+    "headingHighlight": "Vision & Mission",
+    "subtitle": "Guiding principles driving our ecosystem toward sustainable growth and shared success.",
+    "vision": {
+      "badge": "01 / PURPOSE",
+      "title": "Our Vision",
+      "text": "To be a global leader in creating a reliable and innovative ecosystem where individuals and businesses can access life-changing opportunities that bring growth, security, and prosperity to all.",
+      "highlight": "A world of equal opportunities for everyone."
+    },
+    "mission": {
+      "badge": "02 / ACTION",
+      "title": "Our Mission",
+      "text": "To connect people, businesses, and opportunities through accessible programs, strategic partnerships, and transparent processes — empowering communities to grow, achieve, and succeed together.",
+      "highlight": "Empower people. Build trust. Create lasting impact."
+    }
+  },
+  "team": {
+    "badge": "Management Team",
+    "headingPart1": "Meet the people behind",
+    "subtitle": "Guided by experience, accountability, and a shared commitment to connecting opportunities worldwide.",
+    "members": {
+      "afzal": { "role": "Chief Executive Officer (CEO)" },
+      "gulzar": { "role": "Chief Operating Officer (COO)" },
+      "amanat": { "role": "Chairman" },
+      "sajjad": { "role": "Chief Financial Officer (CFO)" }
+    }
+  }
+}

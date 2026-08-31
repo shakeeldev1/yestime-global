@@ -1,0 +1,60 @@
+{
+  "brand": "Yes Time Global",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "business": "Business",
+    "finance": "Finance",
+    "events": "Events",
+    "support": "Support",
+    "contactUs": "Contact Us",
+    "language": "Language",
+    "selectLanguage": "Select language",
+    "toggleMenu": "Toggle menu",
+    "items": {
+      "ourPrograms": "Our Programs",
+      "howItWorks": "How It Works",
+      "businessPartners": "Business Partners",
+      "globalExpansion": "Global Expansion",
+      "investors": "Investors",
+      "banksFinancial": "Banks & Financial",
+      "customerSupport": "Customer Support",
+      "faqs": "FAQs"
+    }
+  },
+  "languages": {
+    "en": "English",
+    "ur": "Urdu"
+  },
+  "footer": {
+    "description": "Yes Time Global Private Limited — Connecting global opportunities with innovation, transparency, and trust through car programs, real estate ventures, and automated savings plans.",
+    "badge": "Transparency • Trust • Accessibility",
+    "programsHeading": "Our Programs",
+    "quickLinksHeading": "Quick Links",
+    "contactHeading": "Contact Us",
+    "address": "Yes Time Global Head Lahore, Pakistan",
+    "copyright": "© {{year}} Yes Time Global Private Limited. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions",
+    "legalDisclaimer": "Legal Disclaimer",
+    "programLinks": {
+      "car": "Car Program",
+      "realEstate": "Real Estate Program",
+      "vehicles": "Vehicles",
+      "shopping": "Shopping & Savings",
+      "automated": "Automated Savings System"
+    },
+    "quickLinks": {
+      "about": "About Us",
+      "visionMission": "Vision & Mission",
+      "businessPartners": "Business Partners",
+      "banksFinancial": "Banks & Financial",
+      "faqsSupport": "FAQs & Support"
+    }
+  },
+  "whatsapp": {
+    "message": "Hello Yes Time Global",
+    "ariaLabel": "Chat with us on WhatsApp"
+  }
+}

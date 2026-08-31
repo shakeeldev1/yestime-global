@@ -2,15 +2,14 @@ import LegalContactCTA from '../components/legal/LegalContactCTA'
 import LegalDocumentContent from '../components/legal/LegalDocumentContent'
 import LegalHero from '../components/legal/LegalHero'
 import LegalNavigation from '../components/legal/LegalNavigation'
-import { termsDocument } from '../components/legal/legalData'
 
 const TermsConditions = () => {
   return (
     <main className="min-h-screen bg-white">
-      <LegalHero {...termsDocument} />
+      <LegalHero documentId="terms" />
       <LegalNavigation active="terms" />
-      <LegalDocumentContent document={termsDocument} />
-      <LegalContactCTA title="Need help understanding" highlight="a program term?" />
+      <LegalDocumentContent documentId="terms" />
+      <LegalContactCTA documentId="terms" />
     </main>
   )
 }

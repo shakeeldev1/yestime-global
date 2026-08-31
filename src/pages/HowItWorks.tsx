@@ -10,80 +10,77 @@ import {
   Users,
   Wallet,
 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 import PageHero from '../components/common/PageHero'
 
-const steps = [
-  {
-    icon: Wallet,
-    title: '1. Pay the membership fee',
-    description:
-      'Every member starts by paying a RS:100 membership fee, which gives access to the program and activates participation in the savings and prize draw system.',
-  },
-  {
-    icon: TrendingUp,
-    title: '2. Purchase and save',
-    description:
-      'When a member purchases through the program, their savings begin to build automatically. Every purchase adds positive value to the member journey.',
-  },
-  {
-    icon: BadgePercent,
-    title: '3. Business coupon / draw participation',
-    description:
-      'Across all programs, business and purchase-based coupons are issued so that each member remains connected to the draw structure and reward cycle.',
-  },
-  {
-    icon: PiggyBank,
-    title: '4. Savings keep growing',
-    description:
-      'The cumulative savings are tracked and reinforced as members continue purchasing, creating a stronger pool of value for the next stage.',
-  },
-  {
-    icon: Ticket,
-    title: '5. Final coupon opens',
-    description:
-      'Once the collection phase is complete, the final coupon or draw is opened, giving the member a chance to win the final reward or prize result.',
-  },
-  {
-    icon: Gift,
-    title: '6. Reward is announced',
-    description:
-      'The final result is announced, and the winning member receives the reward, closing the cycle with a clear and rewarding conclusion.',
-  },
-]
-
-const highlights = [
-  {
-    icon: Users,
-    title: 'Community based program',
-    text: 'Members join as one connected group, creating a shared cycle of savings, rewards, and participation.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Transparent process',
-    text: 'The flow is designed to be clear and easy to understand, from membership to accumulation and final result.',
-  },
-  {
-    icon: Gift,
-    title: 'Rewards are meaningful',
-    text: 'With each purchase and savings contribution, members move closer to the final lucky draw and benefit outcome.',
-  },
-  {
-    icon: Sparkles,
-    title: 'Built for growth',
-    text: 'The structure encourages repeat participation while keeping the experience simple, rewarding, and professional.',
-  },
-]
-
-const flow = [
-  'RS:100 membership entry',
-  'Member purchase is made under the active program',
-  'Savings begin to accumulate for the member',
-  'Business draw / coupon system remains active across all programs',
-  'The final prize in rupees is announced when the last coupon opens',
-]
-
 const HowItWorks = () => {
+  const { t } = useTranslation('howItWorks')
+
+  const steps = [
+    {
+      icon: Wallet,
+      title: t('steps.0.title'),
+      description: t('steps.0.description'),
+    },
+    {
+      icon: TrendingUp,
+      title: t('steps.1.title'),
+      description: t('steps.1.description'),
+    },
+    {
+      icon: BadgePercent,
+      title: t('steps.2.title'),
+      description: t('steps.2.description'),
+    },
+    {
+      icon: PiggyBank,
+      title: t('steps.3.title'),
+      description: t('steps.3.description'),
+    },
+    {
+      icon: Ticket,
+      title: t('steps.4.title'),
+      description: t('steps.4.description'),
+    },
+    {
+      icon: Gift,
+      title: t('steps.5.title'),
+      description: t('steps.5.description'),
+    },
+  ]
+
+  const highlights = [
+    {
+      icon: Users,
+      title: t('highlights.0.title'),
+      text: t('highlights.0.text'),
+    },
+    {
+      icon: ShieldCheck,
+      title: t('highlights.1.title'),
+      text: t('highlights.1.text'),
+    },
+    {
+      icon: Gift,
+      title: t('highlights.2.title'),
+      text: t('highlights.2.text'),
+    },
+    {
+      icon: Sparkles,
+      title: t('highlights.3.title'),
+      text: t('highlights.3.text'),
+    },
+  ]
+
+  const flow = [
+    t('flowList.0'),
+    t('flowList.1'),
+    t('flowList.2'),
+    t('flowList.3'),
+    t('flowList.4'),
+  ]
+
   return (
     <div className="relative overflow-hidden bg-white text-slate-900">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(circle_at_top,_rgba(212,175,55,0.14),_transparent_44%)]" />
@@ -91,17 +88,17 @@ const HowItWorks = () => {
       <div className="pointer-events-none absolute right-[-60px] top-80 h-72 w-72 rounded-full bg-[#000000]/10 blur-3xl" />
 
       <PageHero
-        eyebrow="How It Works"
-        title="How members save, participate, and win"
-        description="A simple step by step process where every member pay a 100 rupee membership, keeps building savings through purchase activity, and moves closer to the final draw or coupon opening."
+        eyebrow={t('hero.eyebrow')}
+        title={t('hero.title')}
+        description={t('hero.description')}
       />
 
       <section className="relative px-5 py-16 sm:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#a97916]">The flow</p>
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#a97916]">{t('flow.eyebrow')}</p>
             <h2 className="text-3xl font-black tracking-tight text-[#071a36] sm:text-4xl">
-              From membership to final <span className="text-[#c5962e]">reward draw</span>
+              {t('flow.titleLead')}<span className="text-[#c5962e]">{t('flow.titleHighlight')}</span>
             </h2>
           </div>
 
@@ -130,12 +127,12 @@ const HowItWorks = () => {
         <div className="absolute left-0 top-0 h-full w-full bg-[linear-gradient(135deg,rgba(197,150,46,0.10),transparent_46%)]" />
         <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <div>
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#f0c75e]">Why this works</p>
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#f0c75e]">{t('why.eyebrow')}</p>
             <h2 className="text-3xl font-black tracking-tight sm:text-4xl">
-              Every purchase supports member <span className="text-[#f0c75e]">saving growth</span>
+              {t('why.titleLead')}<span className="text-[#f0c75e]">{t('why.titleHighlight')}</span>
             </h2>
             <p className="mt-5 max-w-xl text-base leading-7 text-slate-300">
-              The structure is built around a straightforward idea: a small membership creates entry, purchases drive value, and the savings process keeps moving forward until the last draw or final coupon is opened.
+              {t('why.paragraph')}
             </p>
 
             <div className="mt-8 space-y-4">
@@ -153,32 +150,32 @@ const HowItWorks = () => {
           <div className="rounded-[2rem] border border-[#c5962e]/30 bg-[linear-gradient(180deg,#111111_0%,#000000_100%)] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
             <div className="mb-6 flex items-center justify-between">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f0c75e]">Program Overview</p>
-                <h3 className="mt-2 text-2xl font-black text-white">Member Journey</h3>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f0c75e]">{t('overview.eyebrow')}</p>
+                <h3 className="mt-2 text-2xl font-black text-white">{t('overview.title')}</h3>
               </div>
               <div className="rounded-full border border-[#f0c75e]/40 bg-[#f0c75e]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#f0c75e]">
-                Active
+                {t('overview.active')}
               </div>
             </div>
 
             <div className="space-y-5">
               <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Entry</p>
-                <p className="mt-2 text-3xl font-black text-white">RS:100</p>
-                <p className="mt-2 text-sm text-slate-300">Membership contribution to begin participation.</p>
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">{t('overview.entryLabel')}</p>
+                <p className="mt-2 text-3xl font-black text-white">{t('overview.entryValue')}</p>
+                <p className="mt-2 text-sm text-slate-300">{t('overview.entryText')}</p>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-white/10 bg-[#111111] p-4">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Savings</p>
-                  <p className="mt-2 text-xl font-bold text-[#f0c75e]">Growing</p>
-                  <p className="mt-2 text-sm text-slate-300">Each purchase adds to the value created for the member.</p>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">{t('overview.savingsLabel')}</p>
+                  <p className="mt-2 text-xl font-bold text-[#f0c75e]">{t('overview.savingsValue')}</p>
+                  <p className="mt-2 text-sm text-slate-300">{t('overview.savingsText')}</p>
                 </div>
 
                 <div className="rounded-2xl border border-white/10 bg-[#111111] p-4">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Draw</p>
-                  <p className="mt-2 text-xl font-bold text-[#f0c75e]">Final Coupon</p>
-                  <p className="mt-2 text-sm text-slate-300">The last opening delivers the final opportunity for the reward.</p>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">{t('overview.drawLabel')}</p>
+                  <p className="mt-2 text-xl font-bold text-[#f0c75e]">{t('overview.drawValue')}</p>
+                  <p className="mt-2 text-sm text-slate-300">{t('overview.drawText')}</p>
                 </div>
               </div>
             </div>
@@ -196,16 +193,16 @@ const HowItWorks = () => {
             <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-[#c5962e]/30 bg-[#f8e8b3]/30 px-4 py-1.5 backdrop-blur-md">
               <span className="h-1.5 w-1.5 rounded-full bg-[#a97916]" />
               <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#a97916]">
-                Benefits
+                {t('benefits.eyebrow')}
               </p>
             </div>
 
             <h2 className="text-3xl font-black tracking-tight text-[#071a36] sm:text-4xl lg:text-5xl">
-              Why members choose this <span className="bg-gradient-to-r from-[#a97916] via-[#c5962e] to-[#f0c75e] bg-clip-text text-transparent">process</span>
+              {t('benefits.titleLead')}<span className="bg-gradient-to-r from-[#a97916] via-[#c5962e] to-[#f0c75e] bg-clip-text text-transparent">{t('benefits.titleHighlight')}</span>
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 sm:text-lg">
-              Empowering your journey with clarity, security, and proven value every step of the way.
+              {t('benefits.paragraph')}
             </p>
           </div>
 
@@ -246,22 +243,22 @@ const HowItWorks = () => {
 
       <section className="px-5 pb-20 sm:px-8 lg:px-16">
         <div className="mx-auto max-w-5xl rounded-[2rem] border border-[#d7b258]/40 bg-[linear-gradient(135deg,#fffdf8_0%,#fff7dc_100%)] p-8 text-center shadow-[0_25px_50px_rgba(197,150,46,0.12)] sm:p-12">
-          <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#a97916]">Ready to begin</p>
+          <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#a97916]">{t('cta.eyebrow')}</p>
           <h2 className="mt-4 text-3xl font-black text-[#071a36] sm:text-4xl">
-            Join the process and keep moving toward the final opening
+            {t('cta.title')}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-700">
-            The model is simple: pay membership, purchase, save, participate in the draw, and unlock the final reward moment when the last coupon opens.
+            {t('cta.paragraph')}
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <button className="inline-flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-7 py-3.5 text-sm font-bold text-[#071a36] shadow-[0_12px_25px_rgba(197,150,46,0.25)] transition hover:brightness-110 active:scale-95">
-              Join Now
+              {t('cta.joinNow')}
               <ArrowRight size={16} />
             </button>
 
             <button className="rounded-xl border border-[#c5962e]/50 bg-white px-6 py-3.5 text-sm font-bold text-[#071a36] transition hover:border-[#c5962e] hover:bg-[#fffaf0]">
-              View Programs
+              {t('cta.viewPrograms')}
             </button>
           </div>
         </div>

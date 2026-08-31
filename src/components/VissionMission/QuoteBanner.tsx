@@ -1,7 +1,10 @@
 import React from "react";
 import { Quote, Sparkles } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const QuoteBanner: React.FC = () => {
+  const { t } = useTranslation("vision");
+
   return (
     <section className="bg-white px-4 py-12 sm:px-6 lg:px-12">
       <div className="mx-auto max-w-[1400px]">
@@ -31,13 +34,13 @@ const QuoteBanner: React.FC = () => {
               </div>
 
               <p className="text-xl font-medium italic leading-relaxed sm:text-2xl md:text-3xl text-white/95">
-                “Take every opportunity to grow your business, and take a step forward toward the future.”
+                {t("quoteBanner.quote")}
               </p>
 
               <div className="mt-6 flex items-center gap-3">
                 <div className="h-1 w-10 bg-[#f5b51b]" />
                 <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#f5b51b]">
-                  YES TIME GLOBAL
+                  {t("quoteBanner.attribution")}
                 </span>
               </div>
             </div>
@@ -47,8 +50,8 @@ const QuoteBanner: React.FC = () => {
               <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md">
                 <Sparkles className="h-6 w-6 text-[#f5b51b]" />
                 <div>
-                  <span className="block text-sm font-bold text-white">Build Your Future</span>
-                  <span className="text-xs text-white/60">Empowering Communities</span>
+                  <span className="block text-sm font-bold text-white">{t("quoteBanner.badgeTitle")}</span>
+                  <span className="text-xs text-white/60">{t("quoteBanner.badgeSubtitle")}</span>
                 </div>
               </div>
             </div>

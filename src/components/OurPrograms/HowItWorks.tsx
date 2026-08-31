@@ -8,6 +8,7 @@ import {
   Sparkles,
   UserCheck,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface Step {
   number: string;
@@ -16,38 +17,30 @@ interface Step {
   icon: React.ReactNode;
 }
 
-const steps: Step[] = [
-  {
-    number: "01",
-    title: "Explore Programs",
-    description:
-      "Browse available programs and opportunities that match your needs.",
-    icon: <Binoculars size={28} strokeWidth={1.5} />,
-  },
-  {
-    number: "02",
-    title: "Choose Your Program",
-    description:
-      "Select the program that suits your goals and start the process.",
-    icon: <ClipboardCheck size={28} strokeWidth={1.5} />,
-  },
-  {
-    number: "03",
-    title: "Complete the Process",
-    description:
-      "Follow the simple steps and submit required information to become a member.",
-    icon: <FileCheck size={28} strokeWidth={1.5} />,
-  },
-  {
-    number: "04",
-    title: "Start Your Journey",
-    description:
-      "Start using your program and enjoy the benefits designed for your future.",
-    icon: <Rocket size={28} strokeWidth={1.5} />,
-  },
-];
+interface StepText {
+  title: string;
+  description: string;
+}
 
 const HowItWorksSection: React.FC = () => {
+  const { t } = useTranslation("ourPrograms");
+
+  const stepIcons = [
+    <Binoculars size={28} strokeWidth={1.5} />,
+    <ClipboardCheck size={28} strokeWidth={1.5} />,
+    <FileCheck size={28} strokeWidth={1.5} />,
+    <Rocket size={28} strokeWidth={1.5} />,
+  ];
+  const stepNumbers = ["01", "02", "03", "04"];
+  const stepsText = t("howItWorks.steps", { returnObjects: true }) as StepText[];
+
+  const steps: Step[] = stepNumbers.map((number, i) => ({
+    number,
+    title: stepsText[i]?.title ?? "",
+    description: stepsText[i]?.description ?? "",
+    icon: stepIcons[i],
+  }));
+
   return (
     <div className="w-full font-sans antialiased">
       {/* ================= HOW IT WORKS SECTION (DARK) ================= */}
@@ -61,19 +54,19 @@ const HowItWorksSection: React.FC = () => {
             <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[#e5a51e]/60 bg-[#000000] px-3.5 py-1">
               <Sparkles size={12} className="text-[#e5a51e]" />
               <span className="text-[11px] font-bold tracking-[0.15em] text-[#e5a51e] uppercase">
-                HOW IT WORKS
+                {t("howItWorks.badge")}
               </span>
             </div>
 
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-4xl">
-              Getting Started is{" "}
-              <span className="font-extrabold text-[#e5a51e]">Simple</span>
+              {t("howItWorks.headingLead")}{" "}
+              <span className="font-extrabold text-[#e5a51e]">{t("howItWorks.headingHighlight")}</span>
             </h2>
 
             <p className="mt-3 text-xs leading-relaxed text-slate-300 sm:text-sm">
-              Follow these easy steps and start your journey with{" "}
+              {t("howItWorks.descPrefix")}{" "}
               <span className="font-bold text-white">YES TIME GLOBAL</span>{" "}
-              today.
+              {t("howItWorks.descSuffix")}
             </p>
           </div>
 
@@ -140,22 +133,21 @@ const HowItWorksSection: React.FC = () => {
             <div className="max-w-[650px]">
               <div className="mb-2 inline-flex items-center gap-2 text-[11px] font-bold tracking-widest text-[#e5a51e] uppercase">
                 <Sparkles size={14} />
-                <span>READY TO GET STARTED?</span>
+                <span>{t("cta.badge")}</span>
               </div>
 
               <h3 className="text-3xl font-extrabold text-white sm:text-4xl lg:text-[2.5rem]">
-                Move forward with{" "}
-                <span className="text-[#e5a51e]">confidence.</span>
+                {t("cta.headingLead")}{" "}
+                <span className="text-[#e5a51e]">{t("cta.headingHighlight")}</span>
               </h3>
 
               <p className="mt-3 text-xs leading-relaxed text-slate-300 sm:text-sm">
-                Explore our programs and discover opportunities designed around
-                your goals and a better future.
+                {t("cta.description")}
               </p>
 
               <div className="mt-6 flex items-center gap-2 text-xs font-medium text-slate-300">
                 <UserCheck size={16} className="text-[#e5a51e]" />
-                <span>Join thousands of satisfied members today.</span>
+                <span>{t("cta.memberLine")}</span>
               </div>
             </div>
 
@@ -165,7 +157,7 @@ const HowItWorksSection: React.FC = () => {
                 href="/programs"
                 className="group flex items-center justify-center gap-2 rounded-xl bg-[#e5a51e] px-6 py-3.5 text-xs font-bold text-black shadow-md transition-all duration-300 hover:bg-[#f3b431] active:scale-95"
               >
-                <span>Explore Programs</span>
+                <span>{t("cta.exploreButton")}</span>
                 <ChevronRight
                   size={16}
                   className="transition-transform duration-300 group-hover:translate-x-1"
@@ -176,7 +168,7 @@ const HowItWorksSection: React.FC = () => {
                 href="/contact"
                 className="flex items-center justify-center rounded-xl border border-[#e5a51e]/70 bg-black/40 px-6 py-3.5 text-xs font-bold text-white transition-all duration-300 hover:border-[#e5a51e] hover:bg-[#e5a51e]/10 active:scale-95"
               >
-                Talk to Our Team
+                {t("cta.talkButton")}
               </a>
             </div>
           </div>

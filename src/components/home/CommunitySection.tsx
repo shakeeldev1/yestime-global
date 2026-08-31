@@ -6,58 +6,61 @@ import {
   Sparkles,
   Users,
 } from 'lucide-react'
-
-const FEATURES = [
-  {
-    title: 'Secure & Reliable',
-    text: 'Your security and operational safety are always our top priority.',
-    icon: ShieldCheck,
-    image: 'https://i.pinimg.com/1200x/62/2e/6e/622e6e6348cfcb3abb43f16d0d0dcb78.jpg',
-  },
-  {
-    title: 'A Place for Everyone',
-    text: 'A welcoming space where everyone has an equal place to grow.',
-    icon: Users,
-    image: 'https://i.pinimg.com/736x/5d/75/06/5d7506575df6b7050b4dc8ddfbad80dd.jpg',
-  },
-  {
-    title: 'Modern Solutions',
-    text: 'Continuous technological improvements for a better experience.',
-    icon: Lightbulb,
-    image: 'https://i.pinimg.com/736x/e2/5a/b9/e25ab9ca951eee9cf5dd92434fc67666.jpg',
-  },
-  {
-    title: 'Creating Real Change',
-    text: 'Accessible opportunities that create real, sustainable change.',
-    icon: Globe2,
-    image: 'https://i.pinimg.com/1200x/f9/65/e0/f965e04e399643c7f9ec210a51ab7370.jpg',
-  },
-  {
-    title: 'Your Success Comes First',
-    text: 'We are committed to your growth, progress, and long term success.',
-    icon: HeartHandshake,
-    image: 'https://i.pinimg.com/736x/dc/6b/82/dc6b822d67103e6b93cce14246c60b62.jpg',
-  },
-] as const
+import { useTranslation } from 'react-i18next'
 
 export const CommunitySection = () => {
+  const { t } = useTranslation('home')
+
+  const FEATURES = [
+    {
+      title: t('community.features.0.title'),
+      text: t('community.features.0.text'),
+      icon: ShieldCheck,
+      image: 'https://i.pinimg.com/1200x/62/2e/6e/622e6e6348cfcb3abb43f16d0d0dcb78.jpg',
+    },
+    {
+      title: t('community.features.1.title'),
+      text: t('community.features.1.text'),
+      icon: Users,
+      image: 'https://i.pinimg.com/736x/5d/75/06/5d7506575df6b7050b4dc8ddfbad80dd.jpg',
+    },
+    {
+      title: t('community.features.2.title'),
+      text: t('community.features.2.text'),
+      icon: Lightbulb,
+      image: 'https://i.pinimg.com/736x/e2/5a/b9/e25ab9ca951eee9cf5dd92434fc67666.jpg',
+    },
+    {
+      title: t('community.features.3.title'),
+      text: t('community.features.3.text'),
+      icon: Globe2,
+      image: 'https://i.pinimg.com/1200x/f9/65/e0/f965e04e399643c7f9ec210a51ab7370.jpg',
+    },
+    {
+      title: t('community.features.4.title'),
+      text: t('community.features.4.text'),
+      icon: HeartHandshake,
+      image: 'https://i.pinimg.com/736x/dc/6b/82/dc6b822d67103e6b93cce14246c60b62.jpg',
+    },
+  ] as const
+
   return (
     <section className="relative w-full overflow-hidden bg-slate-100/70 py-6">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
         {/* Main Section Header */}
         <div className="flex flex-col items-center text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-amber-300/50 bg-amber-500/10 px-4 py-1.5 text-sm font-bold text-amber-700 shadow-xs">
             <Sparkles className="h-3.5 w-3.5 text-amber-600" />
-            <span className="uppercase tracking-widest">Why Choose Us</span>
+            <span className="uppercase tracking-widest">{t('community.badge')}</span>
           </div>
 
           <h2 className="mt-4 text-4xl font-black tracking-tight text-[#061832] sm:text-5xl">
-            Why Join <span className="text-[#E2A22C]">YES TIME GLOBAL?</span>
+            {t('community.titlePrefix')}<span className="text-[#E2A22C]">{t('community.titleBrand')}</span>
           </h2>
 
           <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">
-            We are committed to building a transparent platform focused on your security, long-term growth, and financial empowerment.
+            {t('community.subtitle')}
           </p>
         </div>
 

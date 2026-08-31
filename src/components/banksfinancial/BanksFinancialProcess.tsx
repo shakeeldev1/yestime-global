@@ -8,47 +8,49 @@ import {
   ShieldCheck,
   TrendingUp,
 } from 'lucide-react'
-
-const comparisonPoints = [
-  { icon: ShieldCheck, title: 'Trusted Network', text: 'Partnership with leading banks' },
-  { icon: CircleDollarSign, title: '100% Secure', text: 'Advanced security measures' },
-  { icon: Building2, title: 'Wide Coverage', text: 'Access across regions' },
-  { icon: TrendingUp, title: 'Member Benefits', text: 'Special opportunities for members' },
-  { icon: CheckCircle2, title: 'Fast & Convenient', text: 'Modern and easy process' },
-]
-
-const processSteps = [
-  { step: '01', title: 'Explore Options', text: 'Choose the service you need', icon: Handshake },
-  { step: '02', title: 'Submit Details', text: 'Share required information', icon: CircleDollarSign },
-  { step: '03', title: 'Bank Verification', text: 'Processed with trusted partners', icon: ShieldCheck },
-  { step: '04', title: 'Get Started', text: 'Enjoy secure and smooth banking', icon: Building2 },
-]
-
-const faqItems = [
-  {
-    question: 'Which banks are partnered with YES TIME GLOBAL?',
-    answer: 'We collaborate with premier institutions including HBL, Meezan Bank, MCB, UBL, Bank Alfalah, Allied Bank, and JS Bank to deliver robust financial services.',
-  },
-  {
-    question: 'Can I open a bank account through YES TIME GLOBAL?',
-    answer: 'Yes, our platform facilitates streamlined onboarding and account opening requests through our official partner network.',
-  },
-  {
-    question: 'Is my financial information secure?',
-    answer: 'Absolutely. We enforce end-to-end encryption protocols and strictly adhere to central banking compliance standards.',
-  },
-  {
-    question: 'Can businesses also avail banking services?',
-    answer: 'Yes, we provide dedicated SME loans, corporate accounts, trade financing, and tailored commercial banking solutions.',
-  },
-  {
-    question: 'How can I contact the financial support team?',
-    answer: 'You can reach out 24/7 via our member support portal, direct hotline, or by visiting any accredited partner desk.',
-  },
-]
+import { useTranslation } from 'react-i18next'
 
 const BanksFinancialProcess = () => {
+  const { t } = useTranslation("banks")
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0)
+
+  const comparisonPoints = [
+    { icon: ShieldCheck, title: t('process.comparisonPoints.trustedNetwork.title'), text: t('process.comparisonPoints.trustedNetwork.text') },
+    { icon: CircleDollarSign, title: t('process.comparisonPoints.secure.title'), text: t('process.comparisonPoints.secure.text') },
+    { icon: Building2, title: t('process.comparisonPoints.wideCoverage.title'), text: t('process.comparisonPoints.wideCoverage.text') },
+    { icon: TrendingUp, title: t('process.comparisonPoints.memberBenefits.title'), text: t('process.comparisonPoints.memberBenefits.text') },
+    { icon: CheckCircle2, title: t('process.comparisonPoints.fastConvenient.title'), text: t('process.comparisonPoints.fastConvenient.text') },
+  ]
+
+  const processSteps = [
+    { step: '01', title: t('process.processSteps.exploreOptions.title'), text: t('process.processSteps.exploreOptions.text'), icon: Handshake },
+    { step: '02', title: t('process.processSteps.submitDetails.title'), text: t('process.processSteps.submitDetails.text'), icon: CircleDollarSign },
+    { step: '03', title: t('process.processSteps.bankVerification.title'), text: t('process.processSteps.bankVerification.text'), icon: ShieldCheck },
+    { step: '04', title: t('process.processSteps.getStarted.title'), text: t('process.processSteps.getStarted.text'), icon: Building2 },
+  ]
+
+  const faqItems = [
+    {
+      question: t('process.faqItems.partneredBanks.question'),
+      answer: t('process.faqItems.partneredBanks.answer'),
+    },
+    {
+      question: t('process.faqItems.openAccount.question'),
+      answer: t('process.faqItems.openAccount.answer'),
+    },
+    {
+      question: t('process.faqItems.informationSecure.question'),
+      answer: t('process.faqItems.informationSecure.answer'),
+    },
+    {
+      question: t('process.faqItems.businessServices.question'),
+      answer: t('process.faqItems.businessServices.answer'),
+    },
+    {
+      question: t('process.faqItems.contactSupport.question'),
+      answer: t('process.faqItems.contactSupport.answer'),
+    },
+  ]
 
   const toggleFaq = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index)
@@ -61,10 +63,10 @@ const BanksFinancialProcess = () => {
         <div className="mx-auto max-w-[1280px]">
           <div className="text-center">
             <p className="text-[12px] font-extrabold uppercase tracking-[0.22em] text-[#d99b26]">
-              Why Choose Our Financial Partners?
+              {t('process.whyLabel')}
             </p>
             <h3 className="mt-3 text-3xl font-black tracking-[-0.04em] text-[#071a36] sm:text-4xl">
-              Reliable Solutions Tailored For You
+              {t('process.whyTitle')}
             </h3>
           </div>
 
@@ -94,10 +96,10 @@ const BanksFinancialProcess = () => {
         <div className="relative z-10 mx-auto max-w-[1280px]">
           <div className="mb-14 flex flex-col items-center text-center">
             <p className="text-[12px] font-extrabold uppercase tracking-[0.22em] text-[#f5c54e]">
-              How It Works
+              {t('process.howLabel')}
             </p>
             <h3 className="mt-3 text-3xl font-black tracking-[-0.04em] text-white sm:text-4xl">
-              Simple &amp; Transparent Process
+              {t('process.howTitle')}
             </h3>
           </div>
 
@@ -131,10 +133,10 @@ const BanksFinancialProcess = () => {
         <div className="mx-auto max-w-[1280px]">
           <div className="mb-12 text-center">
             <p className="text-[12px] font-extrabold uppercase tracking-[0.22em] text-[#d99b26]">
-              Frequently Asked Questions
+              {t('process.faqLabel')}
             </p>
             <h3 className="mt-3 text-3xl font-black tracking-[-0.04em] text-[#071a36] sm:text-4xl">
-              FAQs – Banks &amp; Financial
+              {t('process.faqTitle')}
             </h3>
           </div>
 
@@ -185,17 +187,17 @@ const BanksFinancialProcess = () => {
               <div className="group relative overflow-hidden rounded-[28px] border border-[#dfe8f6] bg-[#f8fafc] shadow-[0_20px_50px_rgba(11,59,110,0.1)]">
                 <img
                   src="https://i.pinimg.com/736x/91/7f/2e/917f2eab5cce01ec48af66cc2b427d0c.jpg"
-                  alt="Customer support financial guidance"
+                  alt={t('process.faqImageAlt')}
                   className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071a36]/80 via-transparent to-transparent" />
 
                 <div className="absolute bottom-6 left-6 right-6 rounded-xl border border-white/20 bg-white/10 p-4 backdrop-blur-md">
                   <p className="text-xs font-semibold uppercase tracking-wider text-[#f5c54e]">
-                    Need Immediate Assistance?
+                    {t('process.assistLabel')}
                   </p>
                   <p className="mt-1 text-sm font-medium text-white">
-                    Our financial advisory team is available to assist you with custom solutions.
+                    {t('process.assistText')}
                   </p>
                 </div>
               </div>

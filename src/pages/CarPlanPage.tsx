@@ -1,8 +1,10 @@
 import { ArrowRight, Car, CheckCircle2, CircleDollarSign, ShieldCheck, Sparkles } from 'lucide-react';
-import { programData } from '../data/programData';
+import { useTranslation } from 'react-i18next';
+import { getProgramBySlug } from '../data/programData';
 
 const CarPlanPage = () => {
-  const carProgram = programData.find((program) => program.slug === 'car-saving');
+  const { t, i18n } = useTranslation('programs');
+  const carProgram = getProgramBySlug('car-saving', i18n.language);
 
   if (!carProgram) {
     return null;
@@ -18,24 +20,24 @@ const CarPlanPage = () => {
             <div>
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#f0c75e]/40 bg-white/5 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[#f0c75e] backdrop-blur-sm">
                 <Sparkles size={14} className="text-[#f0c75e]" />
-                Dedicated Car Plan
+                {t('carPlan.badge')}
               </div>
 
               <h1 className="text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">
-                Drive your dream with a <span className="text-[#f0c75e]">smart car plan</span>
+                {t('carPlan.heroHeadingPrefix')} <span className="text-[#f0c75e]">{t('carPlan.heroHeadingHighlight')}</span>
               </h1>
 
               <p className="mt-5 max-w-xl text-base leading-7 text-slate-300">
-                Choose a flexible car financing path built for long-term value, smooth ownership, and a stronger future for you and your family.
+                {t('carPlan.heroDescription')}
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <button className="inline-flex items-center gap-2 rounded-full bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-6 py-3 text-sm font-bold text-[#071a36] shadow-[0_14px_30px_rgba(197,150,46,0.32)] transition hover:brightness-110 active:scale-95">
-                  Apply for a Plan
+                  {t('carPlan.applyForPlan')}
                   <ArrowRight size={16} />
                 </button>
                 <button className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10">
-                  Compare Plans
+                  {t('carPlan.comparePlans')}
                 </button>
               </div>
             </div>
@@ -44,7 +46,7 @@ const CarPlanPage = () => {
               <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-[0_28px_60px_rgba(0,0,0,0.35)] backdrop-blur-sm">
                 <img
                   src="https://i.pinimg.com/1200x/b8/65/3a/b8653af673f9133a83f6b444d799217b.jpg"
-                  alt="Car plan featured"
+                  alt={t('carPlan.featuredAlt')}
                   className="h-[420px] w-full rounded-[1.5rem] object-cover"
                 />
               </div>
@@ -60,27 +62,27 @@ const CarPlanPage = () => {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#fff8e8] text-[#c5962e]">
                 <Car size={22} />
               </div>
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#a97916]">Flexible</p>
-              <h3 className="mt-3 text-2xl font-black text-[#071a36]">Multiple Options</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">Choose a trusted car plan that fits your budget, driving goals, and future needs.</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#a97916]">{t('carPlan.feature1Tag')}</p>
+              <h3 className="mt-3 text-2xl font-black text-[#071a36]">{t('carPlan.feature1Title')}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{t('carPlan.feature1Desc')}</p>
             </div>
 
             <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-[0_20px_45px_rgba(7,26,54,0.04)]">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#eef8ff] text-[#1d4ed8]">
                 <CircleDollarSign size={22} />
               </div>
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#1d4ed8]">Affordable</p>
-              <h3 className="mt-3 text-2xl font-black text-[#071a36]">Stable Savings</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">Enjoy structured contributions and a clear route toward vehicle ownership with manageable value.</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#1d4ed8]">{t('carPlan.feature2Tag')}</p>
+              <h3 className="mt-3 text-2xl font-black text-[#071a36]">{t('carPlan.feature2Title')}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{t('carPlan.feature2Desc')}</p>
             </div>
 
             <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-[0_20px_45px_rgba(7,26,54,0.04)]">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#ecfdf5] text-[#059669]">
                 <ShieldCheck size={22} />
               </div>
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#059669]">Secure</p>
-              <h3 className="mt-3 text-2xl font-black text-[#071a36]">Trusted Process</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">A transparent and member-focused car plan designed to make your next decision easier and safer.</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#059669]">{t('carPlan.feature3Tag')}</p>
+              <h3 className="mt-3 text-2xl font-black text-[#071a36]">{t('carPlan.feature3Title')}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{t('carPlan.feature3Desc')}</p>
             </div>
           </div>
         </div>
@@ -91,10 +93,10 @@ const CarPlanPage = () => {
           <div className="mb-10 text-center">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c5962e]/30 bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#a97916] shadow-sm">
               <Sparkles size={14} className="text-[#c5962e]" />
-              Car Plans
+              {t('carPlan.plansBadge')}
             </div>
             <h2 className="text-3xl font-black tracking-tight text-[#071a36] sm:text-4xl">
-              Select the best <span className="text-[#c5962e]">car plan</span> for your journey
+              {t('carPlan.plansHeadingPrefix')} <span className="text-[#c5962e]">{t('carPlan.plansHeadingHighlight')}</span> {t('carPlan.plansHeadingSuffix')}
             </h2>
           </div>
 
@@ -121,7 +123,7 @@ const CarPlanPage = () => {
                 <div className="space-y-4 p-5">
                   <div className="flex items-start justify-between gap-3">
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#a97916]">Luxury Vehicle Plan</p>
+                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#a97916]">{t('planCard.luxuryVehiclePlan')}</p>
                       <h3 className="mt-2 text-[24px] font-black leading-none text-[#071a36]">{plan.amount}</h3>
                     </div>
                     <div className="rounded-full border border-[#c5962e]/30 bg-[#fffaf0] px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.12em] text-[#a97916]">
@@ -131,21 +133,21 @@ const CarPlanPage = () => {
 
                   <div className="rounded-2xl border border-[#c5962e]/20 bg-[#fffaf0] p-3.5">
                     <div className="mb-2 flex items-center justify-between gap-3 text-[11px] font-bold uppercase tracking-[0.12em] text-[#a97916]">
-                      <span>Plan Summary</span>
+                      <span>{t('planCard.planSummary')}</span>
                       <span className="h-1.5 w-1.5 rounded-full bg-[#c5962e]" />
                     </div>
 
                     <div className="space-y-2 text-sm text-slate-700">
                       <div className="flex items-center justify-between gap-3">
-                        <span className="text-slate-500">Daily</span>
+                        <span className="text-slate-500">{t('planCard.daily')}</span>
                         <span className="font-bold text-[#071a36]">{plan.daily.replace('Daily ', '')}</span>
                       </div>
                       <div className="flex items-center justify-between gap-3">
-                        <span className="text-slate-500">Monthly</span>
+                        <span className="text-slate-500">{t('planCard.monthly')}</span>
                         <span className="font-bold text-[#071a36]">{plan.monthly.replace('Monthly ', '')}</span>
                       </div>
                       <div className="flex items-center justify-between gap-3">
-                        <span className="text-slate-500">Prize</span>
+                        <span className="text-slate-500">{t('planCard.prize')}</span>
                         <span className="font-bold text-emerald-600">{plan.prize.replace('Prize ', '')}</span>
                       </div>
                     </div>
@@ -153,7 +155,7 @@ const CarPlanPage = () => {
 
                   {plan.details && plan.details.length > 0 && (
                     <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3.5 text-left">
-                      <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#a97916]">Plan Details</p>
+                      <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#a97916]">{t('planCard.planDetails')}</p>
                       <ul className="space-y-1.5 text-xs leading-5 text-slate-600">
                         {plan.details.map((detail) => (
                           <li key={detail} className="flex items-start gap-2">
@@ -175,7 +177,7 @@ const CarPlanPage = () => {
                   )}
 
                   <button className="w-full rounded-xl bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-4 py-3 text-xs font-bold text-[#071a36] shadow-[0_10px_20px_rgba(197,150,46,0.22)] transition hover:brightness-110 active:scale-95">
-                    Apply Now
+                    {t('planCard.applyNow')}
                   </button>
                 </div>
               </article>

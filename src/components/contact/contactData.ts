@@ -1,11 +1,14 @@
+// Stable identifiers for inquiry types. Display labels live in the
+// `contact` i18n namespace under `inquiryTypes.<id>.label` and are resolved
+// with t() in the consuming component (ContactForm).
 export const inquiryTypes = [
-  'General Inquiry',
-  'Customer or Member Support',
-  'Program Information',
-  'Business Partnership',
-  'Investor or Bank Inquiry',
-  'Dealer, Shop, or Showroom Partnership',
-  'Property Partnership',
+  'general',
+  'support',
+  'program',
+  'partnership',
+  'investor',
+  'dealer',
+  'property',
 ] as const
 
 export type InquiryType = (typeof inquiryTypes)[number]

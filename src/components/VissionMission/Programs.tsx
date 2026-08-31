@@ -7,36 +7,39 @@ import {
   PiggyBank,
   UserRound,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Programs: React.FC = () => {
+  const { t } = useTranslation("vision");
+
   const programs = [
     {
-      title: "Shopping\n& Savings",
+      title: t("programs.items.shoppingSavings"),
       image: "/vs7.png",
       icon: ShoppingBag,
     },
     {
-      title: "Car\nProgram",
+      title: t("programs.items.carProgram"),
       image: "/vs6.png",
       icon: Car,
     },
     {
-      title: "Property\nProgram",
+      title: t("programs.items.propertyProgram"),
       image: "/vs11.png",
       icon: Building2,
     },
     {
-      title: "Motorcycle /\nScooter Program",
+      title: t("programs.items.motorcycleScooter"),
       image: "/vs8.png",
       icon: Bike,
     },
     {
-      title: "Saving\nPrograms",
+      title: t("programs.items.savingPrograms"),
       image: "/vs9.png",
       icon: PiggyBank,
     },
     {
-      title: "Self-Service\nSaving",
+      title: t("programs.items.selfServiceSaving"),
       image: "/vs10.png",
       icon: UserRound,
     },
@@ -48,7 +51,7 @@ const Programs: React.FC = () => {
 
         {/* Heading */}
         <h2 className="text-center text-xl font-bold text-[#172238] md:text-2xl">
-          Our Programs That Create Opportunities
+          {t("programs.heading")}
         </h2>
 
         {/* Programs */}

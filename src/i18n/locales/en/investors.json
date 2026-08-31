@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "badge": "Investors & Strategic Partners",
+    "imageAlt": "Investors and strategic partners",
+    "titleLead": "Build lasting value with",
+    "subtitle": "We welcome investors and established businesses who share our vision for accessible, responsible growth across global markets.",
+    "ctaPrimary": "Start a conversation",
+    "ctaSecondary": "Contact us",
+    "highlights": [
+      { "label": "Long-term focus", "value": "Sustainable growth" },
+      { "label": "Strategic fit", "value": "Shared vision" },
+      { "label": "Trust", "value": "Clear accountability" },
+      { "label": "Global reach", "value": "Cross-market value" }
+    ]
+  },
+  "highlights": {
+    "eyebrow": "Why partner with us",
+    "headingLead": "A relationship built for the",
+    "headingHighlight": "long term.",
+    "subtitle": "Our strongest partnerships begin with shared values, clear expectations, and a practical view of the opportunity ahead.",
+    "cards": [
+      {
+        "title": "Shared growth",
+        "description": "Partner with a business focused on sustainable expansion and meaningful economic participation."
+      },
+      {
+        "title": "Strategic collaboration",
+        "description": "Bring your network, expertise, or market access to opportunities built for mutual success."
+      },
+      {
+        "title": "Trust and clarity",
+        "description": "Explore a transparent relationship with clear communication and long-term accountability."
+      }
+    ]
+  },
+  "process": {
+    "badge": "Partnership Process",
+    "headingLead": "How we build",
+    "headingHighlight": "meaningful partnerships",
+    "steps": [
+      {
+        "title": "Connect",
+        "text": "Share your goals and the strengths you bring to a partnership."
+      },
+      {
+        "title": "Explore",
+        "text": "Together, we identify a practical opportunity for collaboration."
+      },
+      {
+        "title": "Grow",
+        "text": "Build a clear relationship designed to create lasting value."
+      }
+    ]
+  },
+  "cta": {
+    "badge": "Ready to explore?",
+    "headingLead": "Ready to explore a",
+    "headingHighlight": "partnership?",
+    "subtitle": "Tell us what you are building and where you see an opportunity to work together.",
+    "button": "Contact our team"
+  }
+}

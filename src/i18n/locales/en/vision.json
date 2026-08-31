@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "eyebrow": "Our Purpose",
+    "titleLine1": "Vision &",
+    "titleHighlight": "Mission",
+    "description": "At YES TIME GLOBAL, our vision and mission are the core of everything we do. They guide our decisions, shape our programs, and drive us to create opportunities that empower people, businesses, and communities across the world.",
+    "stats": {
+      "dailyDraws": {
+        "value": "1400+",
+        "label": "Daily Draws"
+      },
+      "savingPrograms": {
+        "value": "8",
+        "label": "Saving Programs"
+      },
+      "opportunities": {
+        "value": "Global",
+        "label": "Opportunities"
+      },
+      "platform": {
+        "value": "Trusted",
+        "label": "Platform"
+      }
+    }
+  },
+  "whyWeExist": {
+    "eyebrow": "OUR PURPOSE",
+    "heading": "Why We Exist",
+    "description": "Our purpose is to build an organized, transparent, and accessible platform that connects people with the right opportunities to grow, save, and succeed together with trust, transparency, and innovation.",
+    "cards": {
+      "globalOpportunities": "Global Opportunities",
+      "transparentProcess": "Transparent Process",
+      "secureTrusted": "Secure & Trusted",
+      "everyoneCanJoin": "Everyone Can Join",
+      "longTermGrowth": "Long-Term Growth"
+    }
+  },
+  "visionMission": {
+    "eyebrow": "OUR VISION & MISSION",
+    "headingLine1": "Our",
+    "headingHighlight": "Vision & Mission",
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be a global leader in creating a reliable and innovative ecosystem where individuals and businesses can access life-changing opportunities that bring growth, security and prosperity to all.",
+      "highlight": "A world of equal opportunities for everyone."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To connect people, businesses, and opportunities through accessible programs, strategic partnerships, and transparent processes — empowering communities to grow, achieve, and succeed together.",
+      "highlight": "Empower people. Build trust. Create lasting impact."
+    }
+  },
+  "basicPriorities": {
+    "eyebrow": "WHAT WE STAND FOR",
+    "headingLine1": "Our",
+    "headingHighlight": "Basic Priorities",
+    "description": "Our priorities guide the way we work, helping us build trust, create opportunities, and deliver meaningful value to our community.",
+    "items": {
+      "trust": {
+        "title": "Trust",
+        "text": "We build genuine relationships and operate with honesty, reliability, and accountability in every experience."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "text": "We ensure clear policies, open communication, and fair processes for all our members."
+      },
+      "care": {
+        "title": "Care",
+        "text": "We value our members and programs, offering support and solutions that truly matter."
+      },
+      "modernTechnology": {
+        "title": "Modern Technology",
+        "text": "We use smart systems and secure platforms for a smooth and reliable experience."
+      },
+      "globalReach": {
+        "title": "Global Reach",
+        "text": "We aim to bring opportunities to every corner of the world, connecting people across borders."
+      },
+      "yesTimeGlobal": {
+        "title": "Yes Time Global",
+        "text": "We are committed to innovation, growth and creating long-term value for our community."
+      }
+    }
+  },
+  "programs": {
+    "heading": "Our Programs That Create Opportunities",
+    "items": {
+      "shoppingSavings": "Shopping\n& Savings",
+      "carProgram": "Car\nProgram",
+      "propertyProgram": "Property\nProgram",
+      "motorcycleScooter": "Motorcycle /\nScooter Program",
+      "savingPrograms": "Saving\nPrograms",
+      "selfServiceSaving": "Self-Service\nSaving"
+    }
+  },
+  "quoteBanner": {
+    "quote": "“Take every opportunity to grow your business, and take a step forward toward the future.”",
+    "attribution": "YES TIME GLOBAL",
+    "badgeTitle": "Build Your Future",
+    "badgeSubtitle": "Empowering Communities"
+  }
+}

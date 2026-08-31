@@ -10,40 +10,50 @@ import {
   UserRound,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
-
-const supportAreas = [
-  {
-    icon: CreditCard,
-    title: 'Programs & payments',
-    description: 'Understand each program, payment steps, and what is required before you proceed.',
-  },
-  {
-    icon: UserRound,
-    title: 'Member guidance',
-    description: 'Access useful details about membership, updates, and how your benefits work.',
-  },
-  {
-    icon: Headphones,
-    title: 'Need assistance?',
-    description: 'Our support team can guide you to the right next step based on your situation.',
-  },
-]
-
-const quickSupport = [
-  { icon: ShieldCheck, title: 'Secure information', text: 'Your details are reviewed safely and handled with care.' },
-  { icon: MessageSquareText, title: 'Clear communication', text: 'We help you understand the process before you take action.' },
-  { icon: BadgeCheck, title: 'Helpful guidance', text: 'Get the right direction for payments, membership, and plan questions.' },
-  { icon: Clock3, title: 'Faster response', text: 'Prepared information helps our team support you more efficiently.' },
-]
-
-const supportSteps = [
-  { step: '01', title: 'Tell us what you need', text: 'Share your question, membership detail, or program concern.', icon: CircleHelp },
-  { step: '02', title: 'Check your details', text: 'We confirm the right information and next actions required.', icon: ShieldCheck },
-  { step: '03', title: 'Get guided help', text: 'Our team directs you to the best route for a clear answer.', icon: MessageSquareText },
-  { step: '04', title: 'Move forward confidently', text: 'Continue with the right support, plan, or contact path.', icon: BadgeCheck },
-]
+import { useTranslation } from 'react-i18next'
 
 const Customer = () => {
+  const { t } = useTranslation('customer')
+
+  const supportAreas = [
+    {
+      icon: CreditCard,
+      title: t('supportAreas.programsPayments.title'),
+      description: t('supportAreas.programsPayments.description'),
+    },
+    {
+      icon: UserRound,
+      title: t('supportAreas.memberGuidance.title'),
+      description: t('supportAreas.memberGuidance.description'),
+    },
+    {
+      icon: Headphones,
+      title: t('supportAreas.needAssistance.title'),
+      description: t('supportAreas.needAssistance.description'),
+    },
+  ]
+
+  const quickSupport = [
+    { icon: ShieldCheck, title: t('quickSupport.secureInformation.title'), text: t('quickSupport.secureInformation.text') },
+    { icon: MessageSquareText, title: t('quickSupport.clearCommunication.title'), text: t('quickSupport.clearCommunication.text') },
+    { icon: BadgeCheck, title: t('quickSupport.helpfulGuidance.title'), text: t('quickSupport.helpfulGuidance.text') },
+    { icon: Clock3, title: t('quickSupport.fasterResponse.title'), text: t('quickSupport.fasterResponse.text') },
+  ]
+
+  const supportSteps = [
+    { step: '01', title: t('supportSteps.step1.title'), text: t('supportSteps.step1.text'), icon: CircleHelp },
+    { step: '02', title: t('supportSteps.step2.title'), text: t('supportSteps.step2.text'), icon: ShieldCheck },
+    { step: '03', title: t('supportSteps.step3.title'), text: t('supportSteps.step3.text'), icon: MessageSquareText },
+    { step: '04', title: t('supportSteps.step4.title'), text: t('supportSteps.step4.text'), icon: BadgeCheck },
+  ]
+
+  const snapshotItems = [
+    t('snapshot.items.programQuestions'),
+    t('snapshot.items.membershipPayment'),
+    t('snapshot.items.memberSupport'),
+    t('snapshot.items.nextStep'),
+  ]
+
   return (
     <main className="bg-[linear-gradient(180deg,#ffffff_0%,#f6f9fc_100%)] text-[#071a36]">
       <section className="relative overflow-hidden bg-[#000000] px-5 py-10 text-white md:px-8 lg:px-[5.5%] lg:py-12">
@@ -55,16 +65,16 @@ const Customer = () => {
             <div>
               <span className="inline-flex items-center gap-2 rounded-full border border-[#f5c54e]/40 bg-[#000000]/70 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#f5c54e]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#f5c54e]" />
-                Customer / member information
+                {t('hero.badge')}
               </span>
 
               <h1 className="mt-6 max-w-xl text-4xl font-black leading-[1.08] tracking-[-0.04em] sm:text-5xl lg:text-[4rem]">
-                Everything you need,<br />
-                <span className="text-[#f5c54e]">in one clear place.</span>
+                {t('hero.titleLine1')}<br />
+                <span className="text-[#f5c54e]">{t('hero.titleLine2')}</span>
               </h1>
 
               <p className="mt-5 max-w-xl text-base leading-8 text-slate-200 sm:text-lg">
-                Find straightforward guidance about programs, payments, membership, and the support available to you.
+                {t('hero.subtitle')}
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -72,14 +82,14 @@ const Customer = () => {
                   to="/ContactUs"
                   className="inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-[#f5c54e] to-[#d99420] px-6 py-3 text-sm font-bold text-[#07182d] shadow-[0_16px_32px_rgba(245,197,78,0.24)] transition-all duration-200 hover:-translate-y-0.5"
                 >
-                  Contact support
+                  {t('hero.contactSupport')}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   to="/FAQs"
                   className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-bold text-white backdrop-blur-sm transition-all duration-200 hover:border-[#f5c54e] hover:bg-white/10"
                 >
-                  Browse FAQs
+                  {t('hero.browseFaqs')}
                 </Link>
               </div>
             </div>
@@ -88,8 +98,8 @@ const Customer = () => {
               <div className="overflow-hidden rounded-[28px] border border-white/10 bg-[#07182d]/80 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.26)] backdrop-blur-md">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#f5c54e]">Support snapshot</p>
-                    <h2 className="mt-2 text-2xl font-black text-white">We’re here to help</h2>
+                    <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#f5c54e]">{t('snapshot.label')}</p>
+                    <h2 className="mt-2 text-2xl font-black text-white">{t('snapshot.heading')}</h2>
                   </div>
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0f2340] text-[#f5c54e]">
                     <Headphones className="h-5 w-5" />
@@ -97,12 +107,7 @@ const Customer = () => {
                 </div>
 
                 <div className="mt-6 space-y-4">
-                  {[
-                    'Program questions and guidance',
-                    'Membership and payment details',
-                    'Support for members and customers',
-                    'Next-step assistance from our team',
-                  ].map((item) => (
+                  {snapshotItems.map((item) => (
                     <div
                       key={item}
                       className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#f5c54e]/50 hover:bg-white/10"
@@ -122,12 +127,12 @@ const Customer = () => {
 
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-[5.5%]">
         <div className="mb-10 max-w-2xl">
-          <p className="text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#a97916]">Member support</p>
+          <p className="text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#a97916]">{t('memberSupport.label')}</p>
           <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-[#071a36] sm:text-4xl">
-            Simple answers for everyday needs.
+            {t('memberSupport.heading')}
           </h2>
           <p className="mt-4 text-lg leading-8 text-[#41566f]">
-            Use these quick guides to find the information that matters most to you.
+            {t('memberSupport.subtitle')}
           </p>
         </div>
 
@@ -165,8 +170,8 @@ const Customer = () => {
       <section className="bg-[#edf2f8] px-5 py-16 sm:px-8 lg:px-[5.5%]">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
-            <p className="text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#a97916]">How support works</p>
-            <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-[#071a36] sm:text-4xl">A smooth path to the right answer</h2>
+            <p className="text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#a97916]">{t('howSupportWorks.label')}</p>
+            <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-[#071a36] sm:text-4xl">{t('howSupportWorks.heading')}</h2>
           </div>
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -194,18 +199,18 @@ const Customer = () => {
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-[5.5%]">
         <div className="grid gap-6 md:grid-cols-2">
           <div className="group rounded-[26px] border border-[#dfe8f6] bg-white p-7 shadow-[0_18px_35px_rgba(11,59,110,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f5c54e]/60 hover:shadow-[0_22px_40px_rgba(11,59,110,0.08)]">
-            <p className="text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#a97916]">Before you contact us</p>
-            <h3 className="mt-3 text-2xl font-bold text-[#071a36] transition-colors duration-300 group-hover:text-[#a97916]">Keep your member details close.</h3>
+            <p className="text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#a97916]">{t('beforeContact.label')}</p>
+            <h3 className="mt-3 text-2xl font-bold text-[#071a36] transition-colors duration-300 group-hover:text-[#a97916]">{t('beforeContact.heading')}</h3>
             <p className="mt-3 leading-8 text-[#41566f]">
-              Having your membership information ready helps us respond faster and direct your question to the right team.
+              {t('beforeContact.text')}
             </p>
           </div>
 
           <div className="group rounded-[26px] border border-[#dfe8f6] bg-white p-7 shadow-[0_18px_35px_rgba(11,59,110,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f5c54e]/60 hover:shadow-[0_22px_40px_rgba(11,59,110,0.08)]">
-            <p className="text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#a97916]">Need an answer now?</p>
-            <h3 className="mt-3 text-2xl font-bold text-[#071a36] transition-colors duration-300 group-hover:text-[#a97916]">Browse common questions.</h3>
+            <p className="text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#a97916]">{t('needAnswer.label')}</p>
+            <h3 className="mt-3 text-2xl font-bold text-[#071a36] transition-colors duration-300 group-hover:text-[#a97916]">{t('needAnswer.heading')}</h3>
             <p className="mt-3 leading-8 text-[#41566f]">
-              Visit our FAQ section for quick answers to general questions about programs, membership, and the support available to you.
+              {t('needAnswer.text')}
             </p>
           </div>
         </div>
@@ -215,9 +220,9 @@ const Customer = () => {
         <div className="mx-auto max-w-7xl overflow-hidden rounded-[30px] bg-[linear-gradient(90deg,#020b1b_0%,#000000_40%,#000000_100%)] p-7 sm:p-9 lg:p-12">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-2xl">
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#f5c54e]">Still have a question?</p>
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#f5c54e]">{t('cta.label')}</p>
               <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-white sm:text-4xl">
-                We’ll guide you to the right next step.
+                {t('cta.heading')}
               </h2>
             </div>
 
@@ -225,7 +230,7 @@ const Customer = () => {
               to="/ContactUs"
               className="inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-[#f5c54e] to-[#d99420] px-6 py-3 text-sm font-bold text-[#07182d] shadow-[0_16px_32px_rgba(245,197,78,0.2)] transition-all duration-200 hover:-translate-y-0.5"
             >
-              Contact support
+              {t('cta.button')}
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

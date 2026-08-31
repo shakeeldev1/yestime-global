@@ -12,13 +12,16 @@ import {
   Home,
   Tractor,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export const AboutSection: React.FC = () => {
+  const { t } = useTranslation("about");
+
   const ecosystemItems = [
     {
       id: "01",
-      title: "Shopping & Savings",
-      description: "Smart shopping, better savings",
+      title: t("ecosystem.items.shopping.title"),
+      description: t("ecosystem.items.shopping.description"),
       image:
         "https://i.pinimg.com/736x/6c/8a/dc/6c8adc05fa12dd0f64a4ba1ef6c05fe2.jpg",
       icon: (
@@ -30,8 +33,8 @@ export const AboutSection: React.FC = () => {
     },
     {
       id: "02",
-      title: "Vehicles Solutions",
-      description: "Mobility solutions made easy",
+      title: t("ecosystem.items.vehicles.title"),
+      description: t("ecosystem.items.vehicles.description"),
       image:
         "https://i.pinimg.com/1200x/75/7d/a6/757da6961b6cf5c6af412b4418b8ddb0.jpg",
       icon: (
@@ -43,8 +46,8 @@ export const AboutSection: React.FC = () => {
     },
     {
       id: "03",
-      title: "Property Opportunities",
-      description: "Access to property & real estate",
+      title: t("ecosystem.items.property.title"),
+      description: t("ecosystem.items.property.description"),
       image:
         "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80",
       icon: (
@@ -56,8 +59,8 @@ export const AboutSection: React.FC = () => {
     },
     {
       id: "04",
-      title: "Agriculture & Farming",
-      description: "Supporting farmers & agriculture",
+      title: t("ecosystem.items.agriculture.title"),
+      description: t("ecosystem.items.agriculture.description"),
       image:
         "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80",
       icon: (
@@ -69,8 +72,8 @@ export const AboutSection: React.FC = () => {
     },
     {
       id: "05",
-      title: "Business Solutions",
-      description: "Empowering businesses for growth",
+      title: t("ecosystem.items.business.title"),
+      description: t("ecosystem.items.business.description"),
       image:
         "https://i.pinimg.com/1200x/6a/9a/66/6a9a661a89881207fcc24bf0c16e5bf5.jpg",
       icon: (
@@ -95,45 +98,40 @@ export const AboutSection: React.FC = () => {
                 W
               </span>
               <span className="text-xs font-bold uppercase tracking-widest text-amber-600">
-                WHO WE ARE
+                {t("whoWeAre.badge")}
               </span>
             </div>
 
             {/* Heading */}
             <h2 className="mb-6 text-5xl font-bold text-slate-900">
-              Connecting People,
+              {t("whoWeAre.headingLine1")}
               <br />
               <span className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 bg-clip-text text-transparent">
-                Businesses &amp;{" "}
+                {t("whoWeAre.headingBusinesses")}{" "}
               </span>{" "}
-              Opportunities.
+              {t("whoWeAre.headingOpportunities")}
             </h2>
 
             {/* Seamless Story Narrative Text */}
             <div className="mb-8 space-y-4 text-slate-600">
               <p className="text-base leading-relaxed sm:text-lg">
-                Founded in{" "}
+                {t("whoWeAre.para1.part1")}{" "}
                 <span className="font-semibold text-slate-900">2023</span>,{" "}
                 <strong className="font-semibold text-slate-900">
                   YES TIME GLOBAL PRIVATE LIMITED
                 </strong>{" "}
-                emerged with a bold vision to revolutionize how people,
-                businesses, and communities connect.
+                {t("whoWeAre.para1.part2")}
               </p>
 
               <p className="text-sm leading-relaxed sm:text-base">
-                What started as an ambitious idea has grown into a trusted
-                platform, connecting thousands of users to life-changing
-                opportunities in shopping, vehicles, property, agriculture, and
-                more. We empower individuals through transparent processes,
-                helping you save more, invest smarter, and build lasting success.
+                {t("whoWeAre.para2")}
               </p>
             </div>
 
             {/* Core Pillars Grid - ALL CARDS BLACK */}
             <div className="mb-8 rounded-2xl border border-slate-200 bg-slate-50/80 p-6 shadow-sm">
               <span className="mb-4 block text-xs font-bold uppercase tracking-widest text-amber-600">
-                Our Core Pillars
+                {t("whoWeAre.pillarsTitle")}
               </span>
               <div className="grid grid-cols-3 gap-4">
                 {/* 1. MISSION CARD */}
@@ -142,10 +140,10 @@ export const AboutSection: React.FC = () => {
                     <Target size={20} />
                   </span>
                   <span className="text-xs font-bold text-white transition-colors group-hover:text-amber-400">
-                    Mission
+                    {t("whoWeAre.pillars.mission.title")}
                   </span>
                   <span className="mt-0.5 text-[11px] font-medium text-slate-400">
-                    Connect &amp; Empower
+                    {t("whoWeAre.pillars.mission.subtitle")}
                   </span>
                 </div>
 
@@ -155,10 +153,10 @@ export const AboutSection: React.FC = () => {
                     <Eye size={20} />
                   </span>
                   <span className="text-xs font-bold text-white transition-colors group-hover:text-amber-400">
-                    Vision
+                    {t("whoWeAre.pillars.vision.title")}
                   </span>
                   <span className="mt-0.5 text-[11px] font-medium text-slate-400">
-                    Global Leadership
+                    {t("whoWeAre.pillars.vision.subtitle")}
                   </span>
                 </div>
 
@@ -168,10 +166,10 @@ export const AboutSection: React.FC = () => {
                     <Sparkles size={20} />
                   </span>
                   <span className="text-xs font-bold text-white transition-colors group-hover:text-amber-400">
-                    Values
+                    {t("whoWeAre.pillars.values.title")}
                   </span>
                   <span className="mt-0.5 text-[11px] font-medium text-slate-400">
-                    Trust &amp; Innovation
+                    {t("whoWeAre.pillars.values.subtitle")}
                   </span>
                 </div>
               </div>
@@ -184,21 +182,21 @@ export const AboutSection: React.FC = () => {
                   size={16}
                   className="text-amber-500 transition-transform duration-300 hover:rotate-12"
                 />
-                <span>Global Reach</span>
+                <span>{t("whoWeAre.badges.globalReach")}</span>
               </div>
               <div className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-100 px-3.5 py-2 transition-all duration-300 hover:border-emerald-300 hover:bg-emerald-50/50">
                 <ShieldCheck
                   size={16}
                   className="text-emerald-600 transition-transform duration-300 hover:scale-110"
                 />
-                <span>100% Transparent</span>
+                <span>{t("whoWeAre.badges.transparent")}</span>
               </div>
               <div className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-100 px-3.5 py-2 transition-all duration-300 hover:border-amber-300 hover:bg-amber-50/50">
                 <Handshake
                   size={16}
                   className="text-amber-500 transition-transform duration-300 hover:scale-110"
                 />
-                <span>Strategic Partners</span>
+                <span>{t("whoWeAre.badges.partners")}</span>
               </div>
             </div>
 
@@ -208,7 +206,7 @@ export const AboutSection: React.FC = () => {
                 href="/about"
                 className="group relative inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-amber-500/20 transition-all duration-300 hover:scale-105 hover:shadow-amber-500/40 active:scale-95"
               >
-                <span className="text-white">Discover Our Full Story</span>
+                <span className="text-white">{t("whoWeAre.cta")}</span>
                 <ChevronRight className="h-4 w-4 text-white transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>
@@ -221,13 +219,13 @@ export const AboutSection: React.FC = () => {
               <div className="group relative h-[280px] w-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-xl transition-all duration-500 hover:shadow-2xl">
                 <img
                   src="/programs.png"
-                  alt="Programs Header"
+                  alt={t("whoWeAre.images.programsAlt")}
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-80" />
                 <div className="absolute right-4 top-4 rounded-full border border-amber-300 bg-white/90 px-4 py-1.5 shadow-sm backdrop-blur-md transition-transform duration-300 group-hover:scale-105">
                   <span className="text-xs font-extrabold text-amber-600">
-                    Since 2023
+                    {t("whoWeAre.images.since")}
                   </span>
                 </div>
               </div>
@@ -237,24 +235,24 @@ export const AboutSection: React.FC = () => {
                 <div className="group relative h-[180px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-md transition-all duration-500 hover:shadow-xl">
                   <img
                     src="/img.webp"
-                    alt="Global Network"
+                    alt={t("whoWeAre.images.globalNetworkAlt")}
                     className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
                   <span className="absolute bottom-3 left-3 rounded-md bg-white/90 px-2.5 py-1 text-[10px] font-bold text-amber-700 shadow-sm backdrop-blur-md transition-transform duration-300 group-hover:translate-x-1">
-                    Global Network
+                    {t("whoWeAre.images.globalNetworkLabel")}
                   </span>
                 </div>
 
                 <div className="group relative h-[180px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-md transition-all duration-500 hover:shadow-xl">
                   <img
                     src="/img1.png"
-                    alt="Community Impact"
+                    alt={t("whoWeAre.images.communityImpactAlt")}
                     className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
                   <span className="absolute bottom-3 left-3 rounded-md bg-white/90 px-2.5 py-1 text-[10px] font-bold text-emerald-700 shadow-sm backdrop-blur-md transition-transform duration-300 group-hover:translate-x-1">
-                    Community First
+                    {t("whoWeAre.images.communityFirst")}
                   </span>
                 </div>
               </div>
@@ -268,14 +266,14 @@ export const AboutSection: React.FC = () => {
           <div className="mx-auto mb-10 max-w-2xl text-center">
             <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-1.5 shadow-sm transition-transform duration-300 hover:scale-105">
               <span className="text-xs font-extrabold uppercase tracking-widest text-white">
-                OUR ECOSYSTEM
+                {t("ecosystem.badge")}
               </span>
             </div>
 
             <h3 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              One Ecosystem. Multiple{" "}
+              {t("ecosystem.headingPart1")}{" "}
               <span className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">
-                Opportunities.
+                {t("ecosystem.headingHighlight")}
               </span>
             </h3>
           </div>

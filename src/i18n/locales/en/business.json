@@ -1,0 +1,266 @@
+{
+  "hero": {
+    "badge": "Elite Ecosystem Partnership",
+    "title": {
+      "line1": "Architecting",
+      "line2": "Future Alliances."
+    },
+    "description": "YES TIME GLOBAL PRIVATE LIMITED cultivates high-performance ecosystems uniting retail leaders, strategic investors, dealers, and specialized enterprises. Scale your capabilities and unlock unprecedented commercial momentum through curated collaboration.",
+    "features": {
+      "0": { "label": "Long-Term Equity" },
+      "1": { "label": "Accelerated Growth" },
+      "2": { "label": "Exclusive Access" },
+      "3": { "label": "Enterprise Tech Stack" }
+    },
+    "becomePartner": "Become a Partner",
+    "exploreFramework": "Explore Framework",
+    "card": {
+      "brand": "Yestime Global",
+      "heading": "Who Can Partner With Us",
+      "categories": "4 Active Categories"
+    },
+    "cards": {
+      "0": {
+        "title": "Retail Shops",
+        "text": "Expand your local reach and drive revenue by integrating into our high-demand merchant network.",
+        "badge": "High Growth"
+      },
+      "1": {
+        "title": "Strategic Enterprises",
+        "text": "Forge high-impact alliances designed to scale operations, maximize market share, and ensure long-term stability.",
+        "badge": "Core Alliance"
+      },
+      "2": {
+        "title": "Venture Investors",
+        "text": "Unlock high-yield opportunities backed by robust metrics within our accelerating, scalable digital ecosystem.",
+        "badge": "High ROI"
+      },
+      "3": {
+        "title": "Authorized Dealers",
+        "text": "Leverage reliable supply chains, priority support, and dedicated regional distribution channels.",
+        "badge": "Trusted Hub"
+      }
+    },
+    "applyNow": "Apply Now →",
+    "notice": {
+      "title": "Custom Corporate & Enterprise Synergies",
+      "text": "Are you a specialized service provider, corporate entity, or institutional body? We tailor custom collaborative pathways strictly to your organizational metrics."
+    }
+  },
+  "shops": {
+    "badge": "Retail Network Initiative",
+    "title": {
+      "line1": "Scale Your Retail Empire",
+      "line2": "Through Our Ecosystem"
+    },
+    "description": "Empower your physical storefront with institutional infrastructure, structured partnership models, and continuous commercial expansion avenues.",
+    "verifiedPortal": "Verified Portal",
+    "cardTitle": {
+      "line1": "Become an Approved",
+      "line2": "Shop Partner"
+    },
+    "cardText": "Submit your storefront profile for multi-tier enterprise review. Approved partners gain instant admission into structured resource channels.",
+    "workflow": {
+      "title": "Streamlined Integration Workflow",
+      "text": "Submit Profile → Metric Review → Compliance Audit → Formal Agreement"
+    },
+    "joinNetwork": "Join Our Shop Network",
+    "featureFooter": "Fully Verified Service",
+    "features": {
+      "0": {
+        "title": "Retail Shop Owners",
+        "description": "Retail merchants seamlessly plug into our high-volume merchant system, scaling local visibility.",
+        "badge": "Merchant Hub"
+      },
+      "1": {
+        "title": "Strategic Partnership",
+        "description": "We forge institutional-grade bonds focused on mutual equity expansion and commercial stability.",
+        "badge": "Long-Term"
+      },
+      "2": {
+        "title": "Accelerated Growth",
+        "description": "Harness shared pipelines and dynamic market traction engineered to compound your enterprise footprint.",
+        "badge": "High Yield"
+      },
+      "3": {
+        "title": "Secure Compliance",
+        "description": "Operations run securely under strict regulatory frameworks, verified transparency, and legal alignment.",
+        "badge": "Trusted"
+      }
+    },
+    "callout": {
+      "title": "Building Long-Term Commercial Synergies",
+      "text": "Yestime Global engineers reliable, elite enterprise relationships built to withstand market evolution. Approved partners unlock priority access to high-tier commercial tools and sustained cross-collaboration opportunities.",
+      "badge": "Professional Alliance"
+    }
+  },
+  "dealers": {
+    "badge": "Dealer Partnership",
+    "title": {
+      "line1": "Grow Through a Strong",
+      "line2": "Dealer Partnership"
+    },
+    "intro": "We welcome suitable dealers who can establish a professional business relationship with the company. Our partnership approach focuses on business development, market expansion and long-term cooperation according to mutually agreed terms.",
+    "becomeHeading": "Become Our Dealer",
+    "becomeText1": "Dealers can partner with us to expand our network and drive sustainable business growth.",
+    "becomeText2": "Interested dealers can submit their business details for review and approval under agreed terms.",
+    "process": {
+      "title": "Dealer Partnership Process",
+      "text": "Business information submission → company review → approval → agreed terms → formal business partnership."
+    },
+    "becomeCta": "Become a Dealer",
+    "benefits": {
+      "0": {
+        "title": "Dealer Network",
+        "description": "Become part of our growing dealer network and establish a professional business relationship with the company."
+      },
+      "1": {
+        "title": "Business Opportunities",
+        "description": "Explore opportunities to expand your market presence and develop your business through partnership."
+      },
+      "2": {
+        "title": "Trusted Partnership",
+        "description": "Build a reliable and long-term partnership based on agreed business terms, company policies and mutual understanding."
+      },
+      "3": {
+        "title": "Formal Process",
+        "description": "Dealer applications and business information are reviewed according to company requirements before partnership approval."
+      }
+    },
+    "highlights": {
+      "0": {
+        "title": "Mutual Cooperation",
+        "description": "Partnership based on mutual understanding and cooperation."
+      },
+      "1": {
+        "title": "Market Expansion",
+        "description": "Support business reach and future market opportunities."
+      },
+      "2": {
+        "title": "Long-Term Growth",
+        "description": "Develop sustainable and professional business relations."
+      }
+    }
+  },
+  "showrooms": {
+    "badge": "Showroom Partnership",
+    "title": {
+      "before": "Build Your",
+      "highlight": "Business",
+      "after": "With Our Partnership"
+    },
+    "description": "Join our showroom network to build strong partnerships, expand market reach, and support long-term business growth.",
+    "becomeHeading": "Become a Showroom Partner",
+    "becomeText1": "Showroom owners can submit their business information for review and become part of our growing partnership network.",
+    "becomeText2": "Approved partnerships are established through mutually agreed terms and conditions.",
+    "process": {
+      "title": "Partnership Process",
+      "text": "Submit details → review → approval → agreed terms → partnership."
+    },
+    "imageAlt": "Showroom Partnership",
+    "benefits": {
+      "0": {
+        "title": "Business Collaboration",
+        "text": "Showrooms can work with the company as business partners and build a professional, long-term relationship."
+      },
+      "1": {
+        "title": "Market Reach",
+        "text": "Suitable showrooms can help strengthen market presence and improve customer access."
+      },
+      "2": {
+        "title": "Growth Opportunities",
+        "text": "Partnership can create opportunities for business development and market expansion."
+      },
+      "3": {
+        "title": "Approved Partnership",
+        "text": "Showroom partnerships are considered based on company requirements and agreed terms."
+      }
+    },
+    "banner": {
+      "title": "A Partnership Built for Growth",
+      "text": "We seek professional showroom partners who can contribute to business development and network growth."
+    },
+    "cta": "Become a Showroom Partner"
+  },
+  "more": {
+    "badge": "Business Opportunities",
+    "title": {
+      "before": "More Partnership",
+      "highlight": "Opportunities"
+    },
+    "description": "We build long-term partnerships with organizations and professionals, creating opportunities for collaboration and growth.",
+    "partnerTypes": {
+      "0": {
+        "title": "Investors",
+        "description": "Business investors can explore suitable opportunities and potential collaboration as the company continues to grow."
+      },
+      "1": {
+        "title": "Service Providers",
+        "description": "Professional service providers can collaborate with us to support relevant business activities and operations."
+      },
+      "2": {
+        "title": "Corporate Partners",
+        "description": "Corporate organizations can build professional partnerships with us for mutual business development and long-term cooperation."
+      },
+      "3": {
+        "title": "Business Associates",
+        "description": "Relevant businesses and organizations may become partners according to business requirements and mutual understanding."
+      }
+    },
+    "howItWorks": "How It Works",
+    "processHeading": "Our Partnership Process",
+    "processDescription": "A clear and professional process helps us evaluate suitable business partnerships and establish mutually agreed terms.",
+    "processSteps": {
+      "0": {
+        "title": "Submit Information",
+        "description": "Interested partners provide the required business information for consideration."
+      },
+      "1": {
+        "title": "Review",
+        "description": "The submitted information is reviewed according to the company's business requirements."
+      },
+      "2": {
+        "title": "Assessment",
+        "description": "The potential partnership is assessed according to relevant business and partnership criteria."
+      },
+      "3": {
+        "title": "Approval",
+        "description": "Suitable partners may be approved for the relevant business partnership opportunity."
+      },
+      "4": {
+        "title": "Agreement",
+        "description": "Partnership terms and conditions are discussed and mutually agreed upon."
+      },
+      "5": {
+        "title": "Partnership",
+        "description": "A formal business relationship is established between the company and partner."
+      }
+    },
+    "highlightsBadge": "Partnership Highlights",
+    "highlightsHeading": "Building Business Together",
+    "highlights": {
+      "0": {
+        "title": "Business Expansion",
+        "description": "Build stronger business connections and support wider market development."
+      },
+      "1": {
+        "title": "Long-Term Relations",
+        "description": "Develop professional relationships focused on sustainable business cooperation."
+      },
+      "2": {
+        "title": "Mutual Success",
+        "description": "Create opportunities through collaboration, trust and shared business objectives."
+      },
+      "3": {
+        "title": "Future Opportunities",
+        "description": "As the business grows, new opportunities for collaboration and development may arise."
+      }
+    },
+    "cta": {
+      "badge": "Start a Partnership",
+      "heading": "Become Our Business Partner",
+      "text": "Join our growing business network and explore suitable opportunities for professional and long-term collaboration.",
+      "button": "Get Started"
+    }
+  }
+}

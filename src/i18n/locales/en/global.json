@@ -1,0 +1,127 @@
+{
+  "hero": {
+    "badge": "YES TIME GLOBAL",
+    "title": "Global Expansion",
+    "subtitle": "Expanding Our Reach Beyond Borders",
+    "description": "YES TIME GLOBAL is expanding its presence across different countries, creating opportunities for wider international participation and building stronger global connections.",
+    "countries": {
+      "0": "🇵🇰 Pakistan",
+      "1": "🇳🇵 Nepal",
+      "2": "🇮🇩 Indonesia",
+      "3": "🌍 Future Countries"
+    },
+    "ctaPrimary": "Explore Global Presence",
+    "ctaSecondary": "Our Global Journey",
+    "markers": {
+      "pakistan": "Pakistan",
+      "nepal": "Nepal",
+      "indonesia": "Indonesia"
+    }
+  },
+  "impact": {
+    "label": "Our Global Impact",
+    "title": {
+      "before": "Growing Beyond",
+      "highlight": "Borders"
+    },
+    "description": "Our international journey is built around meaningful connections, new opportunities, and a growing presence across different markets.",
+    "items": {
+      "0": {
+        "value": "3",
+        "label": "Current Countries",
+        "description": "Our growing international presence currently connects Pakistan, Nepal, and Indonesia."
+      },
+      "1": {
+        "value": "10",
+        "label": "Active Markets",
+        "description": "We are building stronger connections and exploring opportunities across multiple markets."
+      },
+      "2": {
+        "value": "Growing",
+        "label": "Global Network",
+        "description": "Our network continues to grow through new relationships, partnerships, and opportunities."
+      },
+      "3": {
+        "value": "Future",
+        "label": "Expansion",
+        "description": "We are continuously looking toward new countries and international opportunities."
+      }
+    },
+    "cardFooter": "Global Growth",
+    "bottomTitle": "A growing international presence",
+    "bottomText": "From our current markets to future destinations, YES TIME GLOBAL continues to build connections that create opportunities across borders.",
+    "bottomCta": "Explore Our Journey"
+  },
+  "journey": {
+    "label": "OUR GLOBAL JOURNEY",
+    "title": {
+      "before": "From Local Roots to",
+      "highlight": "Global Reach"
+    },
+    "description": "Our international journey continues to evolve as we connect new countries, build stronger relationships, and explore opportunities beyond borders.",
+    "items": {
+      "0": {
+        "country": "Pakistan",
+        "title": "Where Our Journey Begins",
+        "description": "Pakistan represents an important part of our global journey and the foundation from which YES TIME GLOBAL continues to grow.",
+        "status": "Current Presence"
+      },
+      "1": {
+        "country": "Nepal",
+        "title": "Building New Connections",
+        "description": "Our journey extends into Nepal, creating opportunities to develop new relationships and strengthen our international network.",
+        "status": "Global Presence"
+      },
+      "2": {
+        "country": "Indonesia",
+        "title": "Expanding Our Reach",
+        "description": "Indonesia is another important part of our growing international presence as we continue exploring new markets and opportunities.",
+        "status": "Global Presence"
+      },
+      "3": {
+        "country": "Future Markets",
+        "title": "The Journey Continues",
+        "description": "Our vision goes beyond today's markets. We continue looking toward new countries, partnerships, and opportunities for future expansion.",
+        "status": "Future Expansion"
+      }
+    },
+    "bottomLabel": "The journey continues",
+    "bottomText": "Every new market represents a new opportunity to connect people, businesses, and ideas. Our vision is to continue growing while creating meaningful international relationships.",
+    "bottomCta": "Future Expansion"
+  },
+  "services": {
+    "badge": "WHAT WE DO",
+    "title": {
+      "before": "Creating Opportunities",
+      "highlight": "Across Borders"
+    },
+    "description": "We create meaningful international connections, develop strategic partnerships, and explore opportunities that help people and businesses move beyond borders.",
+    "brand": "YES TIME GLOBAL",
+    "imageAlt": "Yes Time Global",
+    "imageLabel": "YES TIME GLOBAL",
+    "imageHeading": "Creating Global Opportunities.",
+    "imageDescription": "Connecting people, businesses, and markets through meaningful international relationships.",
+    "items": {
+      "0": {
+        "title": "Business Expansion",
+        "description": "We explore new markets and help create opportunities for businesses looking to grow beyond their local boundaries."
+      },
+      "1": {
+        "title": "Global Partnerships",
+        "description": "We build meaningful relationships with organizations, businesses, and individuals across different countries."
+      },
+      "2": {
+        "title": "International Networking",
+        "description": "Our growing network connects people and opportunities across borders, creating stronger international relationships."
+      },
+      "3": {
+        "title": "Market Opportunities",
+        "description": "We identify emerging opportunities and support connections that can contribute to sustainable international growth."
+      }
+    },
+    "connectingTitle": "Connecting Markets",
+    "connectingText": "We aim to connect different markets by creating pathways for communication, collaboration, and future growth.",
+    "relationshipsTitle": "Building Relationships",
+    "relationshipsText": "Strong relationships are at the heart of our international journey and long-term global vision."
+  }
+}

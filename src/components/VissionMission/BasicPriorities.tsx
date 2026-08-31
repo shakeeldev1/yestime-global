@@ -7,48 +7,51 @@ import {
   Globe2,
   Building2,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const BasicPriorities: React.FC = () => {
+  const { t } = useTranslation("vision");
+
   const priorities = [
     {
       number: "01",
-      title: "Trust",
-      text: "We build genuine relationships and operate with honesty, reliability, and accountability in every experience.",
+      title: t("basicPriorities.items.trust.title"),
+      text: t("basicPriorities.items.trust.text"),
       image: "/img9.png",
       icon: Handshake,
     },
     {
       number: "02",
-      title: "Transparency",
-      text: "We ensure clear policies, open communication, and fair processes for all our members.",
+      title: t("basicPriorities.items.transparency.title"),
+      text: t("basicPriorities.items.transparency.text"),
       image: "/vs3.png",
       icon: ShieldCheck,
     },
     {
       number: "03",
-      title: "Care",
-      text: "We value our members and programs, offering support and solutions that truly matter.",
+      title: t("basicPriorities.items.care.title"),
+      text: t("basicPriorities.items.care.text"),
       image: "/vs4.png",
       icon: Heart,
     },
     {
       number: "04",
-      title: "Modern Technology",
-      text: "We use smart systems and secure platforms for a smooth and reliable experience.",
+      title: t("basicPriorities.items.modernTechnology.title"),
+      text: t("basicPriorities.items.modernTechnology.text"),
       image: "/vs5.png",
       icon: Cpu,
     },
     {
       number: "05",
-      title: "Global Reach",
-      text: "We aim to bring opportunities to every corner of the world, connecting people across borders.",
+      title: t("basicPriorities.items.globalReach.title"),
+      text: t("basicPriorities.items.globalReach.text"),
       image: "/img12.png",
       icon: Globe2,
     },
     {
       number: "06",
-      title: "Yes Time Global",
-      text: "We are committed to innovation, growth and creating long-term value for our community.",
+      title: t("basicPriorities.items.yesTimeGlobal.title"),
+      text: t("basicPriorities.items.yesTimeGlobal.text"),
       image: "/variant2_square.webp",
       icon: Building2,
     },
@@ -62,20 +65,18 @@ const BasicPriorities: React.FC = () => {
         <div className="text-center">
 
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d69b22] md:text-sm">
-            WHAT WE STAND FOR
+            {t("basicPriorities.eyebrow")}
           </p>
 
           <h2 className="mt-3 text-3xl font-bold text-[#142238] md:text-4xl">
-            Our{" "}
+            {t("basicPriorities.headingLine1")}{" "}
             <span className="text-[#d69b22]">
-              Basic Priorities
+              {t("basicPriorities.headingHighlight")}
             </span>
           </h2>
 
           <p className="mx-auto mt-4 max-w-[700px] text-sm leading-6 text-gray-500 md:text-base md:leading-7">
-            Our priorities guide the way we work, helping us build trust,
-            create opportunities, and deliver meaningful value to our
-            community.
+            {t("basicPriorities.description")}
           </p>
 
         </div>

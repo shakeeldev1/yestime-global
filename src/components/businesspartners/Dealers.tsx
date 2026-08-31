@@ -8,6 +8,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface DealerBenefit {
   icon: React.ElementType;
@@ -16,42 +17,40 @@ interface DealerBenefit {
   description: string;
 }
 
-const dealerBenefits: DealerBenefit[] = [
-  {
-    icon: Network,
-    title: "Dealer Network",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDj0SFOiYx5AjcQQ3SG01ME_gET6r7nY5kwoQ0wHpxv8swCiiPHSru7C0&s=10",
-    description:
-      "Become part of our growing dealer network and establish a professional business relationship with the company.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Business Opportunities",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGp82fhEWXATVgJ0FQJNOL_7Kajz1pl9ksi3ER4jJFrQbIr7t0uvWPS5rH&s=10",
-    description:
-      "Explore opportunities to expand your market presence and develop your business through partnership.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Trusted Partnership",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7QGCuHT0zQz5jH7DSY4lM9XuZ23m5X8-nczwHXUqdxX-AoxNPoQls8BhX&s=10",
-    description:
-      "Build a reliable and long-term partnership based on agreed business terms, company policies and mutual understanding.",
-  },
-  {
-    icon: FileCheck,
-    title: "Formal Process",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAZFZc30J4fo48tm10LxsqD7zE0lPqGU2D0J6Tiz_QYwiDmDUlGf4mwtTP&s=10",
-    description:
-      "Dealer applications and business information are reviewed according to company requirements before partnership approval.",
-  },
-];
-
 const Dealers: React.FC = () => {
+  const { t } = useTranslation("business");
+
+  const dealerBenefits: DealerBenefit[] = [
+    {
+      icon: Network,
+      title: t("dealers.benefits.0.title"),
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDj0SFOiYx5AjcQQ3SG01ME_gET6r7nY5kwoQ0wHpxv8swCiiPHSru7C0&s=10",
+      description: t("dealers.benefits.0.description"),
+    },
+    {
+      icon: TrendingUp,
+      title: t("dealers.benefits.1.title"),
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGp82fhEWXATVgJ0FQJNOL_7Kajz1pl9ksi3ER4jJFrQbIr7t0uvWPS5rH&s=10",
+      description: t("dealers.benefits.1.description"),
+    },
+    {
+      icon: ShieldCheck,
+      title: t("dealers.benefits.2.title"),
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7QGCuHT0zQz5jH7DSY4lM9XuZ23m5X8-nczwHXUqdxX-AoxNPoQls8BhX&s=10",
+      description: t("dealers.benefits.2.description"),
+    },
+    {
+      icon: FileCheck,
+      title: t("dealers.benefits.3.title"),
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAZFZc30J4fo48tm10LxsqD7zE0lPqGU2D0J6Tiz_QYwiDmDUlGf4mwtTP&s=10",
+      description: t("dealers.benefits.3.description"),
+    },
+  ];
+
   return (
     <section className="relative overflow-hidden bg-white py-24">
       {/* Background Glow */}
@@ -63,22 +62,19 @@ const Dealers: React.FC = () => {
         <div className="grid gap-12 lg:grid-cols-2 lg:items-end">
           <div>
             <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#C6922B]">
-              Dealer Partnership
+              {t("dealers.badge")}
             </span>
 
             <h2 className="mt-4 text-4xl font-bold leading-tight text-[#0B2341] sm:text-5xl">
-              Grow Through a Strong
+              {t("dealers.title.line1")}
               <span className="block text-[#C6922B]">
-                Dealer Partnership
+                {t("dealers.title.line2")}
               </span>
             </h2>
           </div>
 
           <p className="text-lg leading-8 text-[#55708F]">
-            We welcome suitable dealers who can establish a professional
-            business relationship with the company. Our partnership approach
-            focuses on business development, market expansion and long-term
-            cooperation according to mutually agreed terms.
+            {t("dealers.intro")}
           </p>
         </div>
 
@@ -100,17 +96,15 @@ const Dealers: React.FC = () => {
               </div>
 
               <h3 className="mt-7 text-3xl font-bold text-[#0B2341] sm:text-4xl">
-                Become Our Dealer
+                {t("dealers.becomeHeading")}
               </h3>
 
               <p className="mt-5 leading-8 text-[#55708F]">
-                Dealers can partner with us to expand our network and drive sustainable business growth.
-
+                {t("dealers.becomeText1")}
               </p>
 
               <p className="mt-4 leading-8 text-[#55708F]">
-                Interested dealers can submit their business details for review and approval under agreed terms.
-
+                {t("dealers.becomeText2")}
               </p>
 
               <div className="mt-7 rounded-2xl border border-[#C6922B]/20 bg-[#C6922B]/5 p-4">
@@ -121,12 +115,11 @@ const Dealers: React.FC = () => {
 
                   <div>
                     <h4 className="text-sm font-bold text-[#0B2341]">
-                      Dealer Partnership Process
+                      {t("dealers.process.title")}
                     </h4>
 
                     <p className="mt-1 text-sm leading-6 text-[#55708F]">
-                      Business information submission → company review →
-                      approval → agreed terms → formal business partnership.
+                      {t("dealers.process.text")}
                     </p>
                   </div>
                 </div>
@@ -136,7 +129,7 @@ const Dealers: React.FC = () => {
                 to="/contact-us"
                 className="group mt-8 inline-flex items-center gap-2 rounded-md bg-[#0B2341] px-7 py-3.5 font-semibold text-white shadow-lg shadow-[#0B2341]/10 transition duration-300 hover:-translate-y-0.5 hover:bg-[#C6922B] hover:shadow-[#C6922B]/20"
               >
-              <span className="text-white">  Become a Dealer</span>
+              <span className="text-white">  {t("dealers.becomeCta")}</span>
 
                 <ArrowUpRight
                   size={19}
@@ -194,10 +187,10 @@ const Dealers: React.FC = () => {
                 />
                 <div>
                   <h5 className="font-semibold text-[#0B2341]">
-                    Mutual Cooperation
+                    {t("dealers.highlights.0.title")}
                   </h5>
                   <p className="mt-1 text-sm leading-6 text-[#55708F]">
-                    Partnership based on mutual understanding and cooperation.
+                    {t("dealers.highlights.0.description")}
                   </p>
                 </div>
               </div>
@@ -209,10 +202,10 @@ const Dealers: React.FC = () => {
                 />
                 <div>
                   <h5 className="font-semibold text-[#0B2341]">
-                    Market Expansion
+                    {t("dealers.highlights.1.title")}
                   </h5>
                   <p className="mt-1 text-sm leading-6 text-[#55708F]">
-                    Support business reach and future market opportunities.
+                    {t("dealers.highlights.1.description")}
                   </p>
                 </div>
               </div>
@@ -224,10 +217,10 @@ const Dealers: React.FC = () => {
                 />
                 <div>
                   <h5 className="font-semibold text-[#0B2341]">
-                    Long-Term Growth
+                    {t("dealers.highlights.2.title")}
                   </h5>
                   <p className="mt-1 text-sm leading-6 text-[#55708F]">
-                    Develop sustainable and professional business relations.
+                    {t("dealers.highlights.2.description")}
                   </p>
                 </div>
               </div>

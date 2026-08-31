@@ -6,6 +6,7 @@ import {
   TrendingUp,
   ArrowUpRight,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 // ================= IMAGE =================
 // Public assets are served from /public and referenced as a root URL.
@@ -23,34 +24,32 @@ interface Service {
 // ================= COMPONENT =================
 
 const WhatWeDoGlobally: React.FC = () => {
+  const { t } = useTranslation("global");
+
   const services: Service[] = [
     {
       id: 1,
       icon: Building2,
-      title: "Business Expansion",
-      description:
-        "We explore new markets and help create opportunities for businesses looking to grow beyond their local boundaries.",
+      title: t("services.items.0.title"),
+      description: t("services.items.0.description"),
     },
     {
       id: 2,
       icon: Handshake,
-      title: "Global Partnerships",
-      description:
-        "We build meaningful relationships with organizations, businesses, and individuals across different countries.",
+      title: t("services.items.1.title"),
+      description: t("services.items.1.description"),
     },
     {
       id: 3,
       icon: Globe2,
-      title: "International Networking",
-      description:
-        "Our growing network connects people and opportunities across borders, creating stronger international relationships.",
+      title: t("services.items.2.title"),
+      description: t("services.items.2.description"),
     },
     {
       id: 4,
       icon: TrendingUp,
-      title: "Market Opportunities",
-      description:
-        "We identify emerging opportunities and support connections that can contribute to sustainable international growth.",
+      title: t("services.items.3.title"),
+      description: t("services.items.3.description"),
     },
   ];
 
@@ -88,16 +87,16 @@ const WhatWeDoGlobally: React.FC = () => {
               <span className="h-2 w-2 rounded-full bg-[#f5c54e]" />
 
               <span className="text-xs font-semibold tracking-[0.12em] text-[#a97916]">
-                WHAT WE DO
+                {t("services.badge")}
               </span>
             </div>
 
             {/* Heading */}
 
             <h2 className="max-w-xl text-3xl font-extrabold leading-[1.1] tracking-[-0.02em] text-[#071a36] sm:text-4xl md:text-5xl lg:text-[52px]">
-              Creating Opportunities{" "}
+              {t("services.title.before")}{" "}
               <span className="bg-gradient-to-r from-[#f5c54e] via-[#e5b338] to-[#d99420] bg-clip-text text-transparent">
-                Across Borders
+                {t("services.title.highlight")}
               </span>
             </h2>
 
@@ -114,10 +113,7 @@ const WhatWeDoGlobally: React.FC = () => {
             {/* Small Description */}
 
             <p className="mt-7 max-w-xl text-base leading-8 text-[#41566f] sm:text-lg">
-              We create meaningful international connections,
-              develop strategic partnerships, and explore
-              opportunities that help people and businesses
-              move beyond borders.
+              {t("services.description")}
             </p>
           </div>
 
@@ -131,7 +127,7 @@ const WhatWeDoGlobally: React.FC = () => {
 
             <img
               src={GlobalImage}
-              alt="Yes Time Global"
+              alt={t("services.imageAlt")}
               className="h-[380px] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-[430px]"
               loading="lazy"
             />
@@ -161,21 +157,20 @@ const WhatWeDoGlobally: React.FC = () => {
                 <div className="h-px w-8 bg-[#f5c54e]" />
 
                 <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#f5c54e]">
-                  YES TIME GLOBAL
+                  {t("services.imageLabel")}
                 </span>
               </div>
 
               {/* Image Heading */}
 
               <h3 className="max-w-lg text-2xl font-extrabold leading-tight text-white drop-shadow-[0_2px_12px_rgba(2,11,28,0.75)] sm:text-3xl">
-                <span className="text-[#f5c54e]">Creating Global Opportunities.</span>
+                <span className="text-[#f5c54e]">{t("services.imageHeading")}</span>
               </h3>
 
               {/* Image Description */}
 
               <p className="mt-3 max-w-lg text-sm leading-6 text-[#edf3fb] drop-shadow-[0_2px_10px_rgba(2,11,28,0.6)]">
-                Connecting people, businesses, and markets
-                through meaningful international relationships.
+                {t("services.imageDescription")}
               </p>
 
             </div>
@@ -232,7 +227,7 @@ const WhatWeDoGlobally: React.FC = () => {
                   <div className="flex items-center justify-between border-t border-white/10 pt-5">
 
                     <span className="text-xs font-medium tracking-[0.12em] text-slate-500 transition duration-300 group-hover:text-[#FFD45A]">
-                      YES TIME GLOBAL
+                      {t("services.brand")}
                     </span>
 
                     <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 transition duration-300 group-hover:border-[#D9A21B]/50 group-hover:bg-[#D9A21B]/10">
@@ -273,13 +268,11 @@ const WhatWeDoGlobally: React.FC = () => {
               <div>
 
                 <h3 className="text-lg font-semibold text-white">
-                  Connecting Markets
+                  {t("services.connectingTitle")}
                 </h3>
 
                 <p className="mt-2 text-sm leading-6 text-slate-400">
-                  We aim to connect different markets by creating
-                  pathways for communication, collaboration, and
-                  future growth.
+                  {t("services.connectingText")}
                 </p>
 
               </div>
@@ -302,13 +295,11 @@ const WhatWeDoGlobally: React.FC = () => {
               <div>
 
                 <h3 className="text-lg font-semibold text-white">
-                  Building Relationships
+                  {t("services.relationshipsTitle")}
                 </h3>
 
                 <p className="mt-2 text-sm leading-6 text-slate-400">
-                  Strong relationships are at the heart of our
-                  international journey and long-term global
-                  vision.
+                  {t("services.relationshipsText")}
                 </p>
 
               </div>

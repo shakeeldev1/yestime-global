@@ -7,47 +7,50 @@ import {
     Sparkles,
     Users,
 } from 'lucide-react'
-
-const FEATURES = [
-    {
-        title: 'Global Networking',
-        text: 'Connect directly with visionary entrepreneurs, experienced investors, and strategic industry partners hailing from over 30 countries worldwide to expand your international reach.',
-        icon: Globe2,
-        image: 'https://i.pinimg.com/1200x/dc/9f/79/dc9f79b5ac6faa63db23a192300553a6.jpg',
-    },
-    {
-        title: 'Expert Insights',
-        text: 'Learn from seasoned industry leaders and successful entrepreneurs who have scaled empires, sharing proven frameworks, hard-earned wisdom, and actionable market strategies.',
-        icon: Lightbulb,
-        image: 'https://i.pinimg.com/1200x/b9/5f/e6/b95fe60ff7b221ff36bfdb68b6c7b4e3.jpg',
-    },
-    {
-        title: 'Secure & Inclusive',
-        text: 'Experience a welcoming, professionally managed environment where diverse backgrounds are celebrated, ensuring everyone receives an equal opportunity to thrive and succeed securely.',
-        icon: ShieldCheck,
-        image: 'https://i.pinimg.com/1200x/b9/07/aa/b907aab49b75f80838fab3523b1a3ba4.jpg',
-    },
-    {
-        title: 'Business Growth',
-        text: 'Discover real, high-impact business opportunities, funding channels, and disruptive ideas specifically curated to dramatically accelerate your personal trajectory and corporate expansion.',
-        icon: Users,
-        image: 'https://i.pinimg.com/1200x/a4/74/7a/a4747a9d6ba4a858a620fd2c10fda2b9.jpg',
-    },
-    {
-        title: 'Lasting Partnerships',
-        text: 'Build deep, meaningful professional relationships that effortlessly evolve past casual networking events into long-term, profitable business collaborations and joint ventures.',
-        icon: HeartHandshake,
-        image: 'https://i.pinimg.com/1200x/ce/51/8e/ce518ea13256bc8411d7cc35f9c33b44.jpg',
-    },
-    {
-        title: 'Exclusive Resources',
-        text: 'Gain privileged entry to premium downloadable toolkits, proprietary strategic templates, and comprehensive market research reports designed to give your venture a competitive edge.',
-        icon: Award,
-        image: 'https://i.pinimg.com/736x/58/26/e0/5826e0b806d7a830fe2f2847ec06b305.jpg',
-    },
-]
+import { useTranslation } from 'react-i18next'
 
 export const EventsHighlights = () => {
+    const { t } = useTranslation('event')
+
+    const FEATURES = [
+        {
+            title: t('highlights.features.0.title'),
+            text: t('highlights.features.0.text'),
+            icon: Globe2,
+            image: 'https://i.pinimg.com/1200x/dc/9f/79/dc9f79b5ac6faa63db23a192300553a6.jpg',
+        },
+        {
+            title: t('highlights.features.1.title'),
+            text: t('highlights.features.1.text'),
+            icon: Lightbulb,
+            image: 'https://i.pinimg.com/1200x/b9/5f/e6/b95fe60ff7b221ff36bfdb68b6c7b4e3.jpg',
+        },
+        {
+            title: t('highlights.features.2.title'),
+            text: t('highlights.features.2.text'),
+            icon: ShieldCheck,
+            image: 'https://i.pinimg.com/1200x/b9/07/aa/b907aab49b75f80838fab3523b1a3ba4.jpg',
+        },
+        {
+            title: t('highlights.features.3.title'),
+            text: t('highlights.features.3.text'),
+            icon: Users,
+            image: 'https://i.pinimg.com/1200x/a4/74/7a/a4747a9d6ba4a858a620fd2c10fda2b9.jpg',
+        },
+        {
+            title: t('highlights.features.4.title'),
+            text: t('highlights.features.4.text'),
+            icon: HeartHandshake,
+            image: 'https://i.pinimg.com/1200x/ce/51/8e/ce518ea13256bc8411d7cc35f9c33b44.jpg',
+        },
+        {
+            title: t('highlights.features.5.title'),
+            text: t('highlights.features.5.text'),
+            icon: Award,
+            image: 'https://i.pinimg.com/736x/58/26/e0/5826e0b806d7a830fe2f2847ec06b305.jpg',
+        },
+    ]
+
     return (
         <section id="event-highlights" className="relative w-full overflow-hidden bg-slate-100/70 py-12 md:py-20">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -56,15 +59,15 @@ export const EventsHighlights = () => {
                 <div className="flex flex-col items-center text-center">
                     <div className="inline-flex items-center gap-2 rounded-full border border-amber-300/50 bg-amber-500/10 px-4 py-1.5 text-sm font-bold text-amber-700 shadow-xs">
                         <Sparkles className="h-3.5 w-3.5 text-amber-600" />
-                        <span className="uppercase tracking-widest">Why Attend</span>
+                        <span className="uppercase tracking-widest">{t('highlights.badge')}</span>
                     </div>
 
                     <h2 className="mt-4 text-4xl font-black tracking-tight text-[#061832] sm:text-5xl">
-                        Why Join Our <span className="text-[#E2A22C]">Events?</span>
+                        {t('highlights.headingPre')} <span className="text-[#E2A22C]">{t('highlights.headingHighlight')}</span>
                     </h2>
 
                     <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">
-                        Our events are carefully designed to create meaningful connections and provide actionable insights that transform your business and personal growth.
+                        {t('highlights.description')}
                     </p>
                 </div>
 

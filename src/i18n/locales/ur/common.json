@@ -1,0 +1,60 @@
+{
+  "brand": "یس ٹائم گلوبل",
+  "nav": {
+    "home": "ہوم",
+    "about": "ہمارے بارے میں",
+    "programs": "پروگرامز",
+    "business": "کاروبار",
+    "finance": "مالیات",
+    "events": "تقریبات",
+    "support": "معاونت",
+    "contactUs": "رابطہ کریں",
+    "language": "زبان",
+    "selectLanguage": "زبان منتخب کریں",
+    "toggleMenu": "مینو کھولیں یا بند کریں",
+    "items": {
+      "ourPrograms": "ہمارے پروگرامز",
+      "howItWorks": "یہ کیسے کام کرتا ہے",
+      "businessPartners": "کاروباری شراکت دار",
+      "globalExpansion": "عالمی توسیع",
+      "investors": "سرمایہ کار",
+      "banksFinancial": "بینک اور مالیاتی ادارے",
+      "customerSupport": "کسٹمر سپورٹ",
+      "faqs": "عمومی سوالات"
+    }
+  },
+  "languages": {
+    "en": "انگریزی",
+    "ur": "اردو"
+  },
+  "footer": {
+    "description": "یس ٹائم گلوبل پرائیویٹ لمیٹڈ — کار پروگرامز، رئیل اسٹیٹ منصوبوں اور خودکار بچت پلانز کے ذریعے جدت، شفافیت اور اعتماد کے ساتھ عالمی مواقع کو جوڑتا ہے۔",
+    "badge": "شفافیت • اعتماد • رسائی",
+    "programsHeading": "ہمارے پروگرامز",
+    "quickLinksHeading": "فوری روابط",
+    "contactHeading": "رابطہ کریں",
+    "address": "یس ٹائم گلوبل ہیڈ لاہور، پاکستان",
+    "copyright": "© {{year}} یس ٹائم گلوبل پرائیویٹ لمیٹڈ۔ جملہ حقوق محفوظ ہیں۔",
+    "privacyPolicy": "پرائیویسی پالیسی",
+    "termsConditions": "شرائط و ضوابط",
+    "legalDisclaimer": "قانونی اعلامیہ",
+    "programLinks": {
+      "car": "کار پروگرام",
+      "realEstate": "رئیل اسٹیٹ پروگرام",
+      "vehicles": "گاڑیاں",
+      "shopping": "شاپنگ اور بچت",
+      "automated": "خودکار بچت نظام"
+    },
+    "quickLinks": {
+      "about": "ہمارے بارے میں",
+      "visionMission": "وژن اور مشن",
+      "businessPartners": "کاروباری شراکت دار",
+      "banksFinancial": "بینک اور مالیاتی ادارے",
+      "faqsSupport": "عمومی سوالات اور معاونت"
+    }
+  },
+  "whatsapp": {
+    "message": "السلام علیکم، یس ٹائم گلوبل",
+    "ariaLabel": "واٹس ایپ پر ہم سے بات کریں"
+  }
+}

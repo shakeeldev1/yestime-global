@@ -14,6 +14,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface PartnerCard {
   icon: LucideIcon;
@@ -23,42 +24,44 @@ interface PartnerCard {
   image: string;
 }
 
-const partnerCards: PartnerCard[] = [
-  {
-    icon: Store,
-    title: "Retail Shops",
-    text: "Expand your local reach and drive revenue by integrating into our high-demand merchant network.",
-    badge: "High Growth",
-    image:
-      "https://i.pinimg.com/736x/73/73/33/737333b121b2291d32497439795b10bf.jpg",
-  },
-  {
-    icon: Building2,
-    title: "Strategic Enterprises",
-    text: "Forge high-impact alliances designed to scale operations, maximize market share, and ensure long-term stability.",
-    badge: "Core Alliance",
-    image:
-      "https://i.pinimg.com/1200x/6a/9a/66/6a9a661a89881207fcc24bf0c16e5bf5.jpg",
-  },
-  {
-    icon: TrendingUp,
-    title: "Venture Investors",
-    text: "Unlock high-yield opportunities backed by robust metrics within our accelerating, scalable digital ecosystem.",
-    badge: "High ROI",
-    image:
-      "https://i.pinimg.com/736x/b1/a8/ee/b1a8ee6bcbce0d3cf35f6bfb1ebc7520.jpg",
-  },
-  {
-    icon: Users,
-    title: "Authorized Dealers",
-    text: "Leverage reliable supply chains, priority support, and dedicated regional distribution channels.",
-    badge: "Trusted Hub",
-    image:
-      "https://i.pinimg.com/736x/89/de/d7/89ded76624f85cf9c28b078abf09303a.jpg",
-  },
-];
-
 const BusinessPartnersHero: React.FC = () => {
+  const { t } = useTranslation("business");
+
+  const partnerCards: PartnerCard[] = [
+    {
+      icon: Store,
+      title: t("hero.cards.0.title"),
+      text: t("hero.cards.0.text"),
+      badge: t("hero.cards.0.badge"),
+      image:
+        "https://i.pinimg.com/736x/73/73/33/737333b121b2291d32497439795b10bf.jpg",
+    },
+    {
+      icon: Building2,
+      title: t("hero.cards.1.title"),
+      text: t("hero.cards.1.text"),
+      badge: t("hero.cards.1.badge"),
+      image:
+        "https://i.pinimg.com/1200x/6a/9a/66/6a9a661a89881207fcc24bf0c16e5bf5.jpg",
+    },
+    {
+      icon: TrendingUp,
+      title: t("hero.cards.2.title"),
+      text: t("hero.cards.2.text"),
+      badge: t("hero.cards.2.badge"),
+      image:
+        "https://i.pinimg.com/736x/b1/a8/ee/b1a8ee6bcbce0d3cf35f6bfb1ebc7520.jpg",
+    },
+    {
+      icon: Users,
+      title: t("hero.cards.3.title"),
+      text: t("hero.cards.3.text"),
+      badge: t("hero.cards.3.badge"),
+      image:
+        "https://i.pinimg.com/736x/89/de/d7/89ded76624f85cf9c28b078abf09303a.jpg",
+    },
+  ];
+
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-white via-[#F8FAFC]/60 to-white text-[#0B2341]">
       {/* Background Glows */}
@@ -75,32 +78,32 @@ const BusinessPartnersHero: React.FC = () => {
             {/* Badge */}
             <div className="group mb-6 inline-flex items-center gap-2.5 rounded-full border border-[#C6922B]/40 bg-gradient-to-r from-[#C6922B]/10 via-[#C6922B]/5 to-transparent px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#C6922B] shadow-sm backdrop-blur-md transition-all duration-300 hover:border-[#C6922B]">
               <Sparkles size={14} className="animate-pulse" />
-              <span>Elite Ecosystem Partnership</span>
+              <span>{t("hero.badge")}</span>
             </div>
 
             {/* Heading */}
             <h1 className="text-5xl font-bold text-[#0B2341] sm:text-6xl ">
-              Architecting
+              {t("hero.title.line1")}
               <br />
 
               <span className="bg-gradient-to-r from-[#C6922B] via-[#dfa838] to-[#C6922B] bg-clip-text text-transparent">
-                Future Alliances.
+                {t("hero.title.line2")}
               </span>
             </h1>
 
             {/* Description */}
             <p className="mt-6 text-base font-normal leading-relaxed text-[#31527A] sm:text-lg">
-              YES TIME GLOBAL PRIVATE LIMITED cultivates high-performance ecosystems uniting retail leaders, strategic investors, dealers, and specialized enterprises. Scale your capabilities and unlock unprecedented commercial momentum through curated collaboration.
+              {t("hero.description")}
 
             </p>
 
             {/* Feature Grid */}
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {[
-                { label: "Long-Term Equity", icon: Handshake },
-                { label: "Accelerated Growth", icon: TrendingUp },
-                { label: "Exclusive Access", icon: BriefcaseBusiness },
-                { label: "Enterprise Tech Stack", icon: Laptop },
+                { label: t("hero.features.0.label"), icon: Handshake },
+                { label: t("hero.features.1.label"), icon: TrendingUp },
+                { label: t("hero.features.2.label"), icon: BriefcaseBusiness },
+                { label: t("hero.features.3.label"), icon: Laptop },
               ].map((item, idx) => {
                 const ItemIcon = item.icon;
 
@@ -129,7 +132,7 @@ const BusinessPartnersHero: React.FC = () => {
                 className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-[#0B2341] px-5 py-2.5 text-sm font-bold text-white shadow-xl shadow-[#0B2341]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#16385F] hover:shadow-[#0B2341]/30 active:translate-y-0"
               >
                 <span className="relative text-white z-10 flex items-center gap-2">
-                  Become a Partner
+                  {t("hero.becomePartner")}
                   <Zap
                     size={16}
                     className="text-[#C6922B] transition-transform duration-300 group-hover:scale-110"
@@ -141,7 +144,7 @@ const BusinessPartnersHero: React.FC = () => {
                 type="button"
                 className="inline-flex items-center justify-center rounded-full border-2 border-[#C6922B]/80 bg-white/50 px-5 py-2.5 text-sm font-bold text-[#0B2341] shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-[#C6922B] hover:bg-[#C6922B] hover:text-white"
               >
-                Explore Framework
+                {t("hero.exploreFramework")}
               </button>
             </div>
           </div>
@@ -155,16 +158,16 @@ const BusinessPartnersHero: React.FC = () => {
                 <div>
                   <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-[#C6922B]">
                     <ShieldCheck size={16} />
-                    <span>Yestime Global</span>
+                    <span>{t("hero.card.brand")}</span>
                   </div>
 
                   <h2 className="mt-1 text-2xl font-bold tracking-tight text-[#0B2341] sm:text-3xl">
-                    Who Can Partner With Us
+                    {t("hero.card.heading")}
                   </h2>
                 </div>
 
                 <span className="inline-flex self-start rounded-full bg-[#0B2341]/5 px-3.5 py-1 text-xs font-medium text-[#31527A] sm:self-auto">
-                  4 Active Categories
+                  {t("hero.card.categories")}
                 </span>
               </div>
 
@@ -225,7 +228,7 @@ const BusinessPartnersHero: React.FC = () => {
                         {/* Bottom */}
                         <div className="mt-4 flex items-center justify-between border-t border-white/20 pt-3 text-[11px] font-semibold">
                           <span className="flex items-center gap-1 text-[#FFD76A] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
-                            Apply Now →
+                            {t("hero.applyNow")}
                           </span>
                         </div>
                       </div>
@@ -242,13 +245,11 @@ const BusinessPartnersHero: React.FC = () => {
 
                 <div>
                   <h4 className="text-sm font-bold text-[#0B2341]">
-                    Custom Corporate & Enterprise Synergies
+                    {t("hero.notice.title")}
                   </h4>
 
                   <p className="mt-1 text-xs leading-relaxed text-[#31527A]">
-                    Are you a specialized service provider, corporate entity,
-                    or institutional body? We tailor custom collaborative
-                    pathways strictly to your organizational metrics.
+                    {t("hero.notice.text")}
                   </p>
                 </div>
               </div>

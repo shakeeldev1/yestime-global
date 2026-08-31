@@ -14,6 +14,7 @@ import {
   FaMessage,
 } from 'react-icons/fa6'
 import { HiChevronDown, HiCheck, HiArrowRight } from 'react-icons/hi2'
+import { useTranslation } from "react-i18next";
 import { inquiryTypes } from './contactData'
 
 type FormValues = {
@@ -40,6 +41,7 @@ const inputClass =
   'w-full rounded-xl border border-slate-200 bg-[#f9fafb] pl-11 pr-4 py-3 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 hover:border-slate-300 focus:border-[#d99420] focus:bg-white focus:ring-2 focus:ring-[#d99420]/20'
 
 const ContactForm = () => {
+  const { t } = useTranslation("contact");
   const [values, setValues] = useState<FormValues>(initialValues)
   const [submitted, setSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -75,7 +77,7 @@ const ContactForm = () => {
           {/* Background Image Layer */}
           <img
             src="/homeAbout.png"
-            alt="Corporate Office Building"
+            alt={t("form.sidebar.imageAlt")}
             className="absolute inset-0 h-full w-full object-cover opacity-35"
           />
 
@@ -89,7 +91,7 @@ const ContactForm = () => {
             <div className="space-y-4">
               <div>
                 <span className="text-xs font-bold uppercase tracking-widest text-[#d99420]">
-                  GET IN TOUCH
+                  {t("form.sidebar.eyebrow")}
                 </span>
                 <h3 className="mt-1 text-2xl font-extrabold text-white">
                   YES TIME GLOBAL
@@ -100,8 +102,8 @@ const ContactForm = () => {
               <div className="inline-flex items-center gap-2 rounded-xl bg-[#000000]/90 px-3 py-2 border border-slate-700/60 backdrop-blur-sm">
                 <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
                 <div className="text-[11px] leading-tight">
-                  <p className="text-slate-400">Usually responds</p>
-                  <p className="font-bold text-amber-400">within 24 hours</p>
+                  <p className="text-slate-400">{t("form.sidebar.statusLabel")}</p>
+                  <p className="font-bold text-amber-400">{t("form.sidebar.statusValue")}</p>
                 </div>
               </div>
             </div>
@@ -120,7 +122,7 @@ const ContactForm = () => {
                     <FaWhatsapp className="h-5 w-5" />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-xs text-slate-400">WhatsApp Support</p>
+                    <p className="text-xs text-slate-400">{t("form.sidebar.whatsappLabel")}</p>
                     <p className="text-xs font-bold text-white truncate">+92 306 8509086</p>
                   </div>
                 </div>
@@ -139,7 +141,7 @@ const ContactForm = () => {
                     <FaPhone className="h-4 w-4" />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-xs text-slate-400">Direct Call</p>
+                    <p className="text-xs text-slate-400">{t("form.sidebar.callLabel")}</p>
                     <p className="text-xs font-bold text-white truncate">+92 319 6336984</p>
                   </div>
                 </div>
@@ -158,7 +160,7 @@ const ContactForm = () => {
                     <FaEnvelope className="h-4 w-4" />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-xs text-slate-400">Email Support</p>
+                    <p className="text-xs text-slate-400">{t("form.sidebar.emailLabel")}</p>
                     <p className="text-xs font-bold text-white truncate">info@yestimeglobal.com</p>
                   </div>
                 </div>
@@ -175,8 +177,8 @@ const ContactForm = () => {
                   <FaMessage className="h-3.5 w-3.5" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-amber-400">Prefer WhatsApp?</p>
-                  <p className="text-[11px] text-slate-400">Chat directly with our team.</p>
+                  <p className="text-xs font-bold text-amber-400">{t("form.sidebar.preferTitle")}</p>
+                  <p className="text-[11px] text-slate-400">{t("form.sidebar.preferSubtitle")}</p>
                 </div>
               </div>
 
@@ -187,7 +189,7 @@ const ContactForm = () => {
                 className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#00a884] px-5 py-2 text-xs font-bold text-white transition-all hover:bg-[#008f70]"
               >
                 <FaWhatsapp className="h-4 w-4" />
-                <span>Chat on WhatsApp</span>
+                <span>{t("form.sidebar.chatButton")}</span>
                 <HiArrowRight className="h-3.5 w-3.5" />
               </a>
             </div>
@@ -198,7 +200,7 @@ const ContactForm = () => {
                 <span className="text-amber-400 text-xs">📍</span>
                 <div className="text-right">
                   <p className="text-xs font-bold text-white leading-tight">YES TIME GLOBAL</p>
-                  <p className="text-[10px] text-slate-400 leading-tight">Lahore, Pakistan</p>
+                  <p className="text-[10px] text-slate-400 leading-tight">{t("form.sidebar.location")}</p>
                 </div>
               </div>
             </div>
@@ -212,32 +214,32 @@ const ContactForm = () => {
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-[#d99420]" />
               <span className="text-xs font-bold uppercase tracking-wider text-[#d99420]">
-                SEND AN INQUIRY
+                {t("form.eyebrow")}
               </span>
             </div>
 
             <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-              Let’s Talk About Your Next <span className="text-[#d99420]">Opportunity</span>.
+              {t("form.headingPre")} <span className="text-[#d99420]">{t("form.headingHighlight")}</span>{t("form.headingSuffix")}
             </h2>
             <p className="mt-3 text-sm text-slate-600 sm:text-base leading-relaxed">
-              Whether you have a question about our programs, partnerships, financial services or membership, our team is here to help.
+              {t("form.subtitle")}
             </p>
 
             {/* Badges / Features */}
             <div className="mt-6 flex flex-wrap items-center gap-4 border-b border-slate-100 pb-6 text-xs font-semibold text-slate-600">
               <div className="flex items-center gap-2">
                 <FaBolt className="text-[#d99420]" />
-                <span>Quick Response</span>
+                <span>{t("form.badges.quick")}</span>
               </div>
               <span className="text-slate-300">|</span>
               <div className="flex items-center gap-2">
                 <FaShieldHalved className="text-[#d99420]" />
-                <span>Secure Inquiry</span>
+                <span>{t("form.badges.secure")}</span>
               </div>
               <span className="text-slate-300">|</span>
               <div className="flex items-center gap-2">
                 <FaUsers className="text-[#d99420]" />
-                <span>Dedicated Support</span>
+                <span>{t("form.badges.support")}</span>
               </div>
             </div>
 
@@ -247,7 +249,7 @@ const ContactForm = () => {
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-1">
                   <label htmlFor="name" className="text-xs font-bold text-slate-700">
-                    Full Name <span className="text-[#d99420]">*</span>
+                    {t("form.labels.name")} <span className="text-[#d99420]">*</span>
                   </label>
                   <div className="relative">
                     <FaUser className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs" />
@@ -258,14 +260,14 @@ const ContactForm = () => {
                       value={values.name}
                       onChange={handleChange}
                       className={inputClass}
-                      placeholder="Enter your full name"
+                      placeholder={t("form.placeholders.name")}
                     />
                   </div>
                 </div>
 
                 <div className="space-y-1">
                   <label htmlFor="email" className="text-xs font-bold text-slate-700">
-                    Email Address <span className="text-[#d99420]">*</span>
+                    {t("form.labels.email")} <span className="text-[#d99420]">*</span>
                   </label>
                   <div className="relative">
                     <FaEnvelope className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs" />
@@ -277,7 +279,7 @@ const ContactForm = () => {
                       value={values.email}
                       onChange={handleChange}
                       className={inputClass}
-                      placeholder="Enter your email"
+                      placeholder={t("form.placeholders.email")}
                     />
                   </div>
                 </div>
@@ -287,7 +289,7 @@ const ContactForm = () => {
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-1">
                   <label htmlFor="phone" className="text-xs font-bold text-slate-700">
-                    Phone / WhatsApp <span className="text-[#d99420]">*</span>
+                    {t("form.labels.phone")} <span className="text-[#d99420]">*</span>
                   </label>
                   <div className="relative">
                     <FaPhone className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs" />
@@ -299,14 +301,14 @@ const ContactForm = () => {
                       value={values.phone}
                       onChange={handleChange}
                       className={inputClass}
-                      placeholder="Enter your number"
+                      placeholder={t("form.placeholders.phone")}
                     />
                   </div>
                 </div>
 
                 <div className="space-y-1">
                   <label htmlFor="country" className="text-xs font-bold text-slate-700">
-                    Country <span className="text-[#d99420]">*</span>
+                    {t("form.labels.country")} <span className="text-[#d99420]">*</span>
                   </label>
                   <div className="relative">
                     <FaGlobe className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs" />
@@ -317,7 +319,7 @@ const ContactForm = () => {
                       value={values.country}
                       onChange={handleChange}
                       className={inputClass}
-                      placeholder="Select your country"
+                      placeholder={t("form.placeholders.country")}
                     />
                     <HiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 h-5 w-5" />
                   </div>
@@ -327,7 +329,7 @@ const ContactForm = () => {
               {/* Inquiry Type Select */}
               <div className="space-y-1">
                 <label htmlFor="inquiry" className="text-xs font-bold text-slate-700">
-                  Inquiry Type <span className="text-[#d99420]">*</span>
+                  {t("form.labels.inquiry")} <span className="text-[#d99420]">*</span>
                 </label>
                 <div className="relative">
                   <FaListCheck className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs" />
@@ -341,7 +343,7 @@ const ContactForm = () => {
                   >
                     {inquiryTypes.map((type) => (
                       <option key={type} value={type}>
-                        {type}
+                        {t(`inquiryTypes.${type}.label`)}
                       </option>
                     ))}
                   </select>
@@ -352,7 +354,7 @@ const ContactForm = () => {
               {/* Message Textarea */}
               <div className="space-y-1">
                 <label htmlFor="message" className="text-xs font-bold text-slate-700">
-                  Your Message <span className="text-[#d99420]">*</span>
+                  {t("form.labels.message")} <span className="text-[#d99420]">*</span>
                 </label>
                 <div className="relative">
                   <textarea
@@ -364,9 +366,9 @@ const ContactForm = () => {
                     value={values.message}
                     onChange={handleChange}
                     className="w-full rounded-xl border border-slate-200 bg-[#f9fafb] p-3.5 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 hover:border-slate-300 focus:border-[#d99420] focus:bg-white focus:ring-2 focus:ring-[#d99420]/20"
-                    placeholder="Tell us what you would like to discuss..."
+                    placeholder={t("form.placeholders.message")}
                   />
-                 
+
                 </div>
               </div>
 
@@ -383,7 +385,7 @@ const ContactForm = () => {
                     className="mt-0.5 h-4 w-4 rounded border-slate-300 text-[#d99420] focus:ring-[#d99420]"
                   />
                   <label htmlFor="consent" className="cursor-pointer text-xs text-slate-500 leading-tight select-none">
-                    I agree that YES TIME GLOBAL may use these details to respond to my inquiry.
+                    {t("form.consent")}
                   </label>
                 </div>
 
@@ -393,7 +395,7 @@ const ContactForm = () => {
                   className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#d99420] px-5 py-2 text-sm font-bold text-white shadow-md transition-all hover:bg-[#c48316] focus:outline-none focus:ring-2 focus:ring-[#d99420] focus:ring-offset-2 disabled:opacity-70"
                 >
                   <FaPaperPlane className="text-xs" />
-                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                  <span>{isSubmitting ? t("form.submitting") : t("form.submit")}</span>
                 </button>
               </div>
 
@@ -406,8 +408,8 @@ const ContactForm = () => {
                 >
                   <HiCheck className="h-5 w-5 text-emerald-600" />
                   <div>
-                    <p className="font-semibold">Message Sent!</p>
-                    <p className="text-xs text-emerald-700">Thank you. Your inquiry has been received.</p>
+                    <p className="font-semibold">{t("form.successTitle")}</p>
+                    <p className="text-xs text-emerald-700">{t("form.successBody")}</p>
                   </div>
                 </div>
               )}

@@ -5,6 +5,7 @@ import {
   Handshake,
   TrendingUp,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface ImpactItem {
   id: number;
@@ -15,37 +16,35 @@ interface ImpactItem {
 }
 
 const GlobalImpact: React.FC = () => {
+  const { t } = useTranslation("global");
+
   const impactItems: ImpactItem[] = [
     {
       id: 1,
-      value: "3",
-      label: "Current Countries",
-      description:
-        "Our growing international presence currently connects Pakistan, Nepal, and Indonesia.",
+      value: t("impact.items.0.value"),
+      label: t("impact.items.0.label"),
+      description: t("impact.items.0.description"),
       icon: Globe2,
     },
     {
       id: 2,
-      value: "10",
-      label: "Active Markets",
-      description:
-        "We are building stronger connections and exploring opportunities across multiple markets.",
+      value: t("impact.items.1.value"),
+      label: t("impact.items.1.label"),
+      description: t("impact.items.1.description"),
       icon: MapPinned,
     },
     {
       id: 3,
-      value: "Growing",
-      label: "Global Network",
-      description:
-        "Our network continues to grow through new relationships, partnerships, and opportunities.",
+      value: t("impact.items.2.value"),
+      label: t("impact.items.2.label"),
+      description: t("impact.items.2.description"),
       icon: Handshake,
     },
     {
       id: 4,
-      value: "Future",
-      label: "Expansion",
-      description:
-        "We are continuously looking toward new countries and international opportunities.",
+      value: t("impact.items.3.value"),
+      label: t("impact.items.3.label"),
+      description: t("impact.items.3.description"),
       icon: TrendingUp,
     },
   ];
@@ -79,16 +78,16 @@ const GlobalImpact: React.FC = () => {
             <span className="h-2 w-2 rounded-full bg-[#FFD45A] shadow-[0_0_16px_rgba(255,212,90,0.8)]" />
 
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FFD45A]">
-              Our Global Impact
+              {t("impact.label")}
             </span>
           </div>
 
           {/* Heading */}
 
           <h2 className="text-3xl font-black tracking-[-0.04em] text-[#071a36] sm:text-4xl md:text-5xl">
-            Growing Beyond{" "}
+            {t("impact.title.before")}{" "}
             <span className="bg-gradient-to-r from-[#d9a21b] via-[#f2c75e] to-[#d9a21b] bg-clip-text text-transparent">
-              Borders
+              {t("impact.title.highlight")}
             </span>
           </h2>
 
@@ -105,9 +104,7 @@ const GlobalImpact: React.FC = () => {
           {/* Description */}
 
           <p className="text-base leading-7 text-[#41566f] sm:text-lg">
-            Our international journey is built around meaningful
-            connections, new opportunities, and a growing presence
-            across different markets.
+            {t("impact.description")}
           </p>
         </div>
 
@@ -159,7 +156,7 @@ const GlobalImpact: React.FC = () => {
                 {/* Bottom Arrow */}
 
                 <div className="mt-5 flex items-center gap-2 text-xs font-medium text-slate-300 transition duration-300 group-hover:text-[#FFD45A]">
-                  <span>Global Growth</span>
+                  <span>{t("impact.cardFooter")}</span>
 
                   <span className="h-px w-6 bg-current" />
                 </div>
@@ -176,11 +173,11 @@ const GlobalImpact: React.FC = () => {
           <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
             <div className="max-w-3xl">
               <p className="text-2xl font-medium leading-snug tracking-[-0.03em] text-[#071a36]">
-                A growing international presence
+                {t("impact.bottomTitle")}
               </p>
 
               <p className="mt-2 max-w-3xl text-base leading-7 text-[#41566f]">
-                From our current markets to future destinations, YES TIME GLOBAL continues to build connections that create opportunities across borders.
+                {t("impact.bottomText")}
               </p>
             </div>
 
@@ -188,7 +185,7 @@ const GlobalImpact: React.FC = () => {
               href="#global-journey"
               className="inline-flex shrink-0 items-center justify-center rounded-xl border border-[#d9a21b]/60 bg-transparent px-6 py-3.5 text-base font-semibold text-[#071a36] transition duration-300 hover:border-[#d9a21b] hover:bg-[#fffaf0]"
             >
-              Explore Our Journey
+              {t("impact.bottomCta")}
             </a>
           </div>
         </div>

@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "joinNow": "Join Now",
+    "howItWorks": "How It Works",
+    "titleFallback": "Program"
+  },
+  "gallery": {
+    "badge": "Gallery",
+    "headingPrefix": "Explore the",
+    "headingSuffix": "experience",
+    "imageAlt": "{{title}} gallery {{index}}"
+  },
+  "plans": {
+    "badge": "Our Plans",
+    "headingPrefix": "Choose the right",
+    "headingHighlight": "car plan",
+    "headingSuffix": "for your journey",
+    "mainAlt": "{{title}} main gallery",
+    "sideOneAlt": "{{title}} gallery side one",
+    "sideTwoAlt": "{{title}} gallery side two"
+  },
+  "planCard": {
+    "luxuryVehiclePlan": "Luxury Vehicle Plan",
+    "planSummary": "Plan Summary",
+    "daily": "Daily",
+    "monthly": "Monthly",
+    "prize": "Prize",
+    "planDetails": "Plan Details",
+    "applyNow": "Apply Now"
+  },
+  "about": {
+    "badge": "About This Program",
+    "smartSavings": "Smart savings",
+    "cardHeadingLine1": "Better Habits,",
+    "cardHeadingHighlight": "Better Value.",
+    "memberBenefits": "Member Benefits",
+    "smartSavingsTitle": "Smart Savings",
+    "headingFallback": "For Everyone."
+  },
+  "benefits": {
+    "badge": "Benefits For You",
+    "headingPrefix": "More Reasons to"
+  },
+  "audience": {
+    "badge": "Who Can Join?",
+    "headingLine1": "Savings Are",
+    "headingLine2": "For Everyone.",
+    "intro": "Whether you are planning a purchase or looking for better value, this program is designed to help you make smarter decisions and maximize your savings.",
+    "becomeMember": "Become a Member"
+  },
+  "showcase": {
+    "cardHeadingLine1": "Better Shopping.",
+    "cardHeadingHighlight": "Better Living.",
+    "categoryValueSuffix": "Value",
+    "memberRewards": "Member Rewards",
+    "memberLifestyleAlt": "Member lifestyle"
+  },
+  "footerTags": {
+    "smartChoice": "Smart Choice",
+    "betterValue": "Better Value",
+    "strongerFuture": "Stronger Future"
+  },
+  "carPlan": {
+    "badge": "Dedicated Car Plan",
+    "heroHeadingPrefix": "Drive your dream with a",
+    "heroHeadingHighlight": "smart car plan",
+    "heroDescription": "Choose a flexible car financing path built for long-term value, smooth ownership, and a stronger future for you and your family.",
+    "applyForPlan": "Apply for a Plan",
+    "comparePlans": "Compare Plans",
+    "featuredAlt": "Car plan featured",
+    "feature1Tag": "Flexible",
+    "feature1Title": "Multiple Options",
+    "feature1Desc": "Choose a trusted car plan that fits your budget, driving goals, and future needs.",
+    "feature2Tag": "Affordable",
+    "feature2Title": "Stable Savings",
+    "feature2Desc": "Enjoy structured contributions and a clear route toward vehicle ownership with manageable value.",
+    "feature3Tag": "Secure",
+    "feature3Title": "Trusted Process",
+    "feature3Desc": "A transparent and member-focused car plan designed to make your next decision easier and safer.",
+    "plansBadge": "Car Plans",
+    "plansHeadingPrefix": "Select the best",
+    "plansHeadingHighlight": "car plan",
+    "plansHeadingSuffix": "for your journey"
+  }
+}

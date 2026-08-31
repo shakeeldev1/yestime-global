@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight, Calendar, Grid, ShieldCheck, Globe } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const AboutHero: React.FC = () => {
+  const { t } = useTranslation("about");
   return (
     <section className="relative min-h-[600px] w-full overflow-hidden bg-black text-white">
       {/* BACKGROUND IMAGE & OVERLAYS */}
@@ -28,20 +30,21 @@ const AboutHero: React.FC = () => {
               Y
             </span>
             <span className="text-[11px] font-semibold tracking-widest text-white uppercase">
-              ABOUT YES TIME GLOBAL
+              {t("hero.badge")}
             </span>
           </div>
 
           {/* HEADING */}
           <h1 className="text-4xl font-bold  text-white sm:text-5xl ">
-            Building Connections. <br />
-            <span className="text-[#f39c12]">Creating Opportunities.</span> <br />
-            Changing Futures.
+            {t("hero.titleLine1")} <br />
+            <span className="text-[#f39c12]">{t("hero.titleLine2")}</span> <br />
+            {t("hero.titleLine3")}
           </h1>
 
           {/* DESCRIPTION */}
           <p className="mt-6 max-w-[520px] text-sm leading-relaxed text-gray-300 sm:text-base">
-            <strong className="text-white font-semibold">YES TIME GLOBAL</strong> is a trusted ecosystem that connects people, businesses and opportunities through transparent programs, strategic partnerships and accessible solutions.
+            <strong className="text-white font-semibold">YES TIME GLOBAL</strong>{" "}
+            {t("hero.description")}
           </p>
 
           {/* CTA BUTTONS */}
@@ -51,7 +54,7 @@ const AboutHero: React.FC = () => {
               to="/about"
               className="cursor-pointer inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#f39c12] to-[#d68910] px-6 py-3 text-sm font-bold text-white shadow-lg transition-all hover:brightness-110 active:scale-95"
             >
-              <span>Discover Our Story</span>
+              <span>{t("hero.cta.discover")}</span>
               <ChevronRight className="h-4 w-4" />
             </Link>
 
@@ -60,7 +63,7 @@ const AboutHero: React.FC = () => {
               to="/OurPrograms"
               className="cursor-pointer inline-flex items-center gap-2 rounded-xl border border-white/20 bg-black/40 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition-all hover:bg-white/10 active:scale-95"
             >
-              <span>Explore Programs</span>
+              <span>{t("hero.cta.explore")}</span>
               <ChevronRight className="h-4 w-4" />
             </Link>
           </div>
@@ -76,7 +79,7 @@ const AboutHero: React.FC = () => {
               </div>
               <div>
                 <div className="text-xl font-bold text-white">2023</div>
-                <div className="text-xs text-gray-400">Founded</div>
+                <div className="text-xs text-gray-400">{t("hero.stats.founded.label")}</div>
               </div>
             </div>
 
@@ -87,7 +90,7 @@ const AboutHero: React.FC = () => {
               </div>
               <div>
                 <div className="text-xl font-bold text-white">8+</div>
-                <div className="text-xs text-gray-400">Powerful Programs</div>
+                <div className="text-xs text-gray-400">{t("hero.stats.programs.label")}</div>
               </div>
             </div>
 
@@ -98,7 +101,7 @@ const AboutHero: React.FC = () => {
               </div>
               <div>
                 <div className="text-xl font-bold text-white">100%</div>
-                <div className="text-xs text-gray-400">Transparent</div>
+                <div className="text-xs text-gray-400">{t("hero.stats.transparent.label")}</div>
               </div>
             </div>
 
@@ -108,8 +111,8 @@ const AboutHero: React.FC = () => {
                 <Globe className="h-6 w-6" />
               </div>
               <div>
-                <div className="text-xl font-bold text-[#f39c12]">Global</div>
-                <div className="text-xs text-gray-400">Opportunities</div>
+                <div className="text-xl font-bold text-[#f39c12]">{t("hero.stats.global.value")}</div>
+                <div className="text-xs text-gray-400">{t("hero.stats.global.label")}</div>
               </div>
             </div>
           </div>

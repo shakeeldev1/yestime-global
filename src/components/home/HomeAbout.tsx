@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Users, Target, Eye, Handshake, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 interface PillarItem {
   icon: React.ElementType
@@ -8,25 +9,27 @@ interface PillarItem {
   description: string
 }
 
-const PILLARS: readonly PillarItem[] = [
-  {
-    icon: Target,
-    title: 'Mission',
-    description: 'Empowering lives through global access & shared opportunities.',
-  },
-  {
-    icon: Eye,
-    title: 'Vision',
-    description: 'A connected world of transparent and equal opportunities for all.',
-  },
-  {
-    icon: Handshake,
-    title: 'Core Values',
-    description: 'Built on trust, integrity, transparency, and sustainable growth.',
-  },
-] as const
-
 export const AboutUsCard: React.FC = () => {
+  const { t } = useTranslation('home')
+
+  const PILLARS: readonly PillarItem[] = [
+    {
+      icon: Target,
+      title: t('about.pillars.0.title'),
+      description: t('about.pillars.0.description'),
+    },
+    {
+      icon: Eye,
+      title: t('about.pillars.1.title'),
+      description: t('about.pillars.1.description'),
+    },
+    {
+      icon: Handshake,
+      title: t('about.pillars.2.title'),
+      description: t('about.pillars.2.description'),
+    },
+  ]
+
   return (
     <section className="relative w-full overflow-hidden bg-white py-12 text-slate-800 lg:py-16">
       {/* Decorative Glow */}
@@ -48,13 +51,13 @@ export const AboutUsCard: React.FC = () => {
                     <Users className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <span className="text-sm font-extrabold uppercase tracking-widest text-[#d99b26]">
-                    Who We Are
+                    {t('about.badge')}
                   </span>
                 </div>
 
                 <img
                   src="/about-logo.png"
-                  alt="YES TIME GLOBAL Logo"
+                  alt={t('about.logoAlt')}
                   loading="lazy"
                   className="h-16 w-auto max-w-[180px] object-contain"
                 />
@@ -69,10 +72,10 @@ export const AboutUsCard: React.FC = () => {
               {/* Main Copy */}
               <div className="mt-6 space-y-4 text-base leading-relaxed text-slate-700 sm:text-lg sm:leading-8">
                 <p>
-                  At <strong className="text-xl font-black text-[#071930] underline decoration-[#d99b26] decoration-2 underline-offset-4">YES TIME GLOBAL</strong>, we are a trusted international platform bridging members to accessible vehicle schemes, real estate ventures, and automated savings programs.
+                  {t('about.introBefore')}<strong className="text-xl font-black text-[#071930] underline decoration-[#d99b26] decoration-2 underline-offset-4">YES TIME GLOBAL</strong>{t('about.introAfter')}
                 </p>
                 <p className="text-sm text-slate-600 sm:text-base sm:leading-7">
-                  We create accessible programs and strategic partnerships that empower individuals and communities to grow, achieve, and succeed together.
+                  {t('about.paragraph2')}
                 </p>
               </div>
 
@@ -80,11 +83,11 @@ export const AboutUsCard: React.FC = () => {
               <div className="mt-6 grid grid-cols-2 gap-3 text-sm font-bold text-[#071930] sm:text-base">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-5 w-5 shrink-0 text-[#d99b26]" aria-hidden="true" />
-                  <span>Global Opportunities</span>
+                  <span>{t('about.features.0')}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-5 w-5 shrink-0 text-[#d99b26]" aria-hidden="true" />
-                  <span>Transparent Process</span>
+                  <span>{t('about.features.1')}</span>
                 </div>
               </div>
             </div>
@@ -123,7 +126,7 @@ export const AboutUsCard: React.FC = () => {
                   className="inline-flex items-center gap-3 rounded-xl bg-[#071930] px-5 py-2.5 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0c2647] hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-800"
                 >
                   <span className="text-sm font-extrabold tracking-wide text-white">
-                    Discover Full Story
+                    {t('about.button')}
                   </span>
                   <ArrowRight className="h-4 w-4 shrink-0 text-[#d99b26]" aria-hidden="true" />
                 </Link>
@@ -136,7 +139,7 @@ export const AboutUsCard: React.FC = () => {
             <div className="absolute inset-0 bg-white">
               <img
                 src="/homeAbout.png"
-                alt="YES TIME GLOBAL Platform Concept"
+                alt={t('about.imageAlt')}
                 loading="lazy"
                 className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
               />

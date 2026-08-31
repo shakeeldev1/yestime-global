@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import video1 from "../../assets/video1.mp4";
 import video2 from "../../assets/video2.mp4";
+import { useTranslation } from "react-i18next";
 
 interface JourneyItem {
   id: number;
@@ -19,44 +20,42 @@ interface JourneyItem {
 }
 
 const GlobalJourney: React.FC = () => {
+  const { t } = useTranslation("global");
+
   const journey: JourneyItem[] = [
     {
       id: 1,
-      country: "Pakistan",
+      country: t("journey.items.0.country"),
       video:
         "https://v1.pinimg.com/videos/mc/720p/e8/8a/08/e88a08107acb3b6f044a9f5d72fae200.mp4",
-      title: "Where Our Journey Begins",
-      description:
-        "Pakistan represents an important part of our global journey and the foundation from which YES TIME GLOBAL continues to grow.",
-      status: "Current Presence",
+      title: t("journey.items.0.title"),
+      description: t("journey.items.0.description"),
+      status: t("journey.items.0.status"),
     },
     {
       id: 2,
-      country: "Nepal",
+      country: t("journey.items.1.country"),
       image:
         "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=85",
-      title: "Building New Connections",
-      description:
-        "Our journey extends into Nepal, creating opportunities to develop new relationships and strengthen our international network.",
-      status: "Global Presence",
+      title: t("journey.items.1.title"),
+      description: t("journey.items.1.description"),
+      status: t("journey.items.1.status"),
     },
     {
       id: 3,
-      country: "Indonesia",
+      country: t("journey.items.2.country"),
       video: video2,
-      title: "Expanding Our Reach",
-      description:
-        "Indonesia is another important part of our growing international presence as we continue exploring new markets and opportunities.",
-      status: "Global Presence",
+      title: t("journey.items.2.title"),
+      description: t("journey.items.2.description"),
+      status: t("journey.items.2.status"),
     },
     {
       id: 4,
-      country: "Future Markets",
+      country: t("journey.items.3.country"),
       video: video1,
-      title: "The Journey Continues",
-      description:
-        "Our vision goes beyond today's markets. We continue looking toward new countries, partnerships, and opportunities for future expansion.",
-      status: "Future Expansion",
+      title: t("journey.items.3.title"),
+      description: t("journey.items.3.description"),
+      status: t("journey.items.3.status"),
     },
   ];
 
@@ -92,16 +91,16 @@ const GlobalJourney: React.FC = () => {
             />
 
             <span className="text-xs font-semibold  text-[#FFD45A]">
-              OUR GLOBAL JOURNEY
+              {t("journey.label")}
             </span>
           </div>
 
           {/* Heading */}
 
           <h2 className="text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
-            From Local Roots to{" "}
+            {t("journey.title.before")}{" "}
             <span className="text-[#D9A21B]">
-              Global Reach
+              {t("journey.title.highlight")}
             </span>
           </h2>
 
@@ -118,9 +117,7 @@ const GlobalJourney: React.FC = () => {
           {/* Description */}
 
           <p className="text-base leading-7 text-slate-900 sm:text-lg">
-            Our international journey continues to evolve as we
-            connect new countries, build stronger relationships,
-            and explore opportunities beyond borders.
+            {t("journey.description")}
           </p>
         </div>
 
@@ -269,15 +266,12 @@ const GlobalJourney: React.FC = () => {
                 />
 
                 <span className="text-sm font-semibold text-[#FFD45A]">
-                  The journey continues
+                  {t("journey.bottomLabel")}
                 </span>
               </div>
 
               <p className="text-sm leading-7 text-slate-400 sm:text-base">
-                Every new market represents a new opportunity to
-                connect people, businesses, and ideas. Our vision
-                is to continue growing while creating meaningful
-                international relationships.
+                {t("journey.bottomText")}
               </p>
             </div>
 
@@ -285,7 +279,7 @@ const GlobalJourney: React.FC = () => {
               href="#future-expansion"
               className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-[#D9A21B] px-6 py-3.5 text-sm font-semibold text-[#020B1C] transition duration-300 hover:bg-[#FFD45A]"
             >
-              Future Expansion
+              {t("journey.bottomCta")}
               <ArrowRight size={17} />
             </a>
           </div>

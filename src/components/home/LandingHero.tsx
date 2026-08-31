@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, CirclePlay, ShieldCheck, Sparkles, Target, Users, type LucideIcon } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 interface HeroHighlight {
   icon: LucideIcon
@@ -7,37 +8,39 @@ interface HeroHighlight {
   text: string
 }
 
-const HERO_HIGHLIGHTS: HeroHighlight[] = [
-  {
-    icon: Users,
-    title: 'Global Network',
-    text: 'Connect with verified partners worldwide.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Trusted Platform',
-    text: 'Secure, transparent & member-focused.',
-  },
-  {
-    icon: Target,
-    title: 'Real Impact',
-    text: 'Opportunities that create growth & change.',
-  },
-  {
-    icon: Sparkles,
-    title: 'Always With You',
-    text: '24/7 support for all our members.',
-  },
-]
-
 export const LandingHero = () => {
+  const { t } = useTranslation('home')
+
+  const HERO_HIGHLIGHTS: HeroHighlight[] = [
+    {
+      icon: Users,
+      title: t('hero.highlights.0.title'),
+      text: t('hero.highlights.0.text'),
+    },
+    {
+      icon: ShieldCheck,
+      title: t('hero.highlights.1.title'),
+      text: t('hero.highlights.1.text'),
+    },
+    {
+      icon: Target,
+      title: t('hero.highlights.2.title'),
+      text: t('hero.highlights.2.text'),
+    },
+    {
+      icon: Sparkles,
+      title: t('hero.highlights.3.title'),
+      text: t('hero.highlights.3.text'),
+    },
+  ]
+
   return (
     <section className="relative flex min-h-[85vh] flex-col justify-between overflow-hidden bg-[#020c1c] px-6 py-6 text-white sm:px-10 lg:px-[7%]">
       {/* Background Image & Gradient Overlays */}
       <div className="absolute inset-0 z-0">
         <img
           src="/hero-yes.png"
-          alt="Illustration representing a connected global network"
+          alt={t('hero.imageAlt')}
           loading="eager"
           className="h-full w-full object-cover object-center"
         />
@@ -49,16 +52,15 @@ export const LandingHero = () => {
       {/* Hero Headline & Content Container */}
       <div className="relative z-10 max-w-2xl pt-4">
         <h1 className="text-4xl font-extrabold leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl">
-          Connect to
+          {t('hero.titleLine1')}
           <br />
           <span className="bg-gradient-to-r from-[#f5c54e] via-[#e5b338] to-[#d99420] bg-clip-text text-transparent">
-            Global Opportunities.
+            {t('hero.titleLine2')}
           </span>
         </h1>
 
         <p className="mt-6 max-w-xl text-base font-normal leading-relaxed text-slate-200 sm:text-lg sm:leading-8">
-          YES TIME GLOBAL PRIVATE LIMITED creates accessible programs and partnerships that connect
-          people, businesses, and opportunities across the world.
+          {t('hero.subtitle')}
         </p>
 
         {/* Call to Actions */}
@@ -67,7 +69,7 @@ export const LandingHero = () => {
             href="#programs"
             className="inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-[#f5c54e] to-[#d99420] px-5 py-3 text-sm font-bold text-[#07182d] shadow-lg shadow-amber-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-amber-500/40 focus-visible:outline-2 focus-visible:outline-amber-400"
           >
-            <span>Explore Programs</span>
+            <span>{t('hero.exploreProgramsBtn')}</span>
             <ArrowRight className="size-4 shrink-0" aria-hidden="true" />
           </a>
 
@@ -75,7 +77,7 @@ export const LandingHero = () => {
             to="/HowItWorks"
             className="inline-flex items-center gap-2.5 rounded-xl border border-[#d89d2c]/60 bg-[#020c1c]/50 px-5 py-3 text-sm font-bold text-white backdrop-blur-md transition-all duration-300 hover:border-[#d89d2c] hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-white"
           >
-            <span>How It Works</span>
+            <span>{t('hero.howItWorksBtn')}</span>
             <CirclePlay className="size-4 shrink-0 text-[#f5c54e]" aria-hidden="true" />
           </Link>
         </div>

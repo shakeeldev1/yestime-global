@@ -1,6 +1,9 @@
 import { ChevronRight, Play, Tag, ShoppingBag, ShieldCheck } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 function HeroShopSaving() {
+  const { t } = useTranslation('shopSaving');
+
   return (
     <section className="relative min-h-[500px] w-full overflow-hidden bg-[#000000] px-4 py-8 text-white sm:px-8 lg:px-16">
       
@@ -17,18 +20,18 @@ function HeroShopSaving() {
                 01
               </span>
               <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-                Shopping <span className="text-amber-500">Saving</span>
+                {t('hero.title')} <span className="text-amber-500">{t('hero.titleHighlight')}</span>
               </h1>
             </div>
 
             {/* Urdu Subtitle */}
             <p className="mb-4 text-2xl font-bold text-white dir-rtl">
-              شاپنگ سیونگ
+              {t('hero.subtitle')}
             </p>
 
             {/* Main Description */}
             <p className="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
-              Shop smart, save more and enjoy exclusive opportunities through our member-focused shopping saving program.
+              {t('hero.description')}
             </p>
 
             {/* Feature Badges */}
@@ -38,8 +41,8 @@ function HeroShopSaving() {
                   <Tag size={16} />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-white">Exclusive Discounts</h4>
-                  <p className="text-[10px] text-slate-400">Special member discounts and cashback</p>
+                  <h4 className="text-xs font-bold text-white">{t('hero.features.discounts.title')}</h4>
+                  <p className="text-[10px] text-slate-400">{t('hero.features.discounts.description')}</p>
                 </div>
               </div>
 
@@ -48,8 +51,8 @@ function HeroShopSaving() {
                   <ShoppingBag size={16} />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-white">Daily Essentials</h4>
-                  <p className="text-[10px] text-slate-400">Groceries, clothing, electronics & more</p>
+                  <h4 className="text-xs font-bold text-white">{t('hero.features.essentials.title')}</h4>
+                  <p className="text-[10px] text-slate-400">{t('hero.features.essentials.description')}</p>
                 </div>
               </div>
 
@@ -58,8 +61,8 @@ function HeroShopSaving() {
                   <ShieldCheck size={16} />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-white">Trusted Platform</h4>
-                  <p className="text-[10px] text-slate-400">100% trusted and secure shopping experience</p>
+                  <h4 className="text-xs font-bold text-white">{t('hero.features.trusted.title')}</h4>
+                  <p className="text-[10px] text-slate-400">{t('hero.features.trusted.description')}</p>
                 </div>
               </div>
             </div>
@@ -67,12 +70,12 @@ function HeroShopSaving() {
             {/* CTA Buttons */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <button className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-7 py-3 text-xs font-bold text-slate-950 shadow-lg shadow-amber-500/20 transition hover:brightness-110 active:scale-95">
-                <span>Join Now</span>
+                <span>{t('hero.cta.join')}</span>
                 <ChevronRight size={14} />
               </button>
 
               <button className="flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/90 px-6 py-3 text-xs font-bold text-white transition hover:border-amber-500 active:scale-95">
-                <span>How It Works</span>
+                <span>{t('hero.cta.howItWorks')}</span>
                 <div className="flex h-4 w-4 items-center justify-center rounded-full bg-amber-500 text-slate-950">
                   <Play size={8} className="fill-current ml-0.5" />
                 </div>
@@ -85,7 +88,7 @@ function HeroShopSaving() {
             <div className="relative mx-auto overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 shadow-2xl">
               <img
                 src="https://i.pinimg.com/1200x/dd/ba/95/ddba951d66f00304c81fe2cd50557c6f.jpg"
-                alt="Shopping Cart with Bags"
+                alt={t('hero.imageAlt')}
                 className="h-[400px] w-full object-cover rounded-2xl"
               />
             </div>

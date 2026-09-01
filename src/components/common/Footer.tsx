@@ -8,6 +8,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
+import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 
 interface FooterLink {
@@ -157,6 +158,36 @@ const Footer = () => {
           <p className="font-medium">
             © <span dir="ltr">{currentYear}</span> {t("footer.copyrightText")}
           </p>
+
+          <div className="flex items-center gap-3">
+            <a
+              href="https://www.facebook.com/profile.php?id=61593952563370"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D4AF37]/60 bg-[#D4AF37]/10 text-[#1877F2] transition-colors duration-200 hover:bg-[#1877F2]/10 hover:text-[#1877F2]"
+            >
+              <FaFacebookF className="h-4 w-4" />
+            </a>
+            <a
+              href="https://x.com/yestimeglobal"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D4AF37]/60 bg-[#D4AF37]/10 text-black transition-colors duration-200 hover:bg-black/10 hover:text-black"
+            >
+              <FaXTwitter className="h-4 w-4" />
+            </a>
+            <a
+              href="https://www.instagram.com/yestimeglobal/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D4AF37]/60 bg-[#D4AF37]/10 text-[#E1306C] transition-colors duration-200 hover:bg-[#E1306C]/10 hover:text-[#E1306C]"
+            >
+              <FaInstagram className="h-4 w-4" />
+            </a>
+          </div>
 
           <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-medium">
             <Link to="/privacy-policy" className="transition-colors duration-200 hover:text-[#D4AF37]">

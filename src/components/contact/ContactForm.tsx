@@ -12,6 +12,9 @@ import {
   FaUsers,
   FaBolt,
   FaMessage,
+  FaFacebookF,
+  FaInstagram,
+  FaXTwitter,
 } from 'react-icons/fa6'
 import { HiChevronDown, HiCheck, HiArrowRight } from 'react-icons/hi2'
 import { useTranslation } from "react-i18next";
@@ -202,6 +205,42 @@ const ContactForm = () => {
                   <p className="text-xs font-bold text-white leading-tight">YES TIME GLOBAL</p>
                   <p className="text-[10px] text-slate-400 leading-tight">{t("form.sidebar.location")}</p>
                 </div>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="pt-2">
+              <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                Follow us
+              </p>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61593952563370"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D4AF37]/60 bg-[#D4AF37]/10 text-[#1877F2] transition-colors duration-200 hover:bg-[#1877F2]/10 hover:text-[#1877F2]"
+                >
+                  <FaFacebookF className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://x.com/yestimeglobal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D4AF37]/60 bg-[#D4AF37]/10 text-black transition-colors duration-200 hover:bg-black/10 hover:text-black"
+                >
+                  <FaXTwitter className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://www.instagram.com/yestimeglobal/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D4AF37]/60 bg-[#D4AF37]/10 text-[#E1306C] transition-colors duration-200 hover:bg-[#E1306C]/10 hover:text-[#E1306C]"
+                >
+                  <FaInstagram className="h-4 w-4" />
+                </a>
               </div>
             </div>
 

@@ -1,52 +1,85 @@
 {
-  "programList": {
-    "car": "برنامج السيارات",
-    "realEstate": "برنامج العقارات",
-    "motorcycle": "برنامج الدراجات النارية",
-    "shopping": "برنامج التسوق",
-    "property": "العقارات",
-    "agriculture": "الزراعة",
-    "wholesale": "الجملة",
-    "petrolDiesel": "البنزين والديزل",
-    "selfService": "الخدمة الذاتية"
+  "hero": {
+    "joinNow": "انضم الآن",
+    "howItWorks": "كيف يعمل",
+    "titleFallback": "البرنامج"
   },
-  "programDetails": {
-    "shopping": {
-      "title": "التسوق والادخار",
-      "description": "ادخر أكثر على المشتريات اليومية",
-      "badge": "الأكثر شيوعاً"
-    },
-    "wholesale": {
-      "title": "الادخار بالجملة",
-      "description": "قيمة أفضل على المشتريات الحجمية"
-    },
-    "petrolDiesel": {
-      "title": "ادخار البنزين والديزل",
-      "description": "ادخار ذكي للسفر والتنقل"
-    },
-    "motorcycle": {
-      "title": "ادخار الدراجات النارية",
-      "description": "فوائد ميسورة للراكبين"
-    },
-    "car": {
-      "title": "ادخار السيارات",
-      "description": "قيمة أذكى لشراء السيارة"
-    },
-    "carPlan": {
-      "title": "خطة السيارة",
-      "description": "خطة سيارة مرنة وميسورة"
-    },
-    "property": {
-      "title": "ادخار العقارات",
-      "description": "فرص ذكية لشراء العقار"
-    },
-    "crop": {
-      "title": "ادخار المحاصيل",
-      "description": "دعم للزراعة وتخطيط المحاصيل"
-    },
-    "selfService": {
-      "title": "ادخار الخدمة الذاتية",
-      "description": "ادخار مرن للشراء والبيع المباشر"
-    }
+  "gallery": {
+    "badge": "المعرض",
+    "headingPrefix": "استكشف",
+    "headingSuffix": "التجربة",
+    "imageAlt": "معرض {{title}} {{index}}"
+  },
+  "plans": {
+    "badge": "خططنا",
+    "headingPrefix": "اختر الخطة المناسبة",
+    "headingHighlight": "لرحلتك",
+    "headingSuffix": "",
+    "mainAlt": "المعروض الرئيسي لـ {{title}}",
+    "sideOneAlt": "معرض {{title}} 1",
+    "sideTwoAlt": "معرض {{title}} 2"
+  },
+  "planCard": {
+    "luxuryVehiclePlan": "خطة السيارة الفاخرة",
+    "planSummary": "ملخص الخطة",
+    "daily": "يومياً",
+    "monthly": "شهرياً",
+    "prize": "الجائزة",
+    "planDetails": "تفاصيل الخطة",
+    "applyNow": "قدم الآن"
+  },
+  "about": {
+    "badge": "حول هذا البرنامج",
+    "smartSavings": "توفير ذكي",
+    "cardHeadingLine1": "عادات أفضل،",
+    "cardHeadingHighlight": "قيمة أفضل.",
+    "memberBenefits": "مزايا العضو",
+    "smartSavingsTitle": "توفير ذكي",
+    "headingFallback": "لكل واحد."
+  },
+  "benefits": {
+    "badge": "مزايا لك",
+    "headingPrefix": "أسباب أكثر للتسوق"
+  },
+  "audience": {
+    "badge": "من يمكنه الانضمام؟",
+    "headingLine1": "التوفير",
+    "headingLine2": "مناسب للجميع.",
+    "intro": "سواء كنت تخطط لشراء أو تبحث عن قيمة أفضل، تم تصميم هذا البرنامج لمساعدتك على اتخاذ قرارات أذكى وزيادة مدخراتك.",
+    "becomeMember": "كن عضوًا"
+  },
+  "showcase": {
+    "cardHeadingLine1": "تسوق أفضل.",
+    "cardHeadingHighlight": "حياة أفضل.",
+    "categoryValueSuffix": "قيمة",
+    "memberRewards": "مكافآت الأعضاء",
+    "memberLifestyleAlt": "أسلوب حياة الأعضاء"
+  },
+  "footerTags": {
+    "smartChoice": "اختيار ذكي",
+    "betterValue": "قيمة أفضل",
+    "strongerFuture": "مستقبل أقوى"
+  },
+  "carPlan": {
+    "badge": "خطة سيارة مخصصة",
+    "heroHeadingPrefix": "اقود حلمك مع",
+    "heroHeadingHighlight": "خطة سيارة ذكية",
+    "heroDescription": "اختر مسار تمويل سيارة مرن مصمم للقيمة الطويلة الأمد، والملكية السلسة، والمستقبل الأقوى لك ولعائلتك.",
+    "applyForPlan": "قدم لخطة",
+    "comparePlans": "قارن الخطط",
+    "featuredAlt": "خطة السيارة المميزة",
+    "feature1Tag": "مرن",
+    "feature1Title": "خيارات متعددة",
+    "feature1Desc": "اختر خطة سيارة موثوقة تناسب ميزانيتك وأهدافك المستقبلية.",
+    "feature2Tag": "مناسب",
+    "feature2Title": "توفير مستقر",
+    "feature2Desc": "استمتع بمساهمات منظمة وطريق واضح نحو ملكية السيارة بقيمة قابلة للإدارة.",
+    "feature3Tag": "آمن",
+    "feature3Title": "عملية موثوقة",
+    "feature3Desc": "خطة سيارة شفافة وموجهة للعضو لتسهيل قرارك القادم وزيادة السلامة.",
+    "plansBadge": "خطط السيارات",
+    "plansHeadingPrefix": "اختر أفضل",
+    "plansHeadingHighlight": "خطة سيارة",
+    "plansHeadingSuffix": "لرحلتك"
   }
 }

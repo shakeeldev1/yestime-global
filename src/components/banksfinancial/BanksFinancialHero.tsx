@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 const BanksFinancialHero = () => {
-  const { t } = useTranslation("banks")
+  const { t, i18n } = useTranslation("banks")
+  const isRTL = i18n.dir() === 'rtl'
 
   const heroPoints = [
     { icon: ShieldCheck, title: t('hero.points.secureBanking.title'), text: t('hero.points.secureBanking.text') },
@@ -19,6 +20,7 @@ const BanksFinancialHero = () => {
         className="absolute inset-0 bg-cover bg-right bg-no-repeat opacity-90 lg:bg-right-top"
         style={{
           backgroundImage: `url('/bank.png')`,
+          transform: isRTL ? 'scaleX(-1)' : 'scaleX(1)',
         }}
       />
 

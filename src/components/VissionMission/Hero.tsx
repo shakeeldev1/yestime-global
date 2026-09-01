@@ -7,21 +7,25 @@ import {
 import { useTranslation } from "react-i18next";
 
 export default function Hero() {
-  const { t } = useTranslation("vision");
+  const { t, i18n } = useTranslation("vision");
+  const isRTL = i18n.dir() === 'rtl'
 
   return (
     <section 
       className="relative overflow-hidden text-white bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "linear-gradient(to right, rgba(6, 19, 44, 0.9), rgba(6, 19, 44, 0.75)), url('/img12.png')" }}
+      style={{ 
+        backgroundImage: "linear-gradient(to right, rgba(6, 19, 44, 0.9), rgba(6, 19, 44, 0.75)), url('/img12.png')",
+        transform: isRTL ? 'scaleX(-1)' : 'scaleX(1)',
+      }}
     >
 
       {/* Background glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_40%,rgba(245,181,27,.18),transparent_35%)]" />
 
-      <div className="relative mx-auto grid min-h-[570px] max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:px-10">
+      <div className="relative mx-auto grid min-h-[570px] max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:px-10" style={{ transform: isRTL ? 'scaleX(-1)' : 'scaleX(1)' }}>
 
         {/* Left */}
-        <div className="relative z-10">
+        <div className="relative z-10" style={{ transform: isRTL ? 'scaleX(-1)' : 'scaleX(1)' }}>
 
           <p className="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-[#f5b51b]">
             {t("hero.eyebrow")}

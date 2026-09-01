@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 
 type PageHeroProps = {
   eyebrow: string
@@ -8,12 +9,18 @@ type PageHeroProps = {
 }
 
 const PageHero = ({ eyebrow, title, description, children }: PageHeroProps) => {
+  const { i18n } = useTranslation()
+  const isRTL = i18n.dir() === 'rtl'
+
   return (
     <section className="relative flex min-h-[400px] w-full items-center justify-center overflow-hidden bg-black px-6 py-12 text-center text-white md:px-12 lg:px-20">
       {/* Background Image Layer */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 ease-out hover:scale-105"
-        style={{ backgroundImage: "url('/hero-yes.png')" }}
+        style={{ 
+          backgroundImage: "url('/hero-yes.png')",
+          transform: isRTL ? 'scaleX(-1)' : 'scaleX(1)',
+        }}
       />
 
       {/* Dark Overlay & Vignette Layers */}

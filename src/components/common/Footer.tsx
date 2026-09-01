@@ -123,7 +123,7 @@ const Footer = () => {
                   className="group flex items-center gap-3 font-medium transition-colors duration-200 hover:text-[#D4AF37]"
                 >
                   <Mail className="h-5 w-5 shrink-0 text-[#D4AF37]" />
-                  <span className="truncate">info@yestimeglobal.com</span>
+                  <span>info@yestimeglobal.com</span>
                   <ArrowUpRight className="h-4 w-4 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
                 </a>
               </li>
@@ -133,7 +133,7 @@ const Footer = () => {
                   className="group flex items-center gap-3 font-medium transition-colors duration-200 hover:text-[#D4AF37]"
                 >
                   <Phone className="h-5 w-5 shrink-0 text-[#D4AF37]" />
-                  <span>+92 319 6336984</span>
+                  <span dir="ltr">+92 319 6336984</span>
                 </a>
               </li>
               <li>
@@ -144,7 +144,7 @@ const Footer = () => {
                   className="group flex items-center gap-3 font-medium transition-colors duration-200 hover:text-[#25D366]"
                 >
                   <BsWhatsapp className="h-5 w-5 shrink-0 text-[#25D366]" />
-                  <span> +92 306 8509086</span>
+                  <span dir="ltr">+92 306 8509086</span>
                 </a>
               </li>
             </ul>
@@ -154,7 +154,9 @@ const Footer = () => {
 
         {/* Bottom Bar / Copyright */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-8 text-sm text-gray-300 sm:flex-row">
-          <p className="font-medium">{t("footer.copyright", { year: currentYear })}</p>
+          <p className="font-medium">
+            © <span dir="ltr">{currentYear}</span> {t("footer.copyrightText")}
+          </p>
 
           <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-medium">
             <Link to="/privacy-policy" className="transition-colors duration-200 hover:text-[#D4AF37]">

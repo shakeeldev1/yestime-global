@@ -4,7 +4,8 @@ import { ChevronRight, Calendar, Grid, ShieldCheck, Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const AboutHero: React.FC = () => {
-  const { t } = useTranslation("about");
+  const { t, i18n } = useTranslation("about");
+  const isRTL = i18n.dir() === 'rtl'
   return (
     <section className="relative min-h-[600px] w-full overflow-hidden bg-black text-white">
       {/* BACKGROUND IMAGE & OVERLAYS */}
@@ -12,7 +13,8 @@ const AboutHero: React.FC = () => {
         <div
           className="absolute inset-0 bg-cover bg-right bg-no-repeat opacity-90"
           style={{
-            backgroundImage: "url('/img12.png')", // Path to your background image with earth & people
+            backgroundImage: "url('/img12.png')",
+            transform: isRTL ? 'scaleX(-1)' : 'scaleX(1)',
           }}
         />
         {/* Dark Gradients for Content Contrast */}

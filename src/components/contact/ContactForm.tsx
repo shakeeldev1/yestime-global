@@ -123,7 +123,7 @@ const ContactForm = () => {
                   </div>
                   <div className="min-w-0">
                     <p className="text-xs text-slate-400">{t("form.sidebar.whatsappLabel")}</p>
-                    <p className="text-xs font-bold text-white truncate">+92 306 8509086</p>
+                    <p className="text-xs font-bold text-white" dir="ltr">+92 306 8509086</p>
                   </div>
                 </div>
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-800/60 text-slate-400 transition-all group-hover:bg-slate-700 group-hover:text-white">
@@ -142,7 +142,7 @@ const ContactForm = () => {
                   </div>
                   <div className="min-w-0">
                     <p className="text-xs text-slate-400">{t("form.sidebar.callLabel")}</p>
-                    <p className="text-xs font-bold text-white truncate">+92 319 6336984</p>
+                    <p className="text-xs font-bold text-white" dir="ltr">+92 319 6336984</p>
                   </div>
                 </div>
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-800/60 text-slate-400 transition-all group-hover:bg-slate-700 group-hover:text-white">
@@ -161,7 +161,7 @@ const ContactForm = () => {
                   </div>
                   <div className="min-w-0">
                     <p className="text-xs text-slate-400">{t("form.sidebar.emailLabel")}</p>
-                    <p className="text-xs font-bold text-white truncate">info@yestimeglobal.com</p>
+                    <p className="text-xs font-bold text-white" dir="ltr">info@yestimeglobal.com</p>
                   </div>
                 </div>
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-800/60 text-slate-400 transition-all group-hover:bg-slate-700 group-hover:text-white">

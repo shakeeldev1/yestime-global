@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 const InvestorsHero = () => {
-  const { t } = useTranslation('investors')
+  const { t, i18n } = useTranslation('investors')
+  const isRTL = i18n.dir() === 'rtl'
 
   const highlights = [
     { icon: TrendingUp, label: t('hero.highlights.0.label'), value: t('hero.highlights.0.value') },
@@ -14,7 +15,7 @@ const InvestorsHero = () => {
 
   return (
     <section className="relative overflow-hidden bg-[#020c1c] px-6 py-12 text-white sm:px-10 sm:py-16 lg:px-[7%] lg:py-20">
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" style={{ transform: isRTL ? 'scaleX(-1)' : 'scaleX(1)' }}>
         <img src="/hero-yes.png" alt={t('hero.imageAlt')} className="h-full w-full object-cover object-center opacity-80" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#020c1c] via-[#020c1c]/80 to-[#020c1c]/30" />
         <div className="absolute inset-0 bg-[radial-gradient(#f6b93f90_1px,transparent_1px)] [background-size:38px_38px] opacity-[0.12]" />

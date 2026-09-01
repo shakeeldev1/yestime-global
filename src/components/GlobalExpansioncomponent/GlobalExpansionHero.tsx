@@ -18,7 +18,8 @@ interface HeroData {
 }
 
 const GlobalExpansionHero: React.FC = () => {
-  const { t } = useTranslation("global");
+  const { t, i18n } = useTranslation("global");
+  const isRTL = i18n.dir() === 'rtl'
 
   const heroContent: HeroData = {
     image: "/hero-yes.png",
@@ -44,7 +45,10 @@ const GlobalExpansionHero: React.FC = () => {
         <div
           aria-hidden="true"
           className="global-expansion-background absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroContent.image})` }}
+          style={{ 
+            backgroundImage: `url(${heroContent.image})`,
+            transform: isRTL ? 'scaleX(-1)' : 'scaleX(1)',
+          }}
         />
 
         {/* Dark Overlays */}

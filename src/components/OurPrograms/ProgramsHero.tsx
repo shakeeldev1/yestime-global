@@ -4,7 +4,8 @@ import { ChevronRight, Play } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const ProgramsHero: React.FC = () => {
-  const { t } = useTranslation("ourPrograms");
+  const { t, i18n } = useTranslation("ourPrograms");
+  const isRTL = i18n.dir() === 'rtl'
 
   return (
     <section className="relative min-h-[480px] w-full overflow-hidden bg-[#000000] text-white">
@@ -14,7 +15,8 @@ const ProgramsHero: React.FC = () => {
         <div
           className="absolute inset-0 bg-cover bg-right bg-no-repeat opacity-90"
           style={{
-            backgroundImage: "url('/img12.png')", // Ensure your asset matches the globe/building image
+            backgroundImage: "url('/img12.png')",
+            transform: isRTL ? 'scaleX(-1)' : 'scaleX(1)',
           }}
         />
 

@@ -20,12 +20,15 @@
       "investors": "Investors",
       "banksFinancial": "Banks & Financial",
       "customerSupport": "Customer Support",
-      "faqs": "FAQs"
+      "faqs": "FAQs",
+      "termsConditions": "Terms & Conditions",
+      "privacyPolicy": "Privacy Policy"
     }
   },
   "languages": {
     "en": "English",
-    "ur": "Urdu"
+    "ur": "Urdu",
+    "ar": "Arabic"
   },
   "footer": {
     "description": "Yes Time Global Private Limited — Connecting global opportunities with innovation, transparency, and trust through car programs, real estate ventures, and automated savings plans.",

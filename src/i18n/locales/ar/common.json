@@ -1,0 +1,72 @@
+{
+  "brand": "يس تايم جلوبال",
+  "nav": {
+    "home": "الرئيسية",
+    "about": "عننا",
+    "programs": "البرامج",
+    "business": "الأعمال",
+    "finance": "المالية",
+    "events": "الأحداث",
+    "support": "الدعم",
+    "contactUs": "اتصل بنا",
+    "language": "اللغة",
+    "selectLanguage": "اختر اللغة",
+    "toggleMenu": "تبديل القائمة",
+    "items": {
+      "ourPrograms": "برامجنا",
+      "howItWorks": "كيف يعمل",
+      "businessPartners": "شركاء الأعمال",
+      "globalExpansion": "التوسع العالمي",
+      "investors": "المستثمرون",
+      "banksFinancial": "البنوك والمالية",
+      "customerSupport": "دعم العملاء",
+      "faqs": "الأسئلة الشائعة",
+      "termsConditions": "الشروط والأحكام",
+      "privacyPolicy": "سياسة الخصوصية"
+    }
+  },
+  "languages": {
+    "en": "الإنجليزية",
+    "ur": "الأردية",
+    "ar": "العربية"
+  },
+  "footer": {
+    "description": "يس تايم جلوبال برايفت ليمتد — ربط الفرص العالمية بالابتكار والشفافية والثقة من خلال برامج السيارات والمشاريع العقارية وخطط الادخار الآلية.",
+    "badge": "الشفافية • الثقة • الوصول",
+    "programsHeading": "برامجنا",
+    "quickLinksHeading": "روابط سريعة",
+    "contactHeading": "اتصل بنا",
+    "address": "يس تايم جلوبال - مقر لاهور، باكستان",
+    "copyrightText": "يس تايم جلوبال برايفت ليمتد. جميع الحقوق محفوظة.",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsConditions": "الشروط والأحكام",
+    "legalDisclaimer": "إخلاء المسؤولية القانوني",
+    "programLinks": {
+      "car": "برنامج السيارات",
+      "realEstate": "برنامج العقارات",
+      "vehicles": "المركبات",
+      "shopping": "البيع بالتجزئة والادخار",
+      "automated": "نظام الادخار الآلي"
+    },
+    "quickLinks": {
+      "about": "عننا",
+      "visionMission": "الرؤية والرسالة",
+      "businessPartners": "شركاء الأعمال",
+      "banksFinancial": "البنوك والمالية",
+      "faqsSupport": "الأسئلة الشائعة والدعم"
+    }
+  },
+  "buttons": {
+    "explorePrograms": "استكشف البرامج",
+    "talkToTeam": "تحدث إلى فريقنا",
+    "viewProgram": "عرض البرنامج",
+    "learnMore": "اعرف المزيد",
+    "getStarted": "ابدأ الآن",
+    "contactUs": "اتصل بنا"
+  },
+  "whatsapp": {
+    "message": "مرحبا يس تايم جلوبال",
+    "ariaLabel": "تحدث معنا على واتساب"
+  }
+}
+

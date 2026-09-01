@@ -3,24 +3,26 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 /**
- * Supported languages. Only English and Urdu are enabled.
- * Urdu ("ur") is a right-to-left language.
+ * Supported languages. English, Urdu, and Arabic are enabled.
+ * Urdu ("ur") and Arabic ("ar") are right-to-left languages.
  */
-export const SUPPORTED_LANGUAGES = ["en", "ur"] as const;
+export const SUPPORTED_LANGUAGES = ["en", "ur", "ar"] as const;
 export type AppLanguage = (typeof SUPPORTED_LANGUAGES)[number];
 
 /** Languages that should render the layout right-to-left. */
-export const RTL_LANGUAGES: AppLanguage[] = ["ur"];
+export const RTL_LANGUAGES: AppLanguage[] = ["ur", "ar"];
 
 /**
  * Auto-load every namespace JSON file placed under
  *   src/i18n/locales/en/<namespace>.json
  *   src/i18n/locales/ur/<namespace>.json
+ *   src/i18n/locales/ar/<namespace>.json
  * The file name (without extension) becomes the i18next namespace.
  * Just drop a new file in and it is picked up — no edits needed here.
  */
 const enModules = import.meta.glob("./locales/en/*.json", { eager: true });
 const urModules = import.meta.glob("./locales/ur/*.json", { eager: true });
+const arModules = import.meta.glob("./locales/ar/*.json", { eager: true });
 
 type JsonModule = { default: Record<string, unknown> };
 
@@ -38,6 +40,7 @@ const buildResources = (modules: Record<string, unknown>) => {
 
 const enResources = buildResources(enModules);
 const urResources = buildResources(urModules);
+const arResources = buildResources(arModules);
 
 export const NAMESPACES = Object.keys(enResources);
 
@@ -60,6 +63,7 @@ i18n
     resources: {
       en: enResources,
       ur: urResources,
+      ar: arResources,
     },
     ns: NAMESPACES,
     defaultNS: "common",

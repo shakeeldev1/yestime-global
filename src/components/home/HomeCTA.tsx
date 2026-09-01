@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { FiArrowUpRight, FiStar } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 type HomeCTAProps = {
   badge?: string
@@ -23,6 +24,7 @@ const HomeCTA = ({
   className = '',
   panelClassName = '',
 }: HomeCTAProps) => {
+  const { t } = useTranslation('common')
   const sectionRef = useRef<HTMLElement | null>(null)
   const [isVisible, setIsVisible] = useState(() => typeof window === 'undefined' || !('IntersectionObserver' in window))
 
@@ -52,14 +54,14 @@ const HomeCTA = ({
         to="/OurPrograms"
         className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-[1.4rem] py-[0.85rem] text-base font-bold text-[#071a36] shadow-[0_10px_22px_rgba(197,150,46,0.24)] no-underline transition duration-300 ease-out hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5962e] focus-visible:ring-offset-2"
       >
-        Explore Programs
+        {t('buttons.explorePrograms')}
         <FiArrowUpRight size={16} />
       </Link>
       <Link
         to="/ContactUs"
         className="inline-flex items-center justify-center rounded-full border border-[#0b3b6e] bg-[#0b3b6e] px-[1.4rem] py-[0.85rem] text-base font-semibold text-white no-underline transition duration-300 ease-out hover:shadow-[0_10px_22px_rgba(11,59,110,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b3b6e] focus-visible:ring-offset-2"
       >
-        Contact Us
+        {t('buttons.contactUs')}
       </Link>
     </>
   )

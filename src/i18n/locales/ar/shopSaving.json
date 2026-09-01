@@ -1,0 +1,15 @@
+{
+  "hero": {
+    "badge": "برنامج التسوق",
+    "title": "تسوق وادخر",
+    "titleHighlight": "معنا",
+    "subtitle": "استمتع بخصومات حصرية ومكافآت النقود",
+    "description": "برنامج التسوق والادخار المشبع",
+    "features": {
+      "discounts": {
+        "title": "خصومات",
+        "description": "خصومات حصرية"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "eyebrow": "الرؤية والرسالة",
+    "titleLine1": "رؤيتنا",
+    "titleHighlight": "ورسالتنا",
+    "description": "نحن نرى عالماً متصلاً بفرص شفافة وعادلة للجميع.",
+    "stats": {
+      "dailyDraws": {
+        "label": "الرسالة",
+        "value": "تمكين"
+      },
+      "savingPrograms": {
+        "label": "الرؤية",
+        "value": "عادلة"
+      },
+      "opportunities": {
+        "label": "القيم",
+        "value": "شفافة"
+      }
+    }
+  }
+}

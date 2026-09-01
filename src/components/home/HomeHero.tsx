@@ -3,6 +3,7 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import type { Swiper as SwiperInstance } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectFade } from 'swiper/modules'
+import { useTranslation } from 'react-i18next'
 
 import 'swiper/css'
 import 'swiper/css/effect-fade'
@@ -54,29 +55,34 @@ export const HomeHero = ({
   titleHighlight = 'Global Opportunities.',
   titleAfter = '',
   description = 'YES TIME GLOBAL PRIVATE LIMITED creates accessible programs and partnerships that connect people, businesses, and opportunities across the world.',
-  primaryAction = (
-    <a
-      href="#programs"
-      className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-6 py-3.5 text-xs font-bold tracking-wider text-[#071a36] shadow-[0_10px_22px_rgba(197,150,46,0.24)] transition duration-300 ease-out hover:-translate-y-1 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5962e] focus-visible:ring-offset-2"
-    >
-      Explore Programs
-    </a>
-  ),
-  secondaryAction = (
-    <a
-      href="#about"
-      className="inline-flex items-center justify-center rounded-full border border-[#0b3b6e] bg-[#0b3b6e] px-6 py-3.5 text-xs font-bold tracking-wider text-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_10px_22px_rgba(11,59,110,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b3b6e] focus-visible:ring-offset-2"
-    >
-      Discover More
-    </a>
-  ),
+  primaryAction: propsAction,
+  secondaryAction: propsSecondaryAction,
   stats = DEFAULT_STATS,
   imageSrc = ['/hero-yes.png', '/variant2_square.webp', '/variant1_square.webp'],
   imageAlt = 'Yes Time Global logo connecting opportunities worldwide',
   imageFit = 'contain',
   className = '',
 }: HomeHeroProps) => {
+  const { t } = useTranslation('common')
   const hasSlidesMode = Boolean(slides && slides.length > 0)
+  
+  const primaryAction = propsAction || (
+    <a
+      href="#programs"
+      className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-6 py-3.5 text-xs font-bold tracking-wider text-[#071a36] shadow-[0_10px_22px_rgba(197,150,46,0.24)] transition duration-300 ease-out hover:-translate-y-1 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5962e] focus-visible:ring-offset-2"
+    >
+      {t('buttons.explorePrograms')}
+    </a>
+  )
+
+  const secondaryAction = propsSecondaryAction || (
+    <a
+      href="#about"
+      className="inline-flex items-center justify-center rounded-full border border-[#0b3b6e] bg-[#0b3b6e] px-6 py-3.5 text-xs font-bold tracking-wider text-white transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_10px_22px_rgba(11,59,110,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b3b6e] focus-visible:ring-offset-2"
+    >
+      Discover More
+    </a>
+  )
   
   const normalizedSlides = useMemo<HeroSlide[]>(() => {
     if (hasSlidesMode && slides) return slides

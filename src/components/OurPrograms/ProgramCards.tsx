@@ -297,7 +297,8 @@ const ProgramCards: React.FC = () => {
           {filteredPrograms.map((program) => (
             <article
               key={program.number}
-              className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
+              onClick={() => navigate(program.slug === 'car-plan' ? '/car-plan' : `/program/${program.slug}`)}
+              className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl cursor-pointer"
             >
               {/* TOP MEDIA */}
               <div className="relative h-[190px] w-full overflow-hidden bg-slate-100 p-0">

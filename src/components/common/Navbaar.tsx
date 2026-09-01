@@ -18,6 +18,7 @@ interface NavSection {
 const LANGUAGE_OPTIONS = [
   { code: "en", label: "English" },
   { code: "ur", label: "Urdu" },
+  { code: "ar", label: "Arabic" },
 ] as const;
 
 /* ================= DESKTOP HOVER DROPDOWN ================= */
@@ -208,6 +209,8 @@ const Navbar = () => {
       items: [
         { name: t("nav.items.customerSupport"), path: "/customer" },
         { name: t("nav.items.faqs"), path: "/faqs" },
+        { name: t("nav.items.termsConditions"), path: "/terms-conditions" },
+        { name: t("nav.items.privacyPolicy"), path: "/privacy-policy" },
       ],
     },
   ];
@@ -372,15 +375,6 @@ const Navbar = () => {
               }`}
           >
             {t("nav.about")}
-          </Link>
-
-          <Link
-            to="/events"
-            onClick={handleNavigate}
-            className={`block border-b border-white/10 py-3.5 text-base font-semibold ${isActive("/events") ? "text-[#D4AF37]" : "text-white"
-              }`}
-          >
-            {t("nav.events")}
           </Link>
 
           {NAV_SECTIONS.map((section) => {

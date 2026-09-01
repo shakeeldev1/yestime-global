@@ -4,8 +4,11 @@ import {
   Handshake,
   Sparkles,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const GlobalPartnershipCTA: React.FC = () => {
+  const { t } = useTranslation("common");
+
   return (
     <section
       id="global-partnership"
@@ -54,7 +57,7 @@ const GlobalPartnershipCTA: React.FC = () => {
                 href="/OurPrograms"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-[linear-gradient(135deg,#f5c54e_0%,#d99420_100%)] px-6 py-4 text-base font-bold text-[#07182d] transition duration-300 hover:brightness-105"
               >
-                <span>Explore Programs</span>
+                <span>{t("buttons.explorePrograms")}</span>
                 <ArrowRight size={18} />
               </a>
 
@@ -62,7 +65,7 @@ const GlobalPartnershipCTA: React.FC = () => {
                 href="/ContactUs"
                 className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-transparent px-6 py-4 text-base font-semibold text-white transition duration-300 hover:border-[#f5c54e]/70 hover:bg-white/5"
               >
-                Talk to Our Team
+                {t("buttons.talkToTeam")}
               </a>
             </div>
           </div>

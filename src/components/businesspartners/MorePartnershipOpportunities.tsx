@@ -128,7 +128,7 @@ const MorePartnershipOpportunities: React.FC = () => {
 
       {/* Background Glows */}
       <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#C6922B]/5 blur-[130px]" />
-      <div className="absolute -right-40 bottom-20 h-96 w-96 rounded-full bg-[#0B2341]/5 blur-[130px]" />
+      <div className="absolute -right-40 bottom-20 h-96 w-96 rounded-full bg-[#000000]/5 blur-[130px]" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -143,7 +143,7 @@ const MorePartnershipOpportunities: React.FC = () => {
             <span className="h-px w-7 bg-[#C6922B]" />
           </span>
 
-          <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-[#0B2341] sm:text-5xl">
+          <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-[#000000] sm:text-5xl">
   {t("more.title.before")}{" "}
   <span className="text-[#C6922B]">
     {t("more.title.highlight")}
@@ -165,14 +165,14 @@ const MorePartnershipOpportunities: React.FC = () => {
             return (
               <div
                 key={partner.title}
-                className="group relative overflow-hidden rounded-3xl border border-[#D9E3EF] bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#C6922B]/60 hover:bg-[#0B2341] hover:shadow-xl hover:shadow-[#0B2341]/10"
+                className="group relative overflow-hidden rounded-3xl border border-[#D9E3EF] bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#C6922B]/60 hover:bg-[#000000] hover:shadow-xl hover:shadow-[#000000]/10"
               >
 
                 {/* Top Accent */}
                 <div className="absolute left-0 top-0 h-1 w-0 bg-[#C6922B] transition-all duration-500 group-hover:w-full" />
 
                 {/* Icon */}
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0B2341] text-[#C6922B] shadow-lg transition-all duration-500 group-hover:scale-105 group-hover:bg-[#C6922B] group-hover:text-white">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#000000] text-[#C6922B] shadow-lg transition-all duration-500 group-hover:scale-105 group-hover:bg-[#C6922B] group-hover:text-white">
                   <Icon size={25} strokeWidth={2} />
                 </div>
 
@@ -181,7 +181,7 @@ const MorePartnershipOpportunities: React.FC = () => {
                   0{partnerTypes.indexOf(partner) + 1}
                 </span>
 
-                <h3 className="mt-7 text-xl font-bold text-[#0B2341] transition-colors duration-300 group-hover:text-[#C6922B]">
+                <h3 className="mt-7 text-xl font-bold text-[#000000] transition-colors duration-300 group-hover:text-[#C6922B]">
                   {partner.title}
                 </h3>
 
@@ -206,7 +206,7 @@ const MorePartnershipOpportunities: React.FC = () => {
               {t("more.howItWorks")}
             </span>
 
-            <h2 className="mt-4 text-3xl font-bold text-[#0B2341] sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold text-[#000000] sm:text-4xl">
               {t("more.processHeading")}
             </h2>
 
@@ -230,13 +230,13 @@ const MorePartnershipOpportunities: React.FC = () => {
                 return (
                   <div
                     key={step.number}
-                    className="group relative rounded-2xl border border-[#D9E3EF] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#C6922B]/70 hover:bg-[#0B2341] hover:shadow-lg hover:shadow-[#0B2341]/5"
+                    className="group relative rounded-2xl border border-[#D9E3EF] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#C6922B]/70 hover:bg-[#000000] hover:shadow-lg hover:shadow-[#000000]/5"
                   >
 
                     {/* Number */}
                     <div className="flex items-center justify-between">
 
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0B2341]/5 text-[#0B2341] transition-all duration-300 group-hover:bg-[#C6922B] group-hover:text-white">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#000000]/5 text-[#000000] transition-all duration-300 group-hover:bg-[#C6922B] group-hover:text-white">
                         <Icon size={22} />
                       </div>
 
@@ -246,7 +246,7 @@ const MorePartnershipOpportunities: React.FC = () => {
 
                     </div>
 
-                    <h3 className="mt-5 text-lg font-bold text-[#0B2341] transition-colors duration-300 group-hover:text-[#C6922B]">
+                    <h3 className="mt-5 text-lg font-bold text-[#000000] transition-colors duration-300 group-hover:text-[#C6922B]">
                       {step.title}
                     </h3>
 
@@ -266,7 +266,7 @@ const MorePartnershipOpportunities: React.FC = () => {
         {/* =========================================================
             PARTNERSHIP HIGHLIGHTS
         ========================================================= */}
-        <div className="mt-10 overflow-hidden rounded-3xl bg-[#0B2341] shadow-2xl shadow-[#0B2341]/10">
+        <div className="mt-10 overflow-hidden rounded-3xl bg-[#000000] shadow-2xl shadow-[#000000]/10">
 
           <div className="relative px-7 py-12 sm:px-10 lg:px-14">
 
@@ -336,7 +336,7 @@ const MorePartnershipOpportunities: React.FC = () => {
             {/* CTA Content */}
             <div className="flex items-start gap-5">
 
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#0B2341] text-[#C6922B]">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#000000] text-[#C6922B]">
                 <Handshake size={27} />
               </div>
 
@@ -345,7 +345,7 @@ const MorePartnershipOpportunities: React.FC = () => {
                   {t("more.cta.badge")}
                 </span>
 
-                <h3 className="mt-2 text-2xl font-bold text-[#0B2341] sm:text-3xl">
+                <h3 className="mt-2 text-2xl font-bold text-[#000000] sm:text-3xl">
                   {t("more.cta.heading")}
                 </h3>
 
@@ -359,7 +359,7 @@ const MorePartnershipOpportunities: React.FC = () => {
             {/* CTA Button */}
 
             <Link to="/contact-us">
-            <button className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-xl bg-[#C6922B] px-7 py-4 font-semibold text-white shadow-lg shadow-[#C6922B]/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#0B2341] hover:shadow-[#0B2341]/20">
+            <button className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-xl bg-[#C6922B] px-7 py-4 font-semibold text-white shadow-lg shadow-[#C6922B]/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#000000] hover:shadow-[#000000]/20">
 
               {t("more.cta.button")}
 

@@ -26,7 +26,7 @@ const PartnershipProcess = () => {
   ]
 
   return (
-    <section className="relative overflow-hidden bg-[#020c1c] px-5 py-16 sm:px-8 lg:px-12">
+    <section className="relative overflow-hidden bg-[#000000] px-5 py-16 sm:px-8 lg:px-12">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,197,78,0.15),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(245,197,78,0.12),transparent_28%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
@@ -47,7 +47,7 @@ const PartnershipProcess = () => {
             {partnershipSteps.map(({ step, title, text, icon: Icon }, index) => (
               <div key={step} className="group relative flex flex-col items-center text-center">
                 {index < partnershipSteps.length - 1 && (
-                  <div className="pointer-events-none absolute -right-5 top-[42px] z-20 hidden h-3.5 w-3.5 rounded-full border-2 border-[#020c1c] bg-[#f5c54e] shadow-md lg:block" />
+                  <div className="pointer-events-none absolute -right-5 top-[42px] z-20 hidden h-3.5 w-3.5 rounded-full border-2 border-[#000000] bg-[#f5c54e] shadow-md lg:block" />
                 )}
 
                 <div className="relative flex flex-col items-center">
@@ -55,7 +55,7 @@ const PartnershipProcess = () => {
                     {step}
                   </div>
 
-                  <div className="relative -mt-3 flex h-24 w-24 items-center justify-center rounded-full border-2 border-[#d6b35a]/40 bg-[#0c2647] text-[#f5c54e] shadow-xl transition-all duration-300 group-hover:-translate-y-1 group-hover:border-[#f5c54e] group-hover:bg-[#0a1628]">
+                  <div className="relative -mt-3 flex h-24 w-24 items-center justify-center rounded-full border-2 border-[#d6b35a]/40 bg-[#000000] text-[#f5c54e] shadow-xl transition-all duration-300 group-hover:-translate-y-1 group-hover:border-[#f5c54e] group-hover:bg-[#0a1628]">
                     <Icon className="h-10 w-10" />
                   </div>
                 </div>

@@ -139,6 +139,24 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="tel:+923002550300"
+                  className="group flex items-center gap-3 font-medium transition-colors duration-200 hover:text-[#D4AF37]"
+                >
+                  <Phone className="h-5 w-5 shrink-0 text-[#D4AF37]" />
+                  <span dir="ltr">0300 2550300</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+923032722020"
+                  className="group flex items-center gap-3 font-medium transition-colors duration-200 hover:text-[#D4AF37]"
+                >
+                  <Phone className="h-5 w-5 shrink-0 text-[#D4AF37]" />
+                  <span dir="ltr">0303 2722020</span>
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://wa.me/923068509086"
                   target="_blank"
                   rel="noopener noreferrer"

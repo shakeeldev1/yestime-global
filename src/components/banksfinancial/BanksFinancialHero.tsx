@@ -14,7 +14,7 @@ const BanksFinancialHero = () => {
   ]
 
   return (
-    <section className="relative min-h-[520px] overflow-hidden bg-[#020b1b] px-6 py-12 text-white sm:px-10 lg:px-16">
+    <section className="relative min-h-[520px] overflow-hidden bg-[#000000] px-6 py-12 text-white sm:px-10 lg:px-16">
       {/* Clear Background Image Layer */}
       <div 
         className="absolute inset-0 bg-cover bg-right bg-no-repeat opacity-90 lg:bg-right-top"
@@ -25,8 +25,8 @@ const BanksFinancialHero = () => {
       />
 
       {/* Dark Gradient Overlay - Covers text on left, leaves right side visible */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#020b1b] via-[#020b1b]/80 lg:via-[#020b1b]/60 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#020b1b] via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#000000] via-[#000000]/80 lg:via-[#000000]/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent" />
       <div className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-[#f5c54e]/15 blur-[120px]" />
 
       {/* Main Content */}
@@ -57,7 +57,7 @@ const BanksFinancialHero = () => {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
               to="/ContactUs"
-              className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-[#f5c54e] to-[#d99420] px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-[#020b1b] shadow-lg shadow-[#f5c54e]/20 transition-all duration-300 hover:scale-105 active:scale-95"
+              className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-[#f5c54e] to-[#d99420] px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-[#000000] shadow-lg shadow-[#f5c54e]/20 transition-all duration-300 hover:scale-105 active:scale-95"
             >
               <span>{t('hero.exploreButton')}</span>
               <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -78,7 +78,7 @@ const BanksFinancialHero = () => {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {heroPoints.map(({ icon: Icon, title, text }) => (
               <div key={title} className="flex items-center gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#f5c54e]/60 bg-[#020b1b] text-[#f5c54e]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#f5c54e]/60 bg-[#000000] text-[#f5c54e]">
                   <Icon size={18} />
                 </div>
                 <div>

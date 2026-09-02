@@ -5,7 +5,7 @@ import InvestorsCTA from '../components/investors/InvestorsCTA'
 
 const Investors = () => {
   return (
-    <main className="bg-white text-[#071a36]">
+    <main className="bg-white text-[#000000]">
       <InvestorsHero />
       <InvestorHighlights />
       <PartnershipProcess />

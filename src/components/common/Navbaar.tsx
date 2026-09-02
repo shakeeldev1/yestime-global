@@ -209,6 +209,7 @@ const Navbar = () => {
       items: [
         { name: t("nav.items.customerSupport"), path: "/customer" },
         { name: t("nav.items.faqs"), path: "/faqs" },
+        { name: t("nav.items.refundCancellation"), path: "/refund-cancelation" },
         { name: t("nav.items.termsConditions"), path: "/terms-conditions" },
         { name: t("nav.items.privacyPolicy"), path: "/privacy-policy" },
       ],

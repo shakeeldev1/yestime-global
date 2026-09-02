@@ -153,6 +153,42 @@ const ContactForm = () => {
                 </div>
               </a>
 
+              <a
+                href="tel:+923002550300"
+                className="group flex items-center justify-between rounded-2xl border border-slate-800/80 bg-[#0d1622]/90 p-3.5 transition-all hover:border-slate-700 hover:bg-[#111c2e]"
+              >
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#007AFF] text-white">
+                    <FaPhone className="h-4 w-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-xs text-slate-400">{t("form.sidebar.callLabel")}</p>
+                    <p className="text-xs font-bold text-white" dir="ltr">0300 2550300</p>
+                  </div>
+                </div>
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-800/60 text-slate-400 transition-all group-hover:bg-slate-700 group-hover:text-white">
+                  <HiArrowRight className="h-3.5 w-3.5" />
+                </div>
+              </a>
+
+              <a
+                href="tel:+923032722020"
+                className="group flex items-center justify-between rounded-2xl border border-slate-800/80 bg-[#0d1622]/90 p-3.5 transition-all hover:border-slate-700 hover:bg-[#111c2e]"
+              >
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#007AFF] text-white">
+                    <FaPhone className="h-4 w-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-xs text-slate-400">{t("form.sidebar.callLabel")}</p>
+                    <p className="text-xs font-bold text-white" dir="ltr">0303 2722020</p>
+                  </div>
+                </div>
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-800/60 text-slate-400 transition-all group-hover:bg-slate-700 group-hover:text-white">
+                  <HiArrowRight className="h-3.5 w-3.5" />
+                </div>
+              </a>
+
               {/* Email Support Card */}
               <a
                 href="mailto:info@yestimeglobal.com"

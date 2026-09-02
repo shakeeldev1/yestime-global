@@ -14,16 +14,16 @@ const InvestorsHero = () => {
   ]
 
   return (
-    <section className="relative overflow-hidden bg-[#020c1c] px-6 py-12 text-white sm:px-10 sm:py-16 lg:px-[7%] lg:py-20">
+    <section className="relative overflow-hidden bg-[#000000] px-6 py-12 text-white sm:px-10 sm:py-16 lg:px-[7%] lg:py-20">
       <div className="absolute inset-0" style={{ transform: isRTL ? 'scaleX(-1)' : 'scaleX(1)' }}>
         <img src="/hero-yes.png" alt={t('hero.imageAlt')} className="h-full w-full object-cover object-center opacity-80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#020c1c] via-[#020c1c]/80 to-[#020c1c]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#000000] via-[#000000]/80 to-[#000000]/30" />
         <div className="absolute inset-0 bg-[radial-gradient(#f6b93f90_1px,transparent_1px)] [background-size:38px_38px] opacity-[0.12]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="max-w-2xl">
-          <span className="inline-flex rounded-full border border-[#d6b35a]/60 bg-[#020c1c]/60 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-[#f5c54e] backdrop-blur-sm">
+          <span className="inline-flex rounded-full border border-[#d6b35a]/60 bg-[#000000]/60 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-[#f5c54e] backdrop-blur-sm">
             {t('hero.badge')}
           </span>
           <h1 className="mt-5 text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
@@ -43,7 +43,7 @@ const InvestorsHero = () => {
             </Link>
             <Link
               to="/contact-us"
-              className="inline-flex items-center gap-2 rounded-xl border border-[#d89d2c]/60 bg-[#020c1c]/40 px-6 py-3.5 text-xs font-bold uppercase tracking-[0.08em] text-white backdrop-blur-sm transition-all hover:bg-white/10 hover:border-[#d89d2c]"
+              className="inline-flex items-center gap-2 rounded-xl border border-[#d89d2c]/60 bg-[#000000]/40 px-6 py-3.5 text-xs font-bold uppercase tracking-[0.08em] text-white backdrop-blur-sm transition-all hover:bg-white/10 hover:border-[#d89d2c]"
             >
               {t('hero.ctaSecondary')}
             </Link>
@@ -52,8 +52,8 @@ const InvestorsHero = () => {
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {highlights.map(({ icon: Icon, label, value }) => (
-            <div key={label} className="flex items-center gap-3 rounded-xl border border-white/10 bg-[#020c1c]/60 p-3.5 backdrop-blur-md">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#d7951e] bg-[#020c1c] text-[#ebb02f]">
+            <div key={label} className="flex items-center gap-3 rounded-xl border border-white/10 bg-[#000000]/60 p-3.5 backdrop-blur-md">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#d7951e] bg-[#000000] text-[#ebb02f]">
                 <Icon className="h-5 w-5" />
               </div>
               <div>

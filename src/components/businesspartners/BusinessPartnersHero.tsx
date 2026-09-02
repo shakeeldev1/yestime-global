@@ -63,11 +63,11 @@ const BusinessPartnersHero: React.FC = () => {
   ];
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-white via-[#F8FAFC]/60 to-white text-[#0B2341]">
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-white via-[#F8FAFC]/60 to-white text-[#000000]">
       {/* Background Glows */}
       <div className="pointer-events-none absolute -left-32 top-0 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-[#C6922B]/10 via-[#C6922B]/5 to-transparent blur-3xl" />
 
-      <div className="pointer-events-none absolute -right-32 bottom-0 h-[600px] w-[600px] rounded-full bg-gradient-to-tl from-[#0B2341]/10 via-[#0B2341]/5 to-transparent blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 bottom-0 h-[600px] w-[600px] rounded-full bg-gradient-to-tl from-[#000000]/10 via-[#000000]/5 to-transparent blur-3xl" />
 
       <div className="relative mx-auto flex min-h-screen max-w-7xl items-center px-6 py-10 lg:px-8">
         <div className="grid w-full items-center gap-16 lg:grid-cols-12 lg:gap-12">
@@ -82,7 +82,7 @@ const BusinessPartnersHero: React.FC = () => {
             </div>
 
             {/* Heading */}
-            <h1 className="text-5xl font-bold text-[#0B2341] sm:text-6xl ">
+            <h1 className="text-5xl font-bold text-[#000000] sm:text-6xl ">
               {t("hero.title.line1")}
               <br />
 
@@ -110,13 +110,13 @@ const BusinessPartnersHero: React.FC = () => {
                 return (
                   <div
                     key={idx}
-                      className="group flex items-center gap-3 rounded-xl border border-[#D9E3EF]/80 bg-white/80 p-3 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#C6922B]/60 hover:bg-[#0B2341] hover:shadow-lg hover:shadow-[#0B2341]/10"
+                      className="group flex items-center gap-3 rounded-xl border border-[#D9E3EF]/80 bg-white/80 p-3 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#C6922B]/60 hover:bg-[#000000] hover:shadow-lg hover:shadow-[#000000]/10"
                     >
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#0B2341]/5 text-[#0B2341] transition-colors duration-300 group-hover:bg-[#C6922B] group-hover:text-white">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#000000]/5 text-[#000000] transition-colors duration-300 group-hover:bg-[#C6922B] group-hover:text-white">
                         <ItemIcon size={17} strokeWidth={2.2} />
                       </div>
 
-                      <span className="text-xs font-semibold text-[#0B2341] transition-colors duration-300 group-hover:text-white">
+                      <span className="text-xs font-semibold text-[#000000] transition-colors duration-300 group-hover:text-white">
                       {item.label}
                     </span>
                   </div>
@@ -129,7 +129,7 @@ const BusinessPartnersHero: React.FC = () => {
               <Link
                 to="/contact-us"
                 type="button"
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-[#0B2341] px-5 py-2.5 text-sm font-bold text-white shadow-xl shadow-[#0B2341]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#16385F] hover:shadow-[#0B2341]/30 active:translate-y-0"
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-[#000000] px-5 py-2.5 text-sm font-bold text-white shadow-xl shadow-[#000000]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#16385F] hover:shadow-[#000000]/30 active:translate-y-0"
               >
                 <span className="relative text-white z-10 flex items-center gap-2">
                   {t("hero.becomePartner")}
@@ -142,7 +142,7 @@ const BusinessPartnersHero: React.FC = () => {
 
               <button
                 type="button"
-                className="inline-flex items-center justify-center rounded-full border-2 border-[#C6922B]/80 bg-white/50 px-5 py-2.5 text-sm font-bold text-[#0B2341] shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-[#C6922B] hover:bg-[#C6922B] hover:text-white"
+                className="inline-flex items-center justify-center rounded-full border-2 border-[#C6922B]/80 bg-white/50 px-5 py-2.5 text-sm font-bold text-[#000000] shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-[#C6922B] hover:bg-[#C6922B] hover:text-white"
               >
                 {t("hero.exploreFramework")}
               </button>
@@ -151,7 +151,7 @@ const BusinessPartnersHero: React.FC = () => {
 
           {/* ================= RIGHT CONTENT ================= */}
           <div className="lg:col-span-6 xl:col-span-7">
-            <div className="relative rounded-[32px] border border-[#D9E3EF] bg-white/80 p-6 shadow-2xl shadow-[#0B2341]/5 backdrop-blur-xl sm:p-8">
+            <div className="relative rounded-[32px] border border-[#D9E3EF] bg-white/80 p-6 shadow-2xl shadow-[#000000]/5 backdrop-blur-xl sm:p-8">
 
               {/* Card Header */}
               <div className="mb-8 flex flex-col gap-4 border-b border-[#D9E3EF]/60 pb-6 sm:flex-row sm:items-end sm:justify-between">
@@ -161,12 +161,12 @@ const BusinessPartnersHero: React.FC = () => {
                     <span>{t("hero.card.brand")}</span>
                   </div>
 
-                  <h2 className="mt-1 text-2xl font-bold tracking-tight text-[#0B2341] sm:text-3xl">
+                  <h2 className="mt-1 text-2xl font-bold tracking-tight text-[#000000] sm:text-3xl">
                     {t("hero.card.heading")}
                   </h2>
                 </div>
 
-                <span className="inline-flex self-start rounded-full bg-[#0B2341]/5 px-3.5 py-1 text-xs font-medium text-[#31527A] sm:self-auto">
+                <span className="inline-flex self-start rounded-full bg-[#000000]/5 px-3.5 py-1 text-xs font-medium text-[#31527A] sm:self-auto">
                   {t("hero.card.categories")}
                 </span>
               </div>
@@ -179,7 +179,7 @@ const BusinessPartnersHero: React.FC = () => {
                   return (
                     <div
                       key={partner.title}
-                      className="group relative flex min-h-[245px] flex-col justify-between overflow-hidden rounded-2xl border border-[#D9E3EF] bg-white shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[#C6922B]/70 hover:bg-[#0B2341] hover:shadow-xl hover:shadow-[#0B2341]/10"
+                      className="group relative flex min-h-[245px] flex-col justify-between overflow-hidden rounded-2xl border border-[#D9E3EF] bg-white shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[#C6922B]/70 hover:bg-[#000000] hover:shadow-xl hover:shadow-[#000000]/10"
                     >
                       {/* Background Image */}
                       <img
@@ -189,10 +189,10 @@ const BusinessPartnersHero: React.FC = () => {
                       />
 
                       {/* Base dark overlay for readability */}
-                      <div className="absolute inset-0 bg-gradient-to-b from-[#0B2341]/10 via-[#0B2341]/25 to-[#0B2341]/70 transition-all duration-500 group-hover:from-[#0B2341]/45 group-hover:via-[#0B2341]/65 group-hover:to-[#0B2341]/90" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/10 via-[#000000]/25 to-[#000000]/70 transition-all duration-500 group-hover:from-[#000000]/45 group-hover:via-[#000000]/65 group-hover:to-[#000000]/90" />
 
                       {/* Gold Hover Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#C6922B]/0 via-[#0B2341]/10 to-[#C6922B]/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#C6922B]/0 via-[#000000]/10 to-[#C6922B]/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                       {/* Top Gold Line */}
                       <div className="absolute left-0 right-0 top-0 z-20 h-1 bg-gradient-to-r from-transparent via-[#C6922B]/0 to-transparent transition-all duration-500 group-hover:via-[#C6922B]" />
@@ -202,7 +202,7 @@ const BusinessPartnersHero: React.FC = () => {
                         <div className="translate-y-2 opacity-0 transition-all duration-400 group-hover:translate-y-0 group-hover:opacity-100">
                           <div className="mb-4 flex items-center justify-between">
                             {/* Icon */}
-                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/95 text-[#0B2341] shadow-lg transition-all duration-500 group-hover:rotate-6 group-hover:bg-[#C6922B] group-hover:text-white">
+                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/95 text-[#000000] shadow-lg transition-all duration-500 group-hover:rotate-6 group-hover:bg-[#C6922B] group-hover:text-white">
                               <Icon size={22} strokeWidth={2} />
                             </div>
 
@@ -244,7 +244,7 @@ const BusinessPartnersHero: React.FC = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-sm font-bold text-[#0B2341]">
+                  <h4 className="text-sm font-bold text-[#000000]">
                     {t("hero.notice.title")}
                   </h4>
 

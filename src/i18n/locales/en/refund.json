@@ -1,0 +1,165 @@
+{
+  "hero": {
+    "badge": "Policy Overview",
+    "titleLine1": "Refund &",
+    "titleLine2": "Cancellation",
+    "subtitle": "At YES TIME GLOBAL, we value transparency, fairness, and customer trust. Please review the applicable terms before submitting a refund or cancellation request.",
+    "callSupport": "Call Support",
+    "viewTerms": "View Terms",
+    "card": {
+      "label": "Policy Process",
+      "title": "Request Review",
+      "step1": "Submit a valid request",
+      "step2": "Provide required information",
+      "step3": "Verification by our team",
+      "step4": "Receive review outcome",
+      "noteTitle": "Transparent Process",
+      "noteText": "Requests are reviewed according to applicable terms."
+    }
+  },
+  "highlights": {
+    "transparent": {
+      "title": "Transparent Review",
+      "text": "Every request is reviewed according to the applicable program terms and conditions."
+    },
+    "timely": {
+      "title": "Timely Support",
+      "text": "Our team aims to guide you through the request and review process."
+    },
+    "secure": {
+      "title": "Secure Handling",
+      "text": "Information submitted for verification is handled carefully during the review process."
+    },
+    "support": {
+      "title": "Customer Support",
+      "text": "We aim to handle valid requests professionally and respectfully."
+    }
+  },
+  "commitment": {
+    "eyebrow": "Our Commitment",
+    "title": "Fair Policy. Clear Process.",
+    "subtitle": "We aim to make refund and cancellation requests understandable, structured, and easy to submit."
+  },
+  "process": {
+    "eyebrow": "How It Works",
+    "title": "Refund & Cancellation Guidelines",
+    "subtitle": "Follow these steps when submitting a refund or cancellation request.",
+    "steps": {
+      "1": {
+        "title": "Check Program Terms",
+        "text": "Refund and cancellation requests are handled according to the terms and conditions of the selected program or service."
+      },
+      "2": {
+        "title": "Submit Your Request",
+        "text": "Submit your refund or cancellation request through the company’s official support channel with complete and accurate information."
+      },
+      "3": {
+        "title": "Provide Required Information",
+        "text": "The company may require customer details, payment information, transaction records, and other supporting documents where necessary."
+      },
+      "4": {
+        "title": "Verification",
+        "text": "The submitted request and supporting information are reviewed and verified before a decision is made."
+      },
+      "5": {
+        "title": "Approval & Processing",
+        "text": "If the request meets the applicable conditions, the refund or cancellation will be processed according to the relevant program terms."
+      },
+      "6": {
+        "title": "Refund Processing",
+        "text": "Where a refund is approved, it will be processed through the applicable payment or banking method, subject to processing requirements."
+      }
+    }
+  },
+  "information": {
+    "eyebrow": "Request Requirements",
+    "title": "Information You May Need",
+    "subtitle": "Keeping the relevant information and supporting records ready can help make the review process easier.",
+    "customer": {
+      "title": "Customer Information",
+      "text": "Provide your name and relevant contact details associated with your program or transaction."
+    },
+    "payment": {
+      "title": "Payment Details",
+      "text": "Payment or transaction information may be required to identify and verify the relevant payment."
+    },
+    "record": {
+      "title": "Transaction Record",
+      "text": "Where applicable, provide the receipt, payment record, reference number, or other transaction evidence."
+    },
+    "reason": {
+      "title": "Reason for Request",
+      "text": "Clearly explain the reason for your refund or cancellation request so it can be reviewed properly."
+    }
+  },
+  "programs": {
+    "eyebrow": "Program-Specific Terms",
+    "title": "Different Programs, Different Requirements",
+    "subtitle": "Certain refund, cancellation, and transaction matters may require additional verification depending on the program.",
+    "bank": {
+      "title": "Bank-Related Matters",
+      "text": "Refunds or payment-related matters involving banking services may require transaction verification and compliance with the applicable banking process and terms."
+    },
+    "property": {
+      "title": "Property-Related Matters",
+      "text": "Property-related requests may require verification of the relevant agreement, transaction records, supporting documents, and applicable program conditions."
+    },
+    "vehicle": {
+      "title": "Vehicle-Related Matters",
+      "text": "Vehicle-related requests may be reviewed against the relevant agreement, payment records, registration or transaction information, and applicable terms."
+    },
+    "payment": {
+      "title": "Payment & Transaction Matters",
+      "text": "Payment-related requests may require transaction verification and supporting records before any refund or adjustment can be considered."
+    }
+  },
+  "processing": {
+    "eyebrow": "Refund Processing",
+    "title": "How an Approved Refund Is Processed",
+    "subtitle": "Once a request has been reviewed and approved, processing follows the applicable program, payment, or banking requirements.",
+    "review": {
+      "title": "Request Review",
+      "text": "Your request and supporting information are reviewed against the applicable program conditions."
+    },
+    "approval": {
+      "title": "Approval",
+      "text": "Eligible requests proceed according to the relevant terms and conditions."
+    },
+    "payment": {
+      "title": "Payment Processing",
+      "text": "Where applicable, the approved refund is processed through the relevant payment or banking channel."
+    }
+  },
+  "notes": {
+    "eyebrow": "Important Notes",
+    "title": "What to Keep in Mind",
+    "1": "Refund and cancellation requests are subject to the applicable terms and conditions of the selected program or service.",
+    "2": "The requester may be required to provide accurate personal, payment, transaction, or supporting information.",
+    "3": "The company may verify submitted information and request additional documentation where necessary.",
+    "4": "Approval of a request is not automatic and depends on the applicable eligibility and program conditions.",
+    "5": "Refund processing may depend on the relevant payment provider, bank, or other applicable service provider.",
+    "6": "Certain payments, charges, services, or transactions may not be eligible for refund according to the applicable terms.",
+    "7": "Requests involving property, vehicles, banking, or other specific services may be subject to additional requirements.",
+    "8": "For disputes or clarification, please contact the official support team for review."
+  },
+  "help": {
+    "title": "Need Help?",
+    "text": "Our support team can guide you through eligibility, documentation, and request submission.",
+    "contactBtn": "Contact Support"
+  },
+  "legal": {
+    "eyebrow": "Legal Clarification",
+    "title": "Important Policy Notice",
+    "p1": "Refund and cancellation requests are considered according to the terms and conditions applicable to the relevant program, service, agreement, or transaction.",
+    "p2": "Submission of a request does not by itself guarantee approval. Requests may require verification of the information and supporting documents provided.",
+    "p3": "Where a request involves a bank, property, vehicle, or another third-party service, additional terms, documentation, or procedures may apply.",
+    "p4": "If you have a question regarding the interpretation or application of this policy, please contact our support team before proceeding."
+  },
+  "cta": {
+    "eyebrow": "Still Have Questions?",
+    "title": "Let our team help you with your request.",
+    "subtitle": "Contact YES TIME GLOBAL if you need clarification about refund eligibility, cancellation, or the required process.",
+    "callNow": "Call Now",
+    "contactUs": "Contact Us"
+  }
+}

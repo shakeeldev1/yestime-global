@@ -76,7 +76,7 @@ const BanksFinancialProcess = () => {
                 key={title}
                 className="group relative rounded-[20px] border border-[#dfe8f6] bg-white p-6 text-center shadow-[0_18px_35px_rgba(11,59,110,0.04)] transition-all duration-300 hover:-translate-y-2 hover:border-[#d99b26]/50 hover:shadow-[0_22px_45px_rgba(11,59,110,0.12)]"
               >
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0b2b52] text-[#f5c54e] shadow-[0_12px_30px_rgba(11,59,110,0.18)] transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#d99b26] group-hover:text-[#071a36]">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#000000] text-[#f5c54e] shadow-[0_12px_30px_rgba(11,59,110,0.18)] transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#d99b26] group-hover:text-[#071a36]">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h4 className="mt-5 text-lg font-bold text-[#071a36] transition-colors duration-300 group-hover:text-[#d99b26]">
@@ -90,7 +90,7 @@ const BanksFinancialProcess = () => {
       </section>
 
       {/* ================= HOW IT WORKS ================= */}
-      <section className="relative overflow-hidden bg-[#020b1b] px-5 py-10 text-white sm:px-8 lg:px-[5.5%]">
+      <section className="relative overflow-hidden bg-[#000000] px-5 py-10 text-white sm:px-8 lg:px-[5.5%]">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(245,197,78,0.15),_transparent_40%)]" />
 
         <div className="relative z-10 mx-auto max-w-[1280px]">

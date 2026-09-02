@@ -33,7 +33,7 @@ const InvestorHighlights = () => {
             </span>
           </div>
 
-          <h2 className="mt-4 text-3xl font-black tracking-tight text-[#061832] sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-3xl font-black tracking-tight text-[#000000] sm:text-4xl lg:text-5xl">
             {t('highlights.headingLead')} <span className="text-[#d99b26]">{t('highlights.headingHighlight')}</span>
           </h2>
 
@@ -45,10 +45,10 @@ const InvestorHighlights = () => {
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {investorHighlights.map(({ icon: Icon, title, description }) => (
             <article key={title} className="group rounded-xl border border-slate-200/90 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-amber-400 hover:shadow-xl hover:shadow-slate-900/10">
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#06234b] text-amber-400 transition-colors group-hover:bg-amber-400 group-hover:text-[#06234b]">
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#000000] text-amber-400 transition-colors group-hover:bg-amber-400 group-hover:text-[#000000]">
                 <Icon className="h-5 w-5" />
               </div>
-              <h3 className="mt-5 text-xl font-bold text-[#061832] transition-colors group-hover:text-amber-600">{title}</h3>
+              <h3 className="mt-5 text-xl font-bold text-[#000000] transition-colors group-hover:text-amber-600">{title}</h3>
               <p className="mt-3 text-sm leading-7 text-[#41566f]">{description}</p>
               <div className="mt-5 h-0.5 w-8 rounded-full bg-slate-200 transition-all duration-300 group-hover:w-full group-hover:bg-amber-400" />
             </article>

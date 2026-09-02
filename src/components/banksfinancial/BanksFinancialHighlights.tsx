@@ -145,7 +145,7 @@ const BanksFinancialHighlights = () => {
               </span>
             </div>
 
-            <h2 className="text-3xl font-black leading-tight tracking-tight text-[#071a36] sm:text-4xl lg:text-[3.1rem]">
+            <h2 className="text-3xl font-black leading-tight tracking-tight text-[#000000] sm:text-4xl lg:text-[3.1rem]">
               {t('highlights.aboutTitleLine1')}<br />
               <span className="bg-gradient-to-r from-[#d99b26] to-[#f0c75e] bg-clip-text text-transparent">
                 {t('highlights.aboutTitleHighlight')}
@@ -176,7 +176,7 @@ const BanksFinancialHighlights = () => {
             <p className="text-[12px] font-extrabold uppercase tracking-[0.24em] text-[#d99b26]">
               {t('highlights.servicesLabel')}
             </p>
-            <h3 className="mt-3 text-3xl font-black tracking-tight text-[#071a36] sm:text-4xl">
+            <h3 className="mt-3 text-3xl font-black tracking-tight text-[#000000] sm:text-4xl">
               {t('highlights.servicesTitle')}
             </h3>
           </div>
@@ -196,7 +196,7 @@ const BanksFinancialHighlights = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <h4 className="text-xl font-bold text-[#071a36] transition-colors duration-300 group-hover:text-[#d99b26]">
+                    <h4 className="text-xl font-bold text-[#000000] transition-colors duration-300 group-hover:text-[#d99b26]">
                       {title}
                     </h4>
                     <ul className="mt-4 space-y-2.5">
@@ -213,7 +213,7 @@ const BanksFinancialHighlights = () => {
                 </div>
 
                 <div className="px-6 pb-6 pt-2">
-                  <button className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#071a36] px-4 py-3 text-xs font-bold uppercase tracking-[0.08em] text-[#f5c54e] transition-all duration-300 hover:bg-[#d99b26] hover:text-[#071a36]">
+                  <button className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#000000] px-4 py-3 text-xs font-bold uppercase tracking-[0.08em] text-[#f5c54e] transition-all duration-300 hover:bg-[#d99b26] hover:text-[#000000]">
                     <span>{t('highlights.learnMore')}</span>
                     <ArrowRight className="h-3.5 w-3.5" />
                   </button>

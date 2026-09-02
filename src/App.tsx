@@ -24,6 +24,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import Disclaimer from './pages/Disclaimer'
 import Footer from './components/common/Footer'
 import WhatsAppButton from './components/common/WhatsAppButton'
+import RefundAndCancelation from './pages/RefundAndCancelation'
 
 const MainFunction = () => {
   return (
@@ -74,6 +75,7 @@ const router = createBrowserRouter([
 
       { path: '/investors', element: <Investors /> },
       { path: '/Investors', element: <Investors /> },
+      { path: '/refund-cancelation', element: <RefundAndCancelation /> },
 
       { path: '/banks-financial', element: <BanksFinancial /> },
       { path: '/BanksFinancial', element: <BanksFinancial /> },

@@ -54,7 +54,7 @@ const Dealers: React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-white py-24">
       {/* Background Glow */}
-      <div className="absolute left-[-150px] top-[-100px] h-[400px] w-[400px] rounded-full bg-[#0B2341]/5 blur-[120px]" />
+      <div className="absolute left-[-150px] top-[-100px] h-[400px] w-[400px] rounded-full bg-[#000000]/5 blur-[120px]" />
       <div className="absolute right-[-150px] bottom-[-100px] h-[400px] w-[400px] rounded-full bg-[#C6922B]/10 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -65,7 +65,7 @@ const Dealers: React.FC = () => {
               {t("dealers.badge")}
             </span>
 
-            <h2 className="mt-4 text-4xl font-bold leading-tight text-[#0B2341] sm:text-5xl">
+            <h2 className="mt-4 text-4xl font-bold leading-tight text-[#000000] sm:text-5xl">
               {t("dealers.title.line1")}
               <span className="block text-[#C6922B]">
                 {t("dealers.title.line2")}
@@ -79,23 +79,23 @@ const Dealers: React.FC = () => {
         </div>
 
         {/* Dealer Banner */}
-        <div className="relative mt-16 overflow-hidden rounded-3xl border border-[#D9E3EF] bg-[#F8FAFC] p-8 shadow-xl shadow-[#0B2341]/5 sm:p-12 lg:p-14">
+        <div className="relative mt-16 overflow-hidden rounded-3xl border border-[#D9E3EF] bg-[#F8FAFC] p-8 shadow-xl shadow-[#000000]/5 sm:p-12 lg:p-14">
           {/* Decorative Glows */}
-          <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#0B2341]/5 blur-3xl" />
+          <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#000000]/5 blur-3xl" />
           <div className="absolute -bottom-32 left-20 h-80 w-80 rounded-full bg-[#C6922B]/10 blur-3xl" />
 
           {/* Decorative Circle */}
           <div className="absolute right-[-100px] top-1/2 h-[350px] w-[350px] -translate-y-1/2 rounded-full border border-[#C6922B]/10" />
-          <div className="absolute right-[-50px] top-1/2 h-[250px] w-[250px] -translate-y-1/2 rounded-full border border-[#0B2341]/10" />
+          <div className="absolute right-[-50px] top-1/2 h-[250px] w-[250px] -translate-y-1/2 rounded-full border border-[#000000]/10" />
 
           <div className="relative grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             {/* Intro */}
             <div>
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#0B2341] text-[#C6922B] shadow-lg shadow-[#0B2341]/10">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#000000] text-[#C6922B] shadow-lg shadow-[#000000]/10">
                 <Handshake size={31} />
               </div>
 
-              <h3 className="mt-7 text-3xl font-bold text-[#0B2341] sm:text-4xl">
+              <h3 className="mt-7 text-3xl font-bold text-[#000000] sm:text-4xl">
                 {t("dealers.becomeHeading")}
               </h3>
 
@@ -114,7 +114,7 @@ const Dealers: React.FC = () => {
                   </div>
 
                   <div>
-                    <h4 className="text-sm font-bold text-[#0B2341]">
+                    <h4 className="text-sm font-bold text-[#000000]">
                       {t("dealers.process.title")}
                     </h4>
 
@@ -127,7 +127,7 @@ const Dealers: React.FC = () => {
 
               <Link
                 to="/contact-us"
-                className="group mt-8 inline-flex items-center gap-2 rounded-md bg-[#0B2341] px-7 py-3.5 font-semibold text-white shadow-lg shadow-[#0B2341]/10 transition duration-300 hover:-translate-y-0.5 hover:bg-[#C6922B] hover:shadow-[#C6922B]/20"
+                className="group mt-8 inline-flex items-center gap-2 rounded-md bg-[#000000] px-7 py-3.5 font-semibold text-white shadow-lg shadow-[#000000]/10 transition duration-300 hover:-translate-y-0.5 hover:bg-[#C6922B] hover:shadow-[#C6922B]/20"
               >
               <span className="text-white">  {t("dealers.becomeCta")}</span>
 
@@ -146,7 +146,7 @@ const Dealers: React.FC = () => {
                 return (
                   <div
                     key={benefit.title}
-                    className="group relative overflow-hidden rounded-2xl border border-[#D9E3EF] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C6922B] hover:shadow-lg hover:shadow-[#0B2341]/10"
+                    className="group relative overflow-hidden rounded-2xl border border-[#D9E3EF] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C6922B] hover:shadow-lg hover:shadow-[#000000]/10"
                     style={{
                       backgroundImage: `url(${benefit.image})`,
                       backgroundSize: "cover",
@@ -155,7 +155,7 @@ const Dealers: React.FC = () => {
                     }}
                   >
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-[#0B2341]/80 transition-all duration-300 group-hover:bg-[#0B2341]/70" />
+                    <div className="absolute inset-0 bg-[#000000]/80 transition-all duration-300 group-hover:bg-[#000000]/70" />
 
                     {/* Content */}
                     <div className="relative z-10 flex h-full flex-col p-6">
@@ -186,7 +186,7 @@ const Dealers: React.FC = () => {
                   className="mt-1 shrink-0 text-[#C6922B]"
                 />
                 <div>
-                  <h5 className="font-semibold text-[#0B2341]">
+                  <h5 className="font-semibold text-[#000000]">
                     {t("dealers.highlights.0.title")}
                   </h5>
                   <p className="mt-1 text-sm leading-6 text-[#55708F]">
@@ -201,7 +201,7 @@ const Dealers: React.FC = () => {
                   className="mt-1 shrink-0 text-[#C6922B]"
                 />
                 <div>
-                  <h5 className="font-semibold text-[#0B2341]">
+                  <h5 className="font-semibold text-[#000000]">
                     {t("dealers.highlights.1.title")}
                   </h5>
                   <p className="mt-1 text-sm leading-6 text-[#55708F]">
@@ -216,7 +216,7 @@ const Dealers: React.FC = () => {
                   className="mt-1 shrink-0 text-[#C6922B]"
                 />
                 <div>
-                  <h5 className="font-semibold text-[#0B2341]">
+                  <h5 className="font-semibold text-[#000000]">
                     {t("dealers.highlights.2.title")}
                   </h5>
                   <p className="mt-1 text-sm leading-6 text-[#55708F]">

@@ -53,7 +53,7 @@ const Shops: React.FC = () => {
 
       {/* Clean Ambient Background Glows (Boxes/Grids removed entirely) */}
       <div className="absolute -left-40 top-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-[#C6922B]/10 via-[#C6922B]/5 to-transparent blur-[140px] pointer-events-none" />
-      <div className="absolute -right-40 bottom-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-tl from-[#0B2341]/10 via-[#0B2341]/5 to-transparent blur-[140px] pointer-events-none" />
+      <div className="absolute -right-40 bottom-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-tl from-[#000000]/10 via-[#000000]/5 to-transparent blur-[140px] pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -64,7 +64,7 @@ const Shops: React.FC = () => {
             <span>{t("shops.badge")}</span>
           </div>
 
-          <h2 className="text-4xl font-extrabold tracking-tight text-[#0B2341] sm:text-5xl lg:text-6xl">
+          <h2 className="text-4xl font-extrabold tracking-tight text-[#000000] sm:text-5xl lg:text-6xl">
             {t("shops.title.line1")} <br className="hidden sm:inline" />
             <span className="bg-linear-to-r from-[#C6922B] via-[#dfa838] to-[#C6922B] bg-clip-text text-transparent text-3xl font-semibold sm:text-4xl lg:text-5xl">
               {t("shops.title.line2")}
@@ -80,7 +80,7 @@ const Shops: React.FC = () => {
         <div className="mt-20 grid gap-12 lg:grid-cols-12 lg:items-center">
 
           {/* Left Hero Card (5 Cols) */}
-          <div className="lg:col-span-5 relative group overflow-hidden rounded-[32px] shadow-2xl shadow-[#0B2341]/15 border border-[#D9E3EF] min-h-[640px] flex flex-col justify-between">
+          <div className="lg:col-span-5 relative group overflow-hidden rounded-[32px] shadow-2xl shadow-[#000000]/15 border border-[#D9E3EF] min-h-[640px] flex flex-col justify-between">
             {/* Background Image Container */}
             <div
               className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
@@ -91,7 +91,7 @@ const Shops: React.FC = () => {
               }}
             />
             {/* Deep Multi-Layer Gradient Overlays */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0B2341] via-[#0B2341]/90 to-[#0B2341]/60 backdrop-blur-[2px]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-[#000000]/90 to-[#000000]/60 backdrop-blur-[2px]" />
             <div className="absolute inset-0 bg-gradient-to-br from-[#C6922B]/20 via-transparent to-transparent opacity-80" />
 
             {/* Top Tag & Icon */}
@@ -131,7 +131,7 @@ const Shops: React.FC = () => {
               </div>
 
               {/* Interactive CTA */}
-              <button className="group/btn mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#C6922B] px-8 py-4 text-sm font-bold text-white shadow-xl shadow-[#C6922B]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#0B2341]">
+              <button className="group/btn mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#C6922B] px-8 py-4 text-sm font-bold text-white shadow-xl shadow-[#C6922B]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#000000]">
                 <span>{t("shops.joinNetwork")}</span>
                 <ArrowUpRight
                   size={18}
@@ -149,14 +149,14 @@ const Shops: React.FC = () => {
               return (
                 <div
                   key={feature.title}
-                  className="group relative flex flex-col justify-between rounded-3xl border border-[#D9E3EF] bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[#C6922B]/70 hover:bg-[#0B2341] hover:shadow-xl hover:shadow-[#0B2341]/10 overflow-hidden"
+                  className="group relative flex flex-col justify-between rounded-3xl border border-[#D9E3EF] bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[#C6922B]/70 hover:bg-[#000000] hover:shadow-xl hover:shadow-[#000000]/10 overflow-hidden"
                 >
                   {/* Subtle top indicator border */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#C6922B]/0 to-transparent transition-all duration-500 group-hover:via-[#C6922B]" />
 
                   <div>
                     <div className="flex items-center justify-between mb-6">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0B2341]/5 text-[#0B2341] transition-all duration-500 group-hover:bg-[#C6922B] group-hover:text-white group-hover:rotate-6 shadow-sm">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#000000]/5 text-[#000000] transition-all duration-500 group-hover:bg-[#C6922B] group-hover:text-white group-hover:rotate-6 shadow-sm">
                         <Icon size={24} strokeWidth={2} />
                       </div>
                       {feature.badge && (
@@ -166,7 +166,7 @@ const Shops: React.FC = () => {
                       )}
                     </div>
 
-                    <h4 className="text-xl font-bold text-[#0B2341] transition-colors duration-300 group-hover:text-[#C6922B]">
+                    <h4 className="text-xl font-bold text-[#000000] transition-colors duration-300 group-hover:text-[#C6922B]">
                       {feature.title}
                     </h4>
 
@@ -175,7 +175,7 @@ const Shops: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-[#D9E3EF]/60 flex items-center gap-1.5 text-xs font-semibold text-[#0B2341]">
+                  <div className="mt-6 pt-4 border-t border-[#D9E3EF]/60 flex items-center gap-1.5 text-xs font-semibold text-[#000000]">
                     <CheckCircle2 size={15} className="text-[#C6922B]" />
                     <span>{t("shops.featureFooter")}</span>
                   </div>
@@ -187,15 +187,15 @@ const Shops: React.FC = () => {
         </div>
 
         {/* Bottom Information Callout */}
-        <div className="mt-16 rounded-[28px] border border-[#D9E3EF] bg-white p-8 sm:p-10 shadow-lg shadow-[#0B2341]/5">
+        <div className="mt-16 rounded-[28px] border border-[#D9E3EF] bg-white p-8 sm:p-10 shadow-lg shadow-[#000000]/5">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
 
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 mb-2">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0B2341] text-[#C6922B] shadow-md">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#000000] text-[#C6922B] shadow-md">
                   <Handshake size={22} strokeWidth={2} />
                 </div>
-                <h3 className="text-2xl font-bold text-[#0B2341]">
+                <h3 className="text-2xl font-bold text-[#000000]">
                   {t("shops.callout.title")}
                 </h3>
               </div>

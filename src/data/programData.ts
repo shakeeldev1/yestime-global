@@ -401,7 +401,7 @@ export const programData: ProgramData[] = [
         installmentLabel: 'Monthly Installment After Winning',
         installmentValue: 'PKR 72,000',
         badge: 'Popular',
-        description: 'A balanced car plan with stronger value for regular contributors.',
+        description: 'A balanced car plan with stronger value for regular contributor.',
         details: [
           'Daily contribution: PKR 100',
           'Monthly contribution: PKR 3,000',

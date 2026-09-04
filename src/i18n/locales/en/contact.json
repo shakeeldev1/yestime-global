@@ -53,16 +53,30 @@
     "successBody": "Thank you. Your inquiry has been received."
   },
   "inquiryTypes": {
-    "general": { "label": "General Inquiry" },
-    "support": { "label": "Customer or Member Support" },
-    "program": { "label": "Program Information" },
-    "partnership": { "label": "Business Partnership" },
-    "investor": { "label": "Investor or Bank Inquiry" },
-    "dealer": { "label": "Dealer, Shop, or Showroom Partnership" },
-    "property": { "label": "Property Partnership" }
+    "general": {
+      "label": "General Inquiry"
+    },
+    "support": {
+      "label": "Customer or Member Support"
+    },
+    "program": {
+      "label": "Program Information"
+    },
+    "partnership": {
+      "label": "Business Partnership"
+    },
+    "investor": {
+      "label": "Investor or Bank Inquiry"
+    },
+    "dealer": {
+      "label": "Dealer, Shop, or Showroom Partnership"
+    },
+    "property": {
+      "label": "Property Partnership"
+    }
   },
   "markets": {
-    "heading": "Head Office — Lahore, Pakistan",
+    "heading": "Head Office Lahore, Pakistan",
     "mapTitle": "YES TIME GLOBAL Head Office Lahore Location"
   }
 }

@@ -5,7 +5,7 @@ import WhatWeDoGlobally from "../components/GlobalExpansioncomponent/WhatWeDoGlo
 
 const GlobalExpansion = () => {
   return (
-    <main className="global-expansion-page min-h-screen overflow-hidden bg-white text-[#071a36]">
+    <main className="global-expansion-page min-h-screen overflow-hidden bg-white text-[#000000]">
       <GlobalExpansionHero />
       <GlobalImpact />
       <WhatWeDoGlobally />

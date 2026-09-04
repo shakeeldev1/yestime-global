@@ -39,8 +39,8 @@
       "urduTitle": "شاپنگ سیونگ",
       "points": [
         "Daily Essentials",
-        "Smart savings on groceries, household items, and daily needs",
-        "Every 1 Minute • 1 منٹ میں 1 پر"
+        "Registered shops + customers connect shop → record → savings eligibility token + lucky draw",
+        "Every 1 Minute • ہر 1 منٹ میں"
       ]
     },
     "wholesaleSaving": {
@@ -48,7 +48,7 @@
       "urduTitle": "ہول سیل سیونگ",
       "points": [
         "Bulk Purchases",
-        "Better value on wholesale essentials and business stock-ups",
+        "Better value on wholesale essentials and business stock ups",
         "Every 1 Minute • ہر 1 منٹ میں"
       ]
     },
@@ -66,35 +66,35 @@
       "urduTitle": "موٹر سائیکل و اسکوٹی سیونگ",
       "points": [
         "New or Used",
-        "Affordable benefits for riders, commuters, and two-wheeler families",
-        "Every 1 Minute • ہر 1 منٹ میں 1 پر"
+        "Buy/sell motorcycles & scooters search by need/budget, verify vehicle + papers yourself",
+        "Every 1 Minute • ہر 1 منٹ میں"
       ]
     },
     "carSaving": {
       "title": "CAR SAVING",
       "urduTitle": "کار سیونگ",
       "points": [
-        "New or Used Cars",
-        "Smarter value for your next vehicle purchase and ownership plan",
-        "Every 1 Minute • 1 منٹ میں 1 پر"
+        "New or Used Cars marketplace buy/sell with verification",
+        "After purchase, eligible amount may enter auto saving / lucky draw",
+        "Every 1 Minute • ہر 1 منٹ میں"
       ]
     },
     "carPlan": {
       "title": "CAR PLAN",
       "urduTitle": "کار پلان",
       "points": [
-        "Flexible Payments",
-        "Affordable car plan designed for new or used vehicle ownership",
-        "Every 1 Minute • کار پلان"
+        "Structured plans for your future car select → apply → pay → track → complete",
+        "Example tiers: 30L→36k … 2.10Cr→252k monthly • dashboard + optional draw • bank flow",
+        "Join → pay → track → complete • کار پلان"
       ]
     },
     "propertySaving": {
       "title": "PROPERTY SAVING",
-      "urduTitle": "پراپرٹی سیونگ",
+      "urduTitle": "جائیداد کا منصوبہ",
       "points": [
-        "Buy / Sell Property",
-        "Smart opportunities for dependable property purchase and resale decisions",
-        "Every 1 Minute • ہر 1 منٹ میں 1 پر"
+        "Residential / commercial / agri land / future projects search → verify docs → legal transfer",
+        "Sellers after company verify • commission example 2% • auto saving after purchase",
+        "Every 1 Minute • جائیداد کا منصوبہ"
       ]
     },
     "cropSaving": {
@@ -107,11 +107,11 @@
       ]
     },
     "selfServiceSaving": {
-      "title": "SELF-SERVICE SAVING",
+      "title": "SELF SERVICE SAVING",
       "urduTitle": "سیلف سروس سیونگ",
       "points": [
         "Buy or Sell by Yourself",
-        "Flexible self-service saving for direct buying, selling, and value growth",
+        "Flexible self service saving for direct buying, selling, and value growth",
         "Every 1 Minute • ہر 1 منٹ میں"
       ]
     }

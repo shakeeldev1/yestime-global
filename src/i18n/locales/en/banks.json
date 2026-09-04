@@ -122,7 +122,7 @@
       }
     },
     "faqLabel": "Frequently Asked Questions",
-    "faqTitle": "FAQs – Banks & Financial",
+    "faqTitle": "FAQs Banks & Financial",
     "faqItems": {
       "partneredBanks": {
         "question": "Which banks are partnered with YES TIME GLOBAL?",
@@ -134,7 +134,7 @@
       },
       "informationSecure": {
         "question": "Is my financial information secure?",
-        "answer": "Absolutely. We enforce end-to-end encryption protocols and strictly adhere to central banking compliance standards."
+        "answer": "Absolutely. We enforce end to end encryption protocols and strictly adhere to central banking compliance standards."
       },
       "businessServices": {
         "question": "Can businesses also avail banking services?",

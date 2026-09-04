@@ -63,7 +63,7 @@ const HomeCommitment = ({
     >
       {(title || highlight) && (
         <div className="mb-7 text-center sm:mb-8">
-          <h2 className="mb-4 break-words text-5xl font-bold leading-tight text-[#071a36]">
+          <h2 className="mb-4 break-words text-5xl font-bold leading-tight text-[#000000]">
             {title}{' '}
             {highlight ? <span className="italic text-[#c5962e]">{highlight}</span> : null}
           </h2>
@@ -88,7 +88,7 @@ const HomeCommitment = ({
                     className={`transition-all duration-300 ${isHovered ? 'scale-110 text-[#c5962e]' : 'scale-100 text-[#0b3b6e]'}`}
                   />
                 </div>
-                <p className="m-0 break-words text-sm font-normal leading-6 text-[#41566f] transition-colors duration-300 group-hover:text-[#071a36] sm:text-base sm:leading-snug">{item.text}</p>
+                <p className="m-0 break-words text-sm font-normal leading-6 text-[#41566f] transition-colors duration-300 group-hover:text-[#000000] sm:text-base sm:leading-snug">{item.text}</p>
               </div>
             )
           })}

@@ -25,8 +25,8 @@ const Team = () => {
 
     {
       key: 'gulzar',
-      name: 'Hafiz Gulzar Ahmed Khalid',
-      nativeName: 'حافظ گلزار احمد خالد',
+      name: 'Muhammad Gulzar Khalid',
+      nativeName: 'محمد گلزار خالد',
       role: t('team.members.gulzar.role'),
       nativeRole: 'چیف آپریٹنگ آفیسر',
       image: '/team/gulzar-coo.png',

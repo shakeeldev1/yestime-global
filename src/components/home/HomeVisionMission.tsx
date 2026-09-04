@@ -105,7 +105,7 @@ const HomeVisionMission = () => {
           <StepIcon size={23} />
         </div>
         <div className="flex-1">
-          <h3 className="mt-2 text-5xl font-bold tracking-[-0.03em] text-[#071a36]">{step.title}</h3>
+          <h3 className="mt-2 text-5xl font-bold tracking-[-0.03em] text-[#000000]">{step.title}</h3>
           <p className="mt-3 max-w-xl text-sm leading-7 text-[#41566f]">{step.description}</p>
         </div>
         <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -123,7 +123,7 @@ const HomeVisionMission = () => {
     <section id="vision-mission" className="bg-white px-6 py-20">
       <div className="mx-auto max-w-[760px] text-center">
         <span className="inline-block rounded-full bg-[#eff6ff] px-3.5 py-1.5 text-xs font-medium  tracking-[0.12em] text-[#0b3b6e]">Vision &amp; Mission</span>
-        <h2 className="mt-4 text-5xl font-bold leading-tight text-[#071a36]">
+        <h2 className="mt-4 text-5xl font-bold leading-tight text-[#000000]">
           Our Direction. <span className="text-[#c5962e]">A Global Future.</span>
         </h2>
         <p className="mx-auto mt-5 text-base leading-7 text-[#41566f]">Explore our vision, mission, future direction, and global expansion across Pakistan, Nepal, and Indonesia.</p>
@@ -143,7 +143,7 @@ const HomeVisionMission = () => {
                 className={`group flex w-full items-center gap-4 rounded-2xl border p-4 text-left transition duration-200 ${
                   active
                     ? 'border-[#0b3b6e] bg-[#0b3b6e] text-white shadow-[0_12px_25px_rgba(11,59,110,0.2)]'
-                    : 'border-[#dbe5f2] bg-[#f8fafc] text-[#071a36] hover:-translate-y-0.5 hover:border-[#c5962e] hover:shadow-[0_8px_18px_rgba(11,59,110,0.08)]'
+                    : 'border-[#dbe5f2] bg-[#f8fafc] text-[#000000] hover:-translate-y-0.5 hover:border-[#c5962e] hover:shadow-[0_8px_18px_rgba(11,59,110,0.08)]'
                 }`}
               >
                 <span className={`inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-[#0b3b6e] shadow-[0_0_0_1px_#dbe5f2] ${active ? 'bg-[#fff8e1] text-[#c5962e] shadow-none' : ''}`}>
@@ -161,7 +161,7 @@ const HomeVisionMission = () => {
           })}
         </div>
 
-        <article className="flex min-w-0 min-h-[560px] flex-col rounded-[1.6rem] lg:min-h-[330px] border border-[rgba(11,59,110,0.16)] bg-gradient-to-br from-white to-[#f4f8fc] p-7 text-[#071a36] shadow-[0_20px_40px_rgba(11,59,110,0.12)]">
+        <article className="flex min-w-0 min-h-[560px] flex-col rounded-[1.6rem] lg:min-h-[330px] border border-[rgba(11,59,110,0.16)] bg-gradient-to-br from-white to-[#f4f8fc] p-7 text-[#000000] shadow-[0_20px_40px_rgba(11,59,110,0.12)]">
           <div className="relative min-h-[504px] lg:min-h-[302px]">
             {renderStepDetails(displayedStep, isCrossfading ? 'opacity-0' : 'opacity-100')}
             {incomingStep ? renderStepDetails(incomingStep, isCrossfading ? 'opacity-100' : 'opacity-0') : null}

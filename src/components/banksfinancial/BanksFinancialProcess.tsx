@@ -65,7 +65,7 @@ const BanksFinancialProcess = () => {
             <p className="text-[12px] font-extrabold uppercase tracking-[0.22em] text-[#d99b26]">
               {t('process.whyLabel')}
             </p>
-            <h3 className="mt-3 text-3xl font-black tracking-[-0.04em] text-[#071a36] sm:text-4xl">
+            <h3 className="mt-3 text-3xl font-black tracking-[-0.04em] text-[#000000] sm:text-4xl">
               {t('process.whyTitle')}
             </h3>
           </div>
@@ -76,10 +76,10 @@ const BanksFinancialProcess = () => {
                 key={title}
                 className="group relative rounded-[20px] border border-[#dfe8f6] bg-white p-6 text-center shadow-[0_18px_35px_rgba(11,59,110,0.04)] transition-all duration-300 hover:-translate-y-2 hover:border-[#d99b26]/50 hover:shadow-[0_22px_45px_rgba(11,59,110,0.12)]"
               >
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#000000] text-[#f5c54e] shadow-[0_12px_30px_rgba(11,59,110,0.18)] transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#d99b26] group-hover:text-[#071a36]">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#000000] text-[#f5c54e] shadow-[0_12px_30px_rgba(11,59,110,0.18)] transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#d99b26] group-hover:text-[#000000]">
                   <Icon className="h-6 w-6" />
                 </div>
-                <h4 className="mt-5 text-lg font-bold text-[#071a36] transition-colors duration-300 group-hover:text-[#d99b26]">
+                <h4 className="mt-5 text-lg font-bold text-[#000000] transition-colors duration-300 group-hover:text-[#d99b26]">
                   {title}
                 </h4>
                 <p className="mt-2 text-sm leading-6 text-[#41566f]">{text}</p>
@@ -135,7 +135,7 @@ const BanksFinancialProcess = () => {
             <p className="text-[12px] font-extrabold uppercase tracking-[0.22em] text-[#d99b26]">
               {t('process.faqLabel')}
             </p>
-            <h3 className="mt-3 text-3xl font-black tracking-[-0.04em] text-[#071a36] sm:text-4xl">
+            <h3 className="mt-3 text-3xl font-black tracking-[-0.04em] text-[#000000] sm:text-4xl">
               {t('process.faqTitle')}
             </h3>
           </div>
@@ -156,7 +156,7 @@ const BanksFinancialProcess = () => {
                     }`}
                   >
                     <div className="flex items-center justify-between gap-4 px-5 py-2">
-                      <span className="text-base font-bold text-[#071a36]">
+                      <span className="text-base font-bold text-[#000000]">
                         {item.question}
                       </span>
                       <span
@@ -190,7 +190,7 @@ const BanksFinancialProcess = () => {
                   alt={t('process.faqImageAlt')}
                   className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071a36]/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#000000]/80 via-transparent to-transparent" />
 
                 <div className="absolute bottom-6 left-6 right-6 rounded-xl border border-white/20 bg-white/10 p-4 backdrop-blur-md">
                   <p className="text-xs font-semibold uppercase tracking-wider text-[#f5c54e]">

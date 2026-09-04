@@ -39,7 +39,7 @@ const ProgramsSection: React.FC = () => {
     },
     {
       number: "06",
-      title: "Self-Service Savings",
+      title: "Self Service Savings",
       description:
         "Member-focused tools and participation designed for convenient access and control.",
       link: "#",
@@ -63,7 +63,7 @@ const ProgramsSection: React.FC = () => {
           </h2>
 
           <p className="mx-auto mt-4 max-w-[580px] text-[12px] leading-relaxed text-[#6d7e92] sm:text-[13px]">
-            Explore programs designed around practical goals, participation and long-term value.
+            Explore programs designed around practical goals, participation and long term value.
           </p>
         </div>
 

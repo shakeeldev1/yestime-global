@@ -55,7 +55,7 @@ const Customer = () => {
   ]
 
   return (
-    <main className="bg-[linear-gradient(180deg,#ffffff_0%,#f6f9fc_100%)] text-[#071a36]">
+    <main className="bg-[linear-gradient(180deg,#ffffff_0%,#f6f9fc_100%)] text-[#000000]">
       <section className="relative overflow-hidden bg-[#000000] px-5 py-10 text-white md:px-8 lg:px-[5.5%] lg:py-12">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,197,78,0.18),transparent_25%),linear-gradient(90deg,#000000_0%,#000000_38%,rgba(2,11,27,0.9)_100%)]" />
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#000000 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
@@ -128,7 +128,7 @@ const Customer = () => {
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-[5.5%]">
         <div className="mb-10 max-w-2xl">
           <p className="text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#a97916]">{t('memberSupport.label')}</p>
-          <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-[#071a36] sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-[#000000] sm:text-4xl">
             {t('memberSupport.heading')}
           </h2>
           <p className="mt-4 text-lg leading-8 text-[#41566f]">
@@ -142,10 +142,10 @@ const Customer = () => {
               key={title}
               className="group rounded-3xl border border-[#dfe8f6] bg-white p-6 shadow-[0_18px_35px_rgba(11,59,110,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f5c54e]/60 hover:shadow-[0_22px_40px_rgba(11,59,110,0.08)]"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0b2b52] text-[#f5c54e] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#f5c54e] group-hover:text-[#071a36]">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0b2b52] text-[#f5c54e] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#f5c54e] group-hover:text-[#000000]">
                 <Icon className="h-6 w-6" />
               </div>
-              <h3 className="mt-5 text-xl font-bold text-[#071a36] transition-colors duration-300 group-hover:text-[#a97916]">{title}</h3>
+              <h3 className="mt-5 text-xl font-bold text-[#000000] transition-colors duration-300 group-hover:text-[#a97916]">{title}</h3>
               <p className="mt-3 text-base leading-7 text-[#41566f]">{description}</p>
             </article>
           ))}
@@ -160,7 +160,7 @@ const Customer = () => {
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#fff4d9] text-[#c99610] transition-transform duration-300 group-hover:scale-110">
                 <Icon className="h-5 w-5" />
               </div>
-              <h3 className="mt-4 text-lg font-bold text-[#071a36] transition-colors duration-300 group-hover:text-[#a97916]">{title}</h3>
+              <h3 className="mt-4 text-lg font-bold text-[#000000] transition-colors duration-300 group-hover:text-[#a97916]">{title}</h3>
               <p className="mt-2 text-sm leading-6 text-[#41566f]">{text}</p>
             </div>
           ))}
@@ -171,7 +171,7 @@ const Customer = () => {
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
             <p className="text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#a97916]">{t('howSupportWorks.label')}</p>
-            <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-[#071a36] sm:text-4xl">{t('howSupportWorks.heading')}</h2>
+            <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-[#000000] sm:text-4xl">{t('howSupportWorks.heading')}</h2>
           </div>
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -184,11 +184,11 @@ const Customer = () => {
                   <span className="inline-flex h-10 w-12 items-center justify-center rounded-full bg-linear-to-r from-[#f5c54e] to-[#d99420] text-[10px] font-black text-[#07182d] transition-transform duration-300 group-hover:scale-105">
                     {step}
                   </span>
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0b2b52] text-[#f5c54e] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#f5c54e] group-hover:text-[#071a36]">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0b2b52] text-[#f5c54e] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#f5c54e] group-hover:text-[#000000]">
                     <Icon className="h-5 w-5" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#071a36] transition-colors duration-300 group-hover:text-[#a97916]">{title}</h3>
+                <h3 className="text-xl font-bold text-[#000000] transition-colors duration-300 group-hover:text-[#a97916]">{title}</h3>
                 <p className="mt-2 text-sm leading-6 text-[#41566f]">{text}</p>
               </div>
             ))}
@@ -200,7 +200,7 @@ const Customer = () => {
         <div className="grid gap-6 md:grid-cols-2">
           <div className="group rounded-[26px] border border-[#dfe8f6] bg-white p-7 shadow-[0_18px_35px_rgba(11,59,110,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f5c54e]/60 hover:shadow-[0_22px_40px_rgba(11,59,110,0.08)]">
             <p className="text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#a97916]">{t('beforeContact.label')}</p>
-            <h3 className="mt-3 text-2xl font-bold text-[#071a36] transition-colors duration-300 group-hover:text-[#a97916]">{t('beforeContact.heading')}</h3>
+            <h3 className="mt-3 text-2xl font-bold text-[#000000] transition-colors duration-300 group-hover:text-[#a97916]">{t('beforeContact.heading')}</h3>
             <p className="mt-3 leading-8 text-[#41566f]">
               {t('beforeContact.text')}
             </p>
@@ -208,7 +208,7 @@ const Customer = () => {
 
           <div className="group rounded-[26px] border border-[#dfe8f6] bg-white p-7 shadow-[0_18px_35px_rgba(11,59,110,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f5c54e]/60 hover:shadow-[0_22px_40px_rgba(11,59,110,0.08)]">
             <p className="text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#a97916]">{t('needAnswer.label')}</p>
-            <h3 className="mt-3 text-2xl font-bold text-[#071a36] transition-colors duration-300 group-hover:text-[#a97916]">{t('needAnswer.heading')}</h3>
+            <h3 className="mt-3 text-2xl font-bold text-[#000000] transition-colors duration-300 group-hover:text-[#a97916]">{t('needAnswer.heading')}</h3>
             <p className="mt-3 leading-8 text-[#41566f]">
               {t('needAnswer.text')}
             </p>

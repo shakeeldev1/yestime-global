@@ -7,10 +7,22 @@
     "ctaPrimary": "Start a conversation",
     "ctaSecondary": "Contact us",
     "highlights": [
-      { "label": "Long-term focus", "value": "Sustainable growth" },
-      { "label": "Strategic fit", "value": "Shared vision" },
-      { "label": "Trust", "value": "Clear accountability" },
-      { "label": "Global reach", "value": "Cross-market value" }
+      {
+        "label": "Long term focus",
+        "value": "Sustainable growth"
+      },
+      {
+        "label": "Strategic fit",
+        "value": "Shared vision"
+      },
+      {
+        "label": "Trust",
+        "value": "Clear accountability"
+      },
+      {
+        "label": "Global reach",
+        "value": "Cross market value"
+      }
     ]
   },
   "highlights": {
@@ -29,7 +41,7 @@
       },
       {
         "title": "Trust and clarity",
-        "description": "Explore a transparent relationship with clear communication and long-term accountability."
+        "description": "Explore a transparent relationship with clear communication and long term accountability."
       }
     ]
   },

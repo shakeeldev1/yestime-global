@@ -1,0 +1,109 @@
+{
+  "clientSections": {
+    "live": {
+      "badge": "LIVE ALL OPTIONS 1400 DRAWS EVERY DAY",
+      "heading": "DRAW EVERY 1 MINUTE",
+      "headingHighlight": "| 7 OPTIONS = 7 CHANCES",
+      "subtitle": "Property Saving • جائیداد کا منصوبہ • Every 1 Minute",
+      "nextDraw": "Next Draw In",
+      "timeUnit": "Min : Sec",
+      "watchLive": "Watch Live Draw",
+      "stats": {
+        "dailyDraws": {
+          "label": "Total Daily Draws",
+          "value": "1400",
+          "sub": "Across 7 Options"
+        },
+        "interval": {
+          "label": "Draw Interval",
+          "value": "Every 1 Minute",
+          "sub": "Per Option"
+        },
+        "chances": {
+          "label": "Your Chances",
+          "value": "7",
+          "sub": "Per Draw"
+        }
+      }
+    },
+    "process": {
+      "badge": "Buyer Process",
+      "heading": "Buy property search to legal transfer",
+      "subtitle": "Under Property Plan (جائیداد کا منصوبہ): search → details → contact → document verify → price → legal transfer.",
+      "steps": {
+        "0": {
+          "title": "Search",
+          "text": "Search residential, commercial, agricultural land or future construction projects by need and budget."
+        },
+        "1": {
+          "title": "View details",
+          "text": "Review listing information, location, type and available documents on the platform."
+        },
+        "2": {
+          "title": "Contact",
+          "text": "Contact the seller or a property representative / partner in the company network."
+        },
+        "3": {
+          "title": "Verify documents",
+          "text": "Personally verify ownership and related documents before agreeing terms."
+        },
+        "4": {
+          "title": "Agree price",
+          "text": "Negotiate and finalize price with clear disclosure of commission where applicable."
+        },
+        "5": {
+          "title": "Legal transfer",
+          "text": "Complete the transfer according to legal requirements and company process."
+        }
+      }
+    },
+    "buySell": {
+      "buyerTitle": "Buying Property",
+      "buyerText": "Search → details → contact → verify docs → agree price → legal transfer.",
+      "buyerPoints": {
+        "0": "Residential, commercial, agri land, future projects",
+        "1": "Contact seller or property representative",
+        "2": "Verify documents before you deal",
+        "3": "Complete legal transfer carefully"
+      },
+      "sellerTitle": "Selling Property",
+      "sellerText": "Sellers list through the company system after verification of property details and documents.",
+      "sellerPoints": {
+        "0": "Submit accurate listing details",
+        "1": "Provide ownership and related documents",
+        "2": "Company verification before listing goes live",
+        "3": "Work with property representatives / partners",
+        "4": "Commission disclosed per deal",
+        "5": "Follow company terms for transfer"
+      }
+    },
+    "scope": {
+      "badge": "Property Types",
+      "heading": "What you can buy or sell",
+      "residentialTitle": "Residential",
+      "residentialText": "Homes and residential properties listed through the organized Property Plan marketplace.",
+      "commercialTitle": "Commercial",
+      "commercialText": "Commercial property opportunities with verification and legal transfer process.",
+      "agriTitle": "Agricultural land",
+      "agriText": "Agricultural land listings for buyers and sellers under company verification.",
+      "projectsTitle": "Future construction",
+      "projectsText": "Future construction / development projects connected through representatives and partners."
+    },
+    "commission": {
+      "badge": "Commission Example",
+      "heading": "Transparent commission per deal",
+      "text": "Commission is disclosed for each deal. Example: about 2% e.g. a 1 Crore deal may involve about 2 Lakh commission. Exact rates depend on the deal and company terms.",
+      "exampleLabel": "Example",
+      "exampleValue": "1 Cr deal → ~2 Lakh (2%)"
+    },
+    "autoSaving": {
+      "badge": "After Purchase",
+      "heading": "Auto saving may apply",
+      "text": "After an eligible property purchase through the company system, designated amount may enter the automatic saving and lucky draw system."
+    },
+    "disclaimer": {
+      "title": "Important Clarification",
+      "text": "Buyers are responsible for verifying documents and completing legal transfer requirements. Platform information is not final legal proof of ownership. Commission figures are examples. Auto saving and draws follow company terms. Property Saving is also known as جائیداد کا منصوبہ (Property Plan)."
+    }
+  }
+}

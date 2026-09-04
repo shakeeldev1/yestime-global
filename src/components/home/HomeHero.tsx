@@ -69,7 +69,7 @@ export const HomeHero = ({
   const primaryAction = propsAction || (
     <a
       href="#programs"
-      className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-6 py-3.5 text-xs font-bold tracking-wider text-[#071a36] shadow-[0_10px_22px_rgba(197,150,46,0.24)] transition duration-300 ease-out hover:-translate-y-1 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5962e] focus-visible:ring-offset-2"
+      className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-6 py-3.5 text-xs font-bold tracking-wider text-[#000000] shadow-[0_10px_22px_rgba(197,150,46,0.24)] transition duration-300 ease-out hover:-translate-y-1 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5962e] focus-visible:ring-offset-2"
     >
       {t('buttons.explorePrograms')}
     </a>
@@ -148,7 +148,7 @@ export const HomeHero = ({
           {/* Content Column */}
           <div className="flex flex-col gap-6 lg:col-span-7">
             <div className="space-y-4">
-              <h1 className="text-4xl font-bold tracking-tight text-[#071a36] sm:text-5xl lg:text-6xl">
+              <h1 className="text-4xl font-bold tracking-tight text-[#000000] sm:text-5xl lg:text-6xl">
                 {currentSlide.titleBefore}{' '}
                 {currentSlide.titleHighlight && (
                   <span className="block text-[#c5962e]">{currentSlide.titleHighlight}</span>
@@ -196,7 +196,7 @@ export const HomeHero = ({
 
           {/* Media Slider Column */}
           <div className="relative min-w-0 lg:col-span-5">
-            <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-[#0b3b6e]/30 bg-[#071a36] shadow-2xl">
+            <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-[#0b3b6e]/30 bg-[#000000] shadow-2xl">
               <Swiper
                 modules={[Autoplay, EffectFade]}
                 effect="fade"
@@ -211,7 +211,7 @@ export const HomeHero = ({
                 className="h-full w-full"
               >
                 {activeImages.map((imgSrc, index) => (
-                  <SwiperSlide key={`${imgSrc}-${index}`} className="relative h-full w-full bg-[#071a36]">
+                  <SwiperSlide key={`${imgSrc}-${index}`} className="relative h-full w-full bg-[#000000]">
                     <img
                       src={imgSrc}
                       alt={index === 0 ? currentSlide.imageAlt ?? imageAlt : ''}
@@ -223,7 +223,7 @@ export const HomeHero = ({
 
               {/* Swiper Controls */}
               {activeImages.length > 1 && (
-                <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-full bg-[#071a36]/60 px-3 py-1.5 backdrop-blur-md">
+                <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-full bg-[#000000]/60 px-3 py-1.5 backdrop-blur-md">
                   <button
                     type="button"
                     onClick={() => swiperRef.current?.slidePrev()}
@@ -267,7 +267,7 @@ export const HomeHero = ({
             type="button"
             onClick={handlePrevSlide}
             aria-label="Previous slide"
-            className="text-[#071a36] transition hover:scale-110"
+            className="text-[#000000] transition hover:scale-110"
           >
             <FiChevronLeft className="h-5 w-5" />
           </button>
@@ -288,7 +288,7 @@ export const HomeHero = ({
             type="button"
             onClick={handleNextSlide}
             aria-label="Next slide"
-            className="text-[#071a36] transition hover:scale-110"
+            className="text-[#000000] transition hover:scale-110"
           >
             <FiChevronRight className="h-5 w-5" />
           </button>

@@ -32,7 +32,7 @@
       "transparentProcess": "Transparent Process",
       "secureTrusted": "Secure & Trusted",
       "everyoneCanJoin": "Everyone Can Join",
-      "longTermGrowth": "Long-Term Growth"
+      "longTermGrowth": "Long Term Growth"
     }
   },
   "visionMission": {
@@ -41,12 +41,12 @@
     "headingHighlight": "Vision & Mission",
     "vision": {
       "title": "Our Vision",
-      "description": "To be a global leader in creating a reliable and innovative ecosystem where individuals and businesses can access life-changing opportunities that bring growth, security and prosperity to all.",
+      "description": "To be a global leader in creating a reliable and innovative ecosystem where individuals and businesses can access life changing opportunities that bring growth, security and prosperity to all.",
       "highlight": "A world of equal opportunities for everyone."
     },
     "mission": {
       "title": "Our Mission",
-      "description": "To connect people, businesses, and opportunities through accessible programs, strategic partnerships, and transparent processes — empowering communities to grow, achieve, and succeed together.",
+      "description": "To connect people, businesses, and opportunities through accessible programs, strategic partnerships, and transparent processes empowering communities to grow, achieve, and succeed together.",
       "highlight": "Empower people. Build trust. Create lasting impact."
     }
   },
@@ -78,7 +78,7 @@
       },
       "yesTimeGlobal": {
         "title": "Yes Time Global",
-        "text": "We are committed to innovation, growth and creating long-term value for our community."
+        "text": "We are committed to innovation, growth and creating long term value for our community."
       }
     }
   },
@@ -90,7 +90,7 @@
       "propertyProgram": "Property\nProgram",
       "motorcycleScooter": "Motorcycle /\nScooter Program",
       "savingPrograms": "Saving\nPrograms",
-      "selfServiceSaving": "Self-Service\nSaving"
+      "selfServiceSaving": "Self Service\nSaving"
     }
   },
   "quoteBanner": {

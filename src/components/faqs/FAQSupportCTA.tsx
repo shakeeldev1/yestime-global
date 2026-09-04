@@ -7,7 +7,7 @@ const FAQSupportCTA = () => {
 
   return (
     <section className="px-5 pb-16 sm:px-8 lg:px-[5.5%]">
-      <div className="mx-auto max-w-7xl overflow-hidden rounded-[30px] bg-[linear-gradient(90deg,#020b1b_0%,#071a36_40%,#0b2b52_100%)] p-7 sm:p-9 lg:p-12">
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-[30px] bg-[linear-gradient(90deg,#020b1b_0%,#000000_40%,#0b2b52_100%)] p-7 sm:p-9 lg:p-12">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl">
             <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#f5c54e]">{t('cta.eyebrow')}</p>

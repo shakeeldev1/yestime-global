@@ -53,13 +53,27 @@
     "successBody": "شكراً. تم استقبال استفسارك."
   },
   "inquiryTypes": {
-    "general": { "label": "استفسار عام" },
-    "support": { "label": "دعم العملاء أو الأعضاء" },
-    "program": { "label": "معلومات البرنامج" },
-    "partnership": { "label": "شراكة الأعمال" },
-    "investor": { "label": "استفسار المستثمر أو البنك" },
-    "dealer": { "label": "شراكة المتجر أو المعرض" },
-    "property": { "label": "شراكة العقارات" }
+    "general": {
+      "label": "استفسار عام"
+    },
+    "support": {
+      "label": "دعم العملاء أو الأعضاء"
+    },
+    "program": {
+      "label": "معلومات البرنامج"
+    },
+    "partnership": {
+      "label": "شراكة الأعمال"
+    },
+    "investor": {
+      "label": "استفسار المستثمر أو البنك"
+    },
+    "dealer": {
+      "label": "شراكة المتجر أو المعرض"
+    },
+    "property": {
+      "label": "شراكة العقارات"
+    }
   },
   "markets": {
     "heading": "المقر الرئيسي - لاهور، باكستان",

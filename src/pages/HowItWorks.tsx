@@ -97,7 +97,7 @@ const HowItWorks = () => {
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#a97916]">{t('flow.eyebrow')}</p>
-            <h2 className="text-3xl font-black tracking-tight text-[#071a36] sm:text-4xl">
+            <h2 className="text-3xl font-black tracking-tight text-[#000000] sm:text-4xl">
               {t('flow.titleLead')}<span className="text-[#c5962e]">{t('flow.titleHighlight')}</span>
             </h2>
           </div>
@@ -106,16 +106,16 @@ const HowItWorks = () => {
             {steps.map(({ icon: Icon, title, description }, index) => (
               <div
                 key={title}
-                className="group relative overflow-hidden rounded-[1.8rem] border border-[#e8d7a0] bg-[linear-gradient(180deg,#ffffff_0%,#fffaf2_100%)] p-6 shadow-[0_18px_40px_rgba(10,16,30,0.06)] transition-all duration-1000 hover:-translate-y-2 hover:border-[#c5962e]/50 hover:bg-none hover:bg-[#071a36] hover:shadow-[0_30px_55px_rgba(197,150,46,0.12)]"
+                className="group relative overflow-hidden rounded-[1.8rem] border border-[#e8d7a0] bg-[linear-gradient(180deg,#ffffff_0%,#fffaf2_100%)] p-6 shadow-[0_18px_40px_rgba(10,16,30,0.06)] transition-all duration-1000 hover:-translate-y-2 hover:border-[#c5962e]/50 hover:bg-none hover:bg-[#000000] hover:shadow-[0_30px_55px_rgba(197,150,46,0.12)]"
               >
                 <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#0b0b0b_0%,#c5962e_46%,#f0c75e_100%)]" />
                 <div className="mb-5 flex items-center justify-between">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0b0b0b] text-[#f0c75e] shadow-lg shadow-[#c5962e]/10 transition-colors duration-300 group-hover:bg-[#f0c75e] group-hover:text-[#071a36]">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0b0b0b] text-[#f0c75e] shadow-lg shadow-[#c5962e]/10 transition-colors duration-300 group-hover:bg-[#f0c75e] group-hover:text-[#000000]">
                     <Icon size={24} />
                   </div>
                   <span className="text-xs font-black text-[#a97916] transition-colors duration-300 group-hover:text-[#f0c75e]">0{index + 1}</span>
                 </div>
-                <h3 className="mb-3 text-lg font-black text-[#071a36] transition-colors duration-300 group-hover:text-white">{title}</h3>
+                <h3 className="mb-3 text-lg font-black text-[#000000] transition-colors duration-300 group-hover:text-white">{title}</h3>
                 <p className="text-sm leading-6 text-slate-600 transition-colors duration-300 group-hover:text-slate-200">{description}</p>
               </div>
             ))}
@@ -138,7 +138,7 @@ const HowItWorks = () => {
             <div className="mt-8 space-y-4">
               {flow.map((item, index) => (
                 <div key={item} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[linear-gradient(135deg,#f0c75e_0%,#c5962e_100%)] text-sm font-black text-[#071a36]">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[linear-gradient(135deg,#f0c75e_0%,#c5962e_100%)] text-sm font-black text-[#000000]">
                     {index + 1}
                   </div>
                   <p className="text-sm leading-6 text-slate-200">{item}</p>
@@ -197,7 +197,7 @@ const HowItWorks = () => {
               </p>
             </div>
 
-            <h2 className="text-3xl font-black tracking-tight text-[#071a36] sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-black tracking-tight text-[#000000] sm:text-4xl lg:text-5xl">
               {t('benefits.titleLead')}<span className="bg-gradient-to-r from-[#a97916] via-[#c5962e] to-[#f0c75e] bg-clip-text text-transparent">{t('benefits.titleHighlight')}</span>
             </h2>
 
@@ -211,14 +211,14 @@ const HowItWorks = () => {
             {highlights.map(({ icon: Icon, title, text }, index) => (
               <div
                 key={title}
-                className="group relative overflow-hidden rounded-[1.8rem] border border-slate-200/80 bg-white p-7 shadow-[0_16px_35px_rgba(15,23,42,0.04)] transition-all duration-500 ease-in-out hover:-translate-y-2 hover:border-[#c5962e]/50 hover:bg-[#071a36] hover:shadow-[0_25px_50px_rgba(197,150,46,0.15)]"
+                className="group relative overflow-hidden rounded-[1.8rem] border border-slate-200/80 bg-white p-7 shadow-[0_16px_35px_rgba(15,23,42,0.04)] transition-all duration-500 ease-in-out hover:-translate-y-2 hover:border-[#c5962e]/50 hover:bg-[#000000] hover:shadow-[0_25px_50px_rgba(197,150,46,0.15)]"
               >
                 {/* Animated Top Accent Line on Hover */}
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0b0b0b] via-[#c5962e] to-[#f0c75e] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                 {/* Icon Header & Index Number */}
                 <div className="mb-6 flex items-center justify-between">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#fff5d1_0%,#f8e8b3_100%)] text-[#a97916] shadow-inner shadow-[#c5962e]/10 transition-all duration-500 group-hover:bg-[#f0c75e] group-hover:text-[#071a36] group-hover:shadow-lg">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#fff5d1_0%,#f8e8b3_100%)] text-[#a97916] shadow-inner shadow-[#c5962e]/10 transition-all duration-500 group-hover:bg-[#f0c75e] group-hover:text-[#000000] group-hover:shadow-lg">
                     <Icon size={24} />
                   </div>
 
@@ -228,7 +228,7 @@ const HowItWorks = () => {
                 </div>
 
                 {/* Title & Description */}
-                <h3 className="mb-3 text-lg font-black tracking-tight text-[#071a36] transition-colors duration-500 group-hover:text-white">
+                <h3 className="mb-3 text-lg font-black tracking-tight text-[#000000] transition-colors duration-500 group-hover:text-white">
                   {title}
                 </h3>
                 <p className="text-sm leading-relaxed text-slate-600 transition-colors duration-500 group-hover:text-slate-200">
@@ -244,7 +244,7 @@ const HowItWorks = () => {
       <section className="px-5 pb-20 sm:px-8 lg:px-16">
         <div className="mx-auto max-w-5xl rounded-[2rem] border border-[#d7b258]/40 bg-[linear-gradient(135deg,#fffdf8_0%,#fff7dc_100%)] p-8 text-center shadow-[0_25px_50px_rgba(197,150,46,0.12)] sm:p-12">
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#a97916]">{t('cta.eyebrow')}</p>
-          <h2 className="mt-4 text-3xl font-black text-[#071a36] sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-black text-[#000000] sm:text-4xl">
             {t('cta.title')}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-700">
@@ -252,12 +252,12 @@ const HowItWorks = () => {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <button className="inline-flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-7 py-3.5 text-sm font-bold text-[#071a36] shadow-[0_12px_25px_rgba(197,150,46,0.25)] transition hover:brightness-110 active:scale-95">
+            <button className="inline-flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-7 py-3.5 text-sm font-bold text-[#000000] shadow-[0_12px_25px_rgba(197,150,46,0.25)] transition hover:brightness-110 active:scale-95">
               {t('cta.joinNow')}
               <ArrowRight size={16} />
             </button>
 
-            <button className="rounded-xl border border-[#c5962e]/50 bg-white px-6 py-3.5 text-sm font-bold text-[#071a36] transition hover:border-[#c5962e] hover:bg-[#fffaf0]">
+            <button className="rounded-xl border border-[#c5962e]/50 bg-white px-6 py-3.5 text-sm font-bold text-[#000000] transition hover:border-[#c5962e] hover:bg-[#fffaf0]">
               {t('cta.viewPrograms')}
             </button>
           </div>

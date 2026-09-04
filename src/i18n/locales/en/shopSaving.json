@@ -2,90 +2,90 @@
   "hero": {
     "title": "Shopping",
     "titleHighlight": "Saving",
-    "subtitle": "شاپنگ سیونگ",
-    "description": "Shop smart, save more and enjoy exclusive opportunities through our member-focused shopping saving program.",
+    "subtitle": "Shopping Saving",
+    "description": "Yes Time Global connects registered shops and customers through an organized business system. Shop → record in system → savings program eligibility. Token + lucky draw after purchase. Every 1 Minute.",
     "features": {
       "discounts": {
-        "title": "Exclusive Discounts",
-        "description": "Special member discounts and cashback"
+        "title": "Registered Shops",
+        "description": "Registered shops + customers connect"
       },
       "essentials": {
         "title": "Daily Essentials",
-        "description": "Groceries, clothing, electronics & more"
+        "description": "Shopping for everyday needs"
       },
       "trusted": {
-        "title": "Trusted Platform",
-        "description": "100% trusted and secure shopping experience"
+        "title": "Token + Lucky Draw",
+        "description": "Token after purchase • Every 1 Minute"
       }
     },
     "cta": {
       "join": "Join Now",
       "howItWorks": "How It Works"
     },
-    "imageAlt": "Shopping Cart with Bags"
+    "imageAlt": "YES TIME GLOBAL Shopping Saving app"
   },
   "about": {
-    "imageAlt": "Woman shopping and saving",
-    "badge": "Exclusive Savings",
-    "overlaySubtitle": "Shop smarter. Save more.",
-    "overlayTitle": "Every Purchase,",
-    "overlayTitleHighlight": " More Value.",
+    "imageAlt": "Shopping at registered shops",
+    "badge": "Shopping & Saving Program",
+    "overlaySubtitle": "Registered shops + customers connect.",
+    "overlayTitle": "Shop → Record →",
+    "overlayTitleHighlight": " Savings Eligibility.",
     "card": {
-      "label": "Member Benefits",
-      "title": "Smart Shopping",
-      "description": "Exclusive discounts, cashback & special deals."
+      "label": "Client Process",
+      "title": "Token After Purchase",
+      "description": "Purchase recorded → eligibility → token + draw."
     },
     "eyebrow": "About This Program",
-    "heading": "Turn Everyday Shopping Into",
-    "headingBlock": "Everyday Savings.",
-    "para1": "Shopping Saving Program is designed to help members save more on their everyday purchases. From groceries and fashion to electronics and home essentials, enjoy access to exclusive discounts, cashback offers, and special deals from our trusted partners.",
+    "heading": "Registered Shops + Customers",
+    "headingBlock": "Connect.",
+    "para1": "Shopping Saving connects consumers and registered shopkeepers through a managed business system. Consumers shop for daily essentials at registered shops in the company network.",
     "para2": {
-      "start": "Our goal is simple — make your everyday shopping",
-      "bold": "easier, smarter, and more rewarding",
-      "end": "while helping you get more value from every purchase."
+      "start": "After a purchase, the record is saved in the company system. Eligibility, benefits and procedures follow company terms.",
+      "bold": "Purchase alone does not automatically guarantee savings",
+      "end": " unless the specific terms of the program allow for it."
     },
     "featurePoints": {
-      "0": "Exclusive member discounts",
-      "1": "Cashback & special offers",
-      "2": "Trusted partner stores",
-      "3": "Secure shopping experience"
+      "0": "Shop list of registered shopkeepers on mobile",
+      "1": "Purchase history in your personal account",
+      "2": "Savings info, notifications and draw results",
+      "3": "Token issued after verified purchase"
     },
     "stats": {
-      "products": "Products",
-      "partnerStores": "Partner Stores",
-      "support": "Support",
-      "secure": "Secure"
+      "products": "Daily Draws",
+      "partnerStores": "Draw Interval",
+      "support": "Chances / Draw",
+      "secure": "After Purchase"
     }
   },
   "benefits": {
     "label": "Benefits For You",
     "heading": "More Reasons to",
     "headingHighlight": " Shop & Save",
-    "subtitle": "Enjoy exclusive benefits designed to make your everyday shopping experience smarter, easier and more rewarding.",
+    "subtitle": "Shopping Saving: registered shops, system record, token + lucky draw, mobile access and shopkeeper dashboard.",
     "items": {
       "0": {
-        "title": "Exclusive Discounts",
-        "description": "Get special member-only discounts across a wide range of products and services."
+        "title": "Shop at Registered Shops",
+        "description": "Shop at registered stores within the Yes Time Global network for your daily essentials."
       },
       "1": {
-        "title": "Cashback Rewards",
-        "description": "Earn valuable cashback and get more back from your everyday purchases."
+        "title": "Purchase Recorded in System",
+        "description": "After you shop, the purchase record is saved in the company system for savings eligibility."
       },
       "2": {
-        "title": "Wide Variety",
-        "description": "Explore thousands of products across multiple shopping categories."
+        "title": "Token After Purchase",
+        "description": "Eligible customers receive a token / identification number tied to the purchase, shopkeeper, date and amount."
       },
       "3": {
-        "title": "Special Offers",
-        "description": "Enjoy seasonal, festival and limited-time offers available to members."
+        "title": "Lucky Draw Every 1 Minute",
+        "description": "Eligible tokens can enter the draw system. Draw Every 1 Minute | 7 Options = 7 Chances | 1400 Draws Every Day."
       },
       "4": {
-        "title": "Trusted Brands",
-        "description": "Shop confidently with trusted brands and verified partner sellers."
+        "title": "Mobile Access",
+        "description": "On mobile: find registered shops, view shopping history, savings program details, notifications and results."
       },
       "5": {
-        "title": "Safe & Secure",
-        "description": "Enjoy a simple, secure and hassle-free shopping experience."
+        "title": "Shopkeeper Dashboard",
+        "description": "Registered shopkeepers track shop info, customer purchases, purchase records and amount payable to the company."
       }
     }
   },
@@ -93,28 +93,127 @@
     "label": "Who Can Join?",
     "heading": "Savings Are",
     "headingBlock": "For Everyone.",
-    "description": "Whether you're shopping for yourself or your family, our program is designed to help you get more value from your everyday purchases.",
+    "description": "For customers who shop daily essentials at registered shops and want an organized shopping + savings system with token and lucky draw.",
     "points": {
-      "0": "Anyone who wants to save more while shopping.",
-      "1": "Individuals and families looking for better value.",
-      "2": "Members who want simple and hassle-free savings.",
-      "3": "Anyone ready to make everyday shopping more rewarding."
+      "0": "Customers who shop daily essentials at registered shops.",
+      "1": "Families looking for an organized shopping and savings system.",
+      "2": "Members who want token + lucky draw after purchase.",
+      "3": "Anyone ready to join according to company terms and applicable laws."
     },
     "button": "Become a Member"
   },
   "collage": {
     "familyImageAlt": "Happy family",
-    "familyBadge": "Family Savings",
-    "familyTitle": "Better Shopping.",
-    "familyTitleHighlight": " Better Living.",
-    "groceryImageAlt": "Fresh grocery shopping",
-    "groceryBadge": "Grocery Savings",
-    "fashionImageAlt": "Fashion shopping",
-    "fashionBadge": "Fashion Deals"
+    "familyBadge": "Daily Essentials",
+    "familyTitle": "Registered Shops.",
+    "familyTitleHighlight": " Real Savings.",
+    "groceryImageAlt": "Daily essentials shopping",
+    "groceryBadge": "Registered Shops",
+    "fashionImageAlt": "Shopping saving",
+    "fashionBadge": "Token + Draw"
   },
   "bottom": {
-    "shopMore": "Shop More",
-    "saveMore": "Save More",
-    "liveBetter": "Live Better"
+    "shopMore": "Shop",
+    "saveMore": "Record",
+    "liveBetter": "Token + Draw"
+  },
+  "clientSections": {
+    "live": {
+      "badge": "LIVE ALL OPTIONS 1400 DRAWS EVERY DAY",
+      "heading": "DRAW EVERY 1 MINUTE",
+      "headingHighlight": "| 7 OPTIONS = 7 CHANCES",
+      "subtitle": "Shopping Saving • Every 1 Minute • Token after purchase",
+      "nextDraw": "Next Draw In",
+      "timeUnit": "Min : Sec",
+      "watchLive": "Watch Live Draw",
+      "stats": {
+        "dailyDraws": {
+          "label": "Total Daily Draws",
+          "value": "1400",
+          "sub": "Across 7 Options"
+        },
+        "interval": {
+          "label": "Draw Interval",
+          "value": "Every 1 Minute",
+          "sub": "Per Option"
+        },
+        "chances": {
+          "label": "Your Chances",
+          "value": "7",
+          "sub": "Per Draw"
+        }
+      }
+    },
+    "process": {
+      "badge": "Client Process",
+      "heading": "Shop → Record → Savings Eligibility",
+      "subtitle": "Purchase → save in system → savings program eligibility.",
+      "steps": {
+        "0": {
+          "title": "Registered shops + customers connect",
+          "text": "Yes Time Global connects registered shopkeepers and customers through an organized business system."
+        },
+        "1": {
+          "title": "Shop",
+          "text": "Shop for daily essentials at registered shops in the company network."
+        },
+        "2": {
+          "title": "Record saved in system",
+          "text": "After purchase, the record is saved in the company system and savings program eligibility is determined."
+        },
+        "3": {
+          "title": "Token + lucky draw",
+          "text": "Eligible customers receive a token / ID number. Eligible tokens may enter the lucky draw Every 1 Minute."
+        }
+      }
+    },
+    "token": {
+      "title": "Token + Lucky Draw System",
+      "text": "After a verified purchase at a registered shop, eligible customers get a token / identification number linked to customer ID, purchase date, amount, shopkeeper and token number.",
+      "points": {
+        "0": "Token after purchase",
+        "1": "Eligible tokens enter draw",
+        "2": "Results on personal dashboard",
+        "3": "Every 1 Minute draws"
+      }
+    },
+    "mobile": {
+      "title": "On Mobile",
+      "subtitle": "Shop list, purchase history, savings info, notifications",
+      "points": {
+        "0": "Shop list of registered shopkeepers",
+        "1": "Purchase history in personal account",
+        "2": "Savings program information",
+        "3": "Notifications and draw results"
+      }
+    },
+    "shopkeeper": {
+      "title": "Shopkeeper Dashboard",
+      "subtitle": "Purchases and amount payable to the company",
+      "points": {
+        "0": "Shop information",
+        "1": "Customer purchase details",
+        "2": "Full purchase records",
+        "3": "Amount payable to the company",
+        "4": "Own payment records",
+        "5": "Company notifications"
+      }
+    },
+    "app": {
+      "badge": "Client App Requirement",
+      "heading": "01 SHOPPING SAVING",
+      "subtitle": "Shopping Saving",
+      "text": "Daily Essentials same card wording as the client YES TIME GLOBAL app home: Every 1 Minute, with Token Active and Live Draws.",
+      "tags": {
+        "0": "Daily Essentials",
+        "1": "Every 1 Minute",
+        "2": "Token + Live Draw"
+      },
+      "imageAlt": "YES TIME GLOBAL Shopping Saving client app requirement"
+    },
+    "disclaimer": {
+      "title": "Important Clarification",
+      "text": "Eligibility, benefits and procedures follow company terms, conditions and applicable laws. Making a purchase does not automatically guarantee savings or benefits unless the specific terms of the program allow for it. Lucky draws run only where legally permitted and under required approvals."
+    }
   }
 }

@@ -84,7 +84,7 @@ const GlobalImpact: React.FC = () => {
 
           {/* Heading */}
 
-          <h2 className="text-3xl font-black tracking-[-0.04em] text-[#071a36] sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-black tracking-[-0.04em] text-[#000000] sm:text-4xl md:text-5xl">
             {t("impact.title.before")}{" "}
             <span className="bg-gradient-to-r from-[#d9a21b] via-[#f2c75e] to-[#d9a21b] bg-clip-text text-transparent">
               {t("impact.title.highlight")}
@@ -172,7 +172,7 @@ const GlobalImpact: React.FC = () => {
         <div className="mt-10 rounded-[22px] border border-[#d8dfe9] bg-[#f5f7fb] px-5 py-5 shadow-[0_18px_45px_-22px_rgba(11,59,110,0.25)] sm:px-8 sm:py-6">
           <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
             <div className="max-w-3xl">
-              <p className="text-2xl font-medium leading-snug tracking-[-0.03em] text-[#071a36]">
+              <p className="text-2xl font-medium leading-snug tracking-[-0.03em] text-[#000000]">
                 {t("impact.bottomTitle")}
               </p>
 
@@ -183,7 +183,7 @@ const GlobalImpact: React.FC = () => {
 
             <a
               href="#global-journey"
-              className="inline-flex shrink-0 items-center justify-center rounded-xl border border-[#d9a21b]/60 bg-transparent px-6 py-3.5 text-base font-semibold text-[#071a36] transition duration-300 hover:border-[#d9a21b] hover:bg-[#fffaf0]"
+              className="inline-flex shrink-0 items-center justify-center rounded-xl border border-[#d9a21b]/60 bg-transparent px-6 py-3.5 text-base font-semibold text-[#000000] transition duration-300 hover:border-[#d9a21b] hover:bg-[#fffaf0]"
             >
               {t("impact.bottomCta")}
             </a>

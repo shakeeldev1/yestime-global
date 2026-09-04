@@ -1,0 +1,94 @@
+{
+  "clientSections": {
+    "join": {
+      "badge": "How to Join",
+      "heading": "From plan selection to completion",
+      "subtitle": "Structured Car Plan for your future car. Follow these steps in the company system.",
+      "steps": {
+        "0": {
+          "title": "Select a plan",
+          "text": "Choose a car value tier that matches your goal and budget."
+        },
+        "1": {
+          "title": "Review full info",
+          "text": "Read plan details, contribution terms, installment examples and conditions carefully."
+        },
+        "2": {
+          "title": "Apply",
+          "text": "Submit your application with required personal and plan information."
+        },
+        "3": {
+          "title": "Pay",
+          "text": "Make the required contribution / payment through the approved company process."
+        },
+        "4": {
+          "title": "Track",
+          "text": "Follow payments, remaining amount, status and draw information on your dashboard."
+        },
+        "5": {
+          "title": "Complete",
+          "text": "Finish the plan path according to company terms toward your future car goal."
+        }
+      }
+    },
+    "dashboard": {
+      "badge": "Personal Dashboard",
+      "heading": "Track your Car Plan in one place",
+      "subtitle": "Members can monitor progress through the company digital system.",
+      "items": {
+        "0": {
+          "title": "Payments",
+          "text": "See contribution history and payment records."
+        },
+        "1": {
+          "title": "Remaining",
+          "text": "Know what is left toward your plan goal."
+        },
+        "2": {
+          "title": "Status",
+          "text": "Check application and plan status at any time."
+        },
+        "3": {
+          "title": "Draw info",
+          "text": "View lucky draw related information where a scheme applies."
+        }
+      }
+    },
+    "draw": {
+      "badge": "Optional Schemes",
+      "heading": "Lucky draw where offered",
+      "text": "Some Car Plan paths may include optional lucky draw schemes. These operate only with applicable law and required approvals. Participation and outcomes follow company terms and regulatory conditions."
+    },
+    "bank": {
+      "badge": "Bank Partnership",
+      "heading": "Company account → car → installments",
+      "subtitle": "Where bank partnership applies, the flow supports eligibility, verification and vehicle purchase with installment structure.",
+      "steps": {
+        "0": {
+          "title": "Company account",
+          "text": "Open / maintain your account in the Yes Time Global system."
+        },
+        "1": {
+          "title": "Eligibility",
+          "text": "Company reviews eligibility for the selected Car Plan path."
+        },
+        "2": {
+          "title": "Bank verify",
+          "text": "Partner bank verifies required information under its process."
+        },
+        "3": {
+          "title": "Buy car",
+          "text": "Proceed to purchase the vehicle through the approved arrangement."
+        },
+        "4": {
+          "title": "Installments",
+          "text": "Continue structured monthly installments as per the plan example tiers."
+        }
+      }
+    },
+    "disclaimer": {
+      "title": "Important Clarification",
+      "text": "Example car values and monthly installments are illustrative (e.g. 30 Lakh → 36,000; up to 2.10 Cr → 252,000). Actual terms, eligibility, bank partnership and any lucky draw scheme depend on company policy, law and approvals. Car Plan is the installment booklet program separate from Car Saving marketplace."
+    }
+  }
+}

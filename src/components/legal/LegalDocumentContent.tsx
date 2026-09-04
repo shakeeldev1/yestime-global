@@ -22,7 +22,7 @@ const LegalDocumentContent = ({ documentId }: LegalDocumentContentProps) => {
           <div className="space-y-9">
             {sections.map((section, sectionIdx) => (
               <section key={sectionIdx} className="border-b border-[#e5edf5] pb-8 last:border-0 last:pb-0">
-                <h2 className="text-xl font-bold leading-tight text-[#071a36] sm:text-2xl">{section.heading}</h2>
+                <h2 className="text-xl font-bold leading-tight text-[#000000] sm:text-2xl">{section.heading}</h2>
                 <div className="mt-4 space-y-4">
                   {section.paragraphs.map((paragraph, pIdx) => <p key={pIdx} className="text-sm leading-7 text-[#41566f] sm:text-base">{paragraph}</p>)}
                 </div>

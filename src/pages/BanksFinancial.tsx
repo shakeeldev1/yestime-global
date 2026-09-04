@@ -5,7 +5,7 @@ import BanksFinancialCTA from '../components/banksfinancial/BanksFinancialCTA'
 
 const BanksFinancial = () => {
   return (
-    <main className="bg-white text-[#071a36]">
+    <main className="bg-white text-[#000000]">
       <BanksFinancialHero />
       <BanksFinancialHighlights />
       <BanksFinancialProcess />

@@ -93,7 +93,7 @@ const WhatWeDoGlobally: React.FC = () => {
 
             {/* Heading */}
 
-            <h2 className="max-w-xl text-3xl font-extrabold leading-[1.1] tracking-[-0.02em] text-[#071a36] sm:text-4xl md:text-5xl lg:text-[52px]">
+            <h2 className="max-w-xl text-3xl font-extrabold leading-[1.1] tracking-[-0.02em] text-[#000000] sm:text-4xl md:text-5xl lg:text-[52px]">
               {t("services.title.before")}{" "}
               <span className="bg-gradient-to-r from-[#f5c54e] via-[#e5b338] to-[#d99420] bg-clip-text text-transparent">
                 {t("services.title.highlight")}

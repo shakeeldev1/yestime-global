@@ -3,7 +3,7 @@
     "badge": "Frequently Asked Questions",
     "titleLine1": "Answers to help you",
     "titleHighlight": "move forward with confidence.",
-    "subtitle": "Everything you need to know about YES TIME GLOBAL programs, participation, payments, and support — all in one place.",
+    "subtitle": "Everything you need to know about YES TIME GLOBAL programs, participation, payments, and support all in one place.",
     "viewAnswers": "View Answers",
     "contactSupport": "Contact Support",
     "card": {
@@ -22,7 +22,7 @@
   "categories": {
     "about": {
       "label": "About us",
-      "description": "The company and its opportunity-focused model."
+      "description": "The company and its opportunity focused model."
     },
     "programs": {
       "label": "Programs and plans",
@@ -53,7 +53,7 @@
     },
     "available-programs": {
       "question": "What programs are available?",
-      "answer": "The company material references Shop & Savings, car, motorcycle or scooter, property-related opportunities, and other approved programs. Availability and terms may vary by program and market."
+      "answer": "The company material references Shop & Savings, car, motorcycle or scooter, property related opportunities, and other approved programs. Availability and terms may vary by program and market."
     },
     "plan-types": {
       "question": "What types of plans are offered?",
@@ -65,11 +65,11 @@
     },
     "registration-information": {
       "question": "What information is needed during registration?",
-      "answer": "Customers must provide accurate personal and program-related information. The required information can vary according to the selected program and may be reviewed before participation continues."
+      "answer": "Customers must provide accurate personal and program related information. The required information can vary according to the selected program and may be reviewed before participation continues."
     },
     "eligibility": {
       "question": "Who can participate?",
-      "answer": "Participation depends on the relevant program’s eligibility requirements, terms, submitted information, and successful verification. Program-specific requirements should be confirmed before registration."
+      "answer": "Participation depends on the relevant program’s eligibility requirements, terms, submitted information, and successful verification. Program specific requirements should be confirmed before registration."
     },
     "payment-process": {
       "question": "How are payments or purchases handled?",
@@ -84,7 +84,7 @@
       "answer": "Verification helps confirm the customer’s submitted information and eligibility before the customer proceeds through the program. Incomplete or inaccurate information may require correction or additional review."
     },
     "draw-and-non-draw": {
-      "question": "What is the difference between draw and non-draw plans?",
+      "question": "What is the difference between draw and non draw plans?",
       "answer": "The material distinguishes plans with a draw from plans without a draw. The exact draw schedule, selection method, and outcome conditions depend on the approved terms of the specific plan."
     },
     "twelve-month-plans": {
@@ -109,7 +109,7 @@
     },
     "support-complaint": {
       "question": "How can I request support or submit a complaint?",
-      "answer": "Use the company’s approved support or contact channel and include your name, relevant program information, and a clear description of the request. Official contact details should be supplied from the current company-approved information."
+      "answer": "Use the company’s approved support or contact channel and include your name, relevant program information, and a clear description of the request. Official contact details should be supplied from the current company approved information."
     },
     "global-markets": {
       "question": "Where is YES TIME GLOBAL expanding?",

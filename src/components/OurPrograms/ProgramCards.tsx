@@ -141,8 +141,7 @@ const ProgramCards: React.FC = () => {
       slug: "property-saving",
       title: t("cards.propertySaving.title"),
       urduTitle: t("cards.propertySaving.urduTitle"),
-      image:
-        "https://i.pinimg.com/1200x/56/e6/51/56e65103b9d9741631507ad6484af831.jpg",
+      image: "/programs/property-saving.png",
       category: "Property",
       buttonBg: "bg-teal-600",
       buttonHover: "hover:bg-teal-700",
@@ -188,7 +187,7 @@ const ProgramCards: React.FC = () => {
         {/* HEADER SECTION */}
         <div className="mx-auto max-w-[750px] text-center">
           <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-[#c5962e]/40 bg-white px-3 py-1 shadow-xs">
-            <span className="flex h-3.5 w-3.5 items-center justify-center rounded-full bg-[#c5962e] text-[8px] font-bold text-[#071a36]">
+            <span className="flex h-3.5 w-3.5 items-center justify-center rounded-full bg-[#c5962e] text-[8px] font-bold text-[#000000]">
               G
             </span>
             <span className="text-[10px] font-bold tracking-wider text-[#c5962e] uppercase">
@@ -196,7 +195,7 @@ const ProgramCards: React.FC = () => {
             </span>
           </div>
 
-          <h2 className="text-4xl font-extrabold text-[#071a36] sm:text-5xl">
+          <h2 className="text-4xl font-extrabold text-[#000000] sm:text-5xl">
             {t("cardsSection.headingLead")}{" "}
             <span className="text-[#c5962e]">{t("cardsSection.headingHighlight")}</span>
           </h2>
@@ -316,24 +315,24 @@ const ProgramCards: React.FC = () => {
               </div>
 
               {/* CARD CONTENT */}
-              <div className="flex flex-1 flex-col justify-between p-5 pt-6 text-center">
+              <div className="flex flex-1 flex-col justify-between p-5 pt-6 text-center sm:p-6 sm:pt-7">
                 <div>
-                  <h3 className="text-xs font-extrabold tracking-wider text-slate-900 uppercase">
+                  <h3 className="text-base font-extrabold tracking-wide text-slate-900 uppercase sm:text-lg">
                     {program.title}
                   </h3>
-                  <p className="mt-0.5 font-semibold text-xs text-slate-500">
+                  <p className="mt-1 text-sm font-semibold text-slate-500 sm:text-base">
                     {program.urduTitle}
                   </p>
 
-                  <ul className="mt-4 space-y-2.5 text-left">
+                  <ul className="mt-5 space-y-3 text-left">
                     {program.points.map((point, i) => (
                       <li
                         key={i}
-                        className="flex items-center gap-2 text-xs font-medium text-slate-600"
+                        className="flex items-start gap-2.5 text-sm font-medium leading-6 text-slate-600 sm:text-[15px]"
                       >
                         <CheckCircle2
-                          size={14}
-                          className="shrink-0 text-[#c5962e]"
+                          size={18}
+                          className="mt-0.5 shrink-0 text-[#c5962e]"
                         />
                         <span>{point}</span>
                       </li>
@@ -344,11 +343,11 @@ const ProgramCards: React.FC = () => {
                 {/* COLORFUL CATEGORY BUTTON */}
                 <button
                   onClick={() => navigate(program.slug === 'car-plan' ? '/car-plan' : `/program/${program.slug}`)}
-                  className="mt-6 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-5 py-2.5 text-xs font-bold text-[#000000] shadow-[0_10px_22px_rgba(197,150,46,0.24)] transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110 active:scale-95"
+                  className="mt-6 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-5 py-3 text-sm font-bold text-[#000000] shadow-[0_10px_22px_rgba(197,150,46,0.24)] transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110 active:scale-95"
                 >
                   <span>{program.slug === 'car-plan' ? t("cardsSection.viewCarPlan") : t("cardsSection.viewProgram")}</span>
                   <ChevronRight
-                    size={14}
+                    size={16}
                     className="transition-transform duration-300 group-hover:translate-x-1"
                   />
                 </button>

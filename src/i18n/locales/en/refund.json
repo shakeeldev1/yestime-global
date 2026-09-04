@@ -93,24 +93,24 @@
     }
   },
   "programs": {
-    "eyebrow": "Program-Specific Terms",
+    "eyebrow": "Program Specific Terms",
     "title": "Different Programs, Different Requirements",
     "subtitle": "Certain refund, cancellation, and transaction matters may require additional verification depending on the program.",
     "bank": {
-      "title": "Bank-Related Matters",
-      "text": "Refunds or payment-related matters involving banking services may require transaction verification and compliance with the applicable banking process and terms."
+      "title": "Bank Related Matters",
+      "text": "Refunds or payment related matters involving banking services may require transaction verification and compliance with the applicable banking process and terms."
     },
     "property": {
-      "title": "Property-Related Matters",
-      "text": "Property-related requests may require verification of the relevant agreement, transaction records, supporting documents, and applicable program conditions."
+      "title": "Property Related Matters",
+      "text": "Property related requests may require verification of the relevant agreement, transaction records, supporting documents, and applicable program conditions."
     },
     "vehicle": {
-      "title": "Vehicle-Related Matters",
-      "text": "Vehicle-related requests may be reviewed against the relevant agreement, payment records, registration or transaction information, and applicable terms."
+      "title": "Vehicle Related Matters",
+      "text": "Vehicle related requests may be reviewed against the relevant agreement, payment records, registration or transaction information, and applicable terms."
     },
     "payment": {
       "title": "Payment & Transaction Matters",
-      "text": "Payment-related requests may require transaction verification and supporting records before any refund or adjustment can be considered."
+      "text": "Payment related requests may require transaction verification and supporting records before any refund or adjustment can be considered."
     }
   },
   "processing": {
@@ -131,8 +131,6 @@
     }
   },
   "notes": {
-    "eyebrow": "Important Notes",
-    "title": "What to Keep in Mind",
     "1": "Refund and cancellation requests are subject to the applicable terms and conditions of the selected program or service.",
     "2": "The requester may be required to provide accurate personal, payment, transaction, or supporting information.",
     "3": "The company may verify submitted information and request additional documentation where necessary.",
@@ -140,7 +138,9 @@
     "5": "Refund processing may depend on the relevant payment provider, bank, or other applicable service provider.",
     "6": "Certain payments, charges, services, or transactions may not be eligible for refund according to the applicable terms.",
     "7": "Requests involving property, vehicles, banking, or other specific services may be subject to additional requirements.",
-    "8": "For disputes or clarification, please contact the official support team for review."
+    "8": "For disputes or clarification, please contact the official support team for review.",
+    "eyebrow": "Important Notes",
+    "title": "What to Keep in Mind"
   },
   "help": {
     "title": "Need Help?",
@@ -152,7 +152,7 @@
     "title": "Important Policy Notice",
     "p1": "Refund and cancellation requests are considered according to the terms and conditions applicable to the relevant program, service, agreement, or transaction.",
     "p2": "Submission of a request does not by itself guarantee approval. Requests may require verification of the information and supporting documents provided.",
-    "p3": "Where a request involves a bank, property, vehicle, or another third-party service, additional terms, documentation, or procedures may apply.",
+    "p3": "Where a request involves a bank, property, vehicle, or another third party service, additional terms, documentation, or procedures may apply.",
     "p4": "If you have a question regarding the interpretation or application of this policy, please contact our support team before proceeding."
   },
   "cta": {

@@ -14,9 +14,14 @@ import {
   Coins,
   Gift,
   ArrowRight,
+  Ticket,
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { getProgramBySlug, type ProgramData } from '../data/programData';
+import ShoppingSavingClientSections from '../components/OurPrograms/shopSaving/ShoppingSavingClientSections';
+import MotorcycleScootyClientSections from '../components/OurPrograms/motorcycleScooty/MotorcycleScootyClientSections';
+import CarSavingClientSections from '../components/OurPrograms/carSaving/CarSavingClientSections';
+import PropertySavingClientSections from '../components/OurPrograms/propertySaving/PropertySavingClientSections';
 
 const benefitIcons = [Tag, Coins, ShoppingBag, Gift, ShieldCheck, Sparkles];
 
@@ -37,20 +42,35 @@ function ProgramDetailPage() {
       ? location.pathname.replace('/program/', '')
       : location.pathname.replace(/^\//, '').replace(/\/$/, '')
   );
-  const program: ProgramData = getProgramBySlug(resolvedSlug || 'shop-saving', i18n.language);
-// const program.planCards=
+  const activeLanguage = i18n.resolvedLanguage || i18n.language || 'en';
+  const program: ProgramData = getProgramBySlug(resolvedSlug || 'shop-saving', activeLanguage);
+  const isRtl = activeLanguage.startsWith('ur') || activeLanguage.startsWith('ar');
+
+  const showClientSections =
+    program.slug === 'shop-saving' ||
+    program.slug === 'motorcycle-scooty-saving' ||
+    program.slug === 'car-saving' ||
+    program.slug === 'property-saving';
+  const showGalleryLast = showClientSections;
+  // planCards on car-saving power /car-plan only — not this marketplace page
+  const showPlanMedia =
+    Boolean(program.planCards?.length) && program.slug !== 'car-saving';
+
   return (
-    <div>
+    <div key={activeLanguage} dir={isRtl ? 'rtl' : 'ltr'}>
       <HeroSection program={program} />
       <AboutSection program={program} />
-      {program.slug === 'car-saving' ? (
-        <GallerySection program={program} />
-      ) : (program.planCards && program.planCards.length > 0 ? (
+      {program.slug === 'shop-saving' ? <ShoppingSavingClientSections /> : null}
+      {program.slug === 'motorcycle-scooty-saving' ? <MotorcycleScootyClientSections /> : null}
+      {program.slug === 'car-saving' ? <CarSavingClientSections /> : null}
+      {program.slug === 'property-saving' ? <PropertySavingClientSections /> : null}
+      {showPlanMedia ? (
         <PlanMediaSection program={program} />
-      ) : (
+      ) : !showClientSections ? (
         <GallerySection program={program} />
-      ))}
+      ) : null}
       <BenefitsSection program={program} />
+      {showGalleryLast ? <GallerySection program={program} /> : null}
     </div>
   );
 }
@@ -69,7 +89,7 @@ function GallerySection({ program }: { program: ProgramData }) {
             <Sparkles size={14} className="text-[#c5962e]" />
             {t('gallery.badge')}
           </div>
-          <h2 className="text-3xl font-black tracking-tight text-[#071a36] sm:text-4xl">
+          <h2 className="text-3xl font-black tracking-tight text-[#000000] sm:text-4xl">
             {t('gallery.headingPrefix')} <span className="text-[#c5962e]">{program.title}</span> {t('gallery.headingSuffix')}
           </h2>
         </div>
@@ -114,7 +134,7 @@ function PlanMediaSection({ program }: { program: ProgramData }) {
             <Sparkles size={14} className="text-[#c5962e]" />
             {t('plans.badge')}
           </div>
-          <h2 className="text-3xl font-black tracking-tight text-[#071a36] sm:text-4xl">
+          <h2 className="text-3xl font-black tracking-tight text-[#000000] sm:text-4xl">
             {t('plans.headingPrefix')} <span className="text-[#c5962e]">{t('plans.headingHighlight')}</span> {t('plans.headingSuffix')}
           </h2>
         </div>
@@ -172,7 +192,7 @@ function PlanMediaSection({ program }: { program: ProgramData }) {
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#a97916]">{t('planCard.luxuryVehiclePlan')}</p>
-                    <h3 className="mt-2 text-[24px] font-black leading-none text-[#071a36]">{plan.amount}</h3>
+                    <h3 className="mt-2 text-[24px] font-black leading-none text-[#000000]">{plan.amount}</h3>
                   </div>
                   <div className="rounded-full border border-[#c5962e]/30 bg-[#fffaf0] px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.12em] text-[#a97916]">
                     {plan.planType}
@@ -188,11 +208,11 @@ function PlanMediaSection({ program }: { program: ProgramData }) {
                   <div className="space-y-2 text-sm text-slate-700">
                     <div className="flex items-center justify-between gap-3">
                       <span className="text-slate-500">{t('planCard.daily')}</span>
-                      <span className="font-bold text-[#071a36]">{plan.daily.replace('Daily ', '')}</span>
+                      <span className="font-bold text-[#000000]">{plan.daily.replace('Daily ', '')}</span>
                     </div>
                     <div className="flex items-center justify-between gap-3">
                       <span className="text-slate-500">{t('planCard.monthly')}</span>
-                      <span className="font-bold text-[#071a36]">{plan.monthly.replace('Monthly ', '')}</span>
+                      <span className="font-bold text-[#000000]">{plan.monthly.replace('Monthly ', '')}</span>
                     </div>
                     <div className="flex items-center justify-between gap-3">
                       <span className="text-slate-500">{t('planCard.prize')}</span>
@@ -224,7 +244,7 @@ function PlanMediaSection({ program }: { program: ProgramData }) {
                   <p className="text-xs leading-5 text-slate-500">{plan.description}</p>
                 )}
 
-                <button className="w-full rounded-xl bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-4 py-3 text-xs font-bold text-[#071a36] shadow-[0_10px_20px_rgba(197,150,46,0.22)] transition hover:brightness-110 active:scale-95">
+                <button className="w-full rounded-xl bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-4 py-3 text-xs font-bold text-[#000000] shadow-[0_10px_20px_rgba(197,150,46,0.22)] transition hover:brightness-110 active:scale-95">
                   {t('planCard.applyNow')}
                 </button>
               </div>
@@ -263,7 +283,7 @@ function HeroSection({ program }: { program: ProgramData }) {
               {program.featureCards.map((feature, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-500">
-                    {index === 0 ? <Tag size={16} /> : index === 1 ? <ShoppingBag size={16} /> : <ShieldCheck size={16} />}
+                    {index === 0 ? <Store size={16} /> : index === 1 ? <ShoppingBag size={16} /> : program.slug === 'shop-saving' || program.slug === 'motorcycle-scooty-saving' || program.slug === 'car-saving' || program.slug === 'property-saving' ? <Ticket size={16} /> : <ShieldCheck size={16} />}
                   </div>
                   <div>
                     <h4 className="text-xs font-bold text-white">{feature.title}</h4>
@@ -274,14 +294,14 @@ function HeroSection({ program }: { program: ProgramData }) {
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <button className="flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-7 py-3 text-xs font-bold text-[#071a36] shadow-[0_10px_22px_rgba(197,150,46,0.24)] transition hover:brightness-110 active:scale-95">
+              <button className="flex items-center gap-2 rounded-xl bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-7 py-3 text-xs font-bold text-[#000000] shadow-[0_10px_22px_rgba(197,150,46,0.24)] transition hover:brightness-110 active:scale-95">
                 <span>{t('hero.joinNow')}</span>
                 <ChevronRight size={14} />
               </button>
 
               <button className="flex items-center gap-2 rounded-xl border border-[#c5962e]/50 bg-[#000000] px-6 py-3 text-xs font-bold text-white transition hover:border-[#f0c75e] active:scale-95">
                 <span>{t('hero.howItWorks')}</span>
-                <div className="flex h-4 w-4 items-center justify-center rounded-full bg-[#f0c75e] text-[#071a36]">
+                <div className="flex h-4 w-4 items-center justify-center rounded-full bg-[#f0c75e] text-[#000000]">
                   <Play size={8} className="ml-0.5 fill-current" />
                 </div>
               </button>
@@ -290,7 +310,18 @@ function HeroSection({ program }: { program: ProgramData }) {
 
           <div className="relative lg:col-span-5">
             <div className="relative mx-auto overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 shadow-2xl">
-              <img src={program.image} alt={program.title} className="h-[400px] w-full object-cover rounded-2xl" />
+              <img
+                src={program.image}
+                alt={program.title}
+                className={`h-[400px] w-full rounded-2xl ${
+                  program.slug === 'shop-saving'
+                    ? 'object-cover object-top'
+                    : program.slug === 'motorcycle-scooty-saving' ||
+                        program.slug === 'property-saving'
+                      ? 'object-contain bg-white'
+                      : 'object-cover'
+                }`}
+              />
             </div>
           </div>
         </div>
@@ -329,7 +360,7 @@ function AboutSection({ program }: { program: ProgramData }) {
 
               <div className="absolute -bottom-7 -right-3 w-[210px] rounded-2xl border border-[#c5962e]/30 bg-[#11100d] p-5 text-white shadow-2xl sm:-right-7">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c5962e] text-[#071a36]">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c5962e] text-[#000000]">
                     <ShoppingBag size={21} />
                   </div>
                   <div>
@@ -350,7 +381,7 @@ function AboutSection({ program }: { program: ProgramData }) {
               <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#a97916]">{t('about.badge')}</span>
             </div>
 
-            <h2 className="max-w-2xl text-3xl font-black leading-tight tracking-tight text-[#071a36] sm:text-4xl lg:text-5xl">
+            <h2 className="max-w-2xl text-3xl font-black leading-tight tracking-tight text-[#000000] sm:text-4xl lg:text-5xl">
               {program.aboutHeading.split(' ').slice(0, 3).join(' ')}{' '}
               <span className="block text-[#c5962e]">{program.aboutHeading.split(' ').slice(3).join(' ') || t('about.headingFallback')}</span>
             </h2>
@@ -380,7 +411,7 @@ function AboutSection({ program }: { program: ProgramData }) {
                     <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-[#fff3d4] text-[#a97916]">
                       <Icon size={17} />
                     </div>
-                    <h3 className="text-xl font-black text-[#071a36]">{stat.value}</h3>
+                    <h3 className="text-xl font-black text-[#000000]">{stat.value}</h3>
                     <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-[#a97916]">{stat.label}</p>
                   </div>
                 );
@@ -411,7 +442,7 @@ function BenefitsSection({ program }: { program: ProgramData }) {
             <span className="h-px w-8 bg-[#c5962e]" />
           </div>
 
-          <h2 className="mx-auto max-w-3xl text-center text-3xl font-black tracking-tight text-[#071a36] sm:text-4xl lg:text-5xl">
+          <h2 className="mx-auto max-w-3xl text-center text-3xl font-black tracking-tight text-[#000000] sm:text-4xl lg:text-5xl">
             {t('benefits.headingPrefix')}
             <span className="text-[#c5962e]"> {program.title}</span>
           </h2>
@@ -426,11 +457,11 @@ function BenefitsSection({ program }: { program: ProgramData }) {
               return (
                 <div key={item.title} className="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#c5962e]/40 hover:shadow-xl">
                   <span className="absolute right-5 top-4 text-4xl font-black text-slate-100 transition group-hover:text-[#c5962e]/10">0{index + 1}</span>
-                  <div className="relative mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#fff3d4] text-[#a97916] transition duration-300 group-hover:bg-[#c5962e] group-hover:text-[#071a36]">
+                  <div className="relative mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#fff3d4] text-[#a97916] transition duration-300 group-hover:bg-[#c5962e] group-hover:text-[#000000]">
                     <Icon size={25} strokeWidth={2} />
                   </div>
-                  <h3 className="relative mb-2 text-base font-extrabold text-[#071a36]">{item.title}</h3>
-                  <p className="relative text-sm leading-6 text-slate-500">{item.description}</p>
+                  <h3 className="relative mb-2 text-lg font-extrabold tracking-tight text-[#000000] sm:text-xl">{item.title}</h3>
+                  <p className="relative text-base leading-7 text-slate-500">{item.description}</p>
                   <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#c5962e] transition-all duration-300 group-hover:w-full" />
                 </div>
               );
@@ -459,7 +490,7 @@ function BenefitsSection({ program }: { program: ProgramData }) {
               <div className="mt-7 space-y-4">
                 {program.audience.map((text) => (
                   <div key={text} className="flex items-start gap-3">
-                    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#c5962e] text-[#071a36]">
+                    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#c5962e] text-[#000000]">
                       <CheckCircle2 size={14} />
                     </div>
                     <p className="text-sm leading-6 text-slate-300">{text}</p>
@@ -467,7 +498,7 @@ function BenefitsSection({ program }: { program: ProgramData }) {
                 ))}
               </div>
 
-              <button className="mt-8 flex items-center gap-2 rounded-xl border border-[#c5962e]/50 bg-[#fffaf0] px-5 py-3 text-xs font-bold text-[#a97916] transition hover:bg-[#c5962e] hover:text-[#071a36]">
+              <button className="mt-8 flex items-center gap-2 rounded-xl border border-[#c5962e]/50 bg-[#fffaf0] px-5 py-3 text-xs font-bold text-[#a97916] transition hover:bg-[#c5962e] hover:text-[#000000]">
                 {t('audience.becomeMember')}
                 <ArrowRight size={15} />
               </button>
@@ -479,7 +510,7 @@ function BenefitsSection({ program }: { program: ProgramData }) {
               <img src={program.image} alt={program.title} className="h-full min-h-[300px] w-full object-cover transition duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
-                <span className="mb-2 inline-block rounded-full bg-[#c5962e] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#071a36]">
+                <span className="mb-2 inline-block rounded-full bg-[#c5962e] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#000000]">
                   {program.category}
                 </span>
                 <h3 className="text-xl font-black text-white sm:text-2xl">

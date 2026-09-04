@@ -19,7 +19,7 @@ const InvestorsCTA = () => {
                 <span>{t('cta.badge')}</span>
               </div>
 
-              <h2 className="m-0 break-words text-5xl font-bold leading-[1.15] tracking-[-0.03em] text-[#071a36]">
+              <h2 className="m-0 break-words text-5xl font-bold leading-[1.15] tracking-[-0.03em] text-[#000000]">
                 {t('cta.headingLead')}{' '}
                 <span className="italic text-[#c5962e]">{t('cta.headingHighlight')}</span>
               </h2>
@@ -32,7 +32,7 @@ const InvestorsCTA = () => {
             <div className="flex w-full min-w-0 flex-col items-stretch justify-center gap-3 md:max-w-[240px]">
               <Link
                 to="/ContactUs"
-                className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-[1.4rem] py-[0.85rem] text-base font-bold text-[#071a36] shadow-[0_10px_22px_rgba(197,150,46,0.24)] no-underline transition duration-300 ease-out hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5962e] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[linear-gradient(135deg,#c5962e_0%,#f0c75e_100%)] px-[1.4rem] py-[0.85rem] text-base font-bold text-[#000000] shadow-[0_10px_22px_rgba(197,150,46,0.24)] no-underline transition duration-300 ease-out hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5962e] focus-visible:ring-offset-2"
               >
                 {t('cta.button')}
                 <ArrowUpRight size={16} />

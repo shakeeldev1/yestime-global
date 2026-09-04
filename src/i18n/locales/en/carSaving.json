@@ -1,0 +1,87 @@
+{
+  "clientSections": {
+    "live": {
+      "badge": "LIVE ALL OPTIONS 1400 DRAWS EVERY DAY",
+      "heading": "DRAW EVERY 1 MINUTE",
+      "headingHighlight": "| 7 OPTIONS = 7 CHANCES",
+      "subtitle": "Car Saving • Marketplace + Auto Saving • Every 1 Minute",
+      "nextDraw": "Next Draw In",
+      "timeUnit": "Min : Sec",
+      "watchLive": "Watch Live Draw",
+      "stats": {
+        "dailyDraws": {
+          "label": "Total Daily Draws",
+          "value": "1400",
+          "sub": "Across 7 Options"
+        },
+        "interval": {
+          "label": "Draw Interval",
+          "value": "Every 1 Minute",
+          "sub": "Per Option"
+        },
+        "chances": {
+          "label": "Your Chances",
+          "value": "7",
+          "sub": "Per Draw"
+        }
+      }
+    },
+    "process": {
+      "badge": "Client Process",
+      "heading": "Buy / Sell New or Used Cars",
+      "subtitle": "Under New and Used Vehicles: search by need/budget, contact seller, verify yourself. Auto saving after eligible purchase.",
+      "steps": {
+        "0": {
+          "title": "Find a car",
+          "text": "Search for a new or used car according to your needs and budget on the company platform."
+        },
+        "1": {
+          "title": "View listing details",
+          "text": "Review model, year, condition, estimated price, photos, location and registration related details where available."
+        },
+        "2": {
+          "title": "Contact the seller",
+          "text": "Contact the seller or a company representative regarding the car you are interested in."
+        },
+        "3": {
+          "title": "Inspect & complete",
+          "text": "Personally inspect vehicle and papers, agree price, then complete purchase according to legal requirements."
+        }
+      }
+    },
+    "buySell": {
+      "buyerTitle": "Buying a Car",
+      "buyerText": "Find → view info → contact → inspect engine, body, documents & registration → finalize price → complete legal purchase.",
+      "buyerPoints": {
+        "0": "Search by need and budget",
+        "1": "View model, year, condition, price, photos, location, registration",
+        "2": "Contact seller or representative",
+        "3": "Personally verify vehicle + papers"
+      },
+      "sellerTitle": "Selling a Car",
+      "sellerText": "Owners list through the company system. Company verifies information according to its procedure.",
+      "sellerPoints": {
+        "0": "Correct model / name",
+        "1": "Year of manufacture",
+        "2": "Current condition",
+        "3": "Desired price",
+        "4": "Photos of the vehicle",
+        "5": "Location, registration + ownership documents"
+      }
+    },
+    "scope": {
+      "badge": "Program Scope",
+      "heading": "Marketplace + Auto Saving",
+      "marketplaceTitle": "Cars Marketplace",
+      "marketplaceText": "Buy and sell new or used cars on an organized platform with listing details and personal verification before the deal.",
+      "autoSavingTitle": "Auto Saving",
+      "autoSavingText": "After an eligible vehicle purchase through the company system, designated amount may enter automatic saving and lucky draw.",
+      "carPlanTitle": "Not Car Plan",
+      "carPlanText": "Car Saving has no separate installment booklet. Installment value tiers belong to Car Plan a different program."
+    },
+    "disclaimer": {
+      "title": "Important Clarification",
+      "text": "Buyers are responsible for personally verifying the vehicle’s condition, ownership, registration and documents before purchasing. Information on the platform is not final legal proof of ownership. All transactions follow relevant laws and company terms. Car Saving here is marketplace + auto saving not a duplicate of the Car Plan installment booklet."
+    }
+  }
+}

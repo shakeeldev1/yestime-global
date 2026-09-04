@@ -3,7 +3,7 @@
 .global-expansion-page {
   background: radial-gradient(circle at top, rgba(217, 162, 27, 0.12), transparent 24%),
     linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
-  color: #071a36;
+  color: #000000;
 }
 
 .global-expansion-page > section,
@@ -14,7 +14,7 @@
 .global-expansion-page #global-expansion {
   background:
     radial-gradient(circle at top left, rgba(94, 135, 255, 0.2), transparent 22%),
-    linear-gradient(135deg, #020b1c 0%, #04142f 38%, #071a36 100%);
+    linear-gradient(135deg, #020b1c 0%, #04142f 38%, #000000 100%);
 }
 
 .global-expansion-page #global-expansion .global-expansion-background {
@@ -62,7 +62,7 @@
 .global-expansion-page #global-expansion .globe-marker > span.rounded-md {
   background-color: #ffffff !important;
   border-color: rgba(11, 59, 110, 0.2) !important;
-  color: #071a36 !important;
+  color: #000000 !important;
   font-weight: 600;
 }
 
